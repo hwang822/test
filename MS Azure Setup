@@ -11,3 +11,8 @@ copy FTP Host anme ftp://waws-prod-dm1-035.ftp.azurewebsites.windows.net to expo
     To view this FTP site in File Explorer: press Alt, click View, and then click Open FTP Site in File Explorer. 
     02/23/2018 03:37PM      Directory LogFiles
     02/23/2018 03:37PM      Directory site
+Click site. wwwroot.
+Downlaod FTP software as FileZilla to update http file to the wwwroot site.
+Go back to click mxiwellsfotware URL: https://mixwellsoftware.azurewebsites.net to see web page show up.
+
+Crate MVC web service at Azure.
