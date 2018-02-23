@@ -4,3 +4,10 @@ PASS (Platform Service): OS, Framework, Web Server, DB ...
 SAAS (Software Service): Invoicing, Yahoo, Gmall, Accounting, Conrol Panel ...
 Ondemand, Ousourced, you pay what you want to using as hotel is a service industry.
 https://portal.azure.com login em2k_dl00
+go to App Services and add resouces. 
+Add ftp for source cdoes transfer. ftp://waws-prod-dm1-035.ftp.azurewebsites.windows.net with hw822_Dl00.
+copy FTP Host anme ftp://waws-prod-dm1-035.ftp.azurewebsites.windows.net to expolar. mixwellsoftware\hwang822 Dl00 
+    FTP root at waws-prod-dm1-035.ftp.azurewebsites.windows.net
+    To view this FTP site in File Explorer: press Alt, click View, and then click Open FTP Site in File Explorer. 
+    02/23/2018 03:37PM      Directory LogFiles
+    02/23/2018 03:37PM      Directory site
