@@ -19,7 +19,89 @@ Go back to click mxiwellsfotware URL: https://mixwellsoftware.azurewebsites.net 
 Go to overview click Get publish profile.
 Craete pbulish profile and save to developer local folder mixwellsoftware_azure_publish_profile.PublishSettings
 
-2. Crate a WCF service and host at Azure.
-Using MS Visual Studio create WCF Application MixwellWCFService.
-Publish the file build/publish/import mixwellsoftware_azure_publish_profile.PublishSettings to publish file azure.
-go https://mixwellsoftware.azurewebsites.net/MixwellWCFService.svc
+2. Create a html page and host at Azure.
+   Create a index.html (contain: "Mixwellsoftware First Page") file and put at /site/wwwroot
+   go https://mixwellsoftware.azurewebsites.net
+
+3. Crate a WCF web service and host at Azure. 
+   source codes: https://github.com/hwang822/WCFandWVC 
+   
+   Using MS Visual Studio create WCF Application MixwellWCFService.
+   a. Create OperationContractor at Interface IMixwellWCFService 
+        
+        [OperationContract]
+        [WebGet(UriTemplate = "AllData", ResponseFormat=WebMessageFormat.Json)] // for json format
+        List<MixwellData> GetAllData();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "Data/{id}", ResponseFormat = WebMessageFormat.Json)] // for json format        
+        MixwellData GetData(string id);
+
+   b. Create Module class to run the interface implation.
+
+   Create Entity mapped from a database at MixwellDataModel.edmx file.
+
+    public class MixwellWCFService : IMixwellWCFService
+    {
+        //get data function is run from operation contactor IMxwWellWCFSrvice.
+        public List<MixwellData> GetAllData()
+        {
+            using (var db = new MixwellDatabaseEntities())
+            {
+                return db.MixwellDatas.ToList();
+            }
+
+
+            //throw new NotImplementedException();
+        }
+
+        public MixwellData GetData(string id)
+        {
+            using (var db = new MixwellDatabaseEntities())
+            {
+                Int32 _id = Convert.ToInt32(id);
+                return db.MixwellDatas.Single(p => p.id == _id);
+            }
+            //        throw new NotImplementedException();
+        }
+    }
+
+   Create web service at web.config for web/rest service
+
+  <system.serviceModel>
+    <services>
+      <service name= "MixwellWcf.MixwellWCFService">
+        <endpoint address="" behaviorConfiguration="restbehavior" binding="webHttpBinding" contract="MixwellWcf.IMixwellWCFService"></endpoint>
+      </service>
+    </services>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="restbehavior">
+          <webHttp/>
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true" />
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+   <protocolMapping>
+      <add binding="basicHttpsBinding" scheme="https" />
+    </protocolMapping>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true" />
+ </system.serviceModel>
+
+   Publish the file build/publish/import mixwellsoftware_azure_publish_profile.PublishSettings to publish file azure.
+  
+  To Test the server go to VS project MixwellWCFService.svc and Browse With .. Internet Expoloer.
+  http://localhost:23506/MixwellWCFService.svc/AllData or
+  http://localhost:23506/MixwellWCFService.svc/Data/1 
+  
+  go https://mixwellsoftware.azurewebsites.net/MixwellWCFService.svc
+  
+  
+
