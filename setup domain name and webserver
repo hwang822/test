@@ -15,5 +15,18 @@ ping http://73.76.111.140 for http://mixwellsoftware.com
 go to iis manager
 right click BPWEN-PC\hwang822\Sites\Add Web sites...
 Site name: Default Web Site. Applicaiton pool: DefalultAppPool. Physical path: %SystemDrive%\inetpub\wwwroot. Type: http. Port: 80. Click: OK. 
-click browser to make sure web page www.mixwellsoftware could run.
+select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Start or Stop or Restart.
+select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Browse.
 
+4. Add Web Services at www.mixwellsoftware.com
+   a. using MS Visual Studio to create mvc application MixwellMvc project. 
+      build\publish MixwellMvc project to C:\inetpub\wwwroot\MixwellMvc.
+      ie type www.mixwellsoftware.com\mixwellmvc to test web page.
+   
+   b. using MS Visual Studio to create web application MixwellWeb (asp.net webform) project.
+      build\publish MixwellWeb project to  C:\inetpub\wwwroot\MixwellWeb.
+      ie type www.mixwellsoftware.com\mixwellweb to test web page.
+
+   b. using MS Visual Studio to create web application MixwellWcf.
+      build\publish MixwellWcf project to  C:\inetpub\wwwroot\MixwellWcf.
+      ie type www.mixwellsoftware.com\mixwellwcf to test web page.
