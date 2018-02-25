@@ -30,3 +30,27 @@ select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Browse.
    b. using MS Visual Studio to create web application MixwellWcf.
       build\publish MixwellWcf project to  C:\inetpub\wwwroot\MixwellWcf.
       ie type www.mixwellsoftware.com\mixwellwcf to test web page.
+      
+4. Add FTP services at www.mixwellsoftware.com
+Go to control pannel/Programs/Programs and Features/Turn Windows features on ofr off.
+Turn On Internet Information Service (iis) FTP Server/FTP Extensibility/FTP Service, OK.
+
+Go to iis manager.
+right click BPWEN-PC\hwang822\Sites\Add FDP sites...
+FTP Site Name: Default Ftp Site. 
+Content Directory: C:\inetpub\wwwroot. (could be any where, set C:\inetpub\wwwroot to remote update web codes).
+Next
+Binding IP Address: 192.168.0.109, Port: 21.
+Check Start FTP site autmatically.
+SSL: No SSL
+Next.
+Authentication: Basic. Allow access: Apecified users (default using system user username and password).
+Next.
+
+using file exporlare 
+type in ftp://192.168.0.109, un: gm, pw: dl31
+
+
+
+
+Turn off firewall of for FTP
