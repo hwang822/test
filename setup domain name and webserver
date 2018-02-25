@@ -9,14 +9,31 @@ add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.76.
 at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
 At Network tab: to makesure IP address 73.76.111.140 
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
+At Forwarding tab: add visutal servers port=21 IP address 192.168.0.109. Common Service Port: FTP.
+
 ping http://73.76.111.140 for http://mixwellsoftware.com
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <defaultDocument>
+            <files>
+                <remove value="index.aspx" />
+                <add value="index.aspx" />
+            </files>
+        </defaultDocument>
+        <directoryBrowse enabled="true" />
+    </system.webServer>
+</configuration>
 
 3. set web page at pc webroot.
+create C:\inetpub\wwwroot\web.config file to set this foder as web stie.
+
 go to iis manager
 right click BPWEN-PC\hwang822\Sites\Add Web sites...
 Site name: Default Web Site. Applicaiton pool: DefalultAppPool. Physical path: %SystemDrive%\inetpub\wwwroot. Type: http. Port: 80. Click: OK. 
 select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Start or Stop or Restart.
 select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Browse.
+create  at C:\inetpub\wwwroot
 
 4. Add Web Services at www.mixwellsoftware.com
    a. using MS Visual Studio to create mvc application MixwellMvc project. 
