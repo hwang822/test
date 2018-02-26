@@ -66,8 +66,23 @@ Next.
 
 using file exporlare 
 type in ftp://192.168.0.109, un: gm, pw: dl31
+Turn of ftp server at firewall.
 
-
-
-
-Turn off firewall of for FTP
+5. setup email server at host.
+   go to http://www.hmailserver.com and down load the email server.
+   add domain mixwellsoftware.com.  add account hwang@mixwellsoftware.com
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
