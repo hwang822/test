@@ -57,8 +57,11 @@ export class AppComponent {
   title = 'hwang first app';
 }
 
-evertime change teh code the ng will recompiler and relash. 
+everytime change the ng will recomplier the code and relash the web page from server.
 
+ng build will build the project at dist.  Use the `-prod` flag for a production build.
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 
 
