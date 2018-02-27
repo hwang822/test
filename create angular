@@ -4,3 +4,69 @@ shoping card to select items and check out
 Angular is a framework for building client applications in HTML, CSS, and JavaScript/Type Script.
 Gives applicaiotn a clean structure. Front end (UI with HTML, CSS, TypeScript,) => Back-end (Data and processing with HTTP service/APIs).
 
+https://angular.io/guide/quickstart
+
+Step 1. Set up the Development Environment 
+Install Node.js® and npm
+npm install -g @angular/cli
+node -v => v8.9.4
+npm -v => 5.6.0
+
+Step 2. Create a new project
+Created a folder Angular
+c:\Workarea\Angular>ng new my-app
+
+Below is project developer site.
+
+c:\Workarea\Angular>cd my-app
+
+c:\Workarea\Angular\my-app>dir
+ Volume in drive C is Windows
+ Volume Serial Number is F625-2230
+
+ Directory of c:\Workarea\Angular\my-app
+
+02/27/2018  09:04 AM    <DIR>          .
+02/27/2018  09:04 AM    <DIR>          ..
+02/27/2018  09:03 AM             1,241 .angular-cli.json
+02/27/2018  09:03 AM               245 .editorconfig
+02/27/2018  09:03 AM               544 .gitignore
+02/27/2018  09:03 AM    <DIR>          e2e
+02/27/2018  09:03 AM               923 karma.conf.js
+02/27/2018  09:04 AM    <DIR>          node_modules
+02/27/2018  09:04 AM           413,991 package-lock.json
+02/27/2018  09:03 AM             1,291 package.json
+02/27/2018  09:03 AM               722 protractor.conf.js
+02/27/2018  09:03 AM             1,021 README.md
+02/27/2018  09:03 AM    <DIR>          src
+02/27/2018  09:03 AM               363 tsconfig.json
+02/27/2018  09:03 AM             3,012 tslint.json
+              10 File(s)        423,353 bytes
+               5 Dir(s)  22,967,828,480 bytes free
+               
+Step 3: Serve the application 
+The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files.
+Using the --open (or just -o) option will automatically open your browser on http://localhost:4200/.
+
+Step 4: Edit your first Angular component at app.component.ts 
+export class AppComponent {
+  title = 'app';
+}
+
+export class AppComponent {
+  title = 'hwang first app';
+}
+
+evertime change teh code the ng will recompiler and relash. 
+
+
+
+
+
+
+
+
+
+
+
+
