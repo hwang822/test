@@ -26,6 +26,12 @@ ping http://73.76.111.140 for http://mixwellsoftware.com
 </configuration>
 
 3. set web page at pc webroot.
+C:\inetpub\wwwroot is my pc default web server root site.
+http://localhost get ip address run ipconfig => ip = 192.168.0.109.
+
+save a index.html file at C:\inetpub\wwwroot as start web page.
+
+or
 create C:\inetpub\wwwroot\web.config file to set this foder as web stie.
 
 go to iis manager
