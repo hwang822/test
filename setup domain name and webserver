@@ -10,8 +10,19 @@ at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
 At Network tab: to makesure IP address 73.76.111.140 
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
 At Forwarding tab: add visutal servers port=21 IP address 192.168.0.109. Common Service Port: FTP.
+At Forwarding tab: add visutal servers port=161 IP address 192.168.0.109. Common Service Port: POP3.
 
 ping http://73.76.111.140 for http://mixwellsoftware.com
+
+3. set web page at pc webroot.
+C:\inetpub\wwwroot is my pc default web server root site.
+http://localhost get ip address run ipconfig => ip = 192.168.0.109.
+
+save a index.html file at C:\inetpub\wwwroot as start web page.
+
+or
+create C:\inetpub\wwwroot\Web.xml file to set this foder as web stie.
+
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -25,14 +36,7 @@ ping http://73.76.111.140 for http://mixwellsoftware.com
     </system.webServer>
 </configuration>
 
-3. set web page at pc webroot.
-C:\inetpub\wwwroot is my pc default web server root site.
-http://localhost get ip address run ipconfig => ip = 192.168.0.109.
-
-save a index.html file at C:\inetpub\wwwroot as start web page.
-
-or
-create C:\inetpub\wwwroot\web.config file to set this foder as web stie.
+may need set IIS manager/Features View/Directory Browsing/Actions/Enable.
 
 go to iis manager
 right click BPWEN-PC\hwang822\Sites\Add Web sites...
