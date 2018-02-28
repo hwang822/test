@@ -4,6 +4,8 @@ shoping card to select items and check out
 Angular is a framework for building client applications in HTML, CSS, and JavaScript/Type Script.
 Gives applicaiotn a clean structure. Front end (UI with HTML, CSS, TypeScript,) => Back-end (Data and processing with HTTP service/APIs).
 
+1. Build Anuglar application.
+
 https://angular.io/guide/quickstart
 
 Step 1. Set up the Development Environment 
@@ -63,8 +65,16 @@ ng build will build the project at dist.  Use the `-prod` flag for a production 
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-
-
+2. Deploy Angular App to IIS
+  ngbuild --prod --base-href /MixwellAngular/
+  copy dist folder to iis folder C:\inetpub\wwwroot\MixwellAngular
+  run iis manager. Set Alias: ePortal (must same name as build product name). Application pool: .Net 4.5. 
+  Physical path: C:\inetpub\wwwroot\MixwellAngular. Click OK.
+  Run MixwellAngular from IIS browser.
+  
+ 
+   
+ 
 
 
 
