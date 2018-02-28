@@ -38,7 +38,10 @@ c:\Workarea\Angular\my-app>dir
 02/27/2018  09:04 AM    <DIR>          node_modules
 02/27/2018  09:04 AM           413,991 package-lock.json
 02/27/2018  09:03 AM             1,291 package.json
-02/27/2018  09:03 AM               722 protractor.conf.js
+
+app.component.ts— the component class code, written in TypeScript. 
+app.component.html— the component template, written in HTML.
+app.component.css— the component's private CSS styles.02/27/2018  09:03 AM               722 protractor.conf.js
 02/27/2018  09:03 AM             1,021 README.md
 02/27/2018  09:03 AM    <DIR>          src
 02/27/2018  09:03 AM               363 tsconfig.json
@@ -74,8 +77,31 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
   Run MixwellAngular from IIS browser.
   
  
-   
- 
+3. Developer MixwellAngular project.
+  
+  a. setup project.
+  run cmd.
+  go to c:\Workarea
+  git clone https://github.com/hwang822/WCFandMVC
+  cd C:\Workarea\WCFandWVC\MixwellSoftware
+  ng new MixwellAngular
+  cd C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular
+  ng serve --open
+  The --open flag opens a browser to http://localhost:4200/
+  app running in your browser
+  
+  b. code project
+  
+  C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular\src\app
+  The page you see is the application shell. The shell is controlled by an Angular component named AppComponent.
+Components are the fundamental building blocks of Angular applications. They display data on the screen, listen for user input, and take action based on that input.
+
+   app.component.ts— the component class code, written in TypeScript. 
+   app.component.html— the component template, written in HTML.
+   app.component.css— the component's private CSS styles.
+  
+  Create the heroes component
+  ng generate component business
 
 
 
