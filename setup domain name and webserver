@@ -39,6 +39,8 @@ create C:\inetpub\wwwroot\Web.xml file to set this foder as web stie.
 may need set IIS manager/Features View/Directory Browsing/Actions/Enable.
 
 go to iis manager
+
+
 right click BPWEN-PC\hwang822\Sites\Add Web sites...
 Site name: Default Web Site. Applicaiton pool: DefalultAppPool. Physical path: %SystemDrive%\inetpub\wwwroot. Type: http. Port: 80. Click: OK. 
 select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Start or Stop or Restart.
@@ -49,7 +51,8 @@ create  at C:\inetpub\wwwroot
    a. using MS Visual Studio to create mvc application MixwellMvc project. 
       build\publish MixwellMvc project to C:\inetpub\wwwroot\MixwellMvc.
       ie type www.mixwellsoftware.com\mixwellmvc to test web page.
-   
+
+
    b. using MS Visual Studio to create web application MixwellWeb (asp.net webform) project.
       build\publish MixwellWeb project to  C:\inetpub\wwwroot\MixwellWeb.
       ie type www.mixwellsoftware.com\mixwellweb to test web page.
@@ -79,11 +82,27 @@ type in ftp://192.168.0.109, un: gm, pw: dl31
 Turn of ftp server at firewall.
 
 5. setup email server at host.
-   go to http://www.hmailserver.com and down load the email server.
-   add domain mixwellsoftware.com.  add account hwang@mixwellsoftware.com
+    go to http://www.hmailserver.com and down load the email server.
+    add domain mixwellsoftware.com.  add account hwang@mixwellsoftware.com
    
+    SMTP stands for Simple Mail Transfer Protocol. SMTP is used when email is delivered from an email client, such as Outlook Express, to an email server or when email is delivered from one email server to another. SMTP uses port 25. 
+    POP3 stands for Post Office Protocol. POP3 allows an email client to download an email from an email server. The POP3 protocol is simple and does not offer many features except for download. Its design assumes that the email client downloads all available email from the server, deletes them from the server and then disconnects. POP3 normally uses port 110.
+    IMAP stands for Internet Message Access Protocol. IMAP shares many similar features with POP3. It, too, is a protocol that an email client can use to download email from an email server. However, IMAP includes many more features than POP3. The IMAP protocol is designed to let users keep their email on the server. IMAP requires more disk space on the server and more CPU resources than POP3, as all emails are stored on the server. IMAP normally uses port 143. Here is more information about IMAP. 
    
-   
+    MX is an abbreviation for Mail Exchanger and is used by all mail servers when they send an email.
+    
+    C:\Users\henryw>nslookup -type=mx mixwellsoftware.com
+    Server:  rdns37a.ultradns.net
+    Address:  156.154.70.37
+
+    mixwellsoftware.com
+        primary name server = ns1.101domain.com
+        responsible mail addr = ADMIN.mixwellsoftware.com
+        serial  = 2017071012
+        refresh = 10800 (3 hours)
+        retry   = 3600 (1 hour)
+        expire  = 604800 (7 days)
+        default TTL = 3600 (1 hour)
    
    
    
