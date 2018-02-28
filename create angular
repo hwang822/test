@@ -49,6 +49,7 @@ c:\Workarea\Angular\my-app>dir
 Step 3: Serve the application 
 The ng serve command launches the server, watches your files, and rebuilds the app as you make changes to those files.
 Using the --open (or just -o) option will automatically open your browser on http://localhost:4200/.
+ng serve -o
 
 Step 4: Edit your first Angular component at app.component.ts 
 export class AppComponent {
@@ -66,7 +67,7 @@ ng build will build the project at dist.  Use the `-prod` flag for a production 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 2. Deploy Angular App to IIS
-  ngbuild --prod --base-href /MixwellAngular/
+  ng build --prod --base-href /MixwellAngular/
   copy dist folder to iis folder C:\inetpub\wwwroot\MixwellAngular
   run iis manager. Set Alias: ePortal (must same name as build product name). Application pool: .Net 4.5. 
   Physical path: C:\inetpub\wwwroot\MixwellAngular. Click OK.
