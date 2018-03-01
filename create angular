@@ -72,7 +72,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 2. Deploy Angular App to IIS
   ng build --prod --base-href /MixwellAngular/
   copy dist folder to iis folder C:\inetpub\wwwroot\MixwellAngular
-  run iis manager. Set Alias: ePortal (must same name as build product name). Application pool: .Net 4.5. 
+
+run iis manager. Set Alias: ePortal (must same name as build product name). Application pool: .Net 4.5. 
   Physical path: C:\inetpub\wwwroot\MixwellAngular. Click OK.
   Run MixwellAngular from IIS browser.
   
@@ -102,6 +103,48 @@ Components are the fundamental building blocks of Angular applications. They dis
   
   Create the heroes component
   ng generate component business
+
+  always import the Component symbol from the Angular core library and annotate the component class with @Component.
+  Always export the component class so you can import it elsewhere ... like in the AppModule.
+  
+  Java script import module and export class to user.
+  
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Mixwell Software';
+}
+
+app.component.html add component app-services it set components location list.
+<h1>{{title}}</h1>
+<app-services></app-services>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
