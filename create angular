@@ -112,9 +112,10 @@ Components are the fundamental building blocks of Angular applications. They dis
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-root',     //page (component) name, other companent will include this name to put on the page location.
+  templateUrl: './app.component.html',     //page UI
+  styleUrls: ['./app.component.css'],       //page US style.
+  component.ts                             //component module code.
 })
 export class AppComponent {
   title = 'Mixwell Software';
@@ -123,6 +124,28 @@ export class AppComponent {
 app.component.html add component app-services it set components location list.
 <h1>{{title}}</h1>
 <app-services></app-services>
+
+example: 3 parts at main page.
+
+part 1.
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/employees">Employees</a>
+  <a routerLink="/services">Services</a>
+</nav>
+
+part 2. //A router outlet will emit an activate event any time a new component is being instantiated, and a deactivate event when it is being destroyed.
+Routes = [{ path: '', redirectTo: '/employees', pathMatch: 'full' },    // will redirectTo to /employees page 
+ { path: 'detail/:id', component: EmployeeDetailComponent }]           // will go to commppnent with paramet "detail/:id"
+                                                                       // <a routerLink="/detail/{{employee.id}}">
+<router-outlet></router-outlet>    
+
+part 3. <app-messages> component.
+<app-messages></app-messages>
+
+
+
 
 
 
