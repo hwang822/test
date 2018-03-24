@@ -1,3 +1,24 @@
+https://www.youtube.com/watch?v=e0bHm5VfnJ4
+1. Automation Standard at Microsoft.
+2. Management and Administration UI run Powershell underneath
+3. Azure and AWS both have wonderful Powershell API's
+4. Manager you Linux instances
+5. Full power of .NET Framework.
+6. Automation platform (.NET, Win32, Native)
+7. Simply your life.
+
+Microsoft do powershell first. Then make GUI.
+Make powershell the fundation of gui.
+
+You could down laod powershell api for azure or aws.
+
+
+
+
+
+
+
+
 
 windows10 type powershell to start run.
 
@@ -39,3 +60,55 @@ CommandType     Name                                               Version    So
 -----------     ----                                               -------    ------
 Alias           cls -> Clear-Host
 
+***********************************
+verb start $
+
+PS C:\WINDOWS\system32> $zebra = Get-Process Microso
+ftEdge
+PS C:\WINDOWS\system32> $zebra
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)   Id
+-------  ------    -----      -----     ------   --
+   1733      79    53260     105284       8.16 5400
+
+*********************************
+
+get-PSDrive
+
+PS C:\WINDOWS\system32> Get-PSDrive
+
+Name           Used (GB)     Free (GB) Provider
+----           ---------     --------- --------
+Alias                                  Alias
+C                 156.81        282.69 FileSystem
+Cert                                   Certificate
+Env                                    Environment
+Function                               Function
+HKCU                                   Registry
+HKLM                                   Registry
+Variable                               Variable
+WSMan                                  WSMan
+
+PS C:\WINDOWS\system32> Get-PSDrive | where-object {
+$_.free -gt 1}
+
+Name           Used (GB)     Free (GB) Provider
+----           ---------     --------- --------
+C                 156.81        282.69 FileSystem
+
+
+PS C:\WINDOWS\system32> "{0:p2}" -f 10000000
+1,000,000,000.00%
+
+PS C:\WINDOWS\system32> get-volume
+
+DriveLetter FriendlyName FileSystemType DriveType HealthS
+                                                  tatus
+----------- ------------ -------------- --------- -------
+            SYSTEM_DRV   FAT32          Fixed     Healthy
+            PBR_DRV      NTFS           Fixed     Healthy
+C           Windows8_OS  NTFS           Fixed     Healthy
+            WINRE_DRV    NTFS           Fixed     Healthy
+
+
+*****************************************************
