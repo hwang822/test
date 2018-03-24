@@ -1,0 +1,41 @@
+
+windows10 type powershell to start run.
+
+PS C:\WINDOWS\system32> start-transcript
+every thing we type will goning to file
+PS C:\WINDOWS\system32> get-command
+
+format Verb-command
+
+get-command -Noun service
+
+PS C:\WINDOWS\system32> get-command -Noun service
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Cmdlet          Get-Service                                        3.1.0.0    Microsoft....
+Cmdlet          New-Service                                        3.1.0.0    Microsoft....
+Cmdlet          Restart-Service                                    3.1.0.0    Microsoft....
+Cmdlet          Resume-Service                                     3.1.0.0    Microsoft....
+Cmdlet          Set-Service                                        3.1.0.0    Microsoft....
+Cmdlet          Start-Service                                      3.1.0.0    Microsoft....
+Cmdlet          Stop-Service                                       3.1.0.0    Microsoft....
+Cmdlet          Suspend-Service                                    3.1.0.0    Microsoft....
+
+PS C:\WINDOWS\system32> get-service
+
+Status   Name               DisplayName
+------   ----               -----------
+Running  AdobeARMservice    Adobe Acrobat Update Service
+Stopped  AJRouter           AllJoyn Router Service
+Stopped  ALG                Application Layer Gateway Service
+Running  Amazon Assistan... Amazon Assistant Service
+Stopped  AppIDSvc           Application Identity
+...
+
+PS C:\WINDOWS\system32> get-alias cls
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           cls -> Clear-Host
+
