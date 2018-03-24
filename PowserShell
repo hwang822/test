@@ -1,4 +1,9 @@
+
 https://www.youtube.com/watch?v=e0bHm5VfnJ4
+
+*********************************
+Why learn Powershell
+
 1. Automation Standard at Microsoft.
 2. Management and Administration UI run Powershell underneath
 3. Azure and AWS both have wonderful Powershell API's
@@ -6,6 +11,53 @@ https://www.youtube.com/watch?v=e0bHm5VfnJ4
 5. Full power of .NET Framework.
 6. Automation platform (.NET, Win32, Native)
 7. Simply your life.
+
+*********************************
+get-help and get-command
+
+PS C:\WINDOWS\system32> get-command
+
+CommandType     Name
+-----------     ----
+Alias           Add-ProvisionedAppxPackage
+Alias           Add-ProvisioningPackage
+...
+
+PS C:\WINDOWS\system32> get-command | more
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Add-ProvisionedAppxPackage                         3.0        Dism
+Alias           Add-ProvisioningPackage                            3.0        Provisi...
+Alias           Add-TrustedProvisioningCertificate                 3.0        Provisi...
+Alias           Apply-WindowsUnattend                              3.0        Dism
+Alias           Disable-PhysicalDiskIndication                     2.0.0.0    Storage
+Alias           Disable-StorageDiagnosticLog                       2.0.0.0    Storage
+
+get-help
+
+PS C:\WINDOWS\system32> help Add-PhysicalDisk
+
+NAME
+    Add-PhysicalDisk
+
+SYNOPSIS
+    Adds a physical disk to the specified storage pool or manually assigns a physical
+    disk to a specific virtual disk.
+
+
+SYNTAX
+    Add-PhysicalDisk [-StoragePool] <CimInstance> [-CimSession <CimSession[]>]
+    [-ThrottleLimit <Int32>] [-Usage {AutoSelect | ManualSelect | HotSpare | Retired |
+    Journal}] -PhysicalDisks <CimInstance[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+    Add-PhysicalDisk [-VirtualDisk] <CimInstance> [-CimSession <CimSession[]>]
+    [-ThrottleLimit <Int32>] -PhysicalDisks <CimInstance[]> [-Confirm] [-WhatIf]
+    [<CommonParameters>]
+-- More  --
+
+    
+
 
 Microsoft do powershell first. Then make GUI.
 Make powershell the fundation of gui.
