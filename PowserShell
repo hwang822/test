@@ -2,7 +2,7 @@
 https://www.youtube.com/watch?v=e0bHm5VfnJ4
 
 *********************************
-Why learn Powershell
+v1. Why learn Powershell
 
 1. Automation Standard at Microsoft.
 2. Management and Administration UI run Powershell underneath
@@ -12,7 +12,7 @@ Why learn Powershell
 6. Automation platform (.NET, Win32, Native)
 7. Simply your life.
 
-*********************************
+v2. *********************************
 get-help and get-command
 
 PS C:\WINDOWS\system32> get-command
@@ -56,7 +56,92 @@ SYNTAX
     [<CommonParameters>]
 -- More  --
 
+PS C:\WINDOWS\system32> get-childitem -path "c:\"
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        7/19/2017  11:00 PM                e2908f47f0afb35a183737
+d-----        3/22/2018   8:01 PM                HWang
+d-----        1/24/2018   4:32 PM                ldiag
+
+v3. ********************************************
+
+The object pipline
+
+PS C:\WINDOWS\system32> get-process | more
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    20944       9400   1,311.56   3528   0 amazonAssistantService
+    815      42    51712      23472      88.56   6536   2 ApplicationFrameHost
+    420      34    29684       4080       1.92   3640   0 AppService
     
+
+PS C:\WINDOWS\system32> get-process | get-member | more
+
+
+   TypeName: System.Diagnostics.Process
+
+Name                       MemberType     Definition
+----                       ----------     ----------
+Handles                    AliasProperty  Handles = Handlecount
+Name                       AliasProperty  Name = ProcessName
+NPM                        AliasProperty  NPM = NonpagedSystemMemorySize64
+
+PS C:\WINDOWS\system32> get-process | select-object -Property Id | get-member
+
+
+   TypeName: Selected.System.Diagnostics.Process
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Id          NoteProperty int Id=3528
+
+
+v4. ********************
+
+Transforming and Filtering my data along pipeline
+
+select-object 
+
+PS C:\WINDOWS\system32> get-process | select-object  -first 5
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    21008       9564   1,316.47   3528   0 amazonAssistantService
+    817      43    50192      23760      91.73   6536   2 ApplicationFrameHost
+    420      34    29684       4000       1.98   3640   0 AppService
+    148       9     1344       1320       0.06   3536   0 armsvc
+   4697     123    76360      28788     330.84   8460   0 audiodg
+
+
+
+v5. *********************
+Scripting your own Cmdlet
+
+get-service | get-member
+ powershell ise is tool to developer scripts
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+*************************
 
 
 Microsoft do powershell first. Then make GUI.
@@ -64,13 +149,40 @@ Make powershell the fundation of gui.
 
 You could down laod powershell api for azure or aws.
 
+where-object to filt objects to output. 
 
+PS C:\WINDOWS\system32> get-process | where-object {$_.CPU -gt 1000.00} | more
 
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    21008       9556   1,317.53   3528   0 amazonAssistantService
+   9662      83    80700      59588   1,703.86  13020   2 dwm
+   1594     182   399160     344740   1,161.55  13060   2 MicrosoftEdgeCP
+    953      79   210068      85988   3,261.17   3932   0 MsMpEng
+    658      54   144888      27384   2,458.16   3224   0 ReportingServicesService
+    258      14     2864       2024   1,209.73   3860   0 SoundAssService
+    511      47   162756      37984   1,522.05   3484   0 sqlservr
+    414      36   126472      11036  32,336.67   3504   0 sqlservr
+    224      16    60320      56648   2,181.22   1772   0 svchost
+   4495       0      196       1440   4,175.94      4   0 System
 
+PS C:\WINDOWS\system32> get-process | where-object {$_.CPU -gt 1000.00} | Select-ob
+ject -Property Id, CPU
 
+   Id          CPU
+   --          ---
+ 3528  1318.046875
+13020    1710.8125
+13060   1175.15625
+ 3932  3261.640625
+ 3224  2462.171875
+ 3860  1210.171875
+ 3484  1522.328125
+ 3504 32345.015625
+ 1772   2182.59375
+    4   4178.28125
 
-
-
+*****************************
 
 windows10 type powershell to start run.
 
