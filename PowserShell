@@ -143,16 +143,19 @@ get-service | get-member
     
     BEGIN {
         write-Output "Hello world."
+        $Counter=0
     }
     EXPRESS {    
         foreach($Computer in _$ComputerName){
         
             write-Output $ComputerName
-            $($Computer count)
+            $($Computer Counter)
+            $Counter++
         }
     }
     END{
         write-output "Ending..."
+        write-Output "Object Counter:" $Counter
     }
  }
  
@@ -161,9 +164,11 @@ Hello World
 Server1
 1
 Server2
-1
+2
 Server3
-1
+3
+Endiing ...
+Object Counter: 3
 
 *************************
 
