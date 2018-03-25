@@ -130,16 +130,40 @@ Scripting your own Cmdlet
 get-service | get-member
  powershell ise is tool to developer scripts
  
+ open a new file test.ps at ISE.
  
-
-
-
-
-
-
-
-
-
+ coding as 
+ function Foo{
+    [cmdletminding()]
+    
+    param(
+        [Parameter(Mandatory-$true, valueFromPipeline-$true)]
+        [string[]]$ComputerName
+    )
+    
+    BEGIN {
+        write-Output "Hello world."
+    }
+    EXPRESS {    
+        foreach($Computer in _$ComputerName){
+        
+            write-Output $ComputerName
+            $($Computer count)
+        }
+    }
+    END{
+        write-output "Ending..."
+    }
+ }
+ 
+run script as> "Server1", "Server2", "Server3" | Foo
+Hello World
+Server1
+1
+Server2
+1
+Server3
+1
 
 *************************
 
