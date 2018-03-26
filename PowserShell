@@ -1,4 +1,6 @@
 
+
+
 https://www.youtube.com/watch?v=e0bHm5VfnJ4
 
 *********************************
@@ -285,4 +287,328 @@ ject -Property Id, CPU
 https://www.youtube.com/watch?v=yKstEJKdc4o
 sample of codes
 https://www.codykonior.com/2014/07/24/powershell-with-a-focus-on-automation/
+
+01. Basics
+
+# This is an array, PowerShell automatically shows each 
+# segment on one line
+
+"What about","an array?"
+
+# Proof
+
+("What about","an array?").GetType()
+
+# This is also an array if you want to be explicit about it.
+
+@("What about","an array?")
+
+# This is a hash table
+
+@{ Line1 = "This is"
+   Line2 = "a hash table" }
+
+$myVariable = @{ Line1 = "This is"
+   Line2 = "a hash table too" }
+$myVariable
+
+# This is retrieving a value from the hash table
+
+$myVariable["Line1"]
+
+# This looks kind of stupid but it's called splatting
+
+$myVariable = @{
+    Path = "C:\Temp\Test.txt"
+    Value = "Hi"
+} 
+
+Set-Content @myVariable
+# Set-Content -Path "C:\Temp\Test.txt" -Value "Hi"
+
+Get-Content C:\Temp\Test.txt
+
+# This creates a special .NET object in PowerShell 3 where the 
+# hash table becomes properties, in order
+
+$myVariable = [PSCustomObject] @{ 
+    Line1 = "This is"
+    Line2 = "a hash table" }
+$myVariable
+$myVariable.Line1
+
+# Be careful with dates, they are represented internally as US format
+
+$myVariable = [DateTime] "2014-07-23"
+$myVariable
+
+######
+#PipeLine 
+
+# The Pipeline
+
+1 | Select-Object
+
+1, 2 | Measure-Object
+1, 2, 3, 4, 5 | Measure-Object -Average -Sum -Maximum -Minimum
+
+# Select-Object can be used to grab just parts of objects
+
+$myVariable = [PSCustomObject] @{ 
+    Line1 = "This is"
+    Line2 = "a hash table" }
+$myVariable | Select-Object Line1
+
+# And %{ is a For Each loop where $_ is whatever is being iterated
+
+1, 2 | %{ 
+    "Received $_"
+}
+
+foreach ($myNumber in @(1, 2)) {
+    "Received $myNumber"
+}
+
+# Every member of the pipeline is doing some work on the incoming objects
+
+1,2 | Select-Object -Last 1
+
+# Where-Object is an extremely common and powerful command that takes a block.
+# This also shows some comparison operators too, you can't use ==, >, < etc.
+
+1,2 | Where-Object { $_ -eq 1 } # Equal
+1,2 | Where-Object { $_ -gt 1 } # Greater than
+1,2 | Where-Object { $_ -lt 1 } # Less than
+
+# Now for some other default "variables"
+
+Get-Variable *Ver*
+
+# This variable has our version information
+
+$PSVersionTable
+
+# Environment variables are stored under another
+# variable called $env. You can't list them out like this:
+
+$env
+
+# But you can reference them like:
+
+$env:COMPUTERNAME
+
+# PowerShell also emulates a disk for it
+
+Get-PSDrive Env
+Dir Env:
+
+# Lots of stuff in PowerShell is like this.
+
+Set-Location Env: # cd
+Get-ChildItem     # dir
+Set-Item myEnvironmentVariable "Great!"
+Dir
+C:
+# Inspect our variable
+$env:myEnvironmentVariable
+
+# Some commands you can execute if they're in your path
+
+ping localhost -n 1
+
+# Or you can run them if you specify their directory
+
+C:\Windows\System32\ping localhost -n 1
+
+# Or you can use variables, too
+
+ping $env:COMPUTERNAME -n 1
+
+# But it's considered polite to put an ampersand in front,
+# and also lets you execute programs dynamically too
+
+$myCommand = "ping"
+&$myCommand $env:COMPUTERNAME -n 1
+
+# Let's deal with some errors!
+
+$myCommand = "pign"
+&$myCommand $env:COMPUTERNAME -n 1
+
+try { 
+    &$myCommand $env:COMPUTERNAME -n 1
+} catch {
+    # $_ is the "last error". It's best to quickly save it.
+    $thisError = $_
+
+    # Now we can do anything, or...
+    "You're out! Why? $($thisError.Exception.Message)"
+}
+
+# But it only works on terminating errors...
+
+Copy-Item Test.txt C:\
+
+try { 
+    Copy-Item Test.txt C:\
+} catch { 
+    "You'll never catch me!"
+}
+
+$ErrorActionPreference = "Stop"
+try { 
+    Copy-Item Test.txt C:\
+} catch { 
+    "You'll never catch me!"
+}
+
+<# You could also:
+
+try { 
+    Copy-Item Test.txt C:\ -ErrorAction:Stop
+} catch { 
+    "You'll never catch me!"
+}
+
+#>
+
+## Next slide
+
+###########
+
+# Basic IO (you can't just "wait for a keypress" though)
+
+$myInput = Read-Host "Tell me anything"
+
+# Saying nothing is like Write-Output
+
+$myInput
+Write-Host $myInput      # It's a lot like PRINT
+Write-Output $myInput    # It's a lot like SELECT
+
+# It's a lot like the difference between PRINT and SELECT.
+
+$myOutput = Write-Host $myInput
+"myOutput is: $myOutput" # Blank
+$myOutput = Write-Output $myInput
+"myOutput is: $myOutput" # Not on your life
+
+$myInput | Clip
+&notepad
+
+# We'll write out all the files in our Windows directory into a CSV
+
+$myFiles = Get-ChildItem C:\Windows
+$myFiles | Measure-Object
+$myFiles | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# It has a lot of columns...
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# Oh no, we lost it
+
+$myFiles = $null
+
+# We can recreate it
+
+$myFiles = Get-Content C:\Temp\MyWindowsFiles.csv | ConvertFrom-Csv 
+
+# Manipulate it, writing out just the columns we want
+
+$myFiles | Select-Object -Property Name, Attributes | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# That's better
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# If we wanted to do XML we have to jump through a few more hoops
+# This is a fully serialized .NET object stored to a file. We have
+# an Import-CliXml cmdlet too.
+
+$myFiles | Select-Object -Property Name, Attributes | Export-CliXml C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+# We also have a ConvertTo-Xml but it returns an XML type. We can
+# however grab a string property of that type, and pipe it to a file.
+
+$myFiles | Select-Object -Property Name, Attributes | 
+    ConvertTo-Xml | 
+    Select-Object -ExpandProperty OuterXml | 
+    Set-Content C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+## Next Part, Basic Investigation
+
+###############
+
+# Basic IO (you can't just "wait for a keypress" though)
+
+$myInput = Read-Host "Tell me anything"
+
+# Saying nothing is like Write-Output
+
+$myInput
+Write-Host $myInput      # It's a lot like PRINT
+Write-Output $myInput    # It's a lot like SELECT
+
+# It's a lot like the difference between PRINT and SELECT.
+
+$myOutput = Write-Host $myInput
+"myOutput is: $myOutput" # Blank
+$myOutput = Write-Output $myInput
+"myOutput is: $myOutput" # Not on your life
+
+$myInput | Clip
+&notepad
+
+# We'll write out all the files in our Windows directory into a CSV
+
+$myFiles = Get-ChildItem C:\Windows
+$myFiles | Measure-Object
+$myFiles | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# It has a lot of columns...
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# Oh no, we lost it
+
+$myFiles = $null
+
+# We can recreate it
+
+$myFiles = Get-Content C:\Temp\MyWindowsFiles.csv | ConvertFrom-Csv 
+
+# Manipulate it, writing out just the columns we want
+
+$myFiles | Select-Object -Property Name, Attributes | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# That's better
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# If we wanted to do XML we have to jump through a few more hoops
+# This is a fully serialized .NET object stored to a file. We have
+# an Import-CliXml cmdlet too.
+
+$myFiles | Select-Object -Property Name, Attributes | Export-CliXml C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+# We also have a ConvertTo-Xml but it returns an XML type. We can
+# however grab a string property of that type, and pipe it to a file.
+
+$myFiles | Select-Object -Property Name, Attributes | 
+    ConvertTo-Xml | 
+    Select-Object -ExpandProperty OuterXml | 
+    Set-Content C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+## Next Part, Basic Investigation
+
+#################
 
