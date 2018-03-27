@@ -1,2 +1,30 @@
 Install VMware Workstation Play.
-Install Centos from VM as server and client.
+Install Centos from VM as server and client vm.
+
+Change Host name
+hostnamectl set-hostname server
+reboot
+hostnamectl set-hostname client
+reboot
+
+su -
+pw: root
+open visudo file
+add developer  ALL=(ALL)  ALL    NOPASSWD: ALL
+save
+
+set domain name at hosts file
+sudo vi /etc/hosts
+192.168.150.132   server.com
+192.168.150.130   client.com
+save
+
+ping server.com
+
+set ssh between server and client without password.
+ssh-keygen developer@server.com
+ssh-keygen developer@client.com
+
+
+
+
