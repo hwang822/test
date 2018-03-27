@@ -1,3 +1,4 @@
+
 xCreate AWS Account at
 https://aws.amazon.com
 hw2kem_Dl@00
@@ -5,12 +6,16 @@ hw2kem_Dl@00
 10$/mo
 
 build 4 redhat server instances
-server_master   ec2-18-188-59-72.us-east-2.compute.amazonaws.com  (18.188.59.72)
-server_db       ec2-18-188-137-228.us-east-2.compute.amazonaws.com (18.188.137.228)
-server_app      ec2-18-217-55-171.us-east-2.compute.amazonaws.com (18.217.55.171)
-server_web      ec2-18-218-106-3.us-east-2.compute.amazonaws.com  (18.218.106.3)
 
-user name: 18.217.55.171
+
+server_master   ec2-18-221-73-174.us-east-2.compute.amazonaws.com  (18.221.73.174)
+server_db       ec2-18-218-43-72.us-east-2.compute.amazonaws.com (18.218.43.72)
+server_app      ec2-18-220-200-56.us-east-2.compute.amazonaws.com (18.220.200.56)
+server_web      ec2-18-220-88-71.us-east-2.compute.amazonaws.com  (18.220.88.71)
+
+Create 4 Elastic IPS and assocate to servers.
+
+user name: ec2_user
 password: demokey.pem  (create ssh key file and save at client local)
 
 connect PutTTY client or VMware
@@ -21,13 +26,13 @@ Run PuttyGen load key file demokey.pem and generat new putty accepted key file d
 
 Prun Putty to create 4 sesions
 Saved Session: aws_master
-Session\Host Name: ec2-user@ec2-18-188-137-228.us-east-2.compute.amazonaws.com
+Session\Host Name: ec2-18-221-73-174.us-east-2.compute.amazonaws.com
 Saved Session: aws_app_server
-Session\Host Name: ec2-user@ec2-18-188-137-228.us-east-2.compute.amazonaws.com
+Session\Host Name: ec2-18-220-200-56.us-east-2.compute.amazonaws.com
 Saved Session: aws_db_server
-Session\Host Name: ec2-18-188-137-228.us-east-2.compute.amazonaws.com
+Session\Host Name: ec2-18-218-43-72.us-east-2.compute.amazonaws.com
 Saved Session: aws_weber_server
-Session\Host Name: ec2-18-218-106-3.us-east-2.compute.amazonaws.com
+Session\Host Name: ec2-18-220-88-71.us-east-2.compute.amazonaws.com
 
 Connection\Data\Auto-lonin username: ec2-user
 Connection\SSH\Auth: Browse from C:\Hwang\AWS\demokey_putty..ppk
