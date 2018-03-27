@@ -32,6 +32,55 @@ Session\Host Name: ec2-18-218-106-3.us-east-2.compute.amazonaws.com
 Connection\Data\Auto-lonin username: ec2-user
 Connection\SSH\Auth: Browse from C:\Hwang\AWS\demokey_putty..ppk
 Save and Open
+Laod and open all essions.
+
+vi /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.31.16.166   server_master
+172.31.27.228   server_weber
+172.31.46.51    server_db
+172.31.17.202   server_app
+save and copy to all servers /etc/
+
+create ssh-key at master and copy to all server.
+[ec2-user@server_master ~]$ ssh-keygen
+[ec2-user@server_master ~]$ sudo ssh-copy-id server_app
+
+need vi /etc/ssh/sshd_config and change
+PasswordAuthentication yes
+#PermitEmptyPasswords no
+#PasswordAuthentication no
+systemctl restart sshd
+
+
+Install Ansible
+go to https://www.tecmint.com/how-to-enable-epel-repository-for-rhel-centos-6-5/
+
+## RHEL/CentOS 7 64-Bit ##
+# wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+# rpm -ivh epel-release-latest-7.noarch.rpm
+
+download epel-release 
+
+first install wget package for downlaod repository
+[ec2-user@server_master ~]$ sudo yum install wget
+[ec2-user@server_master ~]$ wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+[ec2-user@server_master ~]$ rpm -ivh epel-release-latest-7.noarch.rpm
+
+[ec2-user@server_master ~]$ cd /etc/yum.repos.d/
+[ec2-user@server_master yum.repos.d]$ ll
+total 28
+-rw-r--r--. 1 root root  951 Oct  2 17:44 epel.repo
+-rw-r--r--. 1 root root 1050 Oct  2 17:44 epel-testing.repo
+-rw-r--r--. 1 root root  607 Mar 27 14:13 redhat-rhui-client-config.repo
+-rw-r--r--. 1 root root 8679 Mar 27 14:13 redhat-rhui.repo
+-rw-r--r--. 1 root root   80 Mar 27 14:13 rhui-load-balancers.conf
+
+epel.repo is avaliable
+
+could install  sudo yum install ansible -y
+
 
 
 
