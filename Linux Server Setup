@@ -1,3 +1,5 @@
+
+
 install ansible
 https://www.youtube.com/watch?v=CvnfzTnpASo
 
@@ -37,6 +39,9 @@ ssh-copy-id developer@server.com
 ssh-copy-id developer@client.com
 
 instaall ansible
+
+yum install https:/dl.fedor
+yum install http://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.4.0.0-1.el7.ans.noarch.rpm
 
 
 
