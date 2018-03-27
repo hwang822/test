@@ -1,3 +1,6 @@
+install ansible
+https://www.youtube.com/watch?v=CvnfzTnpASo
+
 Install VMware Workstation Play.
 Install Centos from VM as server and client vm.
 
@@ -22,9 +25,18 @@ save
 ping server.com
 
 set ssh between server and client without password.
-ssh-keygen developer@server.com
-ssh-keygen developer@client.com
 
+at server.com
+ssh-keygen
+ssh-copy-id developer@server.com
+ssh-copy-id developer@client.com
+
+at client.com
+ssh-keygen
+ssh-copy-id developer@server.com
+ssh-copy-id developer@client.com
+
+instaall ansible
 
 
 
