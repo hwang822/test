@@ -20,6 +20,7 @@ password: demokey.pem  (create ssh key file and save at client local)
 
 connect PutTTY client or VMware
 
+
 Putty:
 Download and install Putty and PuttyGen
 Run PuttyGen load key file demokey.pem and generat new putty accepted key file demokey_putty.ppk
@@ -58,9 +59,21 @@ PasswordAuthentication yes
 #PasswordAuthentication no
 systemctl restart sshd
 
+at each server
+adduser ansibleuser
+passwd ansibleuser
+new password: ansibleuser
+retype password: ansibleuser
+
+at master server
+su ansibeuser
+[ansibleuser@server_master ~]$ ssh-keygen
+[ansibleuser@server_master ~]$ ssh-copy-id server_weber
+[ansibleuser@server_master ~]$ ssh-copy-id server_app
+[ansibleuser@server_master ~]$ ssh-copy-id server_db
 
 Install Ansible
-go to https://www.tecmint.com/how-to-enable-epel-repository-for-rhel-centos-6-5/
+go to https://www.tecmint.com/how-to-enable-epel-repository-for-rhel-centos-6-5/an
 
 ## RHEL/CentOS 7 64-Bit ##
 # wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
