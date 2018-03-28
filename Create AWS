@@ -7,14 +7,13 @@ hw2kem_Dl@00
 
 build 4 redhat server instances
 
-
 server_master   ec2-18-221-73-174.us-east-2.compute.amazonaws.com  (18.221.73.174)
 server_db       ec2-18-218-43-72.us-east-2.compute.amazonaws.com (18.218.43.72)
 server_app      ec2-18-220-200-56.us-east-2.compute.amazonaws.com (18.220.200.56)
 server_web      ec2-18-220-88-71.us-east-2.compute.amazonaws.com  (18.220.88.71)
 
 Create 4 Elastic IPS and assocate to servers.
-
+hostnamectl set-hostname "server_master"
 user name: ec2_user
 password: demokey.pem  (create ssh key file and save at client local)
 
@@ -44,7 +43,7 @@ vi /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 172.31.16.166   server_master
-172.31.27.228   server_weber
+172.31.27.228   server_web
 172.31.46.51    server_db
 172.31.17.202   server_app
 save and copy to all servers /etc/
@@ -98,6 +97,71 @@ total 28
 epel.repo is avaliable
 
 could install  sudo yum install ansible -y
+
+
+[ansibleuser@server_master ~]$ ansible --version
+ansible 2.4.2.0
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/ansibleuser/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.5 (default, May  3 2017, 07:55:04) [GCC 4.8.5 20150623 (Red Hat 4.8.5-14)]
+[ansibleuser@server_master ~]$ cd /etc/ansible/
+[ansibleuser@server_master ansible]$ ls
+ansible.cfg  hosts  roles
+
+[ec2-user@server_master ansible]$ sudo vi hosts
+[server_web]
+172.31.27.228
+[server_app]
+172.31.17.202
+[server_db]
+172.31.46.51
+
+[ec2-user@server_master ~]$ ansible all --list-hosts
+  hosts (3):
+    172.31.46.51
+    172.31.27.228
+    172.31.17.202
+
+[ec2-user@server_master ~]$ su ansibleuser
+Password: ansibleuser
+
+
+[ansibleuser@server_master ec2-user]$ ansible all -m ping
+172.31.46.51 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+172.31.27.228 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+172.31.17.202 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+
+only need talk to server_web
+
+[ansibleuser@server_master ec2-user]$ ansible server_web -m ping
+172.31.27.228 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+
+[ansibleuser@server_master ec2-user]$ ansible all -m command -a "uptime"
+172.31.27.228 | SUCCESS | rc=0 >>
+ 15:49:24 up 16:31,  2 users,  load average: 0.00, 0.01, 0.04
+
+172.31.46.51 | SUCCESS | rc=0 >>
+ 15:49:24 up 16:31,  2 users,  load average: 0.00, 0.01, 0.05
+
+172.31.17.202 | SUCCESS | rc=0 >>
+ 15:49:24 up 16:30,  2 users,  load average: 0.00, 0.01, 0.04
+
+
+
 
 
 
