@@ -118,6 +118,8 @@ ansible.cfg  hosts  roles
 [server_web]
 172.31.27.228
 [server_app]
+
+
 172.31.17.202
 [server_db]
 172.31.46.51
@@ -159,6 +161,41 @@ only need talk to server_web
 
 172.31.17.202 | SUCCESS | rc=0 >>
  15:49:24 up 16:30,  2 users,  load average: 0.00, 0.01, 0.04
+
+Create playbook to run tasks and ansible.
+
+mkdir cd playbooks
+
+[ec2-user@server_ansible playbooks]$ vi test.yml
+---
+- name: test of servers
+  hosts: 127.0.0.1
+  connection: local
+  tasks:
+
+run tasks.
+
+[ec2-user@server_ansible playbooks]$ ansible-playbook test.yml
+
+PLAY [test of servers] ******************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************
+ok: [127.0.0.1]
+
+PLAY RECAP ******************************************************************************************************
+127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0
+
+[ec2-user@server_ansible playbooks]$ vi test.yml
+[ec2-user@server_ansible playbooks]$ ansible-playbook test.yml
+
+PLAY [test of servers] ******************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************
+ok: [127.0.0.1]
+
+PLAY RECAP ******************************************************************************************************
+127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0
+
 
 
 
