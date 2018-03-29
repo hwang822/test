@@ -16,28 +16,33 @@ npm -v => 5.6.0
 
 Step 2. Create a new project
 Created a folder Angular
-c:\Workarea\Angular>ng new my-app
+C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular
 
 Below is project developer site.
 
-c:\Workarea\Angular>cd my-app
+C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular>dir
+ Volume in drive C has no label.
+ Volume Serial Number is C8DF-1D5E
 
-c:\Workarea\Angular\my-app>dir
- Volume in drive C is Windows
- Volume Serial Number is F625-2230
+ Directory of C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular
 
- Directory of c:\Workarea\Angular\my-app
+03/06/2018  04:20 PM    <DIR>          .
+03/06/2018  04:20 PM    <DIR>          ..
+03/06/2018  04:15 PM             1,313 .angular-cli.json
+03/06/2018  04:15 PM               258 .editorconfig
+03/06/2018  04:15 PM    <DIR>          e2e
+03/06/2018  04:15 PM               956 karma.conf.js
+03/29/2018  07:28 AM    <DIR>          node_modules
+03/06/2018  04:20 PM           465,308 package-lock.json
+03/06/2018  04:20 PM             1,677 package.json
+03/06/2018  04:20 PM               876 protractor.conf.js
+03/06/2018  04:20 PM    <DIR>          src
+03/06/2018  04:20 PM               382 tsconfig.json
+03/06/2018  04:20 PM             3,184 tslint.json
+               8 File(s)        473,954 bytes
+               5 Dir(s)  153,345,609,728 bytes free
 
-02/27/2018  09:04 AM    <DIR>          .
-02/27/2018  09:04 AM    <DIR>          ..
-02/27/2018  09:03 AM             1,241 .angular-cli.json
-02/27/2018  09:03 AM               245 .editorconfig
-02/27/2018  09:03 AM               544 .gitignore
-02/27/2018  09:03 AM    <DIR>          e2e
-02/27/2018  09:03 AM               923 karma.conf.js
-02/27/2018  09:04 AM    <DIR>          node_modules
-02/27/2018  09:04 AM           413,991 package-lock.json
-02/27/2018  09:03 AM             1,291 package.json
+C:\Workarea\WCFandWVC\MixwellSoftware\MixwellAngular\src\app
 
 app.component.ts— the component class code, written in TypeScript. 
 app.component.html— the component template, written in HTML.
@@ -56,11 +61,7 @@ ng serve -o
 
 Step 4: Edit your first Angular component at app.component.ts 
 export class AppComponent {
-  title = 'app';
-}
-
-export class AppComponent {
-  title = 'hwang first app';
+  title = 'Mixwell Software';
 }
 
 everytime change the ng will recomplier the code and relash the web page from server.
