@@ -128,6 +128,11 @@ app.component.html add component app-services it set components location list.
 
 example: 3 parts at main page.
 
+Create 3 components for this 3 page
+
+ng generate component Dashboard
+ng generate component Employees
+ng generate component Services
 part 1.
 <h1>{{title}}</h1>
 <nav>
