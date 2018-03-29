@@ -48,6 +48,15 @@ vi /etc/hosts
 172.31.17.202   server_app
 save and copy to all servers /etc/
 
+set root password of ec2 instance
+1.    Connect to your EC2 instance running Linux by using SSH.
+2.    Assume root user permissions by running the following command:
+$ sudo su
+3.    Create a password for the root user by running the following command:
+# passwd root 
+new password: root
+retype passwrod: root
+
 create ssh-key at master and copy to all server.
 [ec2-user@server_master ~]$ ssh-keygen
 [ec2-user@server_master ~]$ sudo ssh-copy-id server_app
