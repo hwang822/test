@@ -82,9 +82,14 @@ type in ftp://192.168.0.109, un: gm, pw: dl31
 Turn of ftp server at firewall.
 
 download and install FileZilla
-host: www.mxiwellsoftware.com
+host: www.mxiwellsoftware.com or 73.76.111.140
 un: gm
 pw: dl31
+
+at Windows File Explorer
+type: ftp://www.mixwellsoftware.com
+ftp://73.76.111.140
+will ask un: gm ans ps: dl31
 
 5. setup email server at host.
     go to http://www.hmailserver.com and down load the email server.
