@@ -118,8 +118,6 @@ ansible.cfg  hosts  roles
 [server_web]
 172.31.27.228
 [server_app]
-
-
 172.31.17.202
 [server_db]
 172.31.46.51
@@ -196,9 +194,16 @@ ok: [127.0.0.1]
 PLAY RECAP ******************************************************************************************************
 127.0.0.1                  : ok=1    changed=0    unreachable=0    failed=0
 
+******************
+ansible install a instance at AWS
+*****************
 
+at one linux server (server_ansible)
+mkdir kyes
+vi /keys/demokey.pem
+copy key pair key to file and save.
 
-
+[ec2-user@server_ansible ~]$ sudo chmod 400 keys/demokey.pem
 
 
 
