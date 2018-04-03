@@ -75,7 +75,16 @@ PasswordAuthentication yes
 #PasswordAuthentication no
 systemctl restart sshd
 
+*********
+Install AWS cli  (AWS command line interface)
+**********
+after install you could  run aws from cmd
+
+
+
+***********
 Install Ansible
+*********
 go to https://www.tecmint.com/how-to-enable-epel-repository-for-rhel-centos-6-5/an
 
 ## RHEL/CentOS 7 64-Bit ##
