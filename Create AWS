@@ -330,14 +330,97 @@ get key from aws console management "My Security Credentials" and down load file
 [ec2-user@server_ansible ~]$ aws configure
 AWS Access Key ID [None]: AWSAccessKeyId= from rootkey file
 AWS Secret Access Key [None]: AWSSecretKey= from rootkey file
-Default region name [None]: us-east-2c
+Default region name [None]: us-east-2
 Default output format [None]: text
 
+[ec2-user@server_ansible ~]$ ls -l ~/.aws
+total 8
+-rw-------. 1 ec2-user ec2-user  44 Apr  3 14:47 config
+-rw-------. 1 ec2-user ec2-user 116 Apr  3 14:47 credentials
 
 config aws cli to connect to aws api.
 
+[ec2-user@server_ansible ~]$ cat ~/.aws/config
+[default]
+output = text
+region = us-east-2
+
+[ec2-user@server_ansible ~]$ aws ec2 describe-regions
+REGIONS ec2.ap-south-1.amazonaws.com    ap-south-1
+REGIONS ec2.eu-west-3.amazonaws.com     eu-west-3
+REGIONS ec2.eu-west-2.amazonaws.com     eu-west-2
+REGIONS ec2.eu-west-1.amazonaws.com     eu-west-1
+REGIONS ec2.ap-northeast-2.amazonaws.com        ap-northeast-2
+REGIONS ec2.ap-northeast-1.amazonaws.com        ap-northeast-1
+REGIONS ec2.sa-east-1.amazonaws.com     sa-east-1
+REGIONS ec2.ca-central-1.amazonaws.com  ca-central-1
+REGIONS ec2.ap-southeast-1.amazonaws.com        ap-southeast-1
+REGIONS ec2.ap-southeast-2.amazonaws.com        ap-southeast-2
+REGIONS ec2.eu-central-1.amazonaws.com  eu-central-1
+REGIONS ec2.us-east-1.amazonaws.com     us-east-1
+REGIONS ec2.us-east-2.amazonaws.com     us-east-2
+REGIONS ec2.us-west-1.amazonaws.com     us-west-1
+REGIONS ec2.us-west-2.amazonaws.com     us-west-2
+
+[ec2-user@server_ansible ~]$ aws ec2 describe-instances
+[ec2-user@server_ansible ~]$ aws iam list-access-keys
+ACCESSKEYMETADATA       AKIAJFMUFTBNF6FP5AHQ    2018-04-03T15:08:39Z    Active
+
+*************
+AWS EBS 
+*************
+Create an EBS volume:
+[ec2-user@server_ansible ~]$ aws ec2 create-volume --size 80 --region us-east-2 --availability-zone us-east-2c --volume-type gp2
+
+Attach a EBS to a instance:
+To attach an EBS volume to an instance using the console
+Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/. 
+In the navigation pane, choose Volumes. 
+Select a volume and choose Actions, Attach Volume. 
+
+Make EBS format to use
+After you attach an Amazon EBS volume to your instance, it is exposed as a block device. 
+
+[ec2-user@server_ansible ~]$ lsblk
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  10G  0 disk
+├─xvda1 202:1    0   1M  0 part
+└─xvda2 202:2    0  10G  0 part /
+xvdf    202:80   0  80G  0 disk
+
+[ec2-user@server_ansible ~]$ sudo file -s /dev/xvdf
+/dev/xvdf: data
+[ec2-user@server_ansible ~]$ sudo mkfs -t ext4 /dev/xvdf
+[ec2-user@server_ansible ~]$ sudo mkdir aws_ebs_80G
+
+[ec2-user@server_ansible ~]$ sudo mount /dev/xvdf aws_ebs_80G
+[ec2-user@server_ansible ~]$ sudo vi /etc/fstab
+add and save
+UUID=3e11801e-5277-4d87-be4c-0a9a61fbc3da /                       xfs     defaults        0 0
+/dev/xvdf       aws_ebs_80G                                     xfs     default         0 0
+
+[ec2-user@server_ansible ~]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+/dev/xvda2      1047      3452 1721488   8751964  17% /
+devtmpfs          486796       0    486796   0% /dev
+tmpfs             507288       0    507288   0% /dev/shm
+tmpfs             507288   57372    449916  12% /run
+tmpfs             507288       0    507288   0% /sys/fs/cgroup
+tmpfs             101460       0    101460   0% /run/user/1000
+/dev/xvdf       82438552   57368  78170496   1% /home/ec2-user/aws_ebs_80G
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
