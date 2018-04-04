@@ -424,17 +424,277 @@ tmpfs             101460       0    101460   0% /run/user/1000
 
 [ec2-user@server_ansible playbooks]$ ansible-playbook check_ebs.yml
 
+Aslo 
+- command: "{{ item }}"
+  args:
+    chdir: "/src/package/"
+  with_items:
+    - "./configure"
+    - "/usr/bin/make"
+    - "/usr/bin/make install"
+
+[ec2-user@server_ansible playbooks]$ ansible-playbook test.yml
+[ec2-user@server_ansible playbooks]$ vi test.yml
+---
+- hosts: all
+  tasks:
+     - name: multiline shell command
+       shell: >
+         ls --color
+         /home
+       register: stdout
+
+     - name: debug output
+       debug: msg={{ stdout }}
+
+****************************
+EBS management using AWS CLI
+****************************
+https://www.youtube.com/watch?v=kBjM6zgJbCU
+aws ec2 describe-volumes --output table
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-volumes --output table
+-----------------------------------------------------------------------------
+|                              DescribeVolumes                              |
++---------------------------------------------------------------------------+
+||                                 Volumes                                 ||
+|+-----------------------------+-------------------------------------------+|
+||  AvailabilityZone           |  us-east-2c                               ||
+||  CreateTime                 |  2018-03-27T18:11:15.337Z                 ||
+||  Encrypted                  |  False                                    ||
+||  Iops                       |  100                                      ||
+||  Size                       |  10                                       ||
+||  SnapshotId                 |  snap-03723f9ebe245c0e1                   ||
+||  State                      |  in-use                                   ||
+||  VolumeId                   |  vol-0d62f87a1ca015c53                    ||
+||  VolumeType                 |  gp2                                      ||
+|+-----------------------------+-------------------------------------------+|
+|||                              Attachments                              |||
+||+-------------------------------+---------------------------------------+||
+|||  AttachTime                   |  2018-03-27T18:11:15.000Z             |||
+|||  DeleteOnTermination          |  True                                 |||
+|||  Device                       |  /dev/sda1                            |||
+|||  InstanceId                   |  i-0b2d2d01c191ca2f3                  |||
+|||  State                        |  attached                             |||
+|||  VolumeId                     |  vol-0d62f87a1ca015c53                |||
+||+-------------------------------+---------------------------------------+||
+||                                 Volumes                                 ||
+|+-----------------------------+-------------------------------------------+|
+||  AvailabilityZone           |  us-east-2c                               ||
+||  CreateTime                 |  2018-03-29T16:09:31.629Z                 ||
+||  Encrypted                  |  False                                    ||
+||  Iops                       |  100                                      ||
+||  Size                       |  10                                       ||
+||  SnapshotId                 |  snap-03723f9ebe245c0e1                   ||
+||  State                      |  in-use                                   ||
+||  VolumeId                   |  vol-0e19b13103c417296                    ||
+||  VolumeType                 |  gp2                                      ||
+|+-----------------------------+-------------------------------------------+|
+|||                              Attachments                              |||
+||+-------------------------------+---------------------------------------+||
+|||  AttachTime                   |  2018-03-29T16:09:31.000Z             |||
+|||  DeleteOnTermination          |  True                                 |||
+|||  Device                       |  /dev/sda1                            |||
+|||  InstanceId                   |  i-050c47304f802640a                  |||
+|||  State                        |  attached                             |||
+|||  VolumeId                     |  vol-0e19b13103c417296                |||
+||+-------------------------------+---------------------------------------+||
+
+[ec2-user@server_ansible ~]$ aws ec2 create-volume --size 80 --region us-east-2 --availability-zone us-east-2c --volume-type gp2
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-volumes --volume-id vol-0d62f87a1ca015c53
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-volumes --volume-id vol-0d62f87a1ca015c53 --output table
+---------------------------------------------------------
+|                    DescribeVolumes                    |
++-------------------------------------------------------+
+||                       Volumes                       ||
+|+---------------------+-------------------------------+|
+||  AvailabilityZone   |  us-east-2c                   ||
+||  CreateTime         |  2018-03-27T18:11:15.337Z     ||
+||  Encrypted          |  False                        ||
+||  Iops               |  100                          ||
+||  Size               |  10                           ||
+||  SnapshotId         |  snap-03723f9ebe245c0e1       ||
+||  State              |  in-use                       ||
+||  VolumeId           |  vol-0d62f87a1ca015c53        ||
+||  VolumeType         |  gp2                          ||
+|+---------------------+-------------------------------+|
+|||                    Attachments                    |||
+||+----------------------+----------------------------+||
+|||  AttachTime          |  2018-03-27T18:11:15.000Z  |||
+|||  DeleteOnTermination |  True                      |||
+|||  Device              |  /dev/sda1                 |||
+|||  InstanceId          |  i-0b2d2d01c191ca2f3       |||
+|||  State               |  attached                  |||
+|||  VolumeId            |  vol-0d62f87a1ca015c53     |||
+||+----------------------+----------------------------+||
+
+[ec2-user@server_ansible playbooks]$ aws ec2 attach-volume --volume-id vol-0d62f87a1ca015c53 --instance-id i-0b2d2d01c191ca2f3 --device /dev/sdc
+
+An error occurred (VolumeInUse) when calling the AttachVolume operation: vol-0d62f87a1ca015c53 is already attached to an instance
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-instances --output table --instance-id i-0b2d2d01c191ca2f3
+-----------------------------------------------------------------------------------
+|                                DescribeInstances                                |
++---------------------------------------------------------------------------------+
+||                                 Reservations                                  ||
+|+--------------------------------+----------------------------------------------+|
+||  OwnerId                       |  819471484572                                ||
+||  ReservationId                 |  r-068e77471af3348a7                         ||
+|+--------------------------------+----------------------------------------------+|
+|||                                  Instances                                  |||
+||+------------------------+----------------------------------------------------+||
+|||  AmiLaunchIndex        |  0                                                 |||
+|||  Architecture          |  x86_64                                            |||
+|||  ClientToken           |                                                    |||
+|||  EbsOptimized          |  False                                             |||
+|||  EnaSupport            |  True                                              |||
+|||  Hypervisor            |  xen                                               |||
+|||  ImageId               |  ami-0b1e356e                                      |||
+|||  InstanceId            |  i-0b2d2d01c191ca2f3                               |||
+|||  InstanceType          |  t2.micro                                          |||
+|||  KeyName               |  demokey                                           |||
+|||  LaunchTime            |  2018-03-27T18:11:14.000Z                          |||
+|||  PrivateDnsName        |  ip-172-31-46-51.us-east-2.compute.internal        |||
+|||  PrivateIpAddress      |  172.31.46.51                                      |||
+|||  PublicDnsName         |  ec2-18-218-43-72.us-east-2.compute.amazonaws.com  |||
+|||  PublicIpAddress       |  18.218.43.72                                      |||
+|||  RootDeviceName        |  /dev/sda1                                         |||
+|||  RootDeviceType        |  ebs                                               |||
+|||  SourceDestCheck       |  True                                              |||
+|||  StateTransitionReason |                                                    |||
+|||  SubnetId              |  subnet-b4f9c4f9                                   |||
+|||  VirtualizationType    |  hvm                                               |||
+|||  VpcId                 |  vpc-960b9ffe                                      |||
+||+------------------------+----------------------------------------------------+||
+||||                            BlockDeviceMappings                            ||||
+|||+--------------------------------------+------------------------------------+|||
+||||  DeviceName                          |  /dev/sda1                         ||||
+|||+--------------------------------------+------------------------------------+|||
+|||||                                   Ebs                                   |||||
+||||+--------------------------------+----------------------------------------+||||
+|||||  AttachTime                    |  2018-03-27T18:11:15.000Z              |||||
+|||||  DeleteOnTermination           |  True                                  |||||
+|||||  Status                        |  attached                              |||||
+|||||  VolumeId                      |  vol-0d62f87a1ca015c53                 |||||
+||||+--------------------------------+----------------------------------------+||||
+||||                                Monitoring                                 ||||
+|||+-------------------------------+-------------------------------------------+|||
+||||  State                        |  disabled                                 ||||
+|||+-------------------------------+-------------------------------------------+|||
+||||                             NetworkInterfaces                             ||||
+|||+-----------------------+---------------------------------------------------+|||
+||||  Description          |                                                   ||||
+||||  MacAddress           |  0a:bb:5f:16:8e:b0                                ||||
+||||  NetworkInterfaceId   |  eni-0b1c5d20596f6dcf9                            ||||
+||||  OwnerId              |  819471484572                                     ||||
+||||  PrivateDnsName       |  ip-172-31-46-51.us-east-2.compute.internal       ||||
+||||  PrivateIpAddress     |  172.31.46.51                                     ||||
+||||  SourceDestCheck      |  True                                             ||||
+||||  Status               |  in-use                                           ||||
+||||  SubnetId             |  subnet-b4f9c4f9                                  ||||
+||||  VpcId                |  vpc-960b9ffe                                     ||||
+|||+-----------------------+---------------------------------------------------+|||
+|||||                               Association                               |||||
+||||+----------------+--------------------------------------------------------+||||
+
+
+|||||  IpOwnerId     |  819471484572                                          |||||
+|||||  PublicDnsName |  ec2-18-218-43-72.us-east-2.compute.amazonaws.com      |||||
+|||||  PublicIp      |  18.218.43.72                                          |||||
+||||+----------------+--------------------------------------------------------+||||
+|||||                               Attachment                                |||||
+||||+-----------------------------+-------------------------------------------+||||
+|||||  AttachTime                 |  2018-03-27T18:11:14.000Z                 |||||
+|||||  AttachmentId               |  eni-attach-07be91c54452fa1b2             |||||
+|||||  DeleteOnTermination        |  True                                     |||||
+|||||  DeviceIndex                |  0                                        |||||
+|||||  Status                     |  attached                                 |||||
+||||+-----------------------------+-------------------------------------------+||||
+|||||                                 Groups                                  |||||
+||||+----------------------------------------+--------------------------------+||||
+|||||                 GroupId                |           GroupName            |||||
+||||+----------------------------------------+--------------------------------+||||
+|||||  sg-0f7adc991c6ab946c                  |  amsibledemo                   |||||
+|||||  sg-0e3a538fe4cca78c6                  |  launch-wizard-5               |||||
+||||+----------------------------------------+--------------------------------+||||
+|||||                           PrivateIpAddresses                            |||||
+||||+---------------------+---------------------------------------------------+||||
+|||||  Primary            |  True                                             |||||
+|||||  PrivateDnsName     |  ip-172-31-46-51.us-east-2.compute.internal       |||||
+|||||  PrivateIpAddress   |  172.31.46.51                                     |||||
+||||+---------------------+---------------------------------------------------+||||
+||||||                              Association                              ||||||
+|||||+----------------+------------------------------------------------------+|||||
+||||||  IpOwnerId     |  819471484572                                        ||||||
+||||||  PublicDnsName |  ec2-18-218-43-72.us-east-2.compute.amazonaws.com    ||||||
+||||||  PublicIp      |  18.218.43.72                                        ||||||
+
+|||||+----------------+------------------------------------------------------+|||||
+||||                                 Placement                                 ||||
+|||+-------------------------------------------+-------------------------------+|||
+||||  AvailabilityZone                         |  us-east-2c                   ||||
+||||  GroupName                                |                               ||||
+||||  Tenancy                                  |  default                      ||||
+|||+-------------------------------------------+-------------------------------+|||
+||||                              SecurityGroups                               ||||
+|||+-----------------------------------------+---------------------------------+|||
+||||                 GroupId                 |            GroupName            ||||
+|||+-----------------------------------------+---------------------------------+|||
+||||  sg-0f7adc991c6ab946c                   |  amsibledemo                    ||||
+||||  sg-0e3a538fe4cca78c6                   |  launch-wizard-5                ||||
+|||+-----------------------------------------+---------------------------------+|||
+||||                                   State                                   ||||
+|||+------------------------------+--------------------------------------------+|||
+||||  Code                        |  16                                        ||||
+||||  Name                        |  running                                   ||||
+|||+------------------------------+--------------------------------------------+|||
+||||                                   Tags                                    ||||
+|||+-----------------------------+---------------------------------------------+|||
+||||  Key                        |  Name                                       ||||
+||||  Value                      |  server_db                                  ||||
+|||+-----------------------------+---------------------------------------------+|||
+
+[ec2-user@server_ansible playbooks]$ aws ec2 create-snapshot --volume-id  vol-0d62f87a1ca015c53 --description "create snapshot"
+create snapshot False   819471484572            snap-08ff15c0f266aa53b  2018-04-04T02:11:31.000Z        pending vol-0d62f87a1ca015c53       10
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-snapshots --output table
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-snapshots --snapshot-id snap-01a09909420761c20 --output table
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-snapshots --snapshot-id snap-01a09909420761c20 --output table
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                          DescribeSnapshots                                                                          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+||                                                                             Snapshots                                                                             ||
+|+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+|
+||  Description|  Copied for DestinationAmi ami-c75f7ea2 from SourceAmi ami-17d5e401 for SourceSnapshot snap-04321123c4ac1c6ad. Task created on 1,498,585,380,991.   ||
+||  Encrypted  |  False                                                                                                                                              ||
+||  OwnerId    |  397995763618                                                                                                                                       ||
+||  Progress   |  100%                                                                                                                                               ||
+||  SnapshotId |  snap-01a09909420761c20                                                                                                                             ||
+||  StartTime  |  2017-06-27T17:43:05.000Z                                                                                                                           ||
+||  State      |  completed                                                                                                                                          ||
+||  VolumeId   |  vol-ffffffff                                                                                                                                       ||
+||  VolumeSize |  8                                                                                                                                                  ||
+|+-------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+|
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-snapshots --owner-id 936728503675 --output table
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                          DescribeSnapshots                                                                         |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+||                                                                             Snapshots                                                                            ||
+|+-------------+------------+---------------+-----------+-------------------------+---------------------------+------------+-------------------------+--------------+|
+|| Description | Encrypted  |    OwnerId    | Progress  |       SnapshotId        |         StartTime         |   State    |        VolumeId         | VolumeSize   ||
+|+-------------+------------+---------------+-----------+-------------------------+---------------------------+------------+-------------------------+--------------+|
+||             |  False     |  936728503675 |  100%     |  snap-0242082ac44800f2e |  2017-06-27T14:25:45.000Z |  completed |  vol-0fb6f39847b7378ed  |  8           ||
+||             |  False     |  936728503675 |  100%     |  snap-074ff5bb3f3b193c8 |  2017-06-27T13:51:13.000Z |  completed |  vol-001ae8ce52c9fc83a  |  8           ||
+|+-------------+------------+---------------+-----------+-------------------------+---------------------------+------------+-------------------------+--------------+|
+
+aws ec2 detach-volume --volume-id vol-0fb6f39847b7378ed
 
 
 
 
 
 
-
-
-
-
-
-
-
-  
