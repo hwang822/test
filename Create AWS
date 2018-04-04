@@ -378,6 +378,9 @@ Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
 In the navigation pane, choose Volumes. 
 Select a volume and choose Actions, Attach Volume. 
 
+get EBS volumes
+[ec2-user@server_ansible ~]$ aws ec2 describe-volumes
+
 Make EBS format to use
 After you attach an Amazon EBS volume to your instance, it is exposed as a block device. 
 
@@ -409,6 +412,17 @@ tmpfs             507288       0    507288   0% /sys/fs/cgroup
 tmpfs             101460       0    101460   0% /run/user/1000
 /dev/xvdf       82438552   57368  78170496   1% /home/ec2-user/aws_ebs_80G
 
+[ec2-user@server_ansible playbooks]$ vi check_ebs.yml
+
+## check AWS EBS
+- hosts: 127.0.0.1
+  tasks:
+    - name: list files
+      command: ls -l
+    - name: check ems
+      command: aws ec2 describe-valumes
+
+[ec2-user@server_ansible playbooks]$ ansible-playbook check_ebs.yml
 
 
 
