@@ -447,11 +447,45 @@ Aslo
      - name: debug output
        debug: msg={{ stdout }}
 
+ vi  list_ebs_values.yml
+
+||+-------------------------------+---------------------------------------+||
+[ec2-user@server_ansible playbooks]$ vi  list_ebs_values.yml
+## List AWS EBS values
+## Lists volumes id's attached to an EC2 instance.
+##
+- hosts: 127.0.0.1
+  tasks:
+    - name: list files
+      command: ls -l
+    - name: check ems
+      command: aws ec2 describe-volumes --output table
+
+
 ****************************
 EBS management using AWS CLI
 ****************************
+
 https://www.youtube.com/watch?v=kBjM6zgJbCU
+
 aws ec2 describe-volumes --output table
+
+[ec2-user@server_ansible playbooks]$ ansible-playbook  list_ebs_values.yml
+
+PLAY [127.0.0.1] *******************************************************************************************************************
+
+TASK [Gathering Facts] *************************************************************************************************************
+ok: [127.0.0.1]
+
+TASK [list files] ******************************************************************************************************************
+changed: [127.0.0.1]
+
+TASK [check ems] *******************************************************************************************************************
+changed: [127.0.0.1]
+
+PLAY RECAP *************************************************************************************************************************
+127.0.0.1                  : ok=3    changed=2    unreachable=0    failed=0
+
 
 [ec2-user@server_ansible playbooks]$ aws ec2 describe-volumes --output table
 -----------------------------------------------------------------------------
@@ -633,6 +667,7 @@ An error occurred (VolumeInUse) when calling the AttachVolume operation: vol-0d6
 
 |||||+----------------+------------------------------------------------------+|||||
 ||||                                 Placement                                 ||||
+
 |||+-------------------------------------------+-------------------------------+|||
 ||||  AvailabilityZone                         |  us-east-2c                   ||||
 ||||  GroupName                                |                               ||||
@@ -692,7 +727,17 @@ create snapshot False   819471484572            snap-08ff15c0f266aa53b  2018-04-
 |+-------------+------------+---------------+-----------+-------------------------+---------------------------+------------+-------------------------+--------------+|
 
 aws ec2 detach-volume --volume-id vol-0fb6f39847b7378ed
+aws ec2 delete-volume --volume-id vol-0fb6f39847b7378ed
+aws ec2 create-volume --volume-type gp2 --snapshot-id snap-0242082ac44800f2e --availability-zone us-east-2c --size 6
+aws ec2 delete-snapshot --snapshot-id snap-0242082ac44800f2e
+aws ec2 describe-volume-status 
 
+
+[ec2-user@server_ansible playbooks]$ aws ec2 describe-volume-status --volume-id vol-0b8ff5286243b67c1
+VOLUMESTATUSES  us-east-2b      vol-0b8ff5286243b67c1
+VOLUMESTATUS    ok
+DETAILS io-enabled      passed
+DETAILS io-performance  not-applicable
 
 
 
