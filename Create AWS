@@ -739,7 +739,11 @@ VOLUMESTATUS    ok
 DETAILS io-enabled      passed
 DETAILS io-performance  not-applicable
 
-
+******************
+Tutorial: Install a LAMP Web Server on Amazon Linux 2
+******************
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-ug.pdf 
+page 34
 
 
 
