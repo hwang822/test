@@ -19,6 +19,16 @@ password: demokey.pem  (create ssh key file and save at client local)
 
 connect PutTTY client or VMware
 
+test ping instnace. 
+
+To be able to ping an EC2 instance you will need to enable ICMP requests. 
+Open the EC2 Console.
+Click on “Security Groups”. Choose the required security group.
+Click on the “Inbound” tab.
+Add a new EC2 security group inbound rule:
+Type: Custom ICMP rule - IPv4
+Protocol: Echo request
+Source: Anywhere (This will make your instance reply the requests from anywhere)
 
 Putty:
 Download and install Putty and PuttyGen
