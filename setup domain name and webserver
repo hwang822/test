@@ -1,13 +1,13 @@
 1. Get domain name and bind to host server ip addresss.
 
-type myip at google to get host server ip address 73.76.111.140. 
+type myip at google to get host server ip address 73.32.72.19. 
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
-add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.76.111.140 and click submmit.
+add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.72.19 and click submmit.
 
 2. Set Root to forward internet ip address to local host server addresss. 
-at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
-At Network tab: to makesure IP address 73.76.111.140 
+at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS setup
+At Network tab: to makesure IP address 73.32.72.19 
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
 At Forwarding tab: add visutal servers port=21 IP address 192.168.0.109. Common Service Port: FTP.
 At Forwarding tab: add visutal servers port=161 IP address 192.168.0.109. Common Service Port: POP3.
