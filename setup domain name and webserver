@@ -1,22 +1,75 @@
 1. Get domain name and bind to host server ip addresss.
 
+
 type myip at google to get host server ip address 73.32.72.19. 
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
 add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.72.19 and click submmit.
 
 2. Set Root to forward internet ip address to local host server addresss. 
-at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS setup
-At Network tab: to makesure IP address 73.32.72.19 
-At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
-At Forwarding tab: add visutal servers port=21 IP address 192.168.0.109. Common Service Port: FTP.
-At Forwarding tab: add visutal servers port=161 IP address 192.168.0.109. Common Service Port: POP3.
+setup static ip address for hoster
 
-ping http://73.76.111.140 for http://mixwellsoftware.com
+open cmd and type ipconfig /all
+   IPv4 Address. . . . . . . . . . . : 192.168.1.146
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::5aef:68ff:fe48:4078%5
+                                       192.168.1.1  
+
+   DNS Servers . . . . . . . . . . . : 2001:558:feed::1
+                                       2001:558:feed::2
+                                       75.75.75.75
+                                       75.75.76.76
+route ip address is 192.168.1.1
+
+at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS (cable connected to host PC) setup
+ 
+At internet setup/Static IP: to makesure  Internet IP Address 73.32.72.19 
+    
+    IP Address Range: 
+    192 . 168 . 1. 100 to 149
+    
+run control pannel/Network and Internet/Network Connections/Ethernet/Ethernet Properties/
+    Properties/Internet Protocol Version 4(TCP/IPv4)
+    select 
+    Use the following IP address: 
+         IP address: 192.168.1.200
+         Subnet mask: 255.255.255.0
+         Default gateway: 192.168.1.1
+    Use the following DNS server address: 
+         Preferred DNS server: 75.75.75.75
+         Alternate DNS server: 75.75.76.76
+
+save close
+try if internet web still working.
+
+ipconfig
+   IPv4 Address. . . . . . . . . . . : 192.168.1.200(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::5aef:68ff:fe48:4078%5
+                                       192.168.1.1
+   DHCPv6 IAID . . . . . . . . . . . : 57434733
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
+   DNS Servers . . . . . . . . . . . : 2001:558:feed::1
+                                       2001:558:feed::2
+                                       75.75.75.75
+                                       75.75.76.76
+                                       
+Go to route Application & Gaming/Single Port Forwarding 
+   Enternal Port: 80, Internal Port: 80  Protocol: TCP/UDP, To IP Address: 192.168.1.200, Enable: X
+
+
+At Forwarding tab: add visutal servers port=80 IP address 192.168.0.200 (get from ipconfig at PC).
+At Forwarding tab: add visutal servers port=21 IP address 192.168.0.200. Common Service Port: FTP.
+At Forwarding tab: add visutal servers port=161 IP address 192.168.0.200. Common Service Port: POP3.
+
+ping http://73.32.72.19 for http://mixwellsoftware.com
+
 
 3. set web page at pc webroot.
 C:\inetpub\wwwroot is my pc default web server root site.
-http://localhost get ip address run ipconfig => ip = 192.168.0.109.
+http://localhost get ip address run ipconfig => ip = 192.168.0.200.
+
+
 
 save a index.html file at C:\inetpub\wwwroot as start web page.
 
