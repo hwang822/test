@@ -1,33 +1,29 @@
 1. Get domain name and bind to host server ip addresss.
 
 
-type myip at google to get host server ip address 73.32.72.19. 
+type myip at google to get host server ip address 73.32.73.9. 
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
-add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.72.19 and click submmit.
+add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.73.9 and click submmit.
+
+Test ping mixwellsoftware.com
+
+C:\Users\hwang_000>ping www.mixwellsoftware.com
+
+Pinging www.mixwellsoftware.com [73.32.73.9] with 32 bytes of data:
+Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
+Reply from 73.32.73.9: bytes=32 time=2ms TTL=64
+Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
+Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
+
+Ping statistics for 73.32.73.9:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 3ms, Average = 2ms
 
 2. Set Root to forward internet ip address to local host server addresss. 
 setup static ip address for hoster
 
-open cmd and type ipconfig /all
-   IPv4 Address. . . . . . . . . . . : 192.168.1.146
-   Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : fe80::5aef:68ff:fe48:4078%5
-                                       192.168.1.1  
-
-   DNS Servers . . . . . . . . . . . : 2001:558:feed::1
-                                       2001:558:feed::2
-                                       75.75.75.75
-                                       75.75.76.76
-route ip address is 192.168.1.1
-
-at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS (cable connected to host PC) setup
- 
-At internet setup/Static IP: to makesure  Internet IP Address 73.32.72.19 
-    
-    IP Address Range: 
-    192 . 168 . 1. 100 to 149
-    
 run control pannel/Network and Internet/Network Connections/Ethernet/Ethernet Properties/
     Properties/Internet Protocol Version 4(TCP/IPv4)
     select 
@@ -39,13 +35,64 @@ run control pannel/Network and Internet/Network Connections/Ethernet/Ethernet Pr
          Preferred DNS server: 75.75.75.75
          Alternate DNS server: 75.75.76.76
 
-save close
-try if internet web still working.
+Test ping 192.168.1.200
 
-ipconfig
+Pinging 192.168.1.200 with 32 bytes of data:
+Reply from 192.168.1.200: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.200: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.200: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.200: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.1.200:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms        
+
+open cmd and type ipconfig /all
+C:\Users\hwang_000>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Bowen-PC
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : hsd1.tx.comcast.net.
+
+Wireless LAN adapter Local Area Connection* 10:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 8A-D7-F6-03-34-F3
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 11:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #2
+   Physical Address. . . . . . . . . : 88-D7-F6-03-34-F3
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Realtek PCIe GBE Family Controller
+   Physical Address. . . . . . . . . : 6C-62-6D-44-A5-72
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2601:2c5:c180:38f9:598:79fe:34d6:5ee7(Preferred)
+   IPv6 Address. . . . . . . . . . . : fda0:1ef6:b8e1:0:598:79fe:34d6:5ee7(Preferred)
+   Temporary IPv6 Address. . . . . . : 2601:2c5:c180:38f9:ac1c:a3cd:7397:4bee(Preferred)
+   Temporary IPv6 Address. . . . . . : fda0:1ef6:b8e1:0:ac1c:a3cd:7397:4bee(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::598:79fe:34d6:5ee7%8(Preferred)
    IPv4 Address. . . . . . . . . . . : 192.168.1.200(Preferred)
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : fe80::5aef:68ff:fe48:4078%5
+   Default Gateway . . . . . . . . . : fe80::5aef:68ff:fe48:4078%8
                                        192.168.1.1
    DHCPv6 IAID . . . . . . . . . . . : 57434733
    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
@@ -53,23 +100,108 @@ ipconfig
                                        2001:558:feed::2
                                        75.75.75.75
                                        75.75.76.76
-                                       
-Go to route Application & Gaming/Single Port Forwarding 
-   Enternal Port: 80, Internal Port: 80  Protocol: TCP/UDP, To IP Address: 192.168.1.200, Enable: X
+   NetBIOS over Tcpip. . . . . . . . : Enabled
 
+Ethernet adapter VMware Network Adapter VMnet1:
 
-At Forwarding tab: add visutal servers port=80 IP address 192.168.0.200 (get from ipconfig at PC).
-At Forwarding tab: add visutal servers port=21 IP address 192.168.0.200. Common Service Port: FTP.
-At Forwarding tab: add visutal servers port=161 IP address 192.168.0.200. Common Service Port: POP3.
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VMware Virtual Ethernet Adapter for VMnet1
+   Physical Address. . . . . . . . . : 00-50-56-C0-00-01
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::143a:acfd:b7c2:ff8b%9(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.243.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Thursday, September 13, 2018 8:23:42 PM
+   Lease Expires . . . . . . . . . . : Sunday, September 16, 2018 12:41:19 PM
+   Default Gateway . . . . . . . . . :
+   DHCP Server . . . . . . . . . . . : 192.168.243.254
+   DHCPv6 IAID . . . . . . . . . . . : 268456022
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
 
-ping http://73.32.72.19 for http://mixwellsoftware.com
+Ethernet adapter VMware Network Adapter VMnet8:
 
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VMware Virtual Ethernet Adapter for VMnet8
+   Physical Address. . . . . . . . . : 00-50-56-C0-00-08
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::6433:c817:b149:9a5e%17(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.233.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Thursday, September 13, 2018 8:23:42 PM
+   Lease Expires . . . . . . . . . . : Sunday, September 16, 2018 12:41:19 PM
+   Default Gateway . . . . . . . . . :
+   DHCP Server . . . . . . . . . . . : 192.168.233.254
+   DHCPv6 IAID . . . . . . . . . . . : 285233238
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   Primary WINS Server . . . . . . . : 192.168.233.2
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . : hsd1.tx.comcast.net.
+   Description . . . . . . . . . . . : ASUS USB-AC53 Nano USB Wieless adapter
+   Physical Address. . . . . . . . . : 88-D7-F6-03-34-F3
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::e0da:acad:8aa7:33e%32(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.1.145(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Sunday, September 16, 2018 12:01:27 PM
+   Lease Expires . . . . . . . . . . : Monday, September 17, 2018 12:01:26 PM
+   Default Gateway . . . . . . . . . : 192.168.1.1
+   DHCP Server . . . . . . . . . . . : 192.168.1.1
+   DHCPv6 IAID . . . . . . . . . . . : 545839094
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
+   DNS Servers . . . . . . . . . . . : 75.75.75.75
+                                       75.75.76.76
+                                       192.168.1.1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Ethernet 2:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : TAP-Windows Adapter V9
+   Physical Address. . . . . . . . . : 00-FF-03-23-FB-4C
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::6153:6a75:5fbe:a11a%2(Preferred)
+   Autoconfiguration IPv4 Address. . : 169.254.161.26(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 33619715
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1A-E8-C7-75-6C-62-6D-44-A5-72
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+   
+   route ip address is 192.168.1.1
+
+at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS (cable connected to host PC) setup
+ 
+At internet setup/Static IP: to makesure  Internet IP Address 73.32.73.9 
+    
+At Applications& Gaming/Single Port Forwarding: 
+E/I port=80, Protocol = Both, To IP address = 192.168.0.200, Enalbed = X (get from ipconfig at PC).
+E/I port=21, Protocol = Both, To IP address = 192.168.0.200, Enalbed = X Common Service Port: FTP.
+E/I port=161, Protocol = Both, To IP address = 192.168.0.200, Enalbed = X  Common Service Port: POP3.
+click Save Settings
+
+Test ping http://73.32.73.9 for http://mixwellsoftware.com
+The mixwell webbage shows up
 
 3. set web page at pc webroot.
 C:\inetpub\wwwroot is my pc default web server root site.
 http://localhost get ip address run ipconfig => ip = 192.168.0.200.
-
-
 
 save a index.html file at C:\inetpub\wwwroot as start web page.
 
