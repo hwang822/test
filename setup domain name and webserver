@@ -1,7 +1,12 @@
 1. Get domain name and bind to host server ip addresss.
 
-
 type myip at google to get host server ip address 73.32.73.9. 
+
+Your IP address is: 73.32.73.9 copy 
+Host: c-73-32-73-9.hsd1.tx.comcast.net
+Remote Port: 53098
+ISP: Comcast IP Services, L.L.C. 
+ 
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
 add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.73.9 and click submmit.
