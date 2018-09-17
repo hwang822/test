@@ -329,7 +329,7 @@ will ask un: gm ans ps: dl31
        us/pw: hw822_dl00
   
     b. Access ip webcam from outside networking (wy_wireless)
-       Neet set forward ports to internet = > wy_wireless => wylink5g => smpart phones ports
+       Neet set forward ports to internet (73.32.73.9) = > wy_wireless(192.168.1.126) => wylink5g => smpart phones ports
        
        1. First go to wylink5g internet browser (could set ipad to connction wylink5g and run browser), type 192.168.1.1
           tp-link router un/pw admin_dl00
@@ -378,5 +378,9 @@ will ask un: gm ans ps: dl31
                 Protocol: Both
                 To IP Address: 192.168.1.126
                 Enable: X
-                
-            
+             Test: 
+             Browser insdide home computer type in: http://192.168.1.126:7770
+             Browser in anywhere type in: http://73.32.73.9:7771 or http://www.mixwellsoftware.com:7771
+             un/pw: hw822_dl00
+             
+             
