@@ -319,13 +319,54 @@ will ask un: gm ans ps: dl31
    go to google play to donwload and install IP Webcam (Pavel Khlebovich, free).   
    go to set Local Video setting.
    Create Username and Password hw822_dl00
-   Set Port Number:  7770, 7001
+   Set Port Number:  7770, 7001 (for two smart phones).
    Click Start Service.
    
-   goto IE under wylink5g type in 
-   http://192.168.0.102:7770
-   http://192.168.0.108:7771  
-   
-   us/pw: hw822_dl00
+   a. Access ip webcam from same networking (wylink5g).
+       goto IE under wylink5g type in 
+       http://192.168.0.102:7770
+       http://192.168.0.108:7771  
+       us/pw: hw822_dl00
   
- 
+    b. Access ip webcam from outside networking (wy_wireless)
+       Neet set forward ports to internet = > wy_wireless => wylink5g => smpart phones ports
+       
+       1. First go to wylink5g internet browser (could set ipad to connction wylink5g and run browser), type 192.168.1.1
+          tp-link router un/pw admin_dl00
+          Forwarding/add new: 
+                     ID Service Port: 7770 
+                     Internal Port: 7770
+                     IP Address: 192.168.0.108
+                     Protocol: ALL
+                     Status: Enable
+
+                     ID Service Port: 7771 
+                     Internal Port: 7771
+                     IP Address: 192.168.0.102
+                     Protocol: ALL
+                     Status: Enable
+           Click Save.
+          
+        2. Go to wy_wireless internet PC.
+           run cmd 
+           C:\Users\hwang_000>arp -a
+           Interface: 192.168.1.200 --- 0x8
+             Internet Address      Physical Address      Type
+             192.168.1.1           58-ef-68-48-40-78     dynamic
+             192.168.1.112         6c-8f-b5-d7-9e-84     dynamic
+             192.168.1.113         78-88-6d-96-52-6c     dynamic
+             192.168.1.126         c4-6e-1f-aa-10-8b     dynamic
+             192.168.1.255         ff-ff-ff-ff-ff-ff     static
+             224.0.0.2             01-00-5e-00-00-02     static
+             224.0.0.22            01-00-5e-00-00-16     static
+             224.0.0.251           01-00-5e-00-00-fb     static
+             224.0.0.252           01-00-5e-00-00-fc     static
+             239.255.255.250       01-00-5e-7f-ff-fa     static
+             255.255.255.255       ff-ff-ff-ff-ff-ff     static
+             
+             could know IPs:  
+             gateway-192.168.1.1 
+             ipads - 192.168.1.112 
+             cell phone - 192.168.1.113 
+             route wylink5g - 192.168.1.126
+             subnet - 92.168.1.255
