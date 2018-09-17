@@ -370,3 +370,13 @@ will ask un: gm ans ps: dl31
              cell phone - 192.168.1.113 
              route wylink5g - 192.168.1.126
              subnet - 92.168.1.255
+
+             type 192.168.1.1 in browser
+             linksys route un/pw hw822_dl00
+             Application & Gaming/Port Range Forwarding:
+                Start-End Port: 7770-7779
+                Protocol: Both
+                To IP Address: 192.168.1.126
+                Enable: X
+                
+            
