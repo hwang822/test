@@ -305,6 +305,7 @@ will ask un: gm ans ps: dl31
         default TTL = 3600 (1 hour)
    
    6. Set IP webcam to the server 
+   http://www.mixwellsoftware.com:7771 or http://www.mixwellsoftware.com:7770 (using Chrome)
    
    https://www.youtube.com/watch?v=POX772xjHws
 
@@ -382,7 +383,7 @@ will ask un: gm ans ps: dl31
              Browser insdide home computer type in: http://192.168.1.126:7770
              Browser in anywhere type in: http://73.32.73.9:7771 or http://www.mixwellsoftware.com:7771
              un/pw: hw822_dl00
-        a. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
+        c. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
              create account at www.ivideon.com/For Home/Create Account hwem822_dl00.
              go to smart phone: Ip Webcam/Cloud streaming
              hwem822_dl00
