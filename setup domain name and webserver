@@ -322,13 +322,13 @@ will ask un: gm ans ps: dl31
    Set Port Number:  7770, 7001 (for two smart phones).
    Click Start Service.
    
-   a. Access ip webcam from same networking (wylink5g).
+   a. Access ip webcam from same networking (wylink5g) 0.43/17.19.
        goto IE under wylink5g type in 
        http://192.168.0.102:7770
        http://192.168.0.108:7771  
        us/pw: hw822_dl00
   
-    b. Access ip webcam from outside networking (wy_wireless)
+    b. Access ip webcam from outside networking (wy_wireless) 8.18/17.19
        Neet set forward ports to internet (73.32.73.9) = > wy_wireless(192.168.1.126) => wylink5g => smpart phones ports
        
        1. First go to wylink5g internet browser (could set ipad to connction wylink5g and run browser), type 192.168.1.1
@@ -382,5 +382,12 @@ will ask un: gm ans ps: dl31
              Browser insdide home computer type in: http://192.168.1.126:7770
              Browser in anywhere type in: http://73.32.73.9:7771 or http://www.mixwellsoftware.com:7771
              un/pw: hw822_dl00
+        a. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
+             create account at www.ivideon.com/For Home/Create Account hwem822_dl00.
+             go to smart phone: Ip Webcam/Cloud streaming
+             hwem822_dl00
+             start service.
              
+             go to https://www.ivideon.com/my
+             hwem822_dl00
              
