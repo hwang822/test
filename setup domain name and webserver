@@ -313,11 +313,23 @@ will ask un: gm ans ps: dl31
    How to access IP Webcam from anywhere using lvideon cloud service
 
    Set smart phone (ngxus to connect wi-fi with same web server networking. wy_wireless-guest. dl00
-
-
+   Connect Phone to wylink5g wifi.
+   
    download ip webcam app to the smart phone.
-   IP CamView 
-   Free.
+   go to google play to donwload and install IP Webcam (Pavel Khlebovich, free).   
+   go to set Local Video setting.
+   Create Username and Password hw822_dl00
+   Set Port Number:  7770, 7001
+   Click Start Service.
+   
+   goto IE under wylink5g type in 
+   http://192.168.0.102:7770
+   http://192.168.0.108:7771  
+   
+   us/pw: hw822_dl00
+  
+   
+  
 
 
 
