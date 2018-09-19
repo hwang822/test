@@ -355,7 +355,7 @@ will ask un: gm ans ps: dl31
           Forwarding/add new: 
                      ID Service Port: 7770 
                      Internal Port: 7770
-                     IP Address: 192.168.0.108
+                     IP Address: 192.168.0.104
                      Protocol: ALL
                      Status: Enable
 
@@ -364,6 +364,13 @@ will ask un: gm ans ps: dl31
                      IP Address: 192.168.0.102
                      Protocol: ALL
                      Status: Enable
+                     
+                     ID Service Port: 7772 
+                     Internal Port: 7772
+                     IP Address: 192.168.0.108
+                     Protocol: ALL
+                     Status: Enable
+                    
            Click Save.
           
         2. Go to wy_wireless internet PC.
