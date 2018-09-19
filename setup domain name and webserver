@@ -320,18 +320,36 @@ will ask un: gm ans ps: dl31
    go to google play to donwload and install IP Webcam (Pavel Khlebovich, free).   
    go to set Local Video setting.
    Create Username and Password hw822_dl00
-   Set Port Number:  7770, 7001 (for two smart phones).
+   Set Port Number:  7770, 7771, 7772 (for three smart phones).
    Click Start Service.
    
    a. Access ip webcam from same networking (wylink5g) 0.43/17.19.
-       goto IE under wylink5g type in 
-       http://192.168.0.102:7770
-       http://192.168.0.108:7771  
+       goto IE under wylink5g type in
+                   
+       http://192.168.0.102:7771
+       http://192.168.0.104:7770
+       http://192.168.0.108:7772
        us/pw: hw822_dl00
   
     b. Access ip webcam from outside networking (wy_wireless) 8.18/17.19
-       Neet set forward ports to internet (73.32.73.9) = > wy_wireless(192.168.1.126) => wylink5g => smpart phones ports
-       
+       Neet set forward ports to internet  = > (73.32.73.9, linksys)wy_wireless => (192.168.1.118, tp-link)wylink5g => smpart phones ports
+       set tp-link static ip address at linksys. go to Linksys/Setup/DHCP Reservation/Select 
+            Client Name: Archer_C7(tp-link)
+            Interface: LAN
+            IP Address: 192.168.1.114
+            MAC Address: C4:6E:1F:AA:10:8B
+        Click Add Clinets => Clients Aready Reserved (static ip address)    
+        
+        to chck C:\Users\hwang_000>arp -a
+        
+       Interface: 192.168.1.200 --- 0x8
+         Internet Address      Physical Address      Type
+         192.168.1.1           58-ef-68-48-40-78     dynamic
+         192.168.1.118         c4-6e-1f-aa-10-8b     dynamic  (TP-Link)
+         192.168.1.147         80-56-f2-d7-c4-95     dynamic  (Lenovo-PC)
+         192.168.1.255         ff-ff-ff-ff-ff-ff     static        
+
+
        1. First go to wylink5g internet browser (could set ipad to connction wylink5g and run browser), type 192.168.1.1
           tp-link router un/pw admin_dl00
           Forwarding/add new: 
