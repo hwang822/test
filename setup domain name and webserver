@@ -327,35 +327,41 @@ will ask un: gm ans ps: dl31
        goto IE under wylink5g type in
                    
        http://192.168.0.102:7771
-       http://192.168.0.104:7770
+       http://192.168.0.109:7770
        http://192.168.0.108:7772
        us/pw: hw822_dl00
   
     b. Access ip webcam from outside networking (wy_wireless) 8.18/17.19
        Neet set forward ports to internet  = > (73.32.73.9, linksys)wy_wireless => (192.168.1.118, tp-link)wylink5g => smpart phones ports
-       set tp-link static ip address at linksys. go to Linksys/Setup/DHCP Reservation/Select 
+
+        set tp-link static ip address connected linksys router. go to Linksys/Setup/DHCP Reservation/Select 
             Client Name: Archer_C7(tp-link)
             Interface: LAN
-            IP Address: 192.168.1.114
+            IP Address: 192.168.1.118
             MAC Address: C4:6E:1F:AA:10:8B
-        Click Add Clinets => Clients Aready Reserved (static ip address)    
+        Click Add Clinets => Clients Aready Reserved (static ip address)            
         
         to chck C:\Users\hwang_000>arp -a
         
-       Interface: 192.168.1.200 --- 0x8
+        Interface: 192.168.1.200 --- 0x8
          Internet Address      Physical Address      Type
          192.168.1.1           58-ef-68-48-40-78     dynamic
          192.168.1.118         c4-6e-1f-aa-10-8b     dynamic  (TP-Link)
          192.168.1.147         80-56-f2-d7-c4-95     dynamic  (Lenovo-PC)
          192.168.1.255         ff-ff-ff-ff-ff-ff     static        
 
+        set smpart phones static ip address connected tp-link router. go to tp-link/DHCP
+          Go to DHCP/DHCP Clients List to find out smart phone MAC Address.
+          Go to DHCP/Address Reservation/Add new... copy MAC address and IP address.
+             
+          ID: 1, MAC Address: 10-68-3F-44-6C-7F, Reserved IP Address: 192.168.0.109, Status: Enabled.          
 
        1. First go to wylink5g internet browser (could set ipad to connction wylink5g and run browser), type 192.168.1.1
           tp-link router un/pw admin_dl00
           Forwarding/add new: 
                      ID Service Port: 7770 
                      Internal Port: 7770
-                     IP Address: 192.168.0.104
+                     IP Address: 192.168.0.109
                      Protocol: ALL
                      Status: Enable
 
@@ -374,38 +380,15 @@ will ask un: gm ans ps: dl31
            Click Save.
           
         2. Go to wy_wireless internet PC.
-           run cmd 
-           C:\Users\hwang_000>arp -a
-           Interface: 192.168.1.200 --- 0x8
-             Internet Address      Physical Address      Type
-             192.168.1.1           58-ef-68-48-40-78     dynamic
-             192.168.1.112         6c-8f-b5-d7-9e-84     dynamic
-             192.168.1.113         78-88-6d-96-52-6c     dynamic
-             192.168.1.126         c4-6e-1f-aa-10-8b     dynamic
-             192.168.1.255         ff-ff-ff-ff-ff-ff     static
-             224.0.0.2             01-00-5e-00-00-02     static
-             224.0.0.22            01-00-5e-00-00-16     static
-             224.0.0.251           01-00-5e-00-00-fb     static
-             224.0.0.252           01-00-5e-00-00-fc     static
-             239.255.255.250       01-00-5e-7f-ff-fa     static
-             255.255.255.255       ff-ff-ff-ff-ff-ff     static
-             
-             could know IPs:  
-             gateway-192.168.1.1 
-             ipads - 192.168.1.112 
-             cell phone - 192.168.1.113 
-             route wylink5g - 192.168.1.126
-             subnet - 92.168.1.255
-
              type 192.168.1.1 in browser
              linksys route un/pw hw822_dl00
              Application & Gaming/Port Range Forwarding:
                 Start-End Port: 7770-7779
                 Protocol: Both
-                To IP Address: 192.168.1.126
+                To IP Address: 192.168.1.118
                 Enable: X
              Test: 
-             Browser insdide home computer type in: http://192.168.1.126:7770
+             Browser insdide home computer type in: http://192.168.1.118:7770
              Browser in anywhere type in: http://73.32.73.9:7771 or http://www.mixwellsoftware.com:7771
              un/pw: hw822_dl00
         c. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
