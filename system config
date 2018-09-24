@@ -1,9 +1,10 @@
-9/24/2018 (after clean up)
-
-Device name: Bowen-PC
+Device name: Bowen-PC dl31
 Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.16GHz 3.10GHz
 Installed RAM: 24.GB
 System: 64-Bit OS, x64-based processor
+
+9/24/2018 (after clean up)
+
 C: 135GB        
     Used space: 91,649,110.016 bytes     85.3GB
     Free sapce: 27.408.904 bytes         25.5GB
@@ -50,3 +51,13 @@ D:(Program files)/E:(Bowen): 1T/1T = 2T
      
 F(Hongbo): 4T
 
+Software will be download and installed at D: 
+
+1. Dropbox
+  downlaod and install. it default path to C:\Users\hwang_000\Dropbox.
+2. TeamViewer
+  Download and install to D:\Program Files (x86)\TeamViewer 
+3. vs_2017_community
+  Download and install to D:\Program Files (x86)\
+4. Git service
+  Download and isntall to D:\Program Files (x86)\
