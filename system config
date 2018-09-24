@@ -1,10 +1,10 @@
+9/24/2018 (after clean up)
+
 Device name: Bowen-PC
 Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.16GHz 3.10GHz
 Installed RAM: 24.GB
 System: 64-Bit OS, x64-based processor
-C: 135GB    
-    9/24/2018 (after clean up)
-    
+C: 135GB        
     Used space: 91,649,110.016 bytes     85.3GB
     Free sapce: 27.408.904 bytes         25.5GB
     Capacity:   119.058.014.208 bytes    110GB
@@ -36,11 +36,17 @@ C: 135GB
     Size: 20.5 MB (21,531,672 bytes)
     Size of disk: 20.7 MB (21,749,760 bytes)
     Contains: 116 Files, 11 Folders
-    
-    
-    
-    
-    
-D:/E(Bowen): 1T/1T = 2T
+                   
+D:(Program files)/E:(Bowen): 1T/1T = 2T
+   D: (Program Files)
+     Used space: 36.713.456 bytes  34.1 GB
+     Free sapce: 840.711.430.144 bytes 817GB
+     Capacity: 877.424.537.600 bytes 817 GB
+     Empty     
+   E: (Bowen)
+     Used space: 547.375.005.696 bytes 509 GB
+     Free space: 575.488.770.048 bytes 535 GB
+     Capacity: 1.122.863.775.744 bytes 1.02 TB
+     
 F(Hongbo): 4T
 
