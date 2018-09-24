@@ -61,3 +61,7 @@ Software will be download and installed at D:
   Download and install to D:\Program Files (x86)\
 4. Git service
   Download and isntall to D:\Program Files (x86)\
+  $ git clone https://github.com/hwang822/WCFandWVC
+5. Install MS-Office-2010
+  Install from download folder to D:\Program Files (x86)\
+  
