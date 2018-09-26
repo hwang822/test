@@ -80,3 +80,50 @@ Software will be download and installed at D:
   GPU device ASUS DirectCU II
   remove orignail system C:/ (135 GB)  D:/E:/ (2TB flash memory) only keep F:/ (4TB)
   
+  insert Windows Server 2012 R2 DVD to DVD driver
+  Install now
+  it need key xxxx.xxxx.xxxx.xxxx.xxxx....
+  
+  put windows10 to DVD driver for install
+  
+  install at only one 3.5T driver 0
+  
+  after install the c: driver
+  Disk 0  Basic 3726.02 GB online
+  System Reserved 500 MB NTFS 
+  Healthy(system, Active, Primary Partition)
+  
+  (D:)  
+  2047.51 GB 
+  NTFS Hearth (Boot, Page Files, Crash Dump, Primary Partition
+  
+  While using Diskpart utility to manage a hard drive beyond 2TB, you may find out that Diskpart cannot extend partitions beyond the 2TB with the Virtual Disk Service errors:
+  Only the first 2TB are usable on large MBR disks. Cannot create partitions beyond the 2TB mark, nor convert the disk to dynamic.
+
+  Need to convert it to GDP disk.
+  
+  reboot pc and click f2,f10,f11 to slect boot from DVD
+  At mid installation at WIndows Setup
+  Click Shift + F10 to go Administrator: X:\Windows\system32\cmd.exe
+ 
+  X:\Sources>diskpart  
+  at diskpart.exe console window
+  type 
+  DISKPART> list disk
+  Disk 0 online 3726 GB 
+  DISKPART> select disk 0
+  Disk 0 is now the selected disk
+  DISKPART> clean
+  DiskPart succeeded in cleaning the disk.
+  DISKPART> convert GDP
+  Diskpart successfully converted the selected disk to GDP format.
+  DISKPART>list disk
+  Disk ###: Disk 0, status: Online, size: 3726 GB, Free: 3726 GB, Gpt *
+  DISKPART> exit
+  
+  Refrash Windows Setup 
+  Drive 0 unallocated Space 3726 GB. Click Next button
+
+  after install go to windows OS.
+  
+  
