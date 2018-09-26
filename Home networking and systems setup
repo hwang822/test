@@ -49,7 +49,13 @@ D:(Program files)/E:(Bowen): 1T/1T = 2T
      Free space: 575.488.770.048 bytes 535 GB
      Capacity: 1.122.863.775.744 bytes 1.02 TB
      
-F(Hongbo): 4T
+F(Hongbo): 4T 
+     Used space: 166.234.791.936 bytes   154 GB
+     Free space: 3.834.416.091.136 bytes 3.48TB
+     
+     Location: All in F:\
+     Size: 154GB (165,606,416,611 bytes)
+     Size on disk: 154 GB (165,711,085,568 bytes) 
 
 Software will be download and installed at D: 
 
@@ -69,3 +75,8 @@ Software will be download and installed at D:
 7. Install CCleaner
 8. Install SQL Server.
 9. Install SQL Server Managerment IDE 
+
+9/26/2018 reinstall windows system.
+  GPU device ASUS DirectCU II
+  remove orignail system C:/ (135 GB)  D:/E:/ (2TB flash memory) only keep F:/ (4TB)
+  
