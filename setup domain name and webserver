@@ -251,8 +251,11 @@ create  at C:\inetpub\wwwroot
       build\publish MixwellWcf project to  C:\inetpub\wwwroot\MixwellWcf.
       ie type www.mixwellsoftware.com\mixwellwcf to test web page.
       
-4. Add FTP services at www.mixwellsoftware.com
+. Add FTP services at www.mixwellsoftware.com
 Go to control pannel/Programs/Programs and Features/Turn Windows features on ofr off.
+
+
+
 Turn On Internet Information Service (iis) FTP Server/FTP Extensibility/FTP Service, OK.
 
 Go to iis manager.
@@ -304,7 +307,7 @@ will ask un: gm ans ps: dl31
         expire  = 604800 (7 days)
         default TTL = 3600 (1 hour)
    
-   6. Set IP webcam to the server 
+ 6. Set IP webcam to the server 
    http://www.mixwellsoftware.com:7771 or http://www.mixwellsoftware.com:7770 (using Chrome)
    
    https://www.youtube.com/watch?v=POX772xjHws
@@ -315,8 +318,7 @@ will ask un: gm ans ps: dl31
 
    Set smart phone (ngxus to connect wi-fi with same web server networking. wy_wireless-guest. dl00
    Connect Phone to wylink5g wifi.
-   
-   download ip webcam app to the smart phone.
+      download ip webcam app to the smart phone.
    go to google play to donwload and install IP Webcam (Pavel Khlebovich, free).   
    go to set Local Video setting.
    Create Username and Password hw822_dl00
