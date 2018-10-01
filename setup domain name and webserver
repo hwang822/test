@@ -339,7 +339,8 @@ will ask un: gm ans ps: dl31
         set tp-link static ip address connected linksys router. go to Linksys/Setup/DHCP Reservation/Select 
             Client Name: Archer_C7(tp-link)
             Interface: LAN
-            IP Address: 192.168.1.118
+
+IP Address: 192.168.1.118
             MAC Address: C4:6E:1F:AA:10:8B
         Click Add Clinets => Clients Aready Reserved (static ip address)            
         
@@ -375,8 +376,7 @@ will ask un: gm ans ps: dl31
                      
                      ID Service Port: 7772 
                      Internal Port: 7772
-                     IP Address: 192.168.0.108
-                     Protocol: ALL
+                     IP Address: 192.168.0.108                     Protocol: ALL
                      Status: Enable
                     
            Click Save.
@@ -386,19 +386,76 @@ will ask un: gm ans ps: dl31
              linksys route un/pw hw822_dl00
              Application & Gaming/Port Range Forwarding:
                 Start-End Port: 7770-7779
-                Protocol: Both
+r
+Protocol: Both
                 To IP Address: 192.168.1.118
                 Enable: X
-             Test: 
+             Test:
              Browser insdide home computer type in: http://192.168.1.118:7770
              Browser in anywhere type in: http://73.32.73.9:7771 or http://www.mixwellsoftware.com:7771
              un/pw: hw822_dl00
         c. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
              create account at www.ivideon.com/For Home/Create Account hwem822_dl00.
-             go to smart phone: Ip Webcam/Cloud streaming
+w             go to smart phone: Ip Webcam/Cloud streaming
              hwem822_dl00
              start service.
              
              go to https://www.ivideon.com/my
              hwem822_dl00
              
+7. Docker for windows 10
+    In a nutshell, it's a software contrainerization platform. It providers abstration of operating - system level virtualizaiton.
+
+
+    Contrain:
+    Operationg System
+    Softwaer that you build
+    Dependencises to run the sofware
+    Environment variables
+    And you name it.So, 
+    
+    these contrainers are VM image right?
+    
+    Windows server 2016 has docker for windows.
+    Windows 10 Containers (Hyper-v)
+    
+    after install docker is running as server
+    in cmd type docker info
+    
+    C:\Users\Mixwell Software>docker info
+Containers: 0
+ Running: 0
+ Paused: 0
+ Stopped: 0
+Images: 0
+Server Version: 18.06.1-ce
+Storage Driver: overlay2
+ Backing Filesystem: extfs
+ Supports d_type: true
+ Native Overlay Diff: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins:
+ Volume: local
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+Swarm: inactive
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 468a545b9edcd5932818eb9de8e72413e616e86e
+runc version: 69663f0bd4b60df09991c08812a60108003fa340
+init version: fec3683
+Security Options:
+ seccomp
+  Profile: default
+
+Docker has wide ecosystem and it supports multiple OS, cloud and local clouds.
+
+Docker -help
+Docker create
+Docker pull
+Docker push
+Docker ps
+Docker ps -a (show all containers)
+Docker rm
