@@ -308,7 +308,7 @@ will ask un: gm ans ps: dl31
         default TTL = 3600 (1 hour)
    
  6. Set IP webcam to the server 
-   http://www.mixwellsoftware.com:7771 or http://www.mixwellsoftware.com:7770 (using Chrome)
+   http://www.mixwellsoftware.com:7770, 7771, or 7772 (using Chrome)
    
    https://www.youtube.com/watch?v=POX772xjHws
 
@@ -316,8 +316,8 @@ will ask un: gm ans ps: dl31
    How to access IP Webcam from outside your network.
    How to access IP Webcam from anywhere using lvideon cloud service
 
-   Set smart phone (ngxus to connect wi-fi with same web server networking. wy_wireless-guest. dl00
-   Connect Phone to wylink5g wifi.
+   Set smart phone (ngxus to connect wi-fi with same web server networking. wylinker2.4g. dl00
+   Connect Phone to wylinker2.4g wifi.
       download ip webcam app to the smart phone.
    go to google play to donwload and install IP Webcam (Pavel Khlebovich, free).   
    go to set Local Video setting.
@@ -326,7 +326,7 @@ will ask un: gm ans ps: dl31
    Click Start Service.
    
    a. Access ip webcam from same networking (wylink5g) 0.43/17.19.
-       goto IE under wylink5g type in
+       goto IE under wylinker2.4g type in
                    
        http://192.168.0.102:7771
        http://192.168.0.109:7770
