@@ -396,14 +396,22 @@ Protocol: Both
              un/pw: hw822_dl00
         c. Access ip webcam from anywher using ivideon cloud service 14.47/17.19.             
              create account at www.ivideon.com/For Home/Create Account hwem822_dl00.
-w             go to smart phone: Ip Webcam/Cloud streaming
+             go to smart phone: Ip Webcam/Cloud streaming
              hwem822_dl00
              start service.
              
              go to https://www.ivideon.com/my
              hwem822_dl00
              
-7. Docker for windows 10
+7. Automatically web self-updating.             
+             
+   Go to google chrome store. Seach Super Auto Refresh.
+   https://chrome.google.com/webstore/search/Super%20Auto%20Refresh?_category=extensions
+   
+   Select Auto Refresh. Click "Add to Chrome" button. The icon will be shown at far-right of address bar. 
+   At http://www.mixwellsoftware.com:7772/jsfs.html select auto refresh button to select Refresh on 600sec.
+   
+8. Docker for windows 10
     In a nutshell, it's a software contrainerization platform. It providers abstration of operating - system level virtualizaiton.
 
 
