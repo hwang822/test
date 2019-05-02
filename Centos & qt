@@ -1,0 +1,13 @@
+download and install centos at VM.
+Red hat brance communite software.
+Qt ahs Widgets and QWC
+
+Qt Creator: Cross platform IDE.
+Qt Designer: GUI layout
+Plugin for other IDE: 
+Qt SDK. many framework
+
+at centos.
+yum list : grep qt5
+
+
