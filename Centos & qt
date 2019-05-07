@@ -1,3 +1,152 @@
+****************
+Teamviewer. 
+*****************
+
+Download teamviewer and install.
+HPO has version 11 and only could talk to version 11.
+
+username---hwem
+password---dl00
+
+Access the server from anywhere.
+
+https://www.teamviewer.com/en/download/previous-versions/
+select v11.
+
+*******************
+Matlab
+******************
+un: hw822em
+pw: dl00
+
+download matlab_R2016b_glnxa64.zip to Linux Download folder.
+From Find Files/Folders right click the matlab_R2016b_glnxa64.zip to extract it.
+Right click new folder matlab_R2016b_glnxa64 to open in terminal.
+
+sudo ./inatall
+[sp1@localhost ~]$ ls ../../usr/local/MATLAB/R2016b
+[sp1@localhost ~]$ matlab &
+[2] 1266
+[sp1@localhost ~]$ MATLAB is selecting SOFTWARE OPENGL rendering.
+[sp1@localhost ~]$ matlab -nosoftwareopengl
+
+**********************
+Mount external device
+**********************
+
+how to Mount CD/DVD in Linux
+using lsblk to find DVD name sr0
+
+[developer@seismicpps-job01 Workarea]$ df
+Filesystem           1K-blocks     Used  Available Use% Mounted on
+/dev/mapper/cl-root   52403200 10070428   42332772  20% /
+devtmpfs               8031760        0    8031760   0% /dev
+tmpfs                  8047368      152    8047216   1% /dev/shm
+tmpfs                  8047368     9044    8038324   1% /run
+tmpfs                  8047368        0    8047368   0% /sys/fs/cgroup
+/dev/mapper/cl-home 3843467672  6344448 3837123224   1% /home
+/dev/sda1              1038336   232676     805660  23% /boot
+tmpfs                  1609476       12    1609464   1% /run/user/1001
+[developer@seismicpps-job01 Workarea]$ lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0  1.8T  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0  1.8T  0 part 
+  ├─cl-root 253:0    0   50G  0 lvm  /
+  ├─cl-swap 253:1    0  7.8G  0 lvm  [SWAP]
+  └─cl-home 253:2    0  3.6T  0 lvm  /home
+sdb           8:16   0  1.8T  0 disk 
+└─sdb1        8:17   0  1.8T  0 part 
+  └─cl-home 253:2    0  3.6T  0 lvm  /home
+sr0          11:0    1 1024M  0 rom  
+
+su to root first
+go to mnt folder
+[root@hwang822-job01]# cd /mnt
+create mount point
+[root@hwang822-job01 mnt]# mkdir -p askdvd
+
+/usr/bin/mount -t iso9660
+
+*********************************
+g++ for c and c++
+********************************
+
+[root@seismcipps-job01 ~]# yum group list
+[root@seismcipps-job01 ~]# yum group install "Development Tools" 
+
+check gcc 
+[root@seismcipps-job01 ~]# whereis gcc
+gcc: /usr/bin/gcc /usr/lib/gcc /usr/libexec/gcc /usr/share/man/man1/gcc.1.gz
+
+[root@seismcipps-job01 ~]# gcc --version
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11)
+
+[root@seismcipps-job01 ~]# su - developer
+
+Create c program:
+
+[develpper@seismcipps-job01 ~]$ mkdir "workarea"
+[developer@seismcipps-job01 ~]$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  SeisUP.2016-rhel7  Templates  Videos  workarea
+[developer@seismcipps-job01 ~]$ cd workarea
+
+[develoepr@seismcipps-job01 workarea]$ touch foo.c
+[developer@seismcipps-job01 workarea]$ vi foo.c
+
+#include <stdio.h>
+int main(void){
+        printf("Hello World!\n");
+        return 0;
+}
+:qw
+
+To compile foo.c into foo executable file, type:
+
+[sp1@localhost workarea]$ gcc foo.c -o foo
+
+[sp1@localhost workarea]$ ./foo
+Hello World!
+
+***************************
+Install QT at CentOS.
+***************************
+
+bring up Firefox fro CentOS\internet\FireFox
+run google and search "qt creator download"
+Download and extract QT-creator to Home\Downloads folder
+qt-opensource-linux-x64-5.8.0.run 
+select file and right click to change file executable.
+
+double click qt-opensource-linux-x64-5.8.0.run
+Create QT account. henry@seisimcpps.com  hwang822@00
+Launch QT Create and set "Show A Launcher When Not Running"
+Double click QT create icon at bottom status bar to bring up QT create.
+
+*************************
+Setup git service
+*************************
+1. Create git account at hwang822vm.
+
+[root@hwang822 ~]# useradd git
+[root@hwang822 ~]# passwd git
+New Password: dl00
+Retype new password: dl00.
+
+2. at Client need add server name bind to IP address.
+need set static IP address for git server .
+
+[root@hwang822 ~]# ifconfig
+192.168.1.89
+
+ping 192.168.1.89 from client 
+[developer@hwang822-job01]$sudo vi /etc/hosts to add hwang822 name for ping
+
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Top 5 c++ compiler for windows and linux.
 
 1. Visula C++ 2017 Community edition.
