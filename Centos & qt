@@ -287,6 +287,523 @@ update README file
 
 [sp1@localhost hwang822]$ git gui &
 
+**********************
+Run Linux from VMware in Windows PC
+*********************
+
+download CentOS and burn to DVD.
+http://mirror.us.oneandone.net/linux/distributions/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso 
+
+Download VMware and install at Windows PC
+
+VMware-player-12.5.1-4542065
+
+run VMware Workstation 12 Player and create new VM CentOS 7 from DVD.
+
+select HD 30G and memory 2G and processor: 2
+
+Root password: root
+
+user name: iscn001
+user pw: test
+
+[developer@iscn001 ~]$ 
+
+add developer user to sudo
+
+[developer@iscn001 ~]$ su -
+Password: root
+[root@iscn001 ~]# visudo
+
+developer ALL=(ALL) ALL
+:wq
+
+**************************
+instll centos
+***********************************************************************
+download CentOS
+http://mirror.us.oneandone.net/linux/distributions/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso 
+
+write iso file to DVD (or write to usb drive using Rufus).
+
+connect DVD (ussu
+Reboot server and client F10 to bring up HP Configure and Install software.
+
+Select operating system
+RedHatLinux
+Select Source Media: Physical DVD (or USB key).
+
+It will start Centos Installation.
+Root password: root
+UserName: iscn001
+Password: test
+
+After install, the server will auto reboot to CentOS.
+
+1. boot centos install file .iso from PC or VM
+2. select install centos.
+3. select install source.
+4. select software type with developer tool.
+5. select format disk.
+6. setup root and user
+7. setup networking.
+8. reboot
+
+******************************************
+Install CentOS 7 Linux at HP ProLiant DL360 Gen9.
+
+set up select HD drive.
+1. Turn on HP Server Power.
+2. Click F10 to bring start up software to Configure and Install/Perform Maintenance.
+3. Click Perform Maintenance button to setup windows.
+4. Click HPE Smart Storage Administrator (SSA) button to setup devices.
+5. Click Smart Array P440ar button to bring up configure.
+6. Click config button.
+7. Click create array.
+8. Click select all button to add device to the array.
+9. Click create array button.
+10. Click create logical drive.
+11. Click OK to finish setup.
+12. Click Finish button .
+
+install OS.
+13. Insert CentOS 7 installer USB memory to server usb port.
+14. Reboot system.
+15. High lighting "Install CentOS Linux 7" and click Entry.
+16. Select install options. English - continue.
+17. Click Software Selection button.
+18. Select GNOME desktop and all add-ons. Click Done button.
+19. Select Installation Destination.
+20. Select the drive "HP Logical Volume" and click Done button..
+21. Click Begin Installation button.
+22. Add Root user password "root" and double click Done button.
+23. Add User creation.
+24. Add user name "spn" and Password "spn". Click Done button.
+25. Take minutes install process then click Reboot button.
+26. Remove USB memory.
+27. Click Licening information.
+28. Click accept and Finish Configuration button.
+29. Log in spn user after input password.
+30. Start runLinux.
+
+*****************************************
+
+
+Run Linux from VMware in Windows PC
+
+download CentOS and burn to DVD.
+http://mirror.us.oneandone.net/linux/distributions/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1611.iso 
+
+Download VMware and install at Windows PC
+
+VMware-player-12.5.1-4542065
+
+run VMware Workstation 12 Player and create new VM CentOS 7 from DVD.
+
+select HD 30G and memory 2G and processor: 2
+
+Root password: root
+
+user name: sp1
+user pw: sp1
+
+
+[sp1@localhost ~]$ 
+
+add sp1 user to sudo
+
+[sp1@localhost ~]$ su -
+Password: root
+[root@localhost ~]# visudo
+
+sp1 ALL=(ALL) ALL
+:wq
+[root@localhost ~]# yum group list
+
+[root@localhost ~]# yum group install "Development Tools" 
+
+check gcc 
+[root@localhost ~]# whereis gcc
+gcc: /usr/bin/gcc /usr/lib/gcc /usr/libexec/gcc /usr/share/man/man1/gcc.1.gz
+
+[root@localhost ~]# gcc --version
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-11)
+
+[root@localhost ~]# su -sp1
+
+***************************
+Access and Move file around computer nodes.
+update /etc/hosts file to add all computer nodes ip address and hostname to list in the file.
+****************************
+
+[root@isjis01 etc]# more hosts
+
+10.1.10.249 iscn001.
+
+[root@isjs01 etc] ssh root@iscn001
+password: root
+
+[root@isjs01 etc] scp hosts root@iscn001:/etc/.
+password: root
+[root@isjs01 etc] cd
+[root@isjs01] scp .bashrc root@iscn001:/root
+
+mount disk network drive to reboot file.
+
+/etc/fstab.
+
+
+add mnt drive folder under mnt.
+
+/mnt/mkidr isns01.
+
+isns01:/volume1/data /mnt/isns01  nfs  defaults,bg  0 0
+
+reboot pc to automatic mount the folder.
+
+ 
+*****************************
+Install PuTTY
+and VcXsrv.
+*******************************
+
+Double click VcXsrv to start run
+
+Setup PuTTY
+Double click PuTTY
+Select SSH/X11 check Enable X11 forwarding.
+add -X 10.1.10.5 at target
+
+Input Sessions name Setup.
+Click Open to bring up PuTTY.
+
+Right click the PuTTY and select properties.
+
+Target: "C:\Program Files\PuTTY\putty.exe" -X 10.1.10.5
+
+Select Session
+Login: henry
+Password: test
+{henry@isjs01 ~]# seisup
+
+****************************************
+connect to static server IP address.
+
+connect Ethernet cable to laptop and iscn011 port 4.
+
+in ifconfig in iscn011 to get ip address 192.168.5.21
+
+in the laptop to right click windows and select Network Connections.
+
+Select Wi-Fi connection/Properties/Internet Protocol Version 4 (TCP/IPv4) .
+Select Obtain an IP address automatically and Obtain DNS server address automatically:
+
+
+Select Ethernet/HPOGLOBAL2 with cable connection in port 4.
+Right click the Ethernet and select properties.d
+Select Internet Protocol Version 4 (TCP/IPv4).
+Click Properties button.
+Select Use the following IP address:
+input IP address 192.168.5.150
+Select Use the following DNS server address:
+Run CMD to ping 192.168.5.21
+
+Run Putty and set isns011 to 192.168.5.21
+****************************************
+connect to static server IP address.
+
+connect Ethernet cable to laptop and iscn011 port 4.
+
+in ifconfig in iscn011 to get ip address 192.168.5.21
+
+in the laptop to right click windows and select Network Connections.
+
+Select Wi-Fi connection/Properties/Internet Protocol Version 4 (TCP/IPv4) .
+Select Obtain an IP address automatically and Obtain DNS server address automatically:
+
+Select Ethernet/HPOGLOBAL2 with cable connection in port 4.
+Right click the Ethernet and select properties.d
+Select Internet Protocol Version 4 (TCP/IPv4).
+Click Properties button.
+Select Use the following IP address:
+input IP address 192.168.5.150
+Select Use the following DNS server address:
+Run CMD to ping 192.168.5.21
+
+Run Putty and set isns011 to 192.168.5.21
+
+***************************************************
+
+Using HP iLO4 to check server hardware.
+
+connect internet cable to the server lo port.
+reboot server to look at lo ip address.
+
+
+iLO 4 IPv4: 10.1.10.164.
+
+at Laptop internet explorer type https://10.1.10.164
+to bring up iLO4 ProLiant
+
+input local user name:
+Administrator
+password: 64MBY4X9
+
+Select System Information/Memory
+
+*************************************
+Simulate setup seisup Linux environment.
+
+At window server SeismicPPS install VMware Workstation.12 Player
+
+Create Centos 7 VM
+
+Change each server Edit virtual machine settings.
+Select Networking Adapter/Bridged: Connected directly to the physical network.
+
+Add host name and IP address to /etc/hosts
+10.1.10.84    SeismicPPS 
+10.1.10.138  isjs01    
+10.1.10.214  iscn001  
+10.1.10.5      isns01
+
+copy hosts to update other server hosts.
+[root@isjs01 etc]# scp hosts root@iscn001:/etc/.
+make /mnt/isns01 folder at SeismicPPS, isjs01, iscn001
+mount /mnt/isns01  to isns01:/volume/data.
+mount /home to isns01:/volume1/sh-home
+
+create /volume1/data and /volume1/sh-home folders at isns01.
+Add export folders at isns01 /etc/exports
+/volume1/data    *(rw,no_root_squash,sync)
+/volume1/sh-home    *(rw,no_root_squash,sync)
+
+On isns01 to set as the NFS Server. Install NFS lib and start server.
+
+in nfs server isns01
+yum install nfs-utils nfs-utils-lib -y
+systemctl start rpcbind nfs-server
+systemctl enable rpcbind nfs-server
+mkdir /nfs
+
+vi /etc/exports
+/nfs            *(rw,sync,no_root_squash,no_subtree_check)
+
+exportfs -a
+
+firewall-cmd --permanent --zone=public --add-service=nfs
+firewall-cmd --permanent --zone=public --add-service=mountd
+firewall-cmd --permanent --zone=public --add-service=rpc-bind
+firewall-cmd --reload
+
+systemctl restart nfs
+
+in clients:
+yum install nfs-utils nfs-utils-lib -y
+
+showmount -e isns01
+rpcinfo -p isns01
+
+mount isns01:/nfs /nfs
+df -h
+
+vi /etc/fstab
+isns01:/nfs /nfs nfs auto,noatime,nolock,bg,nfsvers=3,intr,tcp,actimeo=1800 0 0
+mount -a
+
+******************************************
+Set ssh to allow access from master server isjs01 to server isns001.
+:q
+at clients henry@isjs01 ~]$ ssh-keygen -t rsa
+
+[henry@isjs01 ~]$ ls .ssh
+id_rsa  id_rsa.pub  known_hosts
+
+[henry@isjs01 ~]$ ssh-copy-id henry@isns01
+[henry@isns01 ~]$ ls .ssh
+authorized_keys
+
+***********************************
+Installing MPI
+first download http://www.mpich.org/static/downloads/3.1.4/mpich-3.1.4.tar.gz and extract it at isjso1.
+
+install c, Fortran compilers at isjso1 and iscn01
+yum install gcc gcc-c++ gcc-fortran kernel-devel -y (on both machines)
+vi ~/.bashrc
+
+CD extracted folder isjso1/Download/mpich-3.1.4 folder
+set config for the install and build 
+right click extracted folder and start terminal.
+
+[henry@isjs01 mpich-3.1.4]$ sudo ./configure --prefix=/nfs/mpich3
+
+[henry@isjs01 mpich-3.1.4]$ make
+[henry@isjs01 mpich-3.1.4]$ make install
+
+the mpich installed at /nfs/mpich3
+[henry@iscn001 ~]$ ls /nfs/mpich3
+bin  include  lib  share
+
+
+sudo vi ~/.bashrc
+
+export PATH=/nfs/mpich3/bin:$PATH
+export LD_LIBRARY_PATH="/nfs/mpich3/lib:$LD_LIBRARY_PATH"
+
+reboot the pc to make the command work.
+
+run mpich example 
+
+create project folder.
+[henry@isjs01 projects]$ sudo vi hostsLS 
+isjs01
+isns01
+
+[henry@isjs01 projects]$ mpirun -f hosts -n 4 echo "hello world"
+hello world
+hello world
+hello world
+hello worldREs
+w
+
+code mpi_hello.c
+
+[henry@isjs01 projects]$ sudo chmod 777 /nfs/projects
+[henry@isjs01 projects]$ systemctl stop firewalld
+
+[henry@isjs01 projects]$ sudo vi mpi_hello.c
+#include <stdio.h>
+#include <mpi.h>
+int main(int argc, char **argv)
+{
+        int myrank = 1, nprocs = 12;
+        MPI_Init(&argc, &argv);
+        MPI_Comm_size(MPI_COMM_WORLD,&nprocs);
+        MPI_Comm_rank(MPI_COMM_WORLD,&myrank);
+        printf("Hello form processor %d of %d\n", myrank, nprocs);
+        while(1){}
+        MPI_Finalize();
+        return 1;
+}
+
+mpicc -o mpi_hello mpi_hello.c
+
+[henry@isjs01 projects]$ more hosts
+isjs01:3
+isns01:2
+iscn001:4
+SeismicPPS:1
+linuxhenry:5
+mpirun -np 10 -f hosts ./mpi_hello
+
+[henry@isjs01 projects]$ mpirun -np 10 -f hosts ./mpi_hello
+Hello form processor 3 of 10
+Hello form processor 8 of 10
+Hello form processor 9 of 10
+Hello form processor 4 of 10
+Hello form processor 6 of 10
+Hello form processor 5 of 10
+Hello form processor 7 of 10
+Hello form processor 0 of 10
+Hello form processor 1 of 10
+Hello form processor 2 of 10
+
+
+remove fire wall and restart nfs share
+
+[root@isns01 etc]# firewall-cmd --add-port=111/tcp --permanent
+success
+[root@isns01 etc]# firewall-cmd --add-port=111/udp --permanent
+success
+[root@isns01 etc]# firewall-cmd --add-port=2049/udp --permanent
+success
+[root@isns01 etc]# firewall-cmd --add-port=2049/tcp --permanent
+success
+[root@isns01 etc]# firewall-cmd --reload
+success
+[root@isns01 etc]# service nfs restart
+
+add mount at /etc/fstab.
+isns01:/volume1/sh-home  /home  nfs   default, bg   0 0
+isns01:/volume1/data         /mnt/isns01  nfs   default, bg   0 0
+
+rerun mount 
+[root@isjs01 /]# mount -a
+
+**********
+
+build home cloust
+one maser node:
+***
+
+you have account
+IP address
+ip 10.1.10.y
+
+one other computer
+in same networking
+
+account
+ip  10.1.10.x
+
+//http://www.cplusplus.com/forum/unices/116977/
+
+
+using router to connect with same networking.
+router have 4 port
+
+set router ip address. static subnet msk
+192.168.0.1
+255.255.255.0
+
+dhcp to for 4 computers to touch same networking
+every computer has networking cared with mac address.
+
+address reserve ip address for diff mac and IP.
+that will save the server 
+**********
+install MySQL
+***********
+
+download MySQL mysql57-community-release-el7-9.noarch.rpm
+rpm -i mysql57-community-release-el7-9.noarch.rpm
+yum localhost mysql57-community-release-el7-9.noarch.rpm
+
+check MySQL repostory
+
+[root@seismicpps-job01 ~]# yum repolist enabled | grep "mysql.*-community.*"
+mysql-connectors-community/x86_64       MySQL Connectors Community           30
+mysql-tools-community/x86_64            MySQL Tools Community                43
+mysql57-community/x86_64                MySQL 5.7 Community Server          166
+
+install MySQL
+yum install MySQL-community-server
+
+[root@seismicpps-job01 ~]# ls /usr/bin/mysql
+/usr/bin/MySQL
+
+[root@seismicpps-job01 ~]# service mysqld status
+Redirecting to /bin/systemctl status  mysqld.service
+● mysqld.service - MySQL Server
+
+check mysql temporary password 
+[root@seismicpps-job01 ~]# grep 'temporary password' /var/log/mysqld.log
+2017-03-28T15:13:36.470446Z 1 [Note] A temporary password is generated for root@localhost: tlS4j#wNfA3J
+
+[root@seismicpps-job01 ~]# which mysqladmin
+/bin/mysqladmin
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
