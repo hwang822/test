@@ -833,3 +833,50 @@ at centos.
 yum list : grep qt5
 
 
+Pre install centos 7 and setup network name eth0
+
+1. Download Seisup form 
+
+url:       ftp://data.seimaxtech.com
+login:   client5
+pwd:    zwUg9eWz
+
+2. at Download SeisUP.2016.1-rhel7.tgz, right click to Extract here.
+Create new folder SeisUP.2016.1-rhel7
+
+3. su - to root
+mkdir /opt/seisup
+
+mkdir/mnt/seisupdata
+
+[root@seismicpps-tester ~]# perl install.pl
+to start run install
+
+[tester@seismicpps-tester /]$ df -kh
+/dev/mapper/cl-home  2.0T   13G  2.0T   1% /home
+
+mont /dev/mapper/cl-home seisupdata.
+
+[root@seismicpps-tester ~]# perl install.pl
+type seisup install location: /opt/seisup
+type seisup user data location: /mnt/seisupdata.
+
+[tester@seismicpps-tester linux-x86_64]$ sudo vi ~/.bashrc
+
+export QEDTOP=/isns01/seisup
+export QSYS=linux-x86_64
+export SEISUP_LICENSE_FILE=${QEDTOP}/etc
+export QEDSDK=/opt/development/SeisUP.2016-SDK
+export PATH=${PATH}:${QEDTOP}/bin/${QSYS}
+export PATH=/nfs/mpich3/bin:$PATH
+export LD_LIBRARY_PATH="/nfs/mpich3/lib:$LD_LIBRARY_PATH"
+
+4. create user account at centos
+[developer@seismicpps-job01 home]$ sudo adduser tester
+[sudo] password for developer: test
+Modify user home directory from default to a new folder.
+usermod -d /target/directory username
+change the upssward for a user
+passwd tester
+New password: tester00
+Retype new password: tester00
