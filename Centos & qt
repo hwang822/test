@@ -37,7 +37,7 @@ Mount external device
 how to Mount CD/DVD in Linux
 using lsblk to find DVD name sr0
 
-[developer@seismicpps-job01 Workarea]$ df
+[developer@hwang822-job01 Workarea]$ df
 Filesystem           1K-blocks     Used  Available Use% Mounted on
 /dev/mapper/cl-root   52403200 10070428   42332772  20% /
 devtmpfs               8031760        0    8031760   0% /dev
@@ -47,7 +47,7 @@ tmpfs                  8047368        0    8047368   0% /sys/fs/cgroup
 /dev/mapper/cl-home 3843467672  6344448 3837123224   1% /home
 /dev/sda1              1038336   232676     805660  23% /boot
 tmpfs                  1609476       12    1609464   1% /run/user/1001
-[developer@seismicpps-job01 Workarea]$ lsblk
+[developer@hwang822-job01 Workarea]$ lsblk
 NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda           8:0    0  1.8T  0 disk 
 ├─sda1        8:1    0    1G  0 part /boot
@@ -141,6 +141,152 @@ need set static IP address for git server .
 
 ping 192.168.1.89 from client 
 [developer@hwang822-job01]$sudo vi /etc/hosts to add hwang822 name for ping
+
+add
+192.168.1.89 hwang822
+
+ping hwang822
+
+3. in the server we need add SSH Server
+[root@hwang822 /]$ sudo yum install openssh-server
+Loaded plugins: fastestmirror, langpacks
+base                                                                                      | 3.6 kB  00:00:00     
+extras                                                                                    | 3.4 kB  00:00:00     
+updates                                                                                   | 3.4 kB  00:00:00     
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfast.net/
+ * extras: mirror.steadfast.net
+ * updates: mirror.steadfast.net
+
+Change ssh config file.
+su - 
+[root@localhost /]$ vi /etc/ssh/sshd_config
+change
+#PasswordAuthentication yes
+PasswordAuthentication no
+
+4. Client create ssh key for the server authorize 
+
+[developer@hwang822-job01 ~]$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/sp1/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/sp1/.ssh/id_rsa.
+Your public key has been saved in /home/sp1/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:EIrKiIDn6BK0z2FXtWa6Jn8dkEZRDNME3K1tEU+Cw9Q sp1@localhost.localdomain
+The key's randomart image is:
+
++---[RSA 2048]----+
+|      . .*%++o.. |
+|.  . . ..ooB E+  |
+|o.o . ...+. + .. |
+|*=.   ..++ . o   |
+|*o.o . .S . .    |
+|..+ o   .  .     |
+|.. o . o  . .    |
+|.     +  . .     |
+|       ..        |
++----[SHA256]-----+
+
+[developer@hwang822-job01 ~]$ cd ~/.ssh
+[developer@hwang822-job01 .ssh]$ ls
+id_rsa  id_rsa.pub
+[developer@hwang822-job01 .ssh]$
+
+copy client id_rsa.pub to server .ssh/authorized_keys
+sudo cat ../sp1/Downloads/id_rsa.pub >> ~/.ssh/authorized_keys
+
+at client to run ssh to server
+
+[developer@hwang822-job01 ~]$ ssh git@seismcipps
+no password ask.
+
+5. Install git at server.
+
+git@hwang822 ~]$ sudo yum install git
+[sudo] password for git: hwang822 
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfast.net
+ * extras: mirror.steadfast.net
+ * updates: mirror.steadfast.net
+Package git-1.8.3.1-6.el7_2.1.x86_64 already installed and latest version
+Nothing to do
+
+[git@hwang822 ~]$ cat /etc/shells
+/bin/sh
+/bin/bash
+/sbin/nologin
+/usr/bin/sh
+/usr/bin/bash
+/usr/sbin/nologin
+/bin/tcsh
+/bin/csh
+[sp1@localhost ~]$ which git-shell
+/bin/git-shell
+
+[git@hwang822 ~]$ sudo vi /etc/shells
+add
+/bin/git-shell
+mk
+[git@hwang822 ~]$ sudo chsh git
+Changing shell for git.
+New shell [/bin/bash]: 
+
+now client can not log in in command to the git server
+
+[developer@hwang822-job01 /]$ ssh git@hwang822
+Last login: Wed Feb  8 16:12:33 2017 from 10.1.10.240
+fatal: Interactive git shell is not enabled.
+hint: ~/git-shell-commands should exist and have read and execute access.
+Connection to hwang822 closed.
+
+7. Create git repository at remote (master) server
+mkdir /opt/git/projecta.git.
+cd /opt/git/projecta.git
+[git@seismic projecta.git]$ sudo git init --bare
+Initialized empty Git repository in /opt/git/projecta.git/
+[git@localhost projecta.git]$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+
+change group 
+[git@hwang822 opt]$ sudo chown -R git:git git
+
+
+8. At client create local git server
+
+[developer@seismcpps-job01 Workarea]$ sudo git init
+[developer@seismcpps-job01 Workarea]$ sudo touch README random.hpp random.cpp
+[developer@seismcpps-job01 Workarea]$ sudo git add .
+
+
+Set Git config
+
+root@Root:/# git config --global user.email henry@hwang822.com
+root@Root:/# git config --global user.name Henry Wang
+
+add all files to local git server .
+
+[sp1@localhost hwang822]$ sudo git commit -m 'initial commit'
+[master (root-commit) 9fb53a0] initial commit
+ Committer: root <root@hwang822.localdomain>
+ 
+submit to remote git server
+[sp1@localhost hwang822]$ sudo git remote add origin git@hwang822:/opt/git/projecta.git
+[sp1@localhost hwang822]$ git push origin master
+
+install git gui
+
+[sp1@localhost hwang822]$ sudo yum install git-gui
+
+update README file
+
+[sp1@localhost hwang822]$ sudo vi README
+
+[sp1@localhost hwang822]$ git gui &
+
 
 
 
