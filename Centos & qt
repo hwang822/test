@@ -880,3 +880,294 @@ change the upssward for a user
 passwd tester
 New password: tester00
 Retype new password: tester00
+
+++++++++++++++++++
+Inter c++ compiler and intel math kernel library.
+
+Start Visual Studio 2012/Visual Tools/Developer Command Prcompt for VS2012 (CMD), 
+cd "\Program Files (x86)\Intel"
+cd "Composer XE 2013 SP1".
+cd "bin"
+
+here you can see iclvars.bat file
+
+run iclvars.bat int64
+
+be have intel compariler installed.
+
+cd "Composer XE 2013 SP1\include\mkl".
+there are include and example ... directories.
+dir mkl_solv*
+mkl_solver.f77
+mkl_solver.f90
+mkl_solver.fi
+mkl_solver.h
+...
+
+open mkl_solver.f90
+
+INCLUDE 'mkl_dss.f90'
+INCLUDE 'mkl_pardiso.f90'
+INCLUDE 'mkl_rci.fi'
+... it is for FORTRAN
+
+open nkl_solver.h
+
+if(!defined(__KML_SOLVER_H)
+#include(__MKL_SOLVER_H)
+#devine__MKL_SOLVER_H
+#include "mkl_dss.h"
+#include "mkl_pardiso.h"
+#include "mkl_rck.h"
+#endif
+
+cd c:\Program Files (x86)\intel\Composer XE 2013 SP1\mkl\example
+\examples_core\
+   examples_core.zip
+   examples_f95.zip
+   examples_nic.zip
+   
+   go to \intel\Composer XE 2013 SP1\mkl\examples\examples_core\blas\
+   
+   it has makefile, source code folder (*.f files codes for FORTRAN).
+   
+    open one file zcopyx.f
+    
+    PROGRAM ZCOPY_MAIN
+    INTEGER n, incx, incy
+    INTEGET xamx, ymax
+    COMPLEX*16 x(xmax), y(ymax)
+    INTEGER i
+    INTRINSIC abs
+    EXTERNAL ZCOPY, PrintVectorA
+    
+    PRINT*
+    PRINT*, 'ZCOPY EXAMPLE PROGRAM'
+    READ*
+    READ*, n
+    READ*, incx, incy
+    IF(((i+(n-1)*abs(incx)).gt.xmzx).or.
+       ((1+(n-1)*abs(incy)).gt.xmax))THEN
+       PRINT*, 'Insufficient memory for arrays'
+       GOTO 999
+    ENDIF
+    ...
+  END
+    
+complier this FORTRAN file.
+
+make dllintel64
+finish without any errors
+created \dzgennx.exe
+
+++++++++++++++++++++++++++++++++++++++
+Top 10 Linux interview questions:
+1. How can you see which kernel version a system 
+is currently running?
+
+[hwanglaptopwm@hwanglaptop ~]$ uname -a
+Linux hwanglaptop 3.10.0-514.el7.x86_64 #1 SMP Tue Nov 22 16:42:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+[hwanglaptopwm@hwanglaptop ~]$ uname -v
+#1 SMP Tue Nov 22 16:42:41 UTC 2016
+
+[hwanglaptopwm@hwanglaptop ~]$ uname -r
+3.10.0-514.el7.x86_64
+
+2. How can you check system's current IP address?
+
+[hwanglaptopwm@hwanglaptop ~]$ ifconfig
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.184.128  netmask 255.255.255.0  broadcast 192.168.184.255
+        inet6 fe80::57f1:a94:f85a:1c13  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:a4:cd:75  txqueuelen 1000  (Ethernet)
+        RX packets 281  bytes 40775 (39.8 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 273  bytes 27138 (26.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1  (Local Loopback)
+        RX packets 6  bytes 536 (536.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6  bytes 536 (536.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+        ether 52:54:00:7e:70:a9  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[hwanglaptopwm@hwanglaptop ~]$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+
+3. How do you check for free disk space?
+
+[hwanglaptopwm@hwanglaptop ~]$ df
+Filesystem          1K-blocks    Used Available Use% Mounted on
+/dev/mapper/cl-root  17811456 8245268   9566188  47% /
+devtmpfs               484108       0    484108   0% /dev
+tmpfs                  499968     156    499812   1% /dev/shm
+tmpfs                  499968    7200    492768   2% /run
+tmpfs                  499968       0    499968   0% /sys/fs/cgroup
+/dev/sda1             1038336  176588    861748  18% /boot
+tmpfs                   99996      12     99984   1% /run/user/1000
+/dev/sr0              8086368 8086368         0 100% /run/media/hwanglaptopwm/CentOS 7 x86_64
+
+[hwanglaptopwm@hwanglaptop ~]$ df
+Filesystem          1K-blocks    Used Available Use% Mounted on
+/dev/mapper/cl-root  17811456 8245268   9566188  47% /
+devtmpfs               484108       0    484108   0% /dev
+tmpfs                  499968     156    499812   1% /dev/shm
+tmpfs                  499968    7200    492768   2% /run
+tmpfs                  499968       0    499968   0% /sys/fs/cgroup
+/dev/sda1             1038336  176588    861748  18% /boot
+tmpfs                   99996      12     99984   1% /run/user/1000
+/dev/sr0              8086368 8086368         0 100% /run/media/hwanglaptopwm/CentOS 7 x86_64
+[hwanglaptopwm@hwanglaptop ~]$ df -ah
+Filesystem           Size  Used Avail Use% Mounted on
+rootfs                  -     -     -    - /
+sysfs                   0     0     0    - /sys
+proc                    0     0     0    - /proc
+devtmpfs             473M     0  473M   0% /dev
+securityfs              0     0     0    - /sys/kernel/security
+tmpfs                489M  156K  489M   1% /dev/shm
+devpts                  0     0     0    - /dev/pts
+tmpfs                489M  7.1M  482M   2% /run
+tmpfs                489M     0  489M   0% /sys/fs/cgroup
+cgroup                  0     0     0    - /sys/fs/cgroup/systemd
+pstore                  0     0     0    - /sys/fs/pstore
+cgroup                  0     0     0    - /sys/fs/cgroup/cpu,cpuacct
+cgroup                  0     0     0    - /sys/fs/cgroup/cpuset
+cgroup                  0     0     0    - /sys/fs/cgroup/memory
+cgroup                  0     0     0    - /sys/fs/cgroup/freezer
+cgroup                  0     0     0    - /sys/fs/cgroup/perf_event
+cgroup                  0     0     0    - /sys/fs/cgroup/net_cls,net_prio
+cgroup                  0     0     0    - /sys/fs/cgroup/devices
+cgroup                  0     0     0    - /sys/fs/cgroup/hugetlb
+cgroup                  0     0     0    - /sys/fs/cgroup/pids
+cgroup                  0     0     0    - /sys/fs/cgroup/blkio
+configfs                0     0     0    - /sys/kernel/config
+/dev/mapper/cl-root   17G  7.9G  9.2G  47% /
+selinuxfs               0     0     0    - /sys/fs/selinux
+systemd-1               0     0     0    - /proc/sys/fs/binfmt_misc
+debugfs                 0     0     0    - /sys/kernel/debug
+hugetlbfs               0     0     0    - /dev/hugepages
+mqueue                  0     0     0    - /dev/mqueue
+nfsd                    0     0     0    - /proc/fs/nfsd
+/dev/sda1           1014M  173M  842M  18% /boot
+sunrpc                  0     0     0    - /var/lib/nfs/rpc_pipefs
+tmpfs                 98M   12K   98M   1% /run/user/1000
+fusectl                 0     0     0    - /sys/fs/fuse/connections
+gvfsd-fuse              0     0     0    - /run/user/1000/gvfs
+/dev/sr0             7.8G  7.8G     0 100% /run/media/hwanglaptopwm/CentOS 7 x86_64
+
+4. How do you manage services on a system?
+[hwanglaptopwm@hwanglaptop ~]$ service --status-all
+netconsole module not loaded
+Configured devices:
+lo Wired_connection_1 ens33
+Currently active devices:
+lo ens33 virbr0
+
+stop, start and status of service
+
+[hwanglaptopwm@hwanglaptop ~]$ systemctl status
+● hwanglaptop
+    State: degraded
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Wed 2019-05-08 19:41:24 EDT; 14min ago
+   CGroup: /
+           ├─1 /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+           ├─user.slice
+           │ └─user-1000.slice
+           │   └─session-1.scope
+           │     ├─2781 gdm-session-worker [pam/gdm-password]
+           │     ├─2793 /usr/bin/gnome-keyring-daemon --daemonize --login
+
+....
+
+5. How would you check the size of a directory's conteents on disk?
+[hwanglaptopwm@hwanglaptop ~]$ du -sh Workarea
+161M	Workarea
+
+6. How would you check for open ports on a Linux machine?
+[hwanglaptopwm@hwanglaptop ~]$ du -sh Workarea
+161M	Workarea
+[hwanglaptopwm@hwanglaptop ~]$ netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ]         DGRAM                    13081    /run/systemd/shutdownd
+unix  2      [ ]         DGRAM                    8573     /run/systemd/notify
+unix  2      [ ]         DGRAM                    8575     /run/systemd/cgroups-agent
+unix  5      [ ]         DGRAM                    8586     /run/systemd/journal/socket
+unix  26     [ ]         DGRAM                    8588     /dev/log
+unix  3      [ ]         STREAM     CONNECTED     31847    
+unix  2      [ ]         STREAM     CONNECTED     27973    @/tmp/dbus-sx5WmUgA
+unix  3      [ ]         STREAM     CONNECTED     25696    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     31953    
+unix  3      [ ]         STREAM     CONNECTED     31913    
+
+7. How do you cehck CPU useage for a process?
+[hwanglaptopwm@hwanglaptop ~]$ ps aux | grep nginx
+hwangla+   6470  0.0  0.0 112652   964 pts/0    S+   23:12   0:00 grep --color=auto nginx
+
+or 
+[hwanglaptopwm@hwanglaptop ~]$ top
+3 total,   2 running, 181 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  6.4 us,  1.0 sy,  0.0 ni, 92.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :   999936 total,    63964 free,   678976 used,   256996 buff/cache
+KiB Swap:  2097148 total,  2082076 free,    15072 used.    85292 avail Mem 
+
+8. Dealing with Mounts.
+[hwanglaptopwm@hwanglaptop ~]$ ls /mnt
+usb
+
+[hwanglaptopwm@hwanglaptop ~]$ mount
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=484108k,nr_inodes=121027,mode=755)
+
+ sudo mount /dev/sda2 /mnt
+ To see mount seting in file.
+ vi /etc/fstab
+
+/dev/mapper/cl-root     /                       xfs     defaults        0 0
+UUID=c6e58285-5e97-4e4a-89e0-a1c4250b68ca /boot                   xfs     defaults        0 0
+/dev/mapper/cl-swap     swap                    swap    defaults        0 0
+~                                                                             
+9. How do you look up someting you don't know?
+man ps
+
+PS(1)                            User Commands                           PS(1)
+
+NAME
+       ps - report a snapshot of the current processes.
+
+SYNOPSIS
+       ps [options]
+
+10. What do you do when you can't find an answer in a man page?
+
+google up.
+
+
+
+
+
+
+
+
+
