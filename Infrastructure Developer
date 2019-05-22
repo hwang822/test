@@ -1,0 +1,25 @@
+Infrasturcture Developer. 
+code system, network, virtual machenge, servers, database, storage automation manager programing. 
+Powershell, aws tool, configuration. 
+Windows, security, networking, mobile devices, clouds Admination managerment.
+
+build, unitest, deploy
+Developer Productivity, Sevice-orignal programing.
+
+Basic elements of an IT infrastructure
+  Data centers
+     Physical space where servers and network devices are located.
+     Requires access control, cooling, redundant power supplies, etc.
+     Usually organized in "racks".
+     Vary significantly in size.
+        The system administrator.
+        Elements in a LAN.
+           web server(apache, Nginx, MS IIS...), mail server, file server, db server, printer server, clients <=> switch =<> router, modem, internet
+                                                                                    <=> access point <=> wileless clients.   
+                                                                                    
+  Servers and clients
+     Mainframe, High availableilliy, Cluster, Vittual.
+     
+  Network devices
+Communication media
+Types of data networks.
