@@ -23,3 +23,83 @@ Basic elements of an IT infrastructure
   Network devices
 Communication media
 Types of data networks.
+
+
+pyrax python sdk in open source. buil programing.
+
+import pyrax
+import pyrax.utile as utile
+import pyrax.exceptions as exc
+
+# if you have keyring configured...
+pyrax.keyring_auth()
+# if you have a credential file...
+#pyrax.set_credential_file("/path/to/file")
+# Or just set directly
+#pyrax.set_credentials(username, password)
+
+Create the Database
+
+db_instance = cdb.create("DemoDB", flavor=1, voulume=2)
+utils.wait_for_build(db_instance, vebose=True)
+db = db_instnace.create_database("demodb")
+
+db_user = db_instance.create_user("demouser", "topsecret".db)
+
+Create an isolated network
+
+new_network_name = "isolated"
+new_netwrok_cidr = "192.168.0.0/24"
+new_net = cidr.create(new_netwrok_name, cidr=new_network_cidr).
+
+Define a Public Key
+
+# store the public key
+keyfile = os.expanduser("~/.ssh/id_rsa.pub")
+with open(keyfile, "r") as kf:
+   pub=kf.read()
+   key = cs.keypairs.create("macbook",pub)
+
+Create the App Servers
+
+app=image = "fbfaospj-erof-jaef-jaslfjalfjas"
+networks = [{"net-id":cnw.SERVICE_NET_ID}]
+server1 = cs.servers.create("PyConCA_Srvl",
+  image=app_image, flavor=2, key_name="macbook",
+  nics=networks)
+server2 = cs.servers.create("PyConCA_Srv2",
+  image=app_image, flavor=2, key_name="macbook",
+  nics=networks)
+utils.wait_for_build(server1, verbose=True)  
+utils.wait_for_build(server2, verbose=True)
+
+Define the LB Nodes & Virtual IP
+
+# Get the server IPs
+ip1 = server1.addresses["private"][0]["addr"]
+ip2 = server2.addresses["private"][0]["addr"]
+# Define the nodes
+
+node1 = clb.Node(address=ip1, port=80, weight=1, condition="ENABLED")
+node2 = clb.Node(address=ip2, port=80, weight=1, condition="ENABLED")
+
+# Create the virtual IP
+vip = clb.VirtualIP(type="PUBLIC")
+
+Create the Load Balancer
+
+if=clb.create"PyConCA_LB", port=80, protocol="HTTP", nodes=[node1, node2], virtual_ips=vip, algorithm_"WEIGHTED_ROUND_ROBIN")
+utils.wait_for_build(lb, verbose=True)
+lb_ip=lb.birtual_ips[0].address
+domin_name = "pyraxdemo.com"
+dom = dns.create(name=domain_name, emailAddress="ed.leafe@rackspace.com",
+  ttl=900, comment="Pyrax_Demo")
+  a_rec={"type": "A", "name": domain_name, "data": lb_ip, "ttl": 900}
+  recs = dom.add_record(a_rec)     
+  
+  
+
+
+
+
+
