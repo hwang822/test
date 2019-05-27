@@ -50,9 +50,9 @@ time.sleep(2)
 
 def welcome():
 	print"**********************"	
-  print("This script will find the existing git version if any\nand also update/install latest git")
-  print("**********************")
-  time.sleep(4)
+  	print("This script will find the existing git version if any\nand also update/install latest git")
+  	print("**********************")
+  	time.sleep(4)
   
 def Thank_you():
 	print("\n\nThank you for using this script\nHave a great day\n")
@@ -192,15 +192,7 @@ def run_cmd(cmd):
 		print("Please rectify the error and try it")
 		Thank_you()
 		sys.exit(4)
- 
-def install_required_packages():
-	cmd1="yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y"
-	cmd2="yum install gcc perl-Extutiles-MakeMaker -y"
-	cmd3="yum install wget -y"
-	print("Please wait installing required packages")
-	print("(Curl-devel expat-devel gettext-devel openssl-devel zlib-devel and gcc)....")
-	run_cmd(cmd1)
- 
+  
 def install_required_packages():
 	cmd1="yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y"
 	cmd2="yum install gcc perl-Extutiles-MakeMaker -y"
@@ -236,8 +228,17 @@ def install_git(href_link, usr_ver):
 	download_tar_gz="wget. "+url
 	run_cmd(download_tar_gz)
 	tar_ball=url.split(os.sep)[-1]
-  
-  
+	cmd3="tar -xzf "+tar_ball
+	run_cmd(cmd2)
+	cmd3=tar_ball.rstrip(".tar.gz")
+	pwd=get_current_working_dir()
+	cmd4=pwd+os.sep+cmd3
+	os.chdir(cmd4)
+	os.system("./configure")
+	os.system("make")
+	os.system("make install")
+	#os.system("In -s /usr/local/bin/git /bin/git")
+	
 def new_install_git():
 	href_link, ver_li=all_git_versions()
 	usr_ver=select_version(None, ver_li)
@@ -250,7 +251,8 @@ def update_git(git_ver):
   usr_vers=select_version(git_ver, ver_li)
   #print("you required ver is: ", usr_ver)
   install_git(href_link, usr_ver)
-  def user_request():
+  
+def user_request():
 	while True:
 		print("Enter only yes/no")
 		yes_or_no=raw_input()
