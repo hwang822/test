@@ -1,5 +1,4 @@
-P
-tyhon programming:
+Ptyhon programming:
    Types of Operators
    Conditional Statemtns
    Looping
@@ -33,6 +32,8 @@ Triggers of Lambda
 [ec2-user@ip-172-31-26-48 ~]$ clear
 [ec2-user@ip-172-31-26-48 ~]$ ls
 [ec2-user@ip-172-31-26-48 ~]$ vi git_ini.py
+
+git_install.py
 
 #This script is used to install fresh git or it also used to update the existing git
 
@@ -280,5 +281,66 @@ if __name__=="_main__":
 	welcome()
 	main()
 
-            
+start_stop_ec2.py
+
+import boto3 
+import os
+import time
      
+def get_ec2_con_for_give_region(my_region):
+	ec2_con_re=boto3.resource('ec2', region_name=my_region)
+	return ec2_con_re
+	
+def list_instances_on_my_region(ec2_con_re):
+   for each in ec2_con_re.instances.all():
+   	print(each.id)
+	
+def get_instant_state(ec2_con_re, in_id):
+   for each in ec2_con_re.instances.filter(Filters=[{'Name':'instance-id',"Values":[in_id]}]):
+   	pr_st=each.state['Name']
+	
+def start_instance(ec2_con_re, in_id):
+	pr_st=get_instant_state(ec2_con_re, in_id)
+	if pr_st=="running":
+		print("instnace is already running")
+	else:
+		for each in ec2_con_re.instances.filter(Filters=[{'Name':'instance-id',"Values":[in_id]}]):
+			each.start()
+			print("please wait it is going to start, once if it is started then we will let you know")
+			each.wait_until_running()
+			print("now it is running")
+	return
+
+def Thank_you():
+	print("\n\n******Thank you for using this script******")
+	return None
+	
+def stop_instance(ec2_con_re, in_id):
+	pr_st=get_instant_state(ec2_con_re, in_id)
+	if pr_st=="stopped":
+		print("instnace is already stopped")
+	else:
+		for each in ec2_con_re.instances.filter(Filters=[{'Name':'instance-id',"Values":[in_id]}]):
+			each.stop()
+			print("please wait it is going to stop, once if it is stopped then we will let you know")
+			each.wait_until_stopped()
+			print("now it is topped")
+	return
+	
+def welcome():
+	print("This script will help you to start or stop ec2 instances based on your required region and instnace id")
+	print("Enjoy by using this script\n\n")
+	time.sleep(3)
+	
+def main():
+	welcome()
+	py_region=raw_imput("Enter you region name:")
+	print("please wait....conneting to your aws ec2 console......")
+        Than_you()
+      
+if __name__=="_main__":
+	os.system('clear')
+	welcome()
+	main()
+	
+python start_stop_ec2.py
