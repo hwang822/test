@@ -1,0 +1,29 @@
+
+git clone https://github.com/Microsoft/vcpkg.git
+vcpkg>bootstrap-vcpkg.bat
+.\vcpkg integrate install
+
+vcpkg is tool to build open source codes to libs.
+download to vcpkg, cd to vcpkg location.
+direct to using vcpkg command.
+
+vcpkg search => list all available open source codes software.
+
+vcpkg search sqlite3.  
+
+C:\Workarea\vcpkg>vcpkg search sqlite3
+soci[sqlite3]                         Build sqlite3 backend
+sqlite3              3.28.0-1         SQLite is a software library that implements a self-contained, serverless, zer...
+sqlite3[tool]                         sqlite3 executable
+sqlitecpp            2.3.0            SQLiteC++ (SQLiteCpp) is a smart and easy to use C++ SQLite3 wrapper.
+sqlpp11-connector... 0.29-1           A C++ wrapper for sqlite3 meant to be used in combination with sqlpp11.
+
+C:\Workarea\vcpkg>vcpkg install sqlite3:x64-windows
+The following packages are already installed:
+    sqlite3[core]:x86-windows
+Starting package 1/1: sqlite3:x86-windows
+Package sqlite3:x86-windows is already installed
+Elapsed time for package sqlite3:x86-windows: 1.749 ms
+
+Total elapsed time: 1.898 ms
+
