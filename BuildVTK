@@ -27,3 +27,28 @@ Elapsed time for package sqlite3:x86-windows: 1.749 ms
 
 Total elapsed time: 1.898 ms
 
+Download and install Cmake
+Download VTK zip file VTK-8.2.0.zip and extact files at VTK-8.2.0
+
+create VTK folder  VTK\src and VTK\bin
+copy VTK-8.2.0\*.* to VTK\src
+
+run CMake
+set Where is the source code: VTK\src
+set Where is build the binaries: VTK\bin
+
+check Advanced.
+Click Configure button
+
+check BUILD_EXAMPLE
+Module_vtkTestingCore
+Module_vtkTestingrendering
+
+
+
+
+
+
+
+
+
