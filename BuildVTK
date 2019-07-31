@@ -44,6 +44,12 @@ check BUILD_EXAMPLE
 Module_vtkTestingCore
 Module_vtkTestingrendering
 
+Click Configure button again.
+
+Click generate button.
+
+open using VS2019 to open VTK\bin\VTK.sln
+BUILD_ALL
 
 
 
