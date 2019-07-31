@@ -51,10 +51,77 @@ Click generate button.
 open using VS2019 to open VTK\bin\VTK.sln
 BUILD_ALL
 
+******************************
+git clone https://github.com/CamelotVG/vtkbool
+
+right click vtkbool folder to open in visual studio.
+
+get error message:
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error		CMake Error at C:/Workarea/vcpkg/scripts/buildsystems/vcpkg.cmake:266 (_find_package):
+  Could not find a package configuration file provided by "VTK" with any of
+  the following names:
+
+    VTKConfig.cmake
+    vtk-config.cmake
+
+  Add the installation prefix of "VTK" to CMAKE_PREFIX_PATH or set "VTK_DIR"
+  to a directory containing one of the above files.  If "VTK" provides a
+  separate development package or SDK, be sure it has been installed.		C:/Workarea/vcpkg/scripts/buildsystems/vcpkg.cmake	266	
+
+need using vcpkg to rebuild and install VTK
+Then the camke file could be run to build vtkbool
+
+*****************************************
+
+vcpkg install vtk[mpi] vtk
+
+
+Elapsed time for package szip:x86-windows: 40.49 s
+Starting package 14/28: msmpi:x86-windows
+Building package msmpi[core]:x86-windows...
+-- Downloading https://download.microsoft.com/download/A/E/0/AE002626-9D9D-448D-8197-1EA510E297CE/msmpisdk.msi...
+-- Downloading https://download.microsoft.com/download/A/E/0/AE002626-9D9D-448D-8197-1EA510E297CE/msmpisetup.exe...
+CMake Error at ports/msmpi/portfile.cmake:57 (message):
+    Could not find:
+      C:\Program Files/Microsoft MPI/Bin/mpiexec.exe
+    Please install the MSMPI redistributable package before trying to install this port.
+    The appropriate installer has been downloaded to:
+      C:/Workarea/vcpkg/downloads/msmpisetup-10.0.12498.exe
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:73 (include)
+
+
+Error: Building package msmpi:x86-windows failed with: BUILD_FAILED
+Please ensure you're using the latest portfiles with `.\vcpkg update`, then
+submit an issue at https://github.com/Microsoft/vcpkg/issues including:
+  Package: msmpi:x86-windows
+  Vcpkg version: 2019.06.26-nohash
+
+Additionally, attach any relevant sections from the log files above.
+
+Go to  C:/Workarea/vcpkg/downloads/msmpisetup-10.0.12498.exe
+run install msppisetup
+
+vcpkg install vtk[mpi] vtk
+
+Elapsed time for package libxml2:x86-windows-static: 9.635 s
+Starting package 5/36: atlmfc:x86-windows
+Building package atlmfc[core]:x86-windows...
+CMake Error at ports/atlmfc/portfile.cmake:7 (message):
+  Unable to locate 'afxres.h'.  Ensure you have installed the ATL/MFC
+  component of Visual Studio.
+Call Stack (most recent call first):
+  scripts/ports.cmake:73 (include)
+
+Downlaod and install windows 10 SDK
 
 
 
 
+*****************************************************
 
 
 
