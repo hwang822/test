@@ -64,6 +64,71 @@ Download VTK sample CylinderExample
 CylinderExample.cxx and CMakeLists.txt
 using CMake to build CMakeLists.exe
 
+*************************
+
+Vcpkg helps you get C and C++ libraries on Windows.
+
+https://github.com/Microsoft/vcpkg/blob/8379a80abe5288c7c06d5b9ab16efe355d1c6f62/docs/EXAMPLES.md#example-1
+
+vcpkg install boost:x64-windows
+
+The recommended and most productive way to use vcpkg is via user-wide integration, making the system available 
+for all projects you build. The user-wide integration will require administrator access the first time it is used on 
+a given machine. After the first use, administrator access is no longer required and the integration is on a per-user basis.
+
+C:\Workarea\vcpkg>vcpkg integrate install
+Applied user-wide integration for this vcpkg root.
+
+All MSBuild C++ projects can now #include any installed libraries.
+Linking will be handled automatically.
+Installing new libraries will make them instantly available.
+
+Check what vcpkg libs have been installed
+
+https://github.com/Microsoft/vcpkg/tree/master/triplets
+could see all platform x64-windows.
+
+vcpkg install vtk:x64-windows
+get errors: vtk_glew.h(40): fatal error C1083: Cannot open include file: 'GL/glew.h'
+after google and know The vtk-package needs cmake v3.14.0
+On my device cmake v3.15.x was installed.
+After uninstalling cmake, vcpkg downloaded the needed version of CMake and it worked. 
 
 
+open visual studio 2019 and create an c++ proejct.
 
+
+if like to include x64-windows libs from vcpkg, select vs2019 platform
+create a sample c++ file include sqlite3 in the file.
+and complier will scussfully
+
+C:\Workarea\vcpkg>vcpkg list
+atlmfc:x64-windows                                 0                a stub package that ensures VS has ATL/MFC insta...
+boost-any:x64-windows                              1.70.0           Boost any module
+sqlite3:x64-windows-static                         3.29.0-1         SQLite is a software library that implements a s...
+sqlitecpp:x64-windows                              2.3.0            SQLiteC++ (SQLiteCpp) is a smart and easy to use...
+vtk:x64-windows                                    8.2.0-5          Software system for 3D computer graphics, image ...
+
+******************
+#include <stdio.h>
+#include <sqlite3.h>
+#include <SQLiteCpp/Assertion.h>
+#include <boost/any.hpp>
+  
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+	int i;
+    	for(i=0; i<argc; i++){
+      		printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    	}
+    	printf("\n");
+    	return 0;
+}
+  
+int main(int argc, char **argv){
+    	sqlite3 *db;
+	char *zErrMsg = 0;
+	int rc;
+    
+}
+
+*******************************
