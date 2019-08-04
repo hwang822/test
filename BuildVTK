@@ -58,6 +58,9 @@ C:\Program Files (x86)\VTK\bin
 
 set PATH = C:\Program Files (x86)\VTK\bin
 
+
+
+
 ******************************
 Download VTK sample CylinderExample
 
@@ -88,15 +91,41 @@ Check what vcpkg libs have been installed
 https://github.com/Microsoft/vcpkg/tree/master/triplets
 could see all platform x64-windows.
 
+*******************************************
 vcpkg install vtk:x64-windows
 get errors: vtk_glew.h(40): fatal error C1083: Cannot open include file: 'GL/glew.h'
 after google and know The vtk-package needs cmake v3.14.0
 On my device cmake v3.15.x was installed.
 After uninstalling cmake, vcpkg downloaded the needed version of CMake and it worked. 
 
+Installing package vtk[core]:x64-windows... done
+Elapsed time for package vtk:x64-windows: 14.99 min
+
+Total elapsed time: 14.99 min
+
+The package vtk:x64-windows provides CMake targets:
+
+    find_package(VTK CONFIG REQUIRED)
+    # Note: 106 target(s) were omitted.
+    target_link_libraries(main PRIVATE foo vtksys ${name} somelib)
+
+*****************************************
+vcpkg install glfw3:x64-windows
+....
+Installing package glfw3[core]:x64-windows... done
+Elapsed time for package glfw3:x64-windows: 9.376 s
+
+Total elapsed time: 9.376 s
+
+The package glfw3:x64-windows provides CMake targets:
+
+    find_package(glfw3 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE glfw)
+
+create CMake projects file 
+************************************************
 
 open visual studio 2019 and create an c++ proejct.
-
 
 if like to include x64-windows libs from vcpkg, select vs2019 platform
 create a sample c++ file include sqlite3 in the file.
