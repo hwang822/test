@@ -1,3 +1,24 @@
+Simple scripting lanaguage in CMakeLists.txt
+   Built-in commands for common rules.
+     - add_library(MyLib MyLib.cxx)
+     - add_exectuable(MyExe MyMain.cxx)
+  Eample project using Boost
+  
+     cmake_minimum_required(VERSION 2.6)
+     project(MyProject)
+     find_package(Boost REQUIRED thread signals)
+     include_directories($(Boost_INCLUDE_DIRS)
+     add_exectuable(MyExe MyMain.cxx)
+     target_link_libraries(MyExe ${Boost_LIBARIES})
+     
+Configure setup (can using CMake IDE to setup).
+    Read top tree CMakeLists.txt -> Read tree leavs CMakeLists.txt -> Wirte CMakeCache.txt 
+Generate Setup
+     
+
+
+
+
 How to make a good 
 https://www.youtube.com/watch?v=_yFPO1ofyF0&list=PLK6MXr8gasrGmIiSuVQXpfFuE1uPT615s
 
