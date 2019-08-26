@@ -5,7 +5,7 @@ add_library(foo STATIC foo.c foo.h config.h.in)
 #target_include_directories(foo PUBLIC "$CMAKE_CURRENT_SOURCE_DIR")
 
 set_target_properties(foo PROPERTIES
-  PUBLIC_HEADER "foo.h; config.h")
+  PUBLIC_HEADER "foo.h")
 
 
 
