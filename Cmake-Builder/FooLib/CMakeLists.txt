@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 2.8)
-project(foo C)
+project(foo)
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-add_library(foo foo.c foo.h config.h.in)
+add_library(foo foo.cxx foo.h config.h.in)
 
 #target_include_directories(foo PUBLIC "$CMAKE_CURRENT_SOURCE_DIR")
 
