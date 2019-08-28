@@ -35,7 +35,7 @@ message("Boost_LIBRARIES: " ${Boost_LIBRARIES})
 add_executable(BarExe bar.cxx)
 #target_link_libraries(BarExe foo)
 target_link_libraries(BarExe vtkbool)
-target_link_libraries(BarExe VTK)
+target_link_libraries(BarExe ${VTK_LIBRARIES})
 target_link_libraries(BarExe Boost::filesystem)
 
 
