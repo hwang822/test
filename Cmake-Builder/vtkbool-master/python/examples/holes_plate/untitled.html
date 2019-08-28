@@ -1,0 +1,219 @@
+<!--
+Copyright 2012-2019 Ronald Römer
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        html {
+            background-color: #fff;
+        }
+        #links a {
+            display: inline-block;
+            padding: 5px;
+        }
+        #links a:visited {
+            color: #00f;
+        }
+        canvas {
+            border: 1px solid #eee;
+        }
+        pre {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+    </style>
+    <script type="text/javascript" src="test3.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            let dataSel = document.getElementById('dataSel'),
+                polySel = document.getElementById('polySel'),
+                info = document.getElementById('info').firstChild;
+
+            let options = data.map((itm, i) => {
+                return '<option value="' + i + '">' + itm.X + '</option>';
+            });
+
+            dataSel.innerHTML = options.join('');
+
+            var canvas = document.getElementsByTagName('canvas')[0];
+            var ctx = canvas.getContext('2d');
+
+            function drawPoly (color, poly) {
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+
+                ctx.lineJoin = 'round';
+
+                ctx.beginPath();
+
+                ctx.moveTo(poly[0][0], poly[0][1]);
+
+                for (var i = 1; i < poly.length; i++) {
+                    ctx.lineTo(poly[i][0], poly[i][1]);
+                }
+
+                ctx.lineTo(poly[0][0], poly[0][1]);
+
+                ctx.stroke();
+            }
+
+            function scalePoly (poly, f) {
+                let _poly = poly.map((itm) => [...itm]);
+                _poly.forEach((itm) => {
+                    itm[0] *= f;
+                    itm[1] *= f;
+                });
+                return _poly;
+            }
+
+            function movePoly (poly, dx, dy) {
+                poly.forEach((itm) => {
+                    itm[0] += dx;
+                    itm[1] += dy;
+                })
+            }
+
+            function drawOne (d, it) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                let f = 15;
+
+                let mnX, mxX, mnY, mxY;
+
+                let chars = [],
+                    polys = [];
+
+                Object.keys(d).forEach(k => {
+                    if (/[A-Z]\d*/.exec(k)
+                        && k != 'X') {
+                        let poly = scalePoly(d[k], f);
+
+                        if (k == 'A') {
+                            let x = [],
+                                y = [];
+
+                            poly.forEach((itm) => {
+                                x.push(itm[0]);
+                                y.push(itm[1]);
+                            });
+
+                            mnX = Math.min(...x);
+                            mxX = Math.max(...x);
+                            mnY = Math.min(...y);
+                            mxY = Math.max(...y);
+
+                            let width = mxX-mnX,
+                                height = mxY-mnY;
+
+                            canvas.height = height+40;
+                            canvas.width = width+40;
+                        }
+
+                        movePoly(poly, -mnX+20, -mnY+20);
+
+                        chars.push(k);
+                        polys.push(poly);
+                    }
+                });
+
+                drawPoly('#000', polys[0]);
+
+                if (chars[it] !== 'A') {
+                    if (it !== '-' && chars[it] !== 'E') {
+                        drawPoly('#f00', polys[it]);
+                    } else if ('E' in d) {
+                        drawPoly('#00f', polys[chars.indexOf('E')]);
+                    }
+                }
+
+                ctx.strokeStyle = '#0f0';
+
+                ctx.beginPath();
+                ctx.arc(polys[0][d.X][0], polys[0][d.X][1], 5, 0, 2*Math.PI);
+                ctx.stroke();
+
+                info.innerHTML = d._.join('\n');
+
+                if (it !== '-') {
+                    ctx.fillStyle = 'black';
+                    ctx.font = '14px serif';
+
+                    polys[it].forEach((itm, i) => {
+                        ctx.fillText(i.toString(), itm[0], itm[1]);
+                    });
+
+                }
+
+                return chars;
+
+            }
+
+            let descMap = {
+                A: 'poly',
+                B: 'verts in A()',
+                C: 'verts in B()',
+                D: 'res of TrivialRm',
+                E: 'res of GetVisPoly'
+            };
+
+            let sel = 0;
+
+            dataSel.addEventListener('change', function (e) {
+                let chars = drawOne(data[sel = e.target.value], '-');
+
+                while (polySel.childNodes.length > 2) {
+                    polySel.removeChild(polySel.lastChild);
+                }
+
+                chars.forEach((itm, i) => {
+                    let op = document.createElement('option');
+                    op.textContent = itm in descMap ? descMap[itm] : itm;
+                    op.setAttribute('value', i);
+
+                    polySel.appendChild(op);
+                });
+
+                /*polySel.selectedIndex = 4;
+                polySel.dispatchEvent(new Event('change'));*/
+
+            });
+
+            dataSel.dispatchEvent(new Event('change'));
+
+            polySel.addEventListener('change', function (e) {
+                drawOne(data[sel], e.target.value);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <canvas></canvas>
+    <div>
+        <label for="dataSel">Set</label>
+        <select id="dataSel"></select>
+
+        <label for="polySel">Poly</label>
+        <select id="polySel">
+            <option value="-">-</option>
+        </select>
+    </div>
+    <pre id="info"><code></code></pre>
+</body>
+</html>

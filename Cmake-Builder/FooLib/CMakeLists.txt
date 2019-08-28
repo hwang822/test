@@ -3,14 +3,13 @@ project(foo)
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-add_library(foo foo.cxx foo.h config.h.in)
+add_library(foo SHARED foo.cxx foo.h config.h.in)
+add_library(foo STATIC foo.cxx foo.h config.h.in)
 
 #target_include_directories(foo PUBLIC "$CMAKE_CURRENT_SOURCE_DIR")
 
 set_target_properties(foo PROPERTIES
   PUBLIC_HEADER "foo.h")
-
-
 
 install(TARGETS foo
   # IMPORTANT: Add the foo library to the "export-set"
