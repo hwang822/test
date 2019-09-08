@@ -12,3 +12,4 @@ include("${FOO_CMAKE_DIR}/fooTargets.cmake")
 
 # These are IMPORTED targets created by fooTargets.cmake
 set(FOO_LIBRARIES foo)
+set(FOO_LIBRARIES_DIR "${FOO_CMAKE_DIR}")

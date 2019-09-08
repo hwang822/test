@@ -5,9 +5,10 @@
 
 #include "vtkPolyDataBooleanFilter.h"
 
-int Point::_tag = 0; // important
+//int Point::_tag = 0; // important
 
 int main (int argc, char *argv[]) {
+	/*
     vtkCubeSource *cu = vtkCubeSource::New();
     cu->SetYLength(.5);
 
@@ -25,6 +26,6 @@ int main (int argc, char *argv[]) {
     bf->Delete();
     cyl->Delete();
     cu->Delete();
-
+*/
     return 0;
 }

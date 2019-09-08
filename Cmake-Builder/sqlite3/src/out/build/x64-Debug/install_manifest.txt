@@ -1,0 +1,5 @@
+C:/Workarea/test/Cmake-Builder/sqlite3/src/out/install/x64-Debug/tools/sqlite3-bin.exe
+C:/Workarea/test/Cmake-Builder/sqlite3/src/out/install/x64-Debug/lib/sqlite3.lib
+C:/Workarea/test/Cmake-Builder/sqlite3/src/out/install/x64-Debug/lib/sqlite3.lib
+C:/Workarea/test/Cmake-Builder/sqlite3/src/out/install/x64-Debug/share/sqlite3/sqlite3-targets.cmake
+C:/Workarea/test/Cmake-Builder/sqlite3/src/out/install/x64-Debug/share/sqlite3/sqlite3-targets-debug.cmake
