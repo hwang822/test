@@ -1,0 +1,25 @@
+Install docker for windows.
+run docker -version
+c:\Workarea>docker version
+Client: Docker Engine - Community
+ Version:           19.03.4
+ API version:       1.40
+ Go version:        go1.12.10
+ Git commit:        9013bf5
+ Built:             Thu Oct 17 23:44:48 2019
+ OS/Arch:           windows/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.4
+  API version:      1.40 (minimum version 1.24)
+  Go version:       go1.12.10
+  Git commit:       9013bf5
+  Built:            Thu Oct 17 23:55:51 2019
+  OS/Arch:          windows/amd64
+  Experimental:     false
+  
+  pull images from docker repository https://hub.docker.com/_/postgres
+  
+  
