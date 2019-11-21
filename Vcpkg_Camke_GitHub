@@ -3,6 +3,33 @@ GitHub
     
     C:\Workarea\sdc-SmileBuilder-native>git --version
       git version 2.22.0.windows.1
-      
-      
-    
+
+	Git Commands
+
+	1 .start a working area (see also: git help tutorial)
+	   c:\Workarea>
+		
+	   clone      Clone a repository into a new directory
+	   C:\Workarea\test>git clone https://github.com/hwang822/test
+			Cloning into 'test'...
+			remote: Enumerating objects: 9, done.
+			remote: Counting objects: 100% (9/9), done.
+			remote: Compressing objects: 100% (9/9), done.
+			Receiving objects:  88% (770/874), 43.71 MiBused 0 (delta 0), pack-reused 865
+			Receiving objects: 100% (874/874), 44.19 MiB | 1.84 MiB/s, done.
+			Resolving deltas: 100% (394/394), done.
+		 
+		init       Create an empty Git repository or reinitialize an existing one
+		c:\Workarea\test>git init
+		Reinitialized existing Git repository in c:/Workarea/test/.git/     
+	 
+	 2. work on the current change
+	   add        Add file contents to the index
+	   mv         Move or rename a file, a directory, or a symlink
+	   reset      Reset current HEAD to the specified state
+	   rm         Remove files from the working tree and from the index
+	 
+	 
+	 C:\Workarea\test>git branch
+	* master
+
