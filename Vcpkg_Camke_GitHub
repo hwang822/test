@@ -25,9 +25,16 @@ GitHub
 	 
 	 2. work on the current change
 	   add        Add file contents to the index
+	   C:\Workarea\test>git add Vcpkg_Camke_GitHub
+	   
 	   mv         Move or rename a file, a directory, or a symlink
+	   C:\Workarea\test>git mv Vcpkg_Camke_GitHub Vcpkg_Camke_GitHub1
+	   C:\Workarea\test>git mv Vcpkg_Camke_GitHub1 Vcpkg_Camke_GitHub
+	   	  
 	   reset      Reset current HEAD to the specified state
+	   
 	   rm         Remove files from the working tree and from the index
+	   C:\Workarea\test>git rm Vcpkg_Camke_GitHub1
 	 
 	 
 	 C:\Workarea\test>git branch
