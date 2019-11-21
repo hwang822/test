@@ -25,6 +25,7 @@ GitHub
 	 
 	2. work on the current change
 	   add        Add file contents to the index
+
 	   C:\Workarea\test>git add -A
 	   	   
 	   mv         Move or rename a file, a directory, or a symlink
@@ -37,8 +38,7 @@ GitHub
 			 		 
 	   rm         Remove files from the working tree and from the index
 	   C:\Workarea\test>git rm Vcpkg_Camke_GitHub1
-	   fatal: pathspec 'Vcpkg_Camke_GitHub1' did not match any files
-	 
+	   fatal: pathspec 'Vcpkg_Camke_GitHub1' did not match any files	 
 
 	3. examine the history and state)
 		bisect     Use binary search to find the commit that introduced a bug
@@ -137,3 +137,5 @@ GitHub
 		rebase     Reapply commits on top of another base tip
 		
 		tag        Create, list, delete or verify a tag object signed with GPG
+        
+		
