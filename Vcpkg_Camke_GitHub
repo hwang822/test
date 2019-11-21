@@ -23,13 +23,117 @@ GitHub
 		c:\Workarea\test>git init
 		Reinitialized existing Git repository in c:/Workarea/test/.git/     
 	 
-	 2. work on the current change
+	2. work on the current change
 	   add        Add file contents to the index
+	   C:\Workarea\test>git add -A
+	   	   
 	   mv         Move or rename a file, a directory, or a symlink
+	   C:\Workarea\test>git mv Vcpkg_Camke_GitHub Vcpkg_Camke_GitHub1
+	   C:\Workarea\test>git mv Vcpkg_Camke_GitHub1 Vcpkg_Camke_GitHub
+	   
 	   reset      Reset current HEAD to the specified state
+	   C:\Workarea\test>git reset HEAD~2 
+	         moves the hotfix branch backwards by two commits.
+			 		 
 	   rm         Remove files from the working tree and from the index
+	   C:\Workarea\test>git rm Vcpkg_Camke_GitHub1
+	   fatal: pathspec 'Vcpkg_Camke_GitHub1' did not match any files
 	 
-	 
-	 C:\Workarea\test>git branch
-	* master
 
+	3. examine the history and state)
+		bisect     Use binary search to find the commit that introduced a bug
+		C:\Workarea\test>git bisect start
+		
+		grep       Print lines matching a pattern
+		C:\Workarea\test>git grep gradle
+		Binary file Java-Gradle/.gradle/5.5.1/executionHistory/executionHistory.bin matches
+		Java-Gradle/.gradle/buildOutputCleanup/cache.properties:gradle.version=5.5.1
+		Java-Gradle/Readme.md:install andn run gradle
+		Java-Gradle/Readme.md:C:\Workarea\test\Java-Gradle>gradle -v
+		Java-Gradle/Readme.md:create build.gradle
+		Binary file Java-Gradle/build/distributions/Java-Gradle.tar matches
+		Java-Gradle/build/distributions/Java-Gradle/Java-Gradle/bin/Java-Gradle:    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+		Java-Gradle/build/scripts/Java-Gradle:    GRADLE_OPTS="$GRADLE_OPTS \"-Xdock:name=$APP_NAME\" \"-Xdock:icon=$APP_HOME/media/gradle.icns\""
+		
+		log        Show commit logs
+		C:\Workarea\test>git log
+		commit c03fe156614517fa1ba749a53b4b3ad2ce521b2f (HEAD -> master, origin/master, origin/HEAD)
+		Author: hwang822 <hwang822@gmail.com>
+		Date:   Thu Nov 21 08:48:58 2019 -0600
+
+			update chagne
+
+		commit c2e1f10dee3203c41a6e3ef407e5c84e2fedb85e
+		Author: hwang822 <hwang822@gmail.com>
+		Date:   Thu Nov 7 08:43:46 2019 -0600
+
+			Create Docker and pull image to run		
+		
+		show       Show various types of objects
+		C:\Workarea\test>git show
+		commit c03fe156614517fa1ba749a53b4b3ad2ce521b2f (HEAD -> master, origin/master, origin/HEAD)
+		Author: hwang822 <hwang822@gmail.com>
+		Date:   Thu Nov 21 08:48:58 2019 -0600
+
+			update chagne
+
+		diff --git a/AWS codepipelline and codebuilder b/AWS codepipelline and codebuilder
+
+		status     Show the working tree status
+		C:\Workarea\test>git show
+		commit c03fe156614517fa1ba749a53b4b3ad2ce521b2f (HEAD -> master, origin/master, origin/HEAD)
+		Author: hwang822 <hwang822@gmail.com>
+		Date:   Thu Nov 21 08:48:58 2019 -0600
+
+			update chagne
+
+		diff --git a/AWS codepipelline and codebuilder b/AWS codepipelline and codebuilder
+
+		C:\Workarea\test>git log --oneline
+		c03fe15 (HEAD -> master, origin/master, origin/HEAD) update chagne
+		c2e1f10 Create Docker and pull image to run
+		5d6c76d Create IntelliJ IDEA - Gradle - JAVA
+  	 
+	4. grow, mark and tweak your common history
+		branch     List, create, or delete branches
+		C:\Workarea\test>git branch
+		* master
+		C:\Workarea\test>git branch -d test
+		C:\Workarea\test>git branch -d test
+		error: branch 'test' not found.
+
+		checkout   Switch branches or restore working tree files
+		C:\Workarea\test>git checkout -b test
+		Switched to a new branch 'test'
+		M       Cmake-Builder/solid3
+		M       Vcpkg_Camke_GitHub	   
+	   
+		C:\Workarea\test>git checkout master
+		Switched to branch 'master'
+		M       Cmake-Builder/solid3
+		M       Vcpkg_Camke_GitHub
+		Your branch is up to date with 'origin/master'.	   
+	   	  
+		commit     Record changes to the repository
+		C:\Workarea\test>git commit -m "update"
+		[master 057d7ad] update
+		 1 file changed, 30 insertions(+), 3 deletions(-)		
+		
+		diff       Show changes between commits, commit and working tree, etc
+		C:\Workarea\test>git diff
+		diff --git a/Cmake-Builder/solid3 b/Cmake-Builder/solid3
+		--- a/Cmake-Builder/solid3
+		+++ b/Cmake-Builder/solid3
+		@@ -1 +1 @@
+		-Subproject commit c53f6bb1eaaafb1cfb305ef71b1c3a2edb4844e6
+		+Subproject commit c53f6bb1eaaafb1cfb305ef71b1c3a2edb4844e6-dirty
+		diff --git a/Vcpkg_Camke_GitHub b/Vcpkg_Camke_GitHub
+		index 6dcb2f2..f3d5b18 100644
+		
+		merge      Join two or more development histories together
+		C:\Workarea\test>git merge
+		Already up to date.		
+		
+		rebase     Reapply commits on top of another base tip
+		
+		tag        Create, list, delete or verify a tag object signed with GPG
