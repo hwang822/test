@@ -69,6 +69,16 @@ C:\Workarea\Docker>docker container run -t -i busybox /bin/sh
 
 docker: no matching manifest for windows/amd64 10.0.18362 in the manifest list entries.
 
+An alternative is to go to Docker Desktop and select Switch to Linux Containers
+right clikc Docker running icon at tool bar serlect "Switch to Linux Containers"
+
+C:\Workarea\Docker>docker run -d -p 80:80 --name webserver nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+8ec398bc0356: Pull complete                                                                                        a53c868fbde7: Pull complete                                                                                        79daf9dd140d: Pull complete                                                                                        Digest: sha256:70821e443be75ea38bdf52a974fd2271babd5875b2b1964f05025981c75a6717
+Status: Downloaded newer image for nginx:latest
+94e188bf10c69c9b3ddcceca804f1782db6cf899a24671d5c06a45b8a129ce1a
+
 C:\Workarea\Docker>docker container ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 
