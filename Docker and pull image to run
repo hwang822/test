@@ -20,6 +20,110 @@ Server: Docker Engine - Community
   OS/Arch:          windows/amd64
   Experimental:     false
   
-  pull images from docker repository https://hub.docker.com/_/postgres
+  Docker for Windows now requires Microsoft’s Hyper-V. 
+
+  Docker install create vitual box in your machine.
+
+  need crate docker hub account.
+  
+  dockeer -- help
+  
+  https://www.youtube.com/watch?v=YFl2mCHdv24&t=295s
+  
+  docker has image include OS, libs, apps, codes and put at PC as sandbox. user could send message 
+  to docker server port to run image. dockerfile scripts build image files.
+  
+  create Docker folder 
+  create Docker\src folder to hold souce code.
+  create one file at Docker\src\index.php
+  
+  <?php
+  echo "Hello, World";
+  
+  create dockerfiles at Docker\Dockerfile
+  
+  FROM php:7.0-apache
+  COPY src/ /var/www/html
+  EXPOSE 80
+  
+  run command to launch dockerfile script
+  
+  docker build -t hello-world .
+  //create image
+  docker -p
+  80:80 run hello-world
+  //run image
+  
+  docker command
+
+I have create docker image hello-world
+C:\Workarea\Docker>docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              42514ac01c56        8 days ago          251MB
+  
+remove images
+docker rmi -f hello-world
+
+download busybox image
+C:\Workarea\Docker>docker container run -t -i busybox /bin/sh
+
+docker: no matching manifest for windows/amd64 10.0.18362 in the manifest list entries.
+
+C:\Workarea\Docker>docker container ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+check docker server running.
+
+docker container kill
+stop running docker images
+
+run docker localhost:
+
+
+C:\Workarea\Docker>docker run hello-world
+
+C:\Workarea\Docker>docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+ee446884f7be: Already exists                                                                                       8b4475a48151: Already exists                                                                                       7c57688e630a: Already exists                                                                                       Digest: sha256:9572f7cdcee8591948c2963463447a53466950b3fc15a247fcad1917ca215a2f
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+
+C:\Workarea\Docker>docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              42514ac01c56        8 days ago          251MB
+
+you can install and run ubuntu 
+C:\Workarea\Docker>docker run -it ubuntu
+
+
+
+
+
+
+
   
   
+pull images from docker repository https://hub.docker.com/_/postgres
+  
+Supported tags and respective Dockerfile links
+12.1, 12, latest
+12.1-alpine, 12-alpine, alpine
+11.6, 11
+11.6-alpine, 11-alpine
+10.11, 10
+10.11-alpine, 10-alpine
+9.6.16, 9.6, 9  
+  
+Download image from docker hub command
+
+docker pull postgres
+
+C:\Workarea\SmileBuilder\sdc-SmileBuilder>docker pull postgres
+Using default tag: latest
+latest: Pulling from library/postgres
+no matching manifest for windows/amd64 10.0.18362 in the manifest list entries
+
