@@ -1,3 +1,5 @@
+https://github.com/hwang822/test/edit/master/Docker%20and%20pull%20image%20to%20run
+
 Install docker for windows.
 run docker -version
 c:\Workarea>docker version
@@ -108,6 +110,12 @@ hello-world         latest              42514ac01c56        8 days ago          
 
 you can install and run ubuntu 
 C:\Workarea\Docker>docker run -it ubuntu
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+5c939e3a4d10: Pull complete                                                                                        c63719cdbe7a: Pull complete                                                                                        19a861ea6baf: Pull complete                                                                                        651c9d2d6c4f: Pull complete                                                                                        Digest: sha256:8d31dad0c58f552e890d68bbfb735588b6b820a46e459672d96e585871acc110
+Status: Downloaded newer image for ubuntu:latest
+root@6b5eb08e7061:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 
 
 
