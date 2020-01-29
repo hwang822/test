@@ -44,22 +44,75 @@ Server: Docker Engine - Community
   <?php
   echo "Hello, pnp-docker";
   
-  create dockerfiles at Docker\pnp-docker\Dockerfile
+  create dockerfiles at Docker\pnp-docker\Dockerfile  
   
   FROM php:7.0-apache
   COPY src/ /var/www/html
   EXPOSE 80
+  // FROM to get php image from docker hub, COPY sorce code to pnp image container. EXPOSE to runing pnp in localhost:80 port.
   
   run command to launch dockerfile script
   cd Docker\pnp-docker.
   right clikc Docker running icon at tool bar serlect "Switch to Linux Containers" for this linux pnp verson.
   docker build -t hello-pnp-docker .
   //create image
-  docker -p
-  80:80 run hello-world
+    
+
+************************  
+  C:\Workarea\Docker\pnp-docker>docker build -t hell0-pnp-docker .
+Sending build context to Docker daemon  3.584kB
+Step 1/3 : FROM php:7.0-apache
+ ---> aa67a9c9814f
+Step 2/3 : COPY src/ /var/www/html
+ ---> Using cache
+ ---> d565fcb7f80d
+Step 3/3 : EXPOSE 80
+ ---> Using cache
+ ---> b177b6577547
+Successfully built b177b6577547
+Successfully tagged hell0-pnp-docker:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. 
+All files and directories added to build context will have '-rwxr-xr-x' permissions. 
+It is recommended to double check and reset permissions for sensitive files and directories.
+***************************
+C:\Workarea\Docker\pnp-docker>docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hell0-pnp-docker    latest              b177b6577547        About an hour ago   368MB
+nginx               latest              5ad3bd0e67a9        7 days ago          127MB
+<none>              <none>              ccc6e87d482b        13 days ago         64.2MB
+busybox             latest              6d5fcfe5ff17        4 weeks ago         1.22MB
+php                 7.0-apache          aa67a9c9814f        13 months ago       368MB
+**************************
+could see hell0-pnp-docker and pnp have been installed at this windows docker container.
+
+could save this docker image file to linux 
+
+could run this docker image
+
+docker run -p 80:80 hello-pnp-docker
   //run image
-  
-  docker command
+
+and run web IE in localhost
+It will display "Hello, pnp-docker!".
+
+It could add option to mount local source code file to the web server folder to get real time change.
+
+docker run -p 80:80 -v C:\Workarea\Docker\pnp-docker/src/:/var/www/htmp/ hello-pnp-docker
+
+***********************
+in windows IE localhost
+
+Welcome to nginx!
+
+If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+
+For online documentation and support please refer to nginx.org.
+ Commercial support is available at nginx.com.
+
+Thank you for using nginx.
+
+*****************************
+docker command
 
 C:\Workarea\Docker>docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -79,22 +132,21 @@ right clikc Docker running icon at tool bar serlect "Switch to Linux Containers"
 C:\Workarea\Docker>docker run -d -p 80:80 --name webserver nginx
 Unable to find image 'nginx:latest' locally
 latest: Pulling from library/nginx
-8ec398bc0356: Pull complete                                                                                        a53c868fbde7: Pull complete                                                                                        79daf9dd140d: Pull complete                                                                                        Digest: sha256:70821e443be75ea38bdf52a974fd2271babd5875b2b1964f05025981c75a6717
+8ec398bc0356: Pull complete              a53c868fbde7: Pull complete                                                                                        79daf9dd140d: Pull complete                                                                                        Digest: sha256:70821e443be75ea38bdf52a974fd2271babd5875b2b1964f05025981c75a6717
 Status: Downloaded newer image for nginx:latest
 94e188bf10c69c9b3ddcceca804f1782db6cf899a24671d5c06a45b8a129ce1a
 
-C:\Workarea\Docker>docker container ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+switch to windows docker contrainer
+docker images
 
-check docker server running.
-
-docker container kill
-stop running docker images
+C:\Workarea\Docker\pnp-docker>docker images
+REPOSITORY                   TAG                              IMAGE ID            CREATED             SIZE
+<none>                       <none>                           6f6605140500        42 hours ago        18.8GB
+hello-world                  latest                           42514ac01c56        2 weeks ago         251MB
+microsoft/dotnet-framework   3.5-sdk-windowsservercore-1709   9b230679c80b        9 months ago        14.4GB
+buildtools2017native         latest                           9b230679c80b        9 months ago        14.4GB
 
 run docker localhost:
-
-
-C:\Workarea\Docker>docker run hello-world
 
 C:\Workarea\Docker>docker run hello-world
 Unable to find image 'hello-world:latest' locally
@@ -119,6 +171,7 @@ Status: Downloaded newer image for ubuntu:latest
 root@6b5eb08e7061:/# ls
 bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 
+**********************************************
 
 https://blog.alexellis.io/3-steps-to-msbuild-with-docker/
 3 Steps to MSBuild with Docker
