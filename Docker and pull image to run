@@ -323,7 +323,16 @@ The command 'powershell New-Website -Name 'guidgenerator' -Port 80     -Physical
 4294967295: failed to shutdown container: container 8b1a5bb983629514738b4ef3c5a6153b1b9623eeceac1957f6c3260d9fedd135 
 encountered an error during Shutdown: failure in a Windows system call: The connection with the virtual machine 
 or container was closed. (0xc037010a)
- 
+--------------------------------------- 
+
+docker build --build-arg HTTP_PROXY=%HTTP_PROXY% --build-arg HTTPS_PROXY=%HTTPS_PROXY% -f build.Dockerfile -t guid-generator-assets .
+
+docker create --name guid-generator-assets-1 guid-generator-assets
+
+docker cp guid-generator-assets-1:C:\\build\\GuidGenerator\\bin .\\GuidGenerator\bin
+docker rm guid-generator-assets-1
+
+docker build -f Dockerfile -t guid-generator:0.1 .
 
 **********************************************************
 
