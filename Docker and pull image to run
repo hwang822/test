@@ -35,22 +35,25 @@ Server: Docker Engine - Community
   docker has image include OS, libs, apps, codes and put at PC as sandbox. user could send message 
   to docker server port to run image. dockerfile scripts build image files.
   
-  create Docker folder 
-  create Docker\src folder to hold souce code.
-  create one file at Docker\src\index.php
+  
+  I have create docker image hello-pnp-docker to build pnp code complier and running.
+    
+  create Docker\pnp-docker\src folder to hold souce code.
+  create one file at Docker\pnp-docker\src\index.php
   
   <?php
-  echo "Hello, World";
+  echo "Hello, pnp-docker";
   
-  create dockerfiles at Docker\Dockerfile
+  create dockerfiles at Docker\pnp-docker\Dockerfile
   
   FROM php:7.0-apache
   COPY src/ /var/www/html
   EXPOSE 80
   
   run command to launch dockerfile script
-  
-  docker build -t hello-world .
+  cd Docker\pnp-docker.
+  right clikc Docker running icon at tool bar serlect "Switch to Linux Containers" for this linux pnp verson.
+  docker build -t hello-pnp-docker .
   //create image
   docker -p
   80:80 run hello-world
@@ -58,7 +61,6 @@ Server: Docker Engine - Community
   
   docker command
 
-I have create docker image hello-world
 C:\Workarea\Docker>docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 hello-world         latest              42514ac01c56        8 days ago          251MB
