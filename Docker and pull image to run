@@ -258,7 +258,7 @@ https://blog.alexellis.io/3-steps-to-msbuild-with-docker/
 
 https://github.com/alexellis/guidgenerator-aspnet
 
-1.
+1. MSBuild in a Docker container
 get docker msbuilder image from hub.
 C:\Workarea\Docker>docker pull alexellisio/msbuild:12.0
 12.0: Pulling from alexellisio/msbuild
@@ -334,10 +334,7 @@ docker rm guid-generator-assets-1
 
 docker build -f Dockerfile -t guid-generator:0.1 .
 
-**********************************************************
-
-
-  
+**********************************************************  
 pull images from docker repository https://hub.docker.com/_/postgres
   
 Supported tags and respective Dockerfile links
