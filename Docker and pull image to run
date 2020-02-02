@@ -377,7 +377,7 @@ ARG AMAZON_CORRETTO_MSI="https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon
 ARG GRADLE_ZIP="https://services.gradle.org/distributions/gradle-6.0-bin.zip"
 ARG CMAKE_MSI="https://cmake.org/files/v3.14/cmake-3.14.6-win64-x64.msi"
 ARG VS_BUILD_TOOLS_EXE="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16"
-ARG VCPKG_ZIP="https://sdc-treatment-planning.s3.us-east-2.amazonaws.com/vcpkg/vcpkg-with-vtk-debug-fix.zip"
+ARG VCPKG_ZIP="https://vcpkg.s3.us-east-2.amazonaws.com/vcpkg/vcpkg.zip"
 
 #SHELL ["powershell", "-version", "3.0", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 SHELL ["powershell"]
