@@ -24,17 +24,17 @@ Server: Docker Engine - Community
   
   Docker for Windows now requires Microsoft’s Hyper-V. 
 
-  Docker install create vitual box in your machine.
+  Docker will not  install create vitual box in your windows 10 machine.
 
-  need crate docker hub account.
+  need crate docker hub account to look up avalaible images.
   
   dockeer -- help
   
+  ************************************8
   https://www.youtube.com/watch?v=YFl2mCHdv24&t=295s
   
   docker has image include OS, libs, apps, codes and put at PC as sandbox. user could send message 
   to docker server port to run image. dockerfile scripts build image files.
-  
   
   I have create docker image hello-pnp-docker to build pnp code complier and running.
     
@@ -56,8 +56,7 @@ Server: Docker Engine - Community
   right clikc Docker running icon at tool bar serlect "Switch to Linux Containers" for this linux pnp verson.
   docker build -t hello-pnp-docker .
   //create image
-    
-
+   
 ************************  
   C:\Workarea\Docker\pnp-docker>docker build -t hell0-pnp-docker .
 Sending build context to Docker daemon  3.584kB
@@ -203,7 +202,6 @@ latest: Pulling from chemsorly/msbuilder
 18c1a5e515d9: Pulling fs layer                                                                                          
 6b9d79999cab: Waiting ...
 
-
 C:\Workarea\Docker\Chemsorly\dcokercpp>docker run dockercpp .
 
 ********************************
@@ -247,9 +245,6 @@ CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
 ###################
 
 docker build -t buildtools2019:latest -m 2GB .
-
-
-
 
 ************************************
 
@@ -359,16 +354,96 @@ no matching manifest for windows/amd64 10.0.18362 in the manifest list entries
 https://devblogs.microsoft.com/cppblog/using-msvc-in-a-docker-container-for-your-c-projects/
 Using MSVC in a Docker Container for Your C++ Projects
 
+************************************************
+Create C++, java, vcpkg (thrid pary libs) builder in docker container.
+************************************************
 
+Docker files:
 
+# escape=`
+FROM mcr.microsoft.com/dotnet/framework/sdk:latest
+# pull (incstall) micorsoft windows system sdk to container
 
+# Labels ----------------------------------------------------------------------
+LABEL description="Build environment for c++, java, vcpkg ... conbain applcation" 
 
+#-----------------------------------------------------------------------------#
+#   Several build arguments can be used to avoid downloading several of the   #
+#   environmental and build tools. Otherwise, we download safe defaults.      #
+#-----------------------------------------------------------------------------#
+ARG AWSCLI_MSI="https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi"
+ARG GIT_EXE="https://github.com/git-for-windows/git/releases/download/v2.24.0.windows.2/Git-2.24.0.2-64-bit.exe"
+ARG AMAZON_CORRETTO_MSI="https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon-corretto-8.232.09.1-windows-x64.msi"
+ARG GRADLE_ZIP="https://services.gradle.org/distributions/gradle-6.0-bin.zip"
+ARG CMAKE_MSI="https://cmake.org/files/v3.14/cmake-3.14.6-win64-x64.msi"
+ARG VS_BUILD_TOOLS_EXE="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16"
+ARG VCPKG_ZIP="https://sdc-treatment-planning.s3.us-east-2.amazonaws.com/vcpkg/vcpkg-with-vtk-debug-fix.zip"
 
+#SHELL ["powershell", "-version", "3.0", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
+SHELL ["powershell"]
 
+#container using powershell
+#-----------------------------------------------------------------------------#
+#     It is expected that the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY     #
+#     environment variables will be set when the container is run.            #
+#-----------------------------------------------------------------------------#
 
+# Create destination for tools ------------------------------------------------
+RUN md "C:\code" ; `
+    md "C:\downloads" ; `
+    md "C:\tools"
+WORKDIR C:\downloads
 
+# Install Amazon CLI ----------------------------------------------------------
+ADD ${AWSCLI_MSI} aws.msi
+RUN Start-Process aws.msi -ArgumentList '/passive /norestart' -Wait ; `
+#    Remove-Item aws.msi
 
+# Install Git -----------------------------------------------------------------
+ADD ${GIT_EXE} git.exe
+RUN Start-Process git.exe -ArgumentList '/silent /suppressmsgboxes /norestart' -Wait ; `
+#    Remove-Item git.exe
 
+# Install Amazon Corretto JDK -------------------------------------------------
+ADD ${AMAZON_CORRETTO_MSI} jdk.msi
+RUN Start-Process jdk.msi -ArgumentList '/passive /norestart' -Wait ; `
+#    Remove-Item jdk.msi
+ENV JAVA_HOME="C:\Program Files\Amazon Corretto\jdk1.8.0_232"
+
+# Install Gradle --------------------------------------------------------------
+ADD ${GRADLE_ZIP} gradle.zip
+RUN Expand-Archive -Path gradle.zip -DestinationPath C:\tools\ ; `
+#    Remove-Item gradle.zip
+ENV GRADLE_HOME="C:\tools\gradle-6.0"
+
+# Install CMake ---------------------------------------------------------------
+ADD ${CMAKE_MSI} cmake.msi
+RUN Start-Process cmake.msi -ArgumentList '/passive /norestart' -Wait ; `
+#    Remove-Item cmake.msi
+
+# Install Visual Studio 2019 Build Tools --------------------------------------
+ADD ${VS_BUILD_TOOLS_EXE} vs_buildtools.exe
+RUN Start-Process vs_buildtools.exe -ArgumentList '--quiet --wait --norestart --nocache --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --includeOptional' -Wait ; `
+#    Remove-Item vs_buildtools.exe
+
+# Install VCPKG ---------------------------------------------------------------
+ADD ${VCPKG_ZIP} vcpkg.zip
+RUN Expand-Archive -Path vcpkg.zip -DestinationPath C:\tools\ #; Remove-Item vcpkg.zip
+ENV VCPKG_DIR="C:\tools\vcpkg"
+ENV VCPKG_DEFAULT_TRIPLET="x64-windows"
+WORKDIR C:\tools\vcpkg
+#RUN .\vcpkg.exe integrate remove ; .\vcpkg.exe integrate install
+
+# Update PATH environment -----------------------------------------------------
+ENV PATH="C:\Program Files\Amazon\AWSCLI\bin;${JAVA_HOME}\bin;${GRADLE_HOME}\bin;C:\Program Files\Git\bin;C:\Program Files\CMake\bin;${VCPKG_DIR};${PATH}"
+
+# Set CWD to code path --------------------------------------------------------
+WORKDIR C:\code
+
+#ENTRYPOINT "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
+#CMD is using entry container terminal to run >docker run  -it buildertools cmd 
+
+# build this docker iamge with mount host folders c:\code and c:\project  to run > docker build -v buildertool
 
 
 
