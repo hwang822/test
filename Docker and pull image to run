@@ -446,7 +446,7 @@ WORKDIR C:\code
 ##########################################################################################
 
 to build this docker iamge: 
-docker build -t buildertool
+docker build -t buildertool .
 
 to start docker with mount \code :
 >docker run -v C:\code  -it buildertools cmd
