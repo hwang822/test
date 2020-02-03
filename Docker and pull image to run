@@ -359,7 +359,7 @@ Create C++, java, vcpkg (thrid pary libs) builder in docker container.
 ************************************************
 
 Docker files:
-
+##########################################################################################
 # escape=`
 FROM mcr.microsoft.com/dotnet/framework/sdk:latest
 # pull (incstall) micorsoft windows system sdk to container
@@ -441,10 +441,15 @@ ENV PATH="C:\Program Files\Amazon\AWSCLI\bin;${JAVA_HOME}\bin;${GRADLE_HOME}\bin
 WORKDIR C:\code
 
 #ENTRYPOINT "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
-#CMD is using entry container terminal to run >docker run  -it buildertools cmd 
+#CMD is using entry container terminal to run docker command  
 
-# build this docker iamge with mount host folders c:\code and c:\project  to run > docker build -t buildertool
+##########################################################################################
 
+to build this docker iamge: 
+docker build -t buildertool
+
+to start docker with mount \code :
+>docker run -v C:\code  -it buildertools cmd
 
 
 
