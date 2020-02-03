@@ -453,8 +453,40 @@ docker build -t buildertool .
 to start docker with mount \code :
 docker run -v C:\code  -it buildertools cmd
 
+*******************************************************************
 
+Docker- A Container Full of Chocolatey
+https://chocolatey.org/resources/videos/docker-a-container-full-of-chocolatey
 
+create folder  
+run powershell
+
+PS C:\Users\henry.wang> cd C:\Workarea\Docker\Chocolatey
+PS C:\Workarea\Docker\Chocolatey> docker version
+
+Client: Docker Engine - Community
+ Version:           19.03.5
+ API version:       1.40
+ Go version:        go1.12.12
+ Git commit:        633a0ea
+ Built:             Wed Nov 13 07:22:37 2019
+ OS/Arch:           windows/amd64
+ Experimental:      false
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          19.03.5
+  API version:      1.40 (minimum version 1.24)
+  Go version:       go1.12.12
+  Git commit:       633a0ea
+  Built:            Wed Nov 13 07:36:50 2019
+  OS/Arch:          windows/amd64
+  Experimental:     false
+PS C:\Workarea\Docker\Chocolatey>
+
+PS C:\Workarea\Docker\Chocolatey> docker images
+REPOSITORY                                  TAG                              IMAGE ID            CREATED             SIZE
+smilebuilder-build-windows                  latest                           c51d6c05c84e        5 hours ago         9.55GB
 
 
 
