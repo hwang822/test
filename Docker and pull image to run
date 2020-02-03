@@ -444,6 +444,8 @@ WORKDIR C:\code
 #CMD is using entry container terminal to run docker command  
 
 ##########################################################################################
+to clean docker image:
+docker rmi -f smilebuilder-build-windows
 
 to build this docker iamge: 
 docker build -t buildertool .
