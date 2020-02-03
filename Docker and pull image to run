@@ -443,7 +443,7 @@ WORKDIR C:\code
 #ENTRYPOINT "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
 #CMD is using entry container terminal to run >docker run  -it buildertools cmd 
 
-# build this docker iamge with mount host folders c:\code and c:\project  to run > docker build -v buildertool
+# build this docker iamge with mount host folders c:\code and c:\project  to run > docker build -t buildertool
 
 
 
