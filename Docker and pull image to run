@@ -445,13 +445,13 @@ WORKDIR C:\code
 
 ##########################################################################################
 to clean docker image:
-docker rmi -f smilebuilder-build-windows
+docker rmi -f buildertools
 
 to build this docker iamge: 
 docker build -t buildertool .
 
 to start docker with mount \code :
->docker run -v C:\code  -it buildertools cmd
+docker run -v C:\code  -it buildertools cmd
 
 
 
