@@ -1,0 +1,90 @@
+https://www.bogotobogo.com/cplusplus/make.php
+
+$ mkdir sample2
+$ cd sample2
+$ mkdir src
+
+Then, create CMakeLists.txt:
+CMakelist.txt
+
+Then, under src folder, create another CMakeLists.txt:
+$ cd src
+$ touch CMakeLists.txt
+
+#include "stdio.h"
+int main()
+{
+   printf("Sample2 CMake\n");
+   return 0;
+}
+
+
+Note that we have two CMakeLists.txt files. Let's work on the file in sample2/src/CMakeLists.txt:
+ADD_EXECUTABLE( cmake-sample2 main.c )
+
+Here cmake-sample2 is an executable target to be built from the source file (main.c).
+
+Then, let's modify another one in the top directory: sample2/CMakeLists.txt like the following:
+PROJECT( cmake-sample-II )
+ADD_SUBDIRECTORY( src )
+
+Now, we may want to make build directory so that we can keep build files under that directory.
+
+$ mkdir build
+$ cd build
+
+run cmakeC:\Workarea\Docker\cmake\sample2\build>cmake ..
+CMake Error: The source directory "C:/Workarea/Docker/cmake/sample2" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+C:\Workarea\Docker\cmake\sample2\build>cmake ..
+-- Building for: Visual Studio 16 2019
+-- The C compiler identification is MSVC 19.24.28316.0
+-- The CXX compiler identification is MSVC 19.24.28316.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.14)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Workarea/Docker/cmake/sample2/build
+
+C:\Workarea\Docker\cmake\sample2\build>
+
+ Directory of C:\Workarea\Docker\cmake\sample2\build
+
+02/06/2020  08:21 AM    <DIR>          .
+02/06/2020  08:21 AM    <DIR>          ..
+02/06/2020  08:19 AM            40,687 ALL_BUILD.vcxproj
+02/06/2020  08:19 AM               287 ALL_BUILD.vcxproj.filters
+02/06/2020  08:21 AM               168 ALL_BUILD.vcxproj.user
+02/06/2020  08:19 AM             3,117 cmake-sample-II.sln
+02/06/2020  08:19 AM            13,976 CMakeCache.txt
+02/06/2020  08:21 AM    <DIR>          CMakeFiles
+02/06/2020  08:19 AM             1,635 cmake_install.cmake
+02/06/2020  08:21 AM    <DIR>          src
+02/06/2020  08:21 AM    <DIR>          x64
+02/06/2020  08:19 AM            40,723 ZERO_CHECK.vcxproj
+02/06/2020  08:19 AM               530 ZERO_CHECK.vcxproj.filters
+               8 File(s)        101,123 bytes
+               5 Dir(s)  451,465,146,368 bytes free
+
+it also created .sln file
