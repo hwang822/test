@@ -88,3 +88,76 @@ C:\Workarea\Docker\cmake\sample2\build>
                5 Dir(s)  451,465,146,368 bytes free
 
 it also created .sln file
+
+using vs2019 to build cmake-sample-II.sln
+
+
+***************************************************
+using msbuild to build sln project
+
+https://docs.microsoft.com/en-us/visualstudio/msbuild/walkthrough-using-msbuild?view=vs-2019
+
+
+add msbuild to path C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\amd64
+could run msbuild any where.
+
+C:\Users\henry.wang>cd C:\Workarea\Docker\cmake\sample2\build\src
+
+C:\Workarea\Docker\cmake\sample2\build\src>msbuild cmake-sample2.vcxproj
+Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 2/6/2020 10:48:38 AM.
+Project "C:\Workarea\Docker\cmake\sample2\build\src\cmake-sample2.vcxproj" on node 1 (default targets).
+Project "C:\Workarea\Docker\cmake\sample2\build\src\cmake-sample2.vcxproj" (1) is building "C:\Workarea\Docker\cmake\sa
+mple2\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+CustomBuild:
+  All outputs are up-to-date.
+FinalizeBuildStatus:
+  Deleting file "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+  Touching "x64\Debug\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+Done Building Project "C:\Workarea\Docker\cmake\sample2\build\ZERO_CHECK.vcxproj" (default targets).
+
+InitializeBuildStatus:
+  Creating "cmake-sample2.dir\Debug\cmake-sample2.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+CustomBuild:
+  All outputs are up-to-date.
+VcpkgTripletSelection:
+  Using triplet "x64-windows" from "C:\Workarea\vcpkg\installed\x64-windows\"
+ClCompile:
+  All outputs are up-to-date.
+Link:
+  All outputs are up-to-date.
+  cmake-sample2.vcxproj -> C:\Workarea\Docker\cmake\sample2\build\src\Debug\cmake-sample2.exe
+AppLocalFromInstalled:
+  C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -noprofile -File "C:\Workarea\vcpkg
+  \scripts\buildsystems\msbuild\applocal.ps1" "C:\Workarea\Docker\cmake\sample2\build\src\Debug\cmake-sample2.exe" "C:\
+  Workarea\vcpkg\installed\x64-windows\debug\bin" "cmake-sample2.dir\Debug\cmake-sample2.tlog\cmake-sample2.write.1u.tl
+  og" "cmake-sample2.dir\Debug\vcpkg.applocal.log"
+FinalizeBuildStatus:
+  Deleting file "cmake-sample2.dir\Debug\cmake-sample2.tlog\unsuccessfulbuild".
+  Touching "cmake-sample2.dir\Debug\cmake-sample2.tlog\cmake-sample2.lastbuildstate".
+Done Building Project "C:\Workarea\Docker\cmake\sample2\build\src\cmake-sample2.vcxproj" (default targets).
+
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.04
+C:\Workarea\Docker\cmake\sample2\build\src\Debug>dir
+ Volume in drive C is Windows
+ Volume Serial Number is C2A7-45E3
+
+ Directory of C:\Workarea\Docker\cmake\sample2\build\src\Debug
+
+02/06/2020  08:21 AM    <DIR>          .
+02/06/2020  08:21 AM    <DIR>          ..
+02/06/2020  08:21 AM            51,200 cmake-sample2.exe
+02/06/2020  08:21 AM           572,720 cmake-sample2.ilk
+02/06/2020  08:21 AM           544,768 cmake-sample2.pdb
+               3 File(s)      1,168,688 bytes
+               2 Dir(s)  450,844,020,736 bytes free
+               
