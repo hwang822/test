@@ -1,8 +1,8 @@
 GitHub 
     Download and install github.
     
-    C:\Workarea\sdc-SmileBuilder-native>git --version
-      git version 2.22.0.windows.1
+C:\Users\Mixwell Software>git --version
+git version 2.14.1.windows.1
 
 	Git Commands
 
@@ -138,4 +138,34 @@ GitHub
 		
 		tag        Create, list, delete or verify a tag object signed with GPG
         
-		
+vcpkg
+get vcpkg for git hub
+C:\Workarea\vcpkg>git clone https://github.com/microsoft/vcpkg
+
+cd to vcpkg folder
+run bootstrap-vcpkg.batC:\Workarea\vcpkg>bootstrap-vcpkg.bat
+
+search if vtk libs are avalaibe in vcpkg.
+
+C:\Workarea\vcpkg>vcpkg search vtk
+vtk                  9.0              Software system for 3D computer graphics, image processing, and visualization
+
+vcpkg install to download the library and compile it. add boost to vcpakg
+
+vcpkg install boost:x64-windows
+vcpkg install vtk:x64-windows
+
+using find_package() to find installed libs in Cmake project.
+
+list isntalled libs.
+
+C:\Workarea\vcpkg>vcpkg list
+
+
+
+
+
+
+
+
+
