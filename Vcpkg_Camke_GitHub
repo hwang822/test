@@ -157,14 +157,32 @@ vcpkg install vtk:x64-windows
 
 using find_package() to find installed libs in Cmake project.
 
-list isntalled libs.
+list isntalled libs.GRADLE-HOME
 
 C:\Workarea\vcpkg>vcpkg list
 
+VS2019 community is free to install.
 
 CMake.
 Download and install Cmake 
+https://cmake.org/download/
 
+Run Visual Studio Installer to add Desktop devlopment with C++
+
+Oepn Cmake project folder and right click select "Open from Visual Studio"
+Right Click Cmakelists.txt to generate cache.
+Then Righ click to Build or Install.
+
+Download Install gradle form 
+https://gradle.org/install/
+GRADLE-HOME = C:\Workarea\gradle-6.4.1
+
+Download java 
+https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html
+JAVA_HOME = C:\Program Files\Amazon Corretto\jdk1.8.0_252
+
+Downlaod IntelliJ IDEA Community
+https://www.jetbrains.com/idea/download/#section=windows
 
 
 
