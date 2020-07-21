@@ -2,9 +2,15 @@ Download and install IntelliJ IDEA opensource tool for Java Debug.
 
 Open Interlli JDEA and click Create new Project
 
-you need tell will you jdk installed.
+select Gradle. 
 
-Project Name: JAVA-IDE
+you need tell will you jdk installed.
+1.8(java version "1.8.0_222"
+
+Click next
+Project Name: JAVA-GRADLE-IDE
+
+Click finish.
 
 at JAVA-IDE project view select src,  add JAVA class file Main.Class
 
