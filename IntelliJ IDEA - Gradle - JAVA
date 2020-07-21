@@ -1,18 +1,33 @@
+https://www.youtube.com/watch?v=JwPYjnhah3g
+
 Download and install IntelliJ IDEA opensource tool for Java Debug.
 
 Open Interlli JDEA and click Create new Project
 
 select Gradle. 
 
-you need tell will you jdk installed.
+select Project SDK.
 1.8(java version "1.8.0_222"
 
+Select Additional Libraries and Frameworks
+Java
+
 Click next
-Project Name: JAVA-GRADLE-IDE
+
+Groupid: org.mixwell
+Artifactid: java-gradle-ij-example
 
 Click finish.
+IJ will create sample gradle project at sleected (created) folder. 
+C:\Workarea\test\java-gradle-ij-example
+build.gradle config file is exist.
+
+At the top message bar "You can configure Gradle wrapper to use distribution with sources. It will provide IDE with Gradle API/DSL document... OK, apply suggestion!
+
+At the right bar it has gradle item to run tasks such as build.
 
 at JAVA-IDE project view select src,  add JAVA class file Main.Class
+
 
 public class Main {
     public static void main(String[] args){
