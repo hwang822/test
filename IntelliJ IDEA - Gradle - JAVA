@@ -20,7 +20,7 @@ Create a new project
 Check External Liberaries: <1.8> C:\Program Files\Amazon Corretto\jdk 1.8.0_22
 
 If not, at js help find "Switch IDE boot JDK" dialog to find Amazon Corretoo jdk and set to C:\Program Files\Amazon Corretto\jdk1.8.0_222.
-
+Check help/About VM: OPenJDK 64 Bit Server VB by Amzaon.com Inc. 
 $$$$$$$$$$$$$$
 
 Select Additional Libraries and Frameworks
