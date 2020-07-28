@@ -9,6 +9,20 @@ select Gradle.
 select Project SDK.
 1.8(java version "1.8.0_222"
 
+$$$$$$$$$$$$$$$$$
+https://www.youtube.com/watch?v=WtF0QyV3JQo
+ntelliJ IDEA 2019.2 Community Edition Installation using Amazon Corretto 11 JDK on Windows 10
+make sure the Amazon Corretto and IJ have been installed at:
+C:\Program Files\Amazon Corretto\jdk1.8.0_222\bin
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.2.3\jbr\bin
+
+Create a new project
+Check External Liberaries: <1.8> C:\Program Files\Amazon Corretto\jdk 1.8.0_22
+
+If not, at js help find "Switch IDE boot JDK" dialog to find Amazon Corretoo jdk and set to C:\Program Files\Amazon Corretto\jdk1.8.0_222.
+
+$$$$$$$$$$$$$$
+
 Select Additional Libraries and Frameworks
 Java
 
