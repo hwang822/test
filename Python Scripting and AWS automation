@@ -344,3 +344,34 @@ if __name__=="_main__":
 	main()
 	
 python start_stop_ec2.py
+
+Intermediate Python Programming
+//https://www.youtube.com/watch?v=HGOBQPFzWKo
+
+Topic:
+List.py 
+	myList = ["banana", "cherry", "apple"];
+	len(mylist), myList.append(""), mylist.pop, mylist.remove("cherry") ...
+	a = [1,2,3,4,5,6]
+	
+tuples.py  tuples samile list but could not changed.
+	pytuple = ("max", 28. "Boston")
+	print(pytube)
+	
+Directory: Key-Value pairs, Unodrdered, Mutable.	
+
+Sets: unordered, mutable, no duplicates.
+
+Strings: ordered, immutable, text representation.
+
+
+
+
+	
+	
+
+	
+	
+	
+
+
