@@ -364,8 +364,23 @@ Sets: unordered, mutable, no duplicates.
 
 Strings: ordered, immutable, text representation.
 
+Collections: Counter, nuamedtuple, OrderedDict, defaultdict, deque
+
+lambda.py: exceptions.py Errors and Exceptions.
+
+logging.py python has powerful log module. logging.debug, logging.info, logging.warning, logging.error, logging.critical.
+
+json: one web file format or data structure (same as diectory) or DB.
+
+Random Numbers.
+
+Decorators: it is powerfur module using at classes and functions.
+
+generators.py: 
+Treading and mulituples 
 
 
+	
 
 	
 	
