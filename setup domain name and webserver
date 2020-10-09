@@ -1,11 +1,11 @@
 1. Get domain name and bind to host server ip addresss.
 
-type myip at google to get host server ip address 73.32.73.9. 
+type myip at google to get host server ip address 98.197.25.132. 
 
-Your IP address is: 73.32.73.9 copy 
-Host: c-73-32-73-9.hsd1.tx.comcast.net
-Remote Port: 53098
-ISP: Comcast IP Services, L.L.C. 
+Your IP address is: 73.32.73.9 
+Host: 172.69.170.102
+Remote Port: 54574
+ISP: Comcast Cable Communications, LLC
  
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
@@ -191,7 +191,7 @@ Ethernet adapter Ethernet 2:
    
    route ip address is 192.168.1.1
 
-at host pc to IEexplore 192.168.1.1 hwang822 dl00 to my router LINKSYS (cable connected to host PC) setup
+at host pc to IEexplore 192.168.1.1 admin7373 dl00 to my router (Orbi, serial number: 50U2735F07B51, cable connected to host PC) setup
  
 At internet setup/Static IP: to makesure  Internet IP Address 73.32.73.9 
     
