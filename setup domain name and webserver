@@ -2,29 +2,39 @@
 
 type myip at google to get host server ip address 98.197.25.132. 
 
-Your IP address is: 73.32.73.9 
+Your IP address is: 98.197.25.132 
 Host: 172.69.170.102
-Remote Port: 54574
+Remote Port: 27822
 ISP: Comcast Cable Communications, LLC
  
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
 login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
-add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 73.32.73.9 and click submmit.
+add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 98.197.25.132 and click submmit.
 
 Test ping mixwellsoftware.com
 
 C:\Users\hwang_000>ping www.mixwellsoftware.com
 
-Pinging www.mixwellsoftware.com [73.32.73.9] with 32 bytes of data:
-Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
-Reply from 73.32.73.9: bytes=32 time=2ms TTL=64
-Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
-Reply from 73.32.73.9: bytes=32 time=3ms TTL=64
+C:\Users\Mixwell Software>ping www.mixwellsoftware.com
 
-Ping statistics for 73.32.73.9:
+Pinging www.mixwellsoftware.com [98.197.25.132] with 32 bytes of data:
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+
+C:\Users\Mixwell Software>ping 98.197.25.132
+
+Pinging 98.197.25.132 with 32 bytes of data:
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+Reply from 98.197.25.132: bytes=32 time<1ms TTL=64
+
+Ping statistics for 98.197.25.132:
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
 Approximate round trip times in milli-seconds:
-    Minimum = 2ms, Maximum = 3ms, Average = 2ms
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
 2. Set Root to forward internet ip address to local host server addresss. 
 setup static ip address for hoster
