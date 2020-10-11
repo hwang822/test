@@ -1,0 +1,95 @@
+*{
+		margin: 0;
+		padding: 0;
+		font-family: center-right
+}
+
+
+.main{
+	max-width: 1200px;
+	margin: auto;	
+}
+
+
+header{
+    background: url(../images/costa.jpg);
+	
+	height: 100vh;
+	background-size: cover;
+	background-position: center, center;
+    position: relative;	
+}
+
+ul{
+	float: right;
+	List-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;	
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+
+.logo img{
+	float: left;
+	width: 150px;
+	height: auto;
+		
+}
+
+.title{
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+
+.title h1{
+		color: #fff;
+		font-size: 70px;
+}
+
+.button{
+	position: absolute;	
+	width: 600px;
+	height: 300px;
+	
+	top: 50%;
+	left: 50%; 
+	transform: transparent(-50%, -50%);
+	
+}
+
+.btn{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration; none;
+	transition: 0.6s ease;
+}
+	
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+	

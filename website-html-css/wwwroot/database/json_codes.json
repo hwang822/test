@@ -1,0 +1,18 @@
+{"first_name" : "Dale".
+"last_name" : "Cooper".
+"age" : "35".
+"enrolled" : true.
+"married" : null.
+"address" : {
+"street" : "123 Main St",
+"city" : "Seattle",
+"state" : "WA"
+|,
+"phone": [
+{"type" : "home"
+"number" : "4125551212"
+},
+{"type" : "mobile"
+"number" : "4125552121"
+}
+]}
