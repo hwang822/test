@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="backup">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/backup/Blooger_Assets.zip!/" />
+      <root url="jar://$PROJECT_DIR$/backup/Blooger_Website-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

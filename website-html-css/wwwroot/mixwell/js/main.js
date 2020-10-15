@@ -15,6 +15,8 @@ const responsive = {
 
 $(document).ready(function () {
 
+//    show_hide(0);
+
     $nav = $('.nav');
     $toggleCollapse = $('.toggle-collapse');
 
@@ -46,3 +48,36 @@ $(document).ready(function () {
     AOS.init();
 
 });
+
+var a = 0;
+function show_hide(a)
+{
+    
+    document.getElementById("post-0").style.display="none";
+    document.getElementById("post-1").style.display="none";
+    document.getElementById("post-2").style.display="none";
+    document.getElementById("post-3").style.display="none";
+    document.getElementById("post-4").style.display="none";
+    document.getElementById("post-5").style.display="none";
+
+    if(a==0){
+        document.getElementById("post-0").style.display="inline";
+    }
+    else if(a==1){
+        document.getElementById("post-1").style.display="inline";
+    }
+    else if(a==2){
+        document.getElementById("post-2").style.display="inline";
+    }
+    else if(a==3){
+        document.getElementById("post-3").style.display="inline";
+    }
+    else if(a==4){
+        document.getElementById("post-4").style.display="inline";
+    }
+    else if(a==5){
+        document.getElementById("post-5").style.display="inline";
+    }
+
+    return;           
+}
