@@ -43,5 +43,22 @@ https://www.youtube.com/watch?v=5GWIHv94KPM
    Click VPN Connection.  Click connect button to make connection scusffully.
    if failure it has hsome VPN server setup problem.
    
-   
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+https://www.youtube.com/watch?v=9LNC393pqyE
+https://www.vpnbook.com/freevpn
+Set up free VPN Server 
+
+select US1 OpenVPN Certificate Bundle (optimized for fast web surfing; no p2p downloading)
+
+All bundles include UDP53, UDP 25000, TCP 80, TCP 443 profile
+Username: vpnbook
+Password: csx92UD
+
+copy doanloaded config files vpnbook-us1-tcp80, vpnbook-us1-tcp443, vpnbook-us1-udp53, vpnbook-us1-tcp25000 to C:\Program Files\OpenVPN\config
+Go to openVPN apps to select one to connect. input username and password
+
+The app will turn to green
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
    
