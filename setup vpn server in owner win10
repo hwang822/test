@@ -1,35 +1,45 @@
 https://www.youtube.com/watch?v=5GWIHv94KPM
 1. Assign a static local IP address for you computer
    go to tool bar => Network & Internet Settings\Ethernet\Change adapter options\Ethernet\Properties\internet Protocol Version 4(TCP/IPv4)\Properties\
-   \User the following IP address.
-         IP address: 192.168.1.200  Subnet mask: 255.255.255.0 defautl gateway: 192.168.1.1
+   \User the following IP address at vpn server runing PC.
+         IP address: 192.168.1.200  
+         Subnet mask: 255.255.255.0 
+         defautl gateway: 192.168.1.1
    \Use the following DNS server address:
          Preferred DNS server: 192.168.1.1
-         Alternate DNS server: 0.0.0.0
+         Alternate DNS server: 8.8.8.8
    Click OK to close setting.
 
 2. Setup VPN server on windows 10
    at Network Connections dialog, press alt key, the file meun show up at dialog. select file\new incomming connection.
    Add new User to use this vpn
-   User name: hw822
-   Full name: hw822
+   User name: wy-vpn
+   Full name: wy-vpn
    Password: dl00
-   Confirm password: dl00
+   Confirm password: dl00     
    
    click next ... to complate the setting.
    The people you chose can now connect this computer. 
    To connect, they will need following infomation:
    Computer name: BOWEN-PC
    
-3. Configure you router to forwad port 1723
+3. Configure you router to forwading  1723
+3. Configure you router to  forwad port 1723
    go to 192.168.1.1\advanced\Port Forwarding/Port Triggering
-   
-4. Congigue a Firewall for VPN traffic
+   Add PPTP Server IA Address\Port Forwarding: 1723.
+      
+   Congigue a Firewall for VPN traffic
    Go to Control Panel\System and Security\Widnows Defender Firewall\Advanced Settings\Windows Defender Firewall with Advanced Scurity
-   \Inbound Rules\New Rule...\Port\Next\TCP and UDP Specific local ports: 1723\Allow the connection\next\next\Setup rule name: 1723\Finish
+   \Inbound Rules\New Rule...\Port\Next\TCP Specific local ports: 1723\Allow the connection\next\next\Setup rule name: 1723\Finish
+   \Inbound Rules\New Rule...\Port\Next\UDP Specific local ports: 1723\Allow the connection\next\next\Setup rule name: 1723UDP\Finish
    
    test port forwad testing. 
-   have ipname mixwellsoftware.com
+   https://www.yougetsignal.com/tools/open-ports/
+   Remote Address: mixwellsoftware.com \Port Number: 1723
+   Port 1723 is open on mixwellsoftware.com.
+ 
+4. Create an easy to remember hostname, to access your computer from anywhere. 
+   have domain name: mixwellsoftware.com
    
 5. Connect to VPN and access shared folders
 
@@ -41,7 +51,7 @@ https://www.youtube.com/watch?v=5GWIHv94KPM
    
    User will create new networking vpn connection.
    Click VPN Connection.  Click connect button to make connection scusffully.
-   if failure it has hsome VPN server setup problem.
+   if failure it has home VPN server setup problem.
    
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 https://www.youtube.com/watch?v=9LNC393pqyE
