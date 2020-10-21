@@ -391,8 +391,8 @@ var myObj =
 
 function posts()
 {
-    var photopath = "C:\\Workarea\\201901_Cruise_World_Around\\";
-    var smallFile = "\\small.jpg"
+    var photopath = "http://mixwellsoftware.com/travel/images/201901_Cruise_World_Around/"; //"C:\\Workarea\\201901_Cruise_World_Around\\"; // "www.mixwellsoftware.com//travel//images//201901_Cruise_World_Around//"; 
+    var smallFile = "/small.jpg"
     var p = document.getElementById("myposts");
     for(var i = 0; i < myObj.dists.length; i++) {                            
         var html = ""        
