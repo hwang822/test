@@ -1,0 +1,74 @@
+https://www.youtube.com/watch?v=5GWIHv94KPM
+1. Assign a static local IP address for you computer
+   go to tool bar => Network & Internet Settings\Ethernet\Change adapter options\Ethernet\Properties\internet Protocol Version 4(TCP/IPv4)\Properties\
+   \User the following IP address at vpn server runing PC.
+         IP address: 192.168.1.200  
+         Subnet mask: 255.255.255.0 
+         defautl gateway: 192.168.1.1
+   \Use the following DNS server address:
+         Preferred DNS server: 192.168.1.1
+         Alternate DNS server: 8.8.8.8
+   Click OK to close setting.
+
+2. Setup VPN server on windows 10
+   at Network Connections dialog, press alt key, the file meun show up at dialog. select file\new incomming connection.
+   Add new User to use this vpn
+   User name: wy-vpn
+   Full name: wy-vpn
+   Password: dl00
+   Confirm password: dl00     
+   
+   click next ... to complate the setting.
+   The people you chose can now connect this computer. 
+   To connect, they will need following infomation:
+   Computer name: BOWEN-PC
+   
+3. Configure you router to forwading  1723
+3. Configure you router to  forwad port 1723
+   go to 192.168.1.1\advanced\Port Forwarding/Port Triggering
+   Add PPTP Server IA Address\Port Forwarding: 1723.
+      
+   Congigue a Firewall for VPN traffic
+   Go to Control Panel\System and Security\Widnows Defender Firewall\Advanced Settings\Windows Defender Firewall with Advanced Scurity
+   \Inbound Rules\New Rule...\Port\Next\TCP Specific local ports: 1723\Allow the connection\next\next\Setup rule name: 1723\Finish
+   \Inbound Rules\New Rule...\Port\Next\UDP Specific local ports: 1723\Allow the connection\next\next\Setup rule name: 1723UDP\Finish
+   
+   test port forwad testing. 
+   https://www.yougetsignal.com/tools/open-ports/
+   Remote Address: mixwellsoftware.com \Port Number: 1723
+   Port 1723 is open on mixwellsoftware.com.
+ 
+4. Create an easy to remember hostname, to access your computer from anywhere. 
+   have domain name: mixwellsoftware.com
+   
+5. Connect to VPN and access shared folders
+
+   In anotehr machine to access vpn server.
+   
+   go to newwork & internet settings\Ethernet\Network and Sharing Center\Set up a new connection or network\Connect to a workplace(Set up dial-up or VPN connection to your workplace)
+   \Use my internet connection (VPN)\internet address: mixwellsoftware.com
+   input user name and password
+   
+   User will create new networking vpn connection.
+   Click VPN Connection.  Click connect button to make connection scusffully.
+   if failure it has home VPN server setup problem.
+   
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+https://www.youtube.com/watch?v=9LNC393pqyE
+https://www.vpnbook.com/freevpn
+Set up free VPN Server 
+
+select US1 OpenVPN Certificate Bundle (optimized for fast web surfing; no p2p downloading)
+
+All bundles include UDP53, UDP 25000, TCP 80, TCP 443 profile
+Username: vpnbook
+Password: csx92UD
+
+copy doanloaded config files vpnbook-us1-tcp80, vpnbook-us1-tcp443, vpnbook-us1-udp53, vpnbook-us1-tcp25000 to C:\Program Files\OpenVPN\config
+Go to openVPN apps to select one to connect. input username and password
+
+The app will turn to green
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+   
