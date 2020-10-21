@@ -1,0 +1,429 @@
+  <!--
+    HTML Tutorial  
+    https://www.w3schools.com/html/default.asp      
+  -->
+
+
+  <!DOCTYPE html>
+  <html>
+  <body>
+
+  <h1>HTMLTutorial-EX.html</h1>    
+
+  <h2>Text input fields</h2>
+
+  <!--
+    HTML Introduction
+  -->
+  
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form>
+  
+  <p>Note that the form itself is not visible.</p>
+  
+  <p>Also note that the default width of text input fields is 20 characters.</p>
+  
+  <!--
+    HTML Form Attributes
+  -->
+
+  <form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  </body>
+  </html>
+  
+<!--
+The HTML <form> Elements
+The HTML <form> element can contain one or more of the following form elements:
+
+<input>
+<label>
+<select>
+<textarea>
+<button>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<option>
+<optgroup>  
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Visible Option Values</h2>
+
+<p>Use the size attribute to specify the number of visible values.</p>
+
+<form action="/action_page.php">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select><br><br>
+  <input type="submit">
+</form>
+
+</body>
+</html>
+
+<!--
+HTML Input Types
+Here are the different input types you can use in HTML:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">  
+-->
+
+<form>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+</form>
+
+<!--
+  HTML Input Attributes
+  readonly
+  disabled
+  size
+-->
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John" readonly size="50"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe" disabled>
+</form>
+
+<!--
+  HTML Input form* Attributes
+-->
+
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+</form>
+
+
+<!--
+  HTML Canvas Graphics  
+  The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.    
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
+
+</body>
+</html>
+
+
+<!--
+  HTML SVG Graphics
+-->
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+<svg height="130" width="500">
+  
+  <defs>    
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:rgb(255,255,0);stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:rgb(255,0,0);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="50" y="86">SVG</text>
+Sorry, your browser does not support inline SVG.
+</svg>
+
+</body>
+</html>
+
+<!--
+  HTML Video
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<br>
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+</body>
+</html>
+
+<!--
+  HTML Audio
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+<audio controls>
+  <source src="horse.ogv" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
+
+<!--
+  HTML Plug-ins
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<object width="100%" height="500px" data="demo_iframe.html"></object>
+<object data="audi.jpeg"></object>
+
+</body>
+</html>
+
+<!--
+  HTML YouTube Videos
+-->
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+  <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+  </iframe>
+
+</body>
+</html>
+
+<!--
+  HTML Geolocation API
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<br>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
+<!--
+  HTML Drag and Drop API
+-->
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<br>
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+</body>
+</html>
+
+
+<!--
+  HTML Web Storage API
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+</script>
+
+</body>
+
+<!--
+  HTML Web Workers
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+</body>
+</html>
+
+<!--
+  HTML SSE
+-->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Getting server updates</h1>
+<div id="result"></div>
+
+<script>
+if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("demo_sse.php");
+  source.onmessage = function(event) {
+    document.getElementById("result").innerHTML += event.data + "<br>";
+  };
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+</script>
+
+</body>
+</html>
