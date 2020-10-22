@@ -122,6 +122,7 @@ function posts()
         newElement.setAttribute('id', elementId);
         var html = '<div id=' + elementId + '>';
         for(var j = myObj.dists[i].routes.length-1; j >=0; j--) {
+            var key = myObj.dists[i].routes[j].date;
             html = html +
             '<div class="post-content" data-aos="zoom-in" data-aos-delay="200">\
                 <div class="post-image">\
@@ -135,10 +136,10 @@ function posts()
                     </div>\
                 </div>\
                 <div class="post-title">\
-                    <a href="photos.html">' + myObj.dists[i].routes[j].date + '</a>\
+                    <a href="photos.html?key=' + key + '" id="a">' + key + '</a>\
                     <p>' + myObj.dists[i].routes[j].data + '</p>\
                     <div class="post-title">\
-                        <a href="photos.html">Gallery</a>\
+                        <a href="photos.html?key=' + key + '" id="a">Gallery</a>\
                     </div>\
                 </div>\
             </div>\

@@ -11,6 +11,17 @@
   <section>	    
     <div class="gallery" id="gallery_id">
       <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+    
+    
         var myphotos1 = [
 "20190105_Italy_Venice/IMG_20190105_080851.jpg",
 "20190105_Italy_Venice/IMG_20190105_143132.jpg",
@@ -10913,9 +10924,10 @@
 ];
 
   var path = "http://mixwellsoftware.com/travel/images/201901_Cruise_World_Around/";                 
-  var key = localStorage['key'];
+  //var key = localStorage.getItem("myValue"); // localStorage['key'];
+  var key = getParameterByName('key');
   var h1 = document.createElement('h1');
-  var html = "<h1>20190105_Italy_Venice</h1><hr>"	
+  var html = "<h1>" + key + "</h1><hr>";	
   h1.innerHTML = html;
   document.getElementById("gallery_id").appendChild(h1);        
 
