@@ -10932,16 +10932,13 @@
   document.getElementById("gallery_id").appendChild(h1);        
 
   for(var i = 0; i < myphotos.length; i++) {
-    if(myphotos[i].toString().includes("20190427_Italy_Venice")){
+    if(myphotos[i].toString().includes(key)){
         var folder = myphotos[i];
         var b = document.createElement('a');
         b.innerHTML = '<a class="example-image-link" data-lightbox="example-set" href="' + path + myphotos[i] + '"><img src="' + path + myphotos[i] + '" class="img" alt="blog5"></a>';
         document.getElementById("gallery_id").appendChild(b);        
     }    
   }
-  var b = document.createElement('a');
-  b.innerHTML = '<p>total: ' + myphotos.length + '</p>';
-  document.getElementById("gallery_id").appendChild(b);
   </script>
     </div>
   </section>
