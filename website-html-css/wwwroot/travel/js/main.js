@@ -61,7 +61,8 @@ function show_hide(a)
     document.getElementById("post-3").style.display="none";
     document.getElementById("post-4").style.display="none";
     document.getElementById("post-5").style.display="none";
-
+    //document.getElementById("music-id").innerHTML = "";
+    
     if(a==0){
         document.getElementById("post-0").style.display="inline";
     }
@@ -116,11 +117,12 @@ function posts()
 {
     var p = document.getElementById("myposts");
     for(var i = 0; i < myObj.dists.length; i++) {                            
-        var html = ""        
+        //var html = "";        
         var newElement = document.createElement('div');        
         var elementId = "post-" + i; 
         newElement.setAttribute('id', elementId);
         var html = '<div id=' + elementId + '>';
+
         for(var j = myObj.dists[i].routes.length-1; j >=0; j--) {
             var key = myObj.dists[i].routes[j].date;
             html = html +
