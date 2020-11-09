@@ -1,0 +1,46 @@
+https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server
+Creating Demo APIs with json-server
+
+
+first need donwnlaod and npm in windows.
+
+https://phoenixnap.com/kb/install-node-js-npm-on-windows
+
+To start building your Node.js applicNode.js is a run-time environment which includes everything you need to execute a program written in JavaScript. It’s used for running scripts on the server to render content before it is delivered to a web browser.
+
+NPM stands for Node Package Manager, which is an application and repository for developing and sharing JavaScript code.ations, the first step is the installation of the node.js framework
+Node.js also has the ability to embedded external functionality or extended functionality by making use of custom modules. These modules have to be installed separately. An example of a module is the MongoDB module which allows you to work with MongoDB databases from your Node.js application.
+
+Installing NPM (Node Package Manager) on Windows
+
+C:\windows\system32>node -v
+v14.15.0
+C:\windows\system32>npm -v
+6.14.8
+
+Basic Node.js Usage
+Node.js is a framework, which means that it doesn’t work as a normal application. Instead, it interprets commands that you write. To test your new Node.js installation, create a Hello World script.
+
+1. Start by launching a text editor of your choice.
+
+2. Next, copy and paste the following into the text editor you’ve just opened:
+
+var http = require('http');
+ http.createServer(function (req, res) {
+   res.writeHead(200, {'Content-Type': 'text/html'});
+   res.end('Hello World!');
+ }).listen(8080);
+3. Save the file, then exit. Open the PowerShell, and enter the following:
+
+node \users\<your_username>\myprogram.js
+It will look like nothing has happened. In reality, your script is running in the background. You may see a Windows Defender notice about allowing traffic – for now, click Allow.
+
+4. Next, open a web browser, and enter the following into the address bar:
+
+http://localhost:8080
+In the very upper-left corner, you should see the text Hello World!
+
+Right now, your computer is acting like a server. Any other computer that tries to access your system on port 8080 will see the Hello World notice.
+
+To turn off the program, switch back to PowerShell and press Ctrl+C. The system will switch back to a command prompt. You can close this window whenever you are ready.
+
