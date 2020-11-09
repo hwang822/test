@@ -44,3 +44,31 @@ Right now, your computer is acting like a server. Any other computer that tries 
 
 To turn off the program, switch back to PowerShell and press Ctrl+C. The system will switch back to a command prompt. You can close this window whenever you are ready.
 
+C:\Users\hwang>npm install -g json-server
+C:\Users\hwang\AppData\Roaming\npm\json-server -> C:\Users\hwang\AppData\Roaming\npm\node_modules\json-server\lib\cli\bin.js
++ json-server@0.16.2
+updated 1 package in 65.216s
+
+C:\Users\hwang>json-server --watch db.json
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/profile
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+  
+  http://localhost:3000/
+  Congrats!
+You're successfully running JSON Server
+✧*｡٩(ˊᗜˋ*)و✧*｡
+
