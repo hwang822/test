@@ -1,1 +1,76 @@
 Interview Q&A
+
+C# Q&A
+
+A class has several types of 
+members, constructors, fields, properties, methods, delegates, and events.
+
+Abstraction, Encapsulation, Polymorphism, and Inheritance.
+Encapsulation: Hide implementation details with public, private, protect.
+Polymorphism - Overriding baseClass Methods in derivedClass metohods.
+Inheritance - Derived class inheritanced from base class. Class derivedClass : baseClass{} 
+
+😊Abstract Class vs Interface
+both are the process of hiding certain details and showing only essential information to the user.
+
+An interface is a completely "abstract class", which can only contain abstract methods and properties (with empty bodies):
+
+interface TestInterface  
+{  //no impletation 
+    void getMethod();  // interface method (does not have a body)
+    string getName();  //divered class have to impletation
+}   
+
+abstract class TestAbstractClass  
+{  //has member and constractor. no impletation, divered class have to impletation override the method 
+    int i = 4;  
+    int k = 3;  
+    //An abstract class can have both abstract and regular methods:
+    public abstract void getClassName();
+    public void getClassMyName(){
+      return;
+    }
+}  
+
+
+CLR
+Managed code: the object creation, memory allocation, and object disposal is managed by the Common Language Runtime.
+Unmanaged Code: The object creation, execution, and disposal of unmanaged code is directly managed by the programmers.
+
+😊What is Boxing and Unboxing in C#? 
+ 
+Boxing and Unboxing both are used for type conversions.
+ 
+The process of converting from a value type to a reference type is called boxing. Boxing is an implicit conversion. Here is an example of boxing in C#.
+// Boxing  
+int anum = 123;  
+Object obj = anum;  
+Console.WriteLine(anum);  
+Console.WriteLine(obj); 
+The process of converting from a reference type to a value type is called unboxing. Here is an example of unboxing in C#.
+// Unboxing  
+Object obj2 = 123;  
+int anum2 = (int)obj;  
+Console.WriteLine(anum2);  
+Console.WriteLine(obj);  
+
+😊What is the difference between a struct and a class in C#?  
+Class and struct are both user-defined data types, but have some major differences:
+ 
+Struct
+The struct is a value type in C# and it inherits from System.Value Type.
+Struct is usually used for smaller amounts of data.
+Struct can’t be inherited from other types.
+A structure can't be abstract.
+No need to create an object with a new keyword.
+Do not have permission to create any default constructor.
+Class
+The class is a reference type in C# and it inherits from the System.Object Type.
+Classes are usually used for large amounts of data.
+Classes can be inherited from other classes.
+A class can be an abstract type.
+We can create a default constructor.
+
+
+
+
