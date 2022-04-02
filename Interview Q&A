@@ -71,6 +71,63 @@ Classes can be inherited from other classes.
 A class can be an abstract type.
 We can create a default constructor.
 
+😊What are delegates in C# and the uses of delegates?
+Treat a function as data. Delegates allow functions to be passed as parameters, returned from a function as a value
+Delegate is a class that is used to create and invoke delegates at runtime.
 
+namespace Delegates  
+{  
+    // Delegate Definition  
+    public delegate int operation(int x, int y);  
+         
+    class Program  
+    {  
+        // Method that is passes as an Argument  
+        // It has same signature as Delegates   
+        static int Addition(int a, int b)  
+        {  
+            return a + b;  
+        }  
+  
+        static void Main(string[] args)  
+        {  
+            // Delegate instantiation  
+            operation obj = new operation(Program.Addition);  
+   
+            // output  
+            Console.WriteLine("Addition is={0}",obj(23,27));   
+            Console.ReadLine();    
+        }  
+    }  
+}  
 
+😊What are sealed classes in C#?
+    sealed classed can not be inherited
+
+😊 What are partial classes?
+    could define multiple methods in with same class name in diffrenct class body.
+
+😊What’s the difference between the Array.CopyTo() and Array.Clone()?
+    Array.Clone copy each items shallow copy object
+    Array.CopyTo is copy all daata and object to another deepcopy object
+
+😊What are Singleton Design Patterns and how to implement them in
+    Ensures a class has only one instance and provides a global point of access to it.
+
+😊What are Indexers in C#?
+    as Indexers which are used for treating an object as an array
+
+😊What are Different Ways a Method can be Overloaded?
+    a method with the same name but different signatures based on the number and type of parameters and return values.
+ 
+😊What are Generics in C#?
+    generics class or method can work with any data type.
+  
+😊What is a Virtual Method in C#?
+    A virtual method is a method that can be redefined in derived classes  
+  
+😊How do you use the “using” statement in C#?  
+    the using keyword to add namespaces in code-behind and class files
+    using System.IO;  
+    using System.Text;  
 
