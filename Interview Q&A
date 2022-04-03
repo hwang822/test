@@ -1,6 +1,6 @@
 Interview Q&A
 
-C# Q&A
+❤C# Q&A
 
 A class has several types of 
 members, constructors, fields, properties, methods, delegates, and events.
@@ -130,4 +130,95 @@ namespace Delegates
     the using keyword to add namespaces in code-behind and class files
     using System.IO;  
     using System.Text;  
+
+❤ASP .Net Core Q&A
+
+😊What is the ASP.NET Core?
+    ASP. NET Core is an open-source an asp.net core training cross-platform that runs on Windows, Linux, and Mac to develop modern cloud-based applications including IoT apps, Web Apps, Mobile Backends, and more.
+
+😊What are the features provided by ASP.NET Core?
+    Built-in supports for Dependency Injection
+    Built-in supports for the logging framework and it can be extensible
+    Introduced new, fast and cross-platform web server - Kestrel. So, a web application can run without IIS, Apache, and Nginx.
+    Multiple hosting ways are supported
+    It supports modularity, so the developer needs to include the module required by the application. However, .NET Core framework is also providing the meta package that includes the libraries
+    Command-line supports to create, build and run the application
+    There is no web.config file. We can store the custom configuration into an appsettings.json file
+    There is no Global.asax file. We can now register and use the services into startup class
+    It has good support for asynchronous programming
+    Support WebSocket and SignalR
+    Provide protection against CSRF (Cross-Site Request Forgery)
+
+😊What are the advantages of ASP.NET Core over ASP.NET?
+    It is cross-platform, so it can be run on Windows, Linux, and Mac.
+    There is no dependency on framework installation because all the required dependencies are ship with our application
+    ASP.NET Core can handle more request than the ASP.NET
+    Multiple deployment options available withASP.NET Core
+
+😊What is Metapackages?
+    ncludes all the supported package by ASP.NET code with their dependencies into one package
+    
+😊 Can ASP.NET Core application work with full .NET 4.x Framework?
+    Yes. ASP.NET core application works with full .NET framework via the .NET standard library.
+
+😊What is the startup class in ASP.NET core?
+    Startup class is the entry point of the ASP.NET Core application. 
+ 
+ public class Program
+ {
+     public static void Main(string[] args)
+     {
+        CreateWebHostBuilder(args).Build().Run();
+     }
+ 
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+        .UseStartup<TestClass>();
+ }
+ 
+😊What is the use of ConfigureServices method of startup class?
+    to configure the services that are used by the application. 
+    
+😊What is the use of the Configure method of startup class? 
+    It defines how the application will respond to each HTTP request. We can configure the request pipeline by configuring the middleware. It accepts IApplicationBuilder as a parameter and also it has two optional parameters: IHostingEnvironment and ILoggerFactory. Using this method, we can configure built-in middleware such as routing, authentication, session, etc. as well as third-party middleware.
+    
+😊What is middleware?
+    It is software which is injected into the application pipeline to handle request and responses. 
+    
+😊What is the difference between IApplicationBuilder.Use() and IApplicationBuilder.Run()?
+    The middleware adds using IApplicationBuilder.Use may call the next middleware in the pipeline whereas the middleware adds using IApplicationBuilder.Run method never calls the subsequent ore next middleware. After IApplicationBuilder.Run method, system stop adding middleware in request pipeline.
+
+😊What is the use of "Map" extension while adding middleware to ASP.NET Core pipeline?
+    It is used for branching the pipeline. It branches the ASP.NET Core pipeline based on request path matching. If request path starts with the given path, middleware on to that branch will execute.
+
+😊What is routing in ASP.NET Core?
+    Routing is functionality that map incoming request to the route handler. 
+
+😊How to enable Session in ASP.NET Core?
+    The middleware for the session is provided by the package Microsoft.AspNetCore.Session. To use the session in ASP.NET Core application, we need to add this package to csproj file and add the Session middleware to ASP.NET Core request pipeline.
+
+😊What are the various JSON files available in ASP.NET Core?
+    There are following JSON files in ASP.NET Core :
+    global.json
+    launchsettings.json 
+    appsettings.json
+    bundleconfig.json
+    bower.json
+    package.json
+
+😊What is tag helper in ASP.NET Core?
+    It is a feature provided by Razor view engine that enables us to write server-side code to create and render the HTML element in view (Razor). The tag-helper is C# classes that used to generate the view by adding the HTML element. The functionality of tag helper is very similar to HTML helper of ASP.NET MVC.
+
+😊How to specify service lifetime for register service that added as a dependency?
+    ASP.NET Core allows us to specify the lifetime for registered services. 
+    
+
+❤RESTful Web Servbices (Backend)
+    to develop web services by the XML method, RESTful web services use web protocol i.e. HTTP protocol method. 
+
+❤React  https://www.interviewbit.com/react-interview-questions/
+    React is a front-end and open-source JavaScript library which is useful in developing user interfaces specifically for applications with a single page.
+    
+❤SQL Database    
+
 
