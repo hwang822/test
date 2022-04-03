@@ -213,8 +213,47 @@ namespace Delegates
     ASP.NET Core allows us to specify the lifetime for registered services. 
     
 
-❤RESTful Web Servbices (Backend)
-    to develop web services by the XML method, RESTful web services use web protocol i.e. HTTP protocol method. 
+❤RESTful Web Servbices (Backend) 
+    https://www.guru99.com/restful-web-services.html#:~:text=Facebook%2C%20Twitter%2C%20and%20Google%20expose,these%20web%20services%20via%20REST.
+    Client send HTTP protocol request vir RESTful web services host to get, put, post, delete infomration in side the resource.   
+    
+    😃RESTful Key Elements
+    Resouce: get emplayee#1 from mixwellware http://mixwellsoftware.com/employee/1
+    Request Verbs:  A brower issues request vaerbs POST, PUT, and DELETE instruct the endpoint what it wants.
+    Request Headers: define the type of response required or the authorization details. example employee.
+    Request Body: POST request need prvoide data body to post (create) on the web server.
+    Response Body: GET request web server might return an XML document with all the details.
+    Response Status codes: the response error code 2xx from the web server.
+    
+    😃Restful Methods:
+    Browser (pc, mobile ...) to send request to any kind of RESTful resource using same web service api (facebook, google, cloud...). 
+    
+    😃Restful Architecture
+    Client-server is the typical architecture where the server can be the web server hosting the application, and the client can be as simple as the web browser.  
+    Stateless means that the state of the application is not maintained in REST. For example, if you delete a resource from a server using the DELETE command, you cannot expect that delete information to be passed to the next request.
+    
+    😃RESTFul Principles and Constraints
+        RESTFul Client-Server: 
+            Client sample as a browser to send request html format reqeust (need developer React web page if it is GUI). 
+            Server run RESTful web server API to exuct the request method.
+        Stateless: Client cound not sure if the request completted in the server.
+        Catch: to hold client request to avoid cleint repeat send same request to server.
+        Layered System: Middelware between client and endpoint of server host.
+        Interface/Uniform Contract:
+            POST – To create a resource on the server
+            GET – To retrieve a resource from the server
+            PUT – To change the state of a resource or to update it
+            DELETE – To remove or delete a resource from the server
+        
+     😃Create a Restful web service in ASP.NET (using Visual Studio) or Java sprint
+     
+     
+     
+        
+        
+            
+        
+
 
 ❤React  https://www.interviewbit.com/react-interview-questions/
     React is a front-end and open-source JavaScript library which is useful in developing user interfaces specifically for applications with a single page.
