@@ -245,16 +245,76 @@ namespace Delegates
             PUT – To change the state of a resource or to update it
             DELETE – To remove or delete a resource from the server
         
-     😃Create a Restful web service in ASP.NET (using Visual Studio) or Java sprint
-     
-     
-     
+    😃Create a Restful web service in ASP.NET (using Visual Studio) or Java sprint
+    https://www.youtube.com/watch?v=LXZnuJY0dGI
+    
+    https://github.com/hwang822/test/RestFulServiceAPI
+    Step 1) Create new project from VS2019 
+        select project type ASP.NET Web Application (.NET Framework) and project name.  
+        select WCF and Web API     
+        cleak Create Button
+    Step 2) Go to controllers
+        HomeController.cs  basic home page controller   https://localhost:44387/home
+        ValuesController.cs coustom home page controller  https://localhost:44387/values(can be renamed)
         
-        
+        Right Controller to Add new API controller with read/write action and named to WeatherController.cs
+            Add using RestFulServiceAPI.Models;
+            to use data form models WeatherInfo
+            public class WeatherController : ControllerBase
+            {
+                // GET: api/<WeatherController>
+                [HttpGet]
+                public IEnumerable<WeatherInfo> Get()
+                {
+                    // get to create weatherInfoList as data source
+                    var weatherInfoList = new List<WeatherInfo>()
+
+                    for (int i = 0; i < 10; i++)
+                    {
+                        var weatherInfo = new WeatherInfo
+                        {
+                            Location = $"Location {i}",
+                            Degree = i * 23 / 17,
+                            DateTime = DateTime.Now.ToUniversalTime()
+                        };
+                    }
+
+                    return weatherInfoList;
+                }
+
+                // GET api/<WeatherController>/5
+                [HttpGet("{id}")]
+                public WeatherInfo Get(int id)
+                {
+
+                    return new WeatherInfo
+                    {
+                        Location = $"Location {id}",
+                        Degree = id * 23 / 17,
+                        DateTime = DateTime.Now.ToUniversalTime()
+                    };
+                }
             
+        Right Models to add new API model named WeatherInfo.cs 
+   
+            using System;
+            using System.Runtime.Serialization;
+
+            namespace RestFulServiceAPI.Models
+            {
+                [DataContract]
+                public class WeatherInfo
+                {
+                    [DataMember(Name = "location")]
+                    public string Location { get; set; }
+                    [DataMember(Name = "degree")]
+                    public float Degree { get; set; }
+                    [DataMember(Name = "dateTime")]
+                    public DateTime DateTime { get; set; }
+
+                }
+            }
         
-
-
 ❤React  https://www.interviewbit.com/react-interview-questions/
     React is a front-end and open-source JavaScript library which is useful in developing user interfaces specifically for applications with a single page.
     
@@ -268,5 +328,5 @@ namespace Delegates
     5. Strengthen CPU - 
     6. Review Access - 
     
-    
+
 
