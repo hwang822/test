@@ -198,8 +198,14 @@ open app.js
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App() { //js codes function and componies in html
   return (
+  //add self html start page and componnies
+  
+  
+  
+  // null  will get empty html page
+  /*
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -216,8 +222,46 @@ function App() {
         </a>
       </header>
     </div>
+*/    
   );
 }
-
 export default App;
 
+
+create TodoList.js file and add <TodoList /> in app.js
+import React from 'react'
+
+export default function TodoList(){
+    return (
+        <div>
+            Hello Wolrd from TodoList!C:\Workarea\test\learn-react-inx-minutes\src\App.js
+C:\Workarea\test\learn-react-inx-minutes\src\TodoList.js
+C:\Workarea\test\learn-react-inx-minutes\src\App.test.js
+        </div>
+    )
+}
+
+function App() {
+  return (
+    <div>
+      Hello World from App!
+      <TodoList /> 
+      
+      <input type="text" />
+      <button> Add Todo</button>
+      <button> Clear Completed Todds</button>
+      <input type="text" />
+      <div> 0 left to </div>
+            
+    </div>
+   )
+   
+   //add state managerment
+   import React, {usestate} from 'react';
+   
+   
+   
+   
+   
+   
+}   
