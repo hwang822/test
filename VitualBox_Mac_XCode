@@ -10,10 +10,81 @@ Download XCode and run XCode in VitualBox MacOS.
 Build XCode Apple code
 https://www.youtube.com/watch?v=_YvAUgV6GYM
 
+#################################################################
 IOS printing 
 https://www.youtube.com/watch?v=NAmj9v-CBGg
 
-##################################################################
+First set Printer with AirPrint (wifi) function with Apple device under same networking
+Go to select Print.
+
+Or add apple simulator in apple device. 
+https:/developer.apple.com/downloads
+Download Hardware IO Tools for Xcode 7.3 and install this dmg file
+Go to Select Print.
+
+When click print butoon it will create a PDF at simulator as print format.
+
+create ViewController.swift
+
+At XCode IDE add Button and Immage controls to the viewer.
+Add home_loan.png file to image control
+
+*************************************************
+//
+// ViewController.swift
+// PrinterDemo
+//
+// Created by Henry Wang on  2/26/2023
+//
+
+import UIKit
+
+class StandardAssetPrintViewController: UIViewController {
+	 @IBOutlet weak var imageView: UIImageView!
+	 
+	 override func viewDidLoad() {
+	 	super.viewDidLoad()
+	// Do any additional setup after loading the view, typically from a nib.
+		
+	 }
+	 
+	 override func difReceiverMemoryWarning() {
+	 	super.didReceiveMemoryWarning()
+		// Dispose of any reaources that can be recreated.
+	}
+	
+	@IBAction func printButtonTapped(sender: AnyObject) {
+		self.printImage()
+	}
+	
+	func printImage() {
+		let printController = UIPrintInteractionController.aharedPrintController()
+		let printInfo = UIPrintInfo(dictonary:nil)
+		printInfo.jobName = "printing an image"
+		printInfo.outputType = .Photo
+		printController.printInfo = printInfo
+		
+		printController.printingItem = imageView.image
+		
+		printController.presentAnimated( , is Print, error?) in
+			if error == nil {
+				print("image is printed")
+			} else {
+				print("image is not printed")
+			}
+			
+		}
+	}
+	
+}
+
+*************************************************
+
+run the code, select a print simulator or real printer.
+Clieck Print button.
+It will create a PDF file or print out.
+
+??????????????????????????????????????????????????????????????????
 
 Or download xcode for windoes 10
 https://www.youtube.com/watch?v=8Gm_fBOx1Ok
