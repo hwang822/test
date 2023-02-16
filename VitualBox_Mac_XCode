@@ -1,10 +1,43 @@
-Add macos in Vitualbox
+Add MacOS in Vitualbox
 https://www.youtube.com/watch?v=YC_PlSk7U8w
 download and install vitualbox
 Create Vitual Machine, select OS type: Mac OS X  64-bits
+
+Launch MacOS in Vitualbox
+
+Download XCode and run XCode in VitualBox MacOS.
 
 Build XCode Apple code
 https://www.youtube.com/watch?v=_YvAUgV6GYM
 
 IOS printing 
 https://www.youtube.com/watch?v=NAmj9v-CBGg
+
+##################################################################
+
+Or download xcode for windoes 10
+https://www.youtube.com/watch?v=8Gm_fBOx1Ok
+
+https://swiftforwindows.github.io/
+
+download SwiftForWindows-2.0.exe
+
+It could bring up Swift for Windows 2.0 Compiler.
+
+Create a Swift codes in swift file using any editor
+
+save as first_swift.swift file
+************************************
+let marks = 70
+
+	if marks >= 70 {
+		print("you are talented student so please you must subscribe my channel ") 
+	}
+	else {
+		print("otherwise you subscribe my channel for learning ")
+	} 
+
+	print(" THANK YOU FOR WATCHING MY VIDEO")
+************************************
+go to swift compiler and load this file.
+
