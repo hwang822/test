@@ -1,12 +1,12 @@
 https://www.youtube.com/watch?v=5GWIHv94KPM
 1. Assign a static local IP address for you computer
-   go to tool bar => Network & Internet Settings\Ethernet\Change adapter options\Ethernet\Properties\internet Protocol Version 4(TCP/IPv4)\Properties\
+   go to Control Panel\Network and Internet\Network Connections\Ethernet(clicked)\Ethernet Status(dialog)\General\Properties\internet Protocol Version 4(TCP/IPv4)\Properties\
    \User the following IP address at vpn server runing PC.
          IP address: 192.168.1.200  
          Subnet mask: 255.255.255.0 
          defautl gateway: 192.168.1.1
    \Use the following DNS server address:
-         Preferred DNS server: 192.168.1.1
+         Preferred DNS server: 192.168.1.1 (gateway of external internet NEGEAR Router Orbi http://192.168.1.1/index.htm)
          Alternate DNS server: 8.8.8.8
    Click OK to close setting.
 
