@@ -1,0 +1,48 @@
+https://www.youtube.com/watch?v=QG7fYShkNXA
+
+Remote access Bowen-PC
+
+Step1: Enable Remote Desktop
+
+Control Panel\System and Security\System\Advanced system sttings\System Properties(dialog)\Remote\Remote\Desktop\Allow remote connections this computer\
+        Check: Allow connections only from computers running Remote Desktop with Network Level Authentication (recommended). 
+        
+Step2: Configure Remote Desktop without Password
+
+Search and Run gpedit.msc command
+
+Local Group Policy Editor 
+ Select Local Computer Policy\Computer Configuration\Windows Settings\Security Settings\Local Policy\Security Options
+         \Accounts:Limit local account use of blank passowrd to console logon only\check Disabled
+         
+Step3: Update Policy
+
+Run CMD as Administorator (search and right click)
+
+C:\WINDOWS\system32>gpupdate /force
+Updating policy...
+
+Computer Policy update has completed successfully.
+User Policy update has completed successfully.
+
+Step4: Check IP Client
+Set statick IP addr: 192.168.1.200
+
+Step 5: Check Username
+This PC\Manager\System Tools\Local Users and Groups\Users\hwang822
+
+Go to client PC to install and run Rmeote Desktop Connection
+Copunter: 192.168,1.200
+Connect Button
+
+username: hw822 password: dl00
+
+only one could access this coputer. Leave hoem, log out BOWEN_PC to let remote connection only (to avoid ask access permit).
+
+
+
+
+
+
+
+
