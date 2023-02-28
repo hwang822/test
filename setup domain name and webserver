@@ -8,8 +8,11 @@ Remote Port: 27822
 ISP: Comcast Cable Communications, LLC
  
 pay domain name www.mixwellsoftware.com 1$/m at 101domain.com. 
-login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX).
-add/edit record mixwellsoftware.com Record and www.mixwellsoftware.com to 98.197.25.132 and click submmit.
+
+login 101domain.com em_dl00 to set Domain Names\mixwellsfotware.com\DNS Records\MyDomains\mixaellsoftware.com.
++ New Recode: domainname, and host ipaddress.
+
+Edit/Delete: NAME: ftp and www to VALUE = 98.197.25.132.
 
 Test ping mixwellsoftware.com
 
@@ -216,6 +219,9 @@ click Save Settings
 
 Test ping http://98.197.25.132 for http://mixwellsoftware.com
 The mixwell webbage shows up
+
+to celan access error ipconfig /flushdns
+or reinstall msedge, chrome
 
 3. set web page at pc webroot.
 C:\inetpub\wwwroot is my pc default web server root site.
