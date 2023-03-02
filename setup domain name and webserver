@@ -72,7 +72,7 @@ C:\Users\Mixwell Software>ipconfig /all
 
 Windows IP Configuration
 
-   Host Name . . . . . . . . . . . . : Bowen-PC
+   Host Name . . . . . . . . . . . . : HWANG-PC
    Primary Dns Suffix  . . . . . . . :
    Node Type . . . . . . . . . . . . : Hybrid
    IP Routing Enabled. . . . . . . . : No
@@ -279,7 +279,7 @@ Go to control pannel/Programs/Programs and Features/Turn Windows features on ofr
 Turn On Internet Information Service (iis) FTP Server/FTP Extensibility/FTP Service, OK.
 
 Go to iis manager.
-right click BPWEN-PC\hwang822\Sites\Add FDP sites...
+right click HWang-PC\hwang822\Sites\Add FDP sites...
 FTP Site Name: Default Ftp Site. 
 Content Directory: C:\inetpub\wwwroot. (could be any where, set C:\inetpub\wwwroot to remote update web codes).
 Next
