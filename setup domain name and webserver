@@ -487,3 +487,30 @@ Docker push
 Docker ps
 Docker ps -a (show all containers)
 Docker rm
+
+#################################################
+Home Route 
+
+Internet IP Address 98.197.23.132
+Frimary DNS 75.75.75.75
+
+Attached Devices
+Go to Access Control  to allow or block devices.
+ 	Access Control: Turned Off	
+Router
+#	Device Name	IP Address	MAC Address	Connection Type
+1	RBW30	192.168.1.8	9C:3D:CF:15:40:65	Orbi
+2	HWANG-PC	192.168.1.200	6C:62:6D:44:A5:72	Wired
+3	Canon Printer MF4700	192.168.1.2	2C:9E:FC:62:F5:C8	Wired
+4	LENOVO-PC	192.168.1.12	90:32:4B:12:98:DF	Wireless
+5	HWANG822-LAPTOP	192.168.1.16	60:D8:19:12:BA:70	Wireless
+6	GATEWAY5CF17D	192.168.1.6	B8:2C:A0:5C:F1:7D	Wireless
+7	WYZE CAM	192.168.1.7	2C:AA:8E:05:19:B0	Wireless
+8	ANDROID-C710E763959F9F25	192.168.1.10	78:68:F7:B4:13:72	Wireless
+9	<unknown>	192.168.1.4	2C:AA:8E:31:CE:52	Wireless
+10	ANDROID-SAMSUNG	192.168.1.17	90:18:7C:D5:65:96	Wireless
+11	HUAWEI_MATE_10	192.168.1.19	90:94:97:06:33:CC	Wireless
+12	IPAD	192.168.1.9	76:E1:30:AE:97:77	Wireless
+13	<unknown>	192.168.1.11	F0:46:3B:85:54:AA	Wireless
+14	<unknown>	192.168.1.13	26:3A:F1:09:EC:29	Wireless
+15	IPHONE	192.168.1.18	52:62:AF:87:8A:5A	Wireless
