@@ -221,7 +221,7 @@ Test ping http://98.197.25.132 for http://mixwellsoftware.com
 The mixwell webbage shows up
 
 to celan access error ipconfig /flushdns
-or reinstall msedge, chrome
+or reinstall msedge, chrome browsers
 
 3. set web page at pc webroot.
 C:\inetpub\wwwroot is my pc default web server root site.
@@ -251,10 +251,10 @@ may need set IIS manager/Features View/Directory Browsing/Actions/Enable.
 go to iis manager
 
 
-right click BPWEN-PC\hwang822\Sites\Add Web sites...
+right click HWang-PC\hwang822\Sites\Add Web sites...
 Site name: Default Web Site. Applicaiton pool: DefalultAppPool. Physical path: %SystemDrive%\inetpub\wwwroot. Type: http. Port: 80. Click: OK. 
-select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Start or Stop or Restart.
-select BPWEN-PC\hwang822\Sites\Default Web Site\Manager WebSit\Browse.
+select HWang-PC\hwang822\Sites\Default Web Site\Manager WebSit\Start or Stop or Restart.
+select HWang-PC\hwang822\Sites\Default Web Site\Manager WebSit\Browse.
 create  at C:\inetpub\wwwroot
 
 4. Add Web Services at www.mixwellsoftware.com
