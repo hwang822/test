@@ -1,0 +1,25 @@
+https://www.youtube.com/watch?v=CWMPMs0W29o
+How to Connect Printer to Wifi Router | Convert Any Printer using Ethernet Port
+
+My home printer Canon priter MF7500 serier connected to router at IP: 192.168.1.2
+
+go to 192.168.1.1 Router site
+ADVANCED\Attached Devices
+Canon Printer MF4700 IP: 192.168.1.2
+
+Go to Windows 
+Setting\Device\Printers & Scanners\Add a printer or scanner
+
+Automatically Search printer under router 192.168.1.1
+or input ip address 192.168.1.1 to search.
+Find and select Canon MF4700 and download driver to my wifi connected hwang-laptop
+
+
+
+
+
+
+
+
+
+
