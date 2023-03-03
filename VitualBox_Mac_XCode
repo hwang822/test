@@ -1,16 +1,37 @@
+#############################################################
+How to install mac os Monterery on Vitural Box
+
+https://www.youtube.com/watch?v=YC_PlSk7U8w&t=26s
+
 Add MacOS in Vitualbox
-https://www.youtube.com/watch?v=YC_PlSk7U8w
 download and install vitualbox
+https://www.virtualbox.org/wiki/Downloads
+VirtualBox 7.0.6 platform packages  Windows hosts
+VirtualBox 7.0.6 Oracle VM VirtualBox Extension Pack
+
 Create Vitual Machine, select OS type: Mac OS X  64-bits
 
 Launch MacOS in Vitualbox 
 download MacOS iso file from macOS Monterey by Techrechard.com
 
+cd "C:\Program Files\Oracle\VirtualBox\"
+VBoxManage.exe modifyvm "MacOS Monterey" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff
+VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "iMac11,3"
+VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Iloveapple"
+VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+
+
+
+############################################################
+https://www.youtube.com/watch?v=YC_PlSk7U8w
 
 Download XCode and run XCode in VitualBox MacOS.
 
 Build XCode Apple code
 https://www.youtube.com/watch?v=_YvAUgV6GYM
+
 
 #################################################################
 IOS printing 
