@@ -23,9 +23,30 @@ VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/Devi
 VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
 
 ###########################################################
+https://www.youtube.com/watch?v=XrnxwyzDk5s&t=43s
 How to install mac os Monterery on VMware Workstation.
-select 1CPU and setting VX-t in process
+Download and run VMware Workstation v16. (no MacOS selection)
 
+Download auto-unlocker v2.0.0a  
+https://github.com/paolo-projects/auto-unlocker/releases
+extract zip and run unlocker.
+patch files.
+
+VMare Workstatin v16 has supported MacOS selection.
+
+Run VMare Workstatin to Create New VM.
+Set RAM 16G
+Set HDD 120G.
+Set Proessor 1 and VX-t (no less than a minite remaind... unend proglem).
+Set Display Resolution: 1280x1024. (speed up running)
+
+run install MacOS
+Set HDD format to MacOS extention format.
+
+run init MacOS
+download Windows Migration Assistant software to transfer Windows account to MacOS account.
+
+Finishe MacOS in VMware workstation.
 
 ##############################################################
 transfer information to this mac from a windows sysetem
