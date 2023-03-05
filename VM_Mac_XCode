@@ -22,6 +22,18 @@ VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/efi/0/Config/DmiB
 VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
 VBoxManage setextradata "MacOS Monterey" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
 
+###########################################################
+How to install mac os Monterery on VMware Workstation.
+select 1CPU and setting VX-t in process
+
+
+##############################################################
+transfer information to this mac from a windows sysetem
+https://www.youtube.com/watch?v=Ax7Tq2PfLWo
+
+https://support.apple.com/en-us/HT204087
+Download Windows Migration Assistant v2.4.2.0 (Monterey & Ventura)
+
 
 
 ############################################################
@@ -33,9 +45,12 @@ Build XCode Apple code
 https://www.youtube.com/watch?v=_YvAUgV6GYM
 
 
+
 #################################################################
 IOS printing 
 https://www.youtube.com/watch?v=NAmj9v-CBGg
+
+
 
 First set Printer with AirPrint (wifi) function with Apple device under same networking
 Go to select Print.
