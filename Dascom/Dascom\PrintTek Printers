@@ -1,5 +1,12 @@
 ************************************
 
+Review I80, I820, VP-420,  FP541, FP530, and FP530si.
+
+*************************************************
+
+
+************************************
+
 Mobile thermal printing I-820
 
 https://www.youtube.com/watch?v=jhZSURY_KhU
@@ -20,12 +27,33 @@ Printek VehiclePro 400 (VP400) overview
 
 Blue tooth, USB conection.
 
-************************************
+******************************
+DP-530 工业级便携式热敏票据打印机
+
+https://www.dascom.cn/front/web/site.productShow?id=14
 
 
+FieldPro Series: FP530
+https://www.printek.com/portable-mobile-printers/fieldpro-series.html
 
 
+Connectivity
+Standard (All Units): USB 2.0 PNP
+Wireless Options:
+Bluetooth®
+Complete Bluetooth® 4.0 Stack including:
 
+Protocols: L2CAP, RFCOMM, SDP
+Profiles: GAP, SDAP, SPP, BTLE
+Class 2 Operation
+RFC2217 and EN60601 compliant
+Wi-Fi 802.11b/g/n compatible
+Universal Port: Data and power port–allows connection of external devices such as MCR, bar code scanners, biometrics, RFID
+Software
+Drivers and Utilities: Drivers for XP, WIN 7, WIN 8. Compatible with Windows, and Android. Print utilities and SDKs for all platforms. Native App and Web printing.
+Printer Setup Program provides convenient configuration via a Web interface from any host (tablets and smartphones included).
+Emulations: Emulates many popular printer brands and languages including Zebra CPCL and ZPL, ESC POS. Firmware can be upgraded as new emulations become available.
+Supports direct printing of Postscript, PDF, PBM, JPG, PNG, BMP, SVG, and TIFF files.
 
 
 
