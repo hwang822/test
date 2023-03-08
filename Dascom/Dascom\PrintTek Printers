@@ -32,7 +32,6 @@ DP-530 工业级便携式热敏票据打印机
 
 https://www.dascom.cn/front/web/site.productShow?id=14
 
-
 FieldPro Series: FP530
 https://www.printek.com/portable-mobile-printers/fieldpro-series.html
 
@@ -54,6 +53,45 @@ Drivers and Utilities: Drivers for XP, WIN 7, WIN 8. Compatible with Windows, an
 Printer Setup Program provides convenient configuration via a Web interface from any host (tablets and smartphones included).
 Emulations: Emulates many popular printer brands and languages including Zebra CPCL and ZPL, ESC POS. Firmware can be upgraded as new emulations become available.
 Supports direct printing of Postscript, PDF, PBM, JPG, PNG, BMP, SVG, and TIFF files.
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+Dot Matrax Printers
+
+https://www.printek.com/dot-matrix-printers/formspro-5100-series.html
+
+FormsPro 5100 Series Printer
+The PRINTEK® FormsPro 5100 is a top-of-the-line printer series that
+
+
+PrintMaster 700 Series Printers
+The PrintMaster 700 Series is the narrow footprint mid-range printer series with a wide selection of features.
+Parallel, USB and Ethernet are standard on all models.
+
+
+24 needle (12 needle parallel array)
+2 x 16 LCD for form selection, on/off line status and error descriptions.
+Cartridge, 20 million characters
+
+Setup (Automatic Methods)
+Control Panel or Config File obtained from Web Page Config Utility through USB connection
+I/O Buffer
+256k
+Standard Interfaces
+Parallel Bi-Directional, Ethernet 10/100 Mbit USB 2.0 Full Speep, USB A Host (servicing) Optional Interface: Serial, RS-232 600 to 19,200 baud
+Software Controls
+Epson LQ-2550, Epson LQ-2180, Epson FX, IBM Proprinter xl24e, IBM Proprinter xl24e+AGM, MTPL, 14 Industrial Barcodes, or Basic Postnet and Intelligent Mail Barcodes
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+
+
+
+
+
 
 
 
