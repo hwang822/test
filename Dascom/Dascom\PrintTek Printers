@@ -1,3 +1,77 @@
+*************************************
+setup FPS541 with wifi
+
+Battery check is full.
+connected usb-type-C/USB to computer PC.
+
+Power on unitl green light sold on. 
+push paper roll button twice to start print test page.
+
+Go browser 165.254.200.1
+it will has PRINTEK FP-541 drive in the list. 
+Click it to download (one time).
+
+-----------------------------
+if print through wifi. no usb connection.
+
+Go browser 165.254.200.1 and go to wifi config
+static ip address:  xxx.xxx.xxx.45
+gateway ip address: xxx.xxx.xxx.1
+
+go to wifi select to select wift with same wifi in printer.
+------------------------------
+
+if print set as access point (self wifi route)
+Go browser 165.254.200.1
+select access point
+Could change SSID:
+
+Model: FP-541
+Primary SW Version: 02.06.00.00
+CoProcessor SW Version: 02.04.00.00
+Serial Number: 866021330145
+KERNEL_INFO: V04.02.00
+Rpint head recode: 2.96 m
+
+--Interfaces--
+USB Active/WIFI Active
+USB Setup IP Address: 169.254.200.1
+Address Method: Access Point
+SSID: FP-541-866021330145-henry
+IP Address:169.254.200.1
+SubnetMask:255.255.0.0
+Gateway: 0.0.0.0
+Wifi Port: 8023
+MAC Address: 00:12:7b:21:90:42
+
+--Image Config --
+Encoding: GP18030
+Emulation: ESCPOS
+....
+
+I80 printer
+
+sub and blue tooth.
+
+Go to printek.com\mobile\sofware to download printek.xx.xx.xx.apk file and install at andriore cell phone. 
+-
+APK file stands for Android Package Kit; also known as an Android Application Package or just as Android Package.
+
+same thing do usp connection.
+
+
+
+
+
+
+
+
+
+**************************************
+
+
+
+
 ************************************
 
 Review I80, I820, VP-420,  FP541, FP530, and FP530si.
