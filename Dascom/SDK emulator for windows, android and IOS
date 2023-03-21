@@ -31,3 +31,205 @@ Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\WOW6432Node right click to crea
 start Emulater
 
 
+#################################
+Run DASCOM SDK sample
+
+
+Connected FS530 to laptop in USB.
+
+********************
+Windows Version
+
+Run Demo
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo\bin\x64\Debug\ThermalExampleDemo
+
+Input emulation type--
+【0：ZPL】
+【1：TSPL】
+【2：ESCPOS】
+2
+Input connection type--
+【1：USB】
+【2：TCP】
+1
+PrtIO is executing!
+usb open  => usb://MC220528@PRINTEKFP-530$V2a82P0001MC$1.
+Input operation type--
+【1：Dynamic RFID printing（Numbered Mode）】
+【2：Print text 】
+【3：Print image】
+【4：Print barcode/QR】
+【5：Combination printing】
+【6：Defined drawing 】
+【7：Print graphic (escpos is not supported)】
+【8：Move the paper】
+【9：4bits status inquiry】
+【10：Set RFID position（Numbered Mode）】
+【11：Set and read the reading power（Numbered Mode）】
+【13：Dynamic User data reading and writing （Numbered Mode）】
+【14：64 bits status inquiry Numbered Mode）】
+【15：Position the black mark】
+【16：Clean current printer】
+【17：Acquire current dynamic library information 】
+【18：Set to read TID dynamic（Numbered Mode）】
+【19：Rfid relative operation (json)（Numbered Mode）】
+【20：Set to read TID dynamic（Numbered Mode）】
+【21：Scan operation (jsoon)（Numbered Mode）】
+【100：Eject】
+1
+Error: return 25182210 获取状态失败
+Error: return 25182210 Error
+
+ ****************************Finish, please input relative operation****************************
+Input operation type--
+【1：Dynamic RFID printing（Numbered Mode）】
+【2：Print text 】
+【3：Print image】
+【4：Print barcode/QR】
+【5：Combination printing】
+【6：Defined drawing 】
+【7：Print graphic (escpos is not supported)】
+【8：Move the paper】
+【9：4bits status inquiry】
+【10：Set RFID position（Numbered Mode）】
+【11：Set and read the reading power（Numbered Mode）】
+【13：Dynamic User data reading and writing （Numbered Mode）】
+【14：64 bits status inquiry Numbered Mode）】
+【15：Position the black mark】
+【16：Clean current printer】
+【17：Acquire current dynamic library information 】
+【18：Set to read TID dynamic（Numbered Mode）】
+【19：Rfid relative operation (json)（Numbered Mode）】
+【20：Set to read TID dynamic（Numbered Mode）】
+【21：Scan operation (jsoon)（Numbered Mode）】
+【100：Eject】
+2
+NoFindDir [../../../../../script-cases/escpos/text]
+NoFindDir [../../../../../../../../script-cases/escpos/text]
+NoFindDir [../example/script-cases/escpos/text]
+No Files
+
+ ****************************Finish, please input relative operation****************************
+Input operation type--
+【1：Dynamic RFID printing（Numbered Mode）】
+【2：Print text 】
+【3：Print image】
+【4：Print barcode/QR】
+【5：Combination printing】
+【6：Defined drawing 】
+【7：Print graphic (escpos is not supported)】
+【8：Move the paper】
+【9：4bits status inquiry】
+【10：Set RFID position（Numbered Mode）】
+【11：Set and read the reading power（Numbered Mode）】
+【13：Dynamic User data reading and writing （Numbered Mode）】
+【14：64 bits status inquiry Numbered Mode）】
+【15：Position the black mark】
+【16：Clean current printer】
+【17：Acquire current dynamic library information 】
+【18：Set to read TID dynamic（Numbered Mode）】
+【19：Rfid relative operation (json)（Numbered Mode）】
+【20：Set to read TID dynamic（Numbered Mode）】
+【21：Scan operation (jsoon)（Numbered Mode）】
+【100：Eject】
+4
+NoFindDir [../../../../../script-cases/escpos/code]
+NoFindDir [../../../../../../../../script-cases/escpos/code]
+NoFindDir [../example/script-cases/escpos/code]
+No Files
+
+ ****************************Finish, please input relative operation****************************
+Input operation type--
+【1：Dynamic RFID printing（Numbered Mode）】
+【2：Print text 】
+【3：Print image】
+【4：Print barcode/QR】
+【5：Combination printing】
+【6：Defined drawing 】
+【7：Print graphic (escpos is not supported)】
+【8：Move the paper】
+【9：4bits status inquiry】
+【10：Set RFID position（Numbered Mode）】
+【11：Set and read the reading power（Numbered Mode）】
+【13：Dynamic User data reading and writing （Numbered Mode）】
+【14：64 bits status inquiry Numbered Mode）】
+【15：Position the black mark】
+【16：Clean current printer】
+【17：Acquire current dynamic library information 】
+【18：Set to read TID dynamic（Numbered Mode）】
+【19：Rfid relative operation (json)（Numbered Mode）】
+【20：Set to read TID dynamic（Numbered Mode）】
+【21：Scan operation (jsoon)（Numbered Mode）】
+【100：Eject】
+5
+NoFindDir [../../../../../script-cases/escpos/combined]
+NoFindDir [../../../../../../../../script-cases/escpos/combined]
+NoFindDir [../example/script-cases/escpos/combined]
+No Files
+
+ ****************************Finish, please input relative operation****************************
+Input operation type--
+【1：Dynamic RFID printing（Numbered Mode）】
+【2：Print text 】
+【3：Print image】
+【4：Print barcode/QR】
+【5：Combination printing】
+【6：Defined drawing 】
+【7：Print graphic (escpos is not supported)】
+【8：Move the paper】
+【9：4bits status inquiry】
+【10：Set RFID position（Numbered Mode）】
+【11：Set and read the reading power（Numbered Mode）】
+【13：Dynamic User data reading and writing （Numbered Mode）】
+【14：64 bits status inquiry Numbered Mode）】
+【15：Position the black mark】
+【16：Clean current printer】
+【17：Acquire current dynamic library information 】
+【18：Set to read TID dynamic（Numbered Mode）】
+【19：Rfid relative operation (json)（Numbered Mode）】
+【20：Set to read TID dynamic（Numbered Mode）】
+【21：Scan operation (jsoon)（Numbered Mode）】
+【100：Eject】
+
+No print
+
+******************************************
+Run Web Version
+Run bat file 
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\thermal_web\server\x64\copy_necessary_windows_x64.bat
+
+
+xcopy /F /Y ..\..\..\lib\x64\libDSThermal.dll .\
+xcopy /F /Y ..\..\..\lib\x64\dssdk.img .\
+xcopy /F /Y ..\..\..\lib\x64\ewl.img .\
+xcopy /F /Y ..\..\..\lib\x64\sdkcfg.xml .\
+::pause
+
+Run Server
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\thermal_web\server\x64\server.exe
+
+Run Demo web page.
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\thermal_web\demo
+
+In Home page
+Select ESCPOS
+Click Enumerate File. 
+Device: usb://MC220528@PRINTEKFP-530$V2a82P0001MC$1.
+
+Click test "Print Text".
+It start print but empty text.
+
+******************************************
+Run Code C++ Version
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo.sln
+
+Build error
+
+it build at Visual Studio 2015.
+
+Try to using VS2022 to build VS2015 C++ codes and get error 
+
+Major SDK function include at \DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo\PubFunction.h
+
+
