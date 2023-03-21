@@ -8,3 +8,26 @@ vs_emulatorsetup.exe
 
 Run Visual Studio Android Emulator needs to turn on Hyper-V netwrok adapter
 
+You do not have permission to modify internal Hyper-V Netwrok adapter settings, which are required to run the emulator
+
+got to Hyper-V manager and remove service in Hyper-V
+
+ 
+************************
+
+
+go to cmd
+type adb devices
+
+C:\Users\dell>adb devices
+'adb' is not recognized as an internal or external command,
+operable program or batch file.
+
+need add android sdk path to regedit
+
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\WOW6432Node right click to create new key "Android SDK Tools", right click "Android SDK Tools" add new Key Name = "Path"
+"Value Data" = D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Android\Dascom SDK 2021.03.23 6720
+
+start Emulater
+
+
