@@ -6,3 +6,5 @@ Download and install Visual Studio Android Emulator at https://visualstudio.micr
 
 vs_emulatorsetup.exe
 
+Run Visual Studio Android Emulator needs to turn on Hyper-V netwrok adapter
+
