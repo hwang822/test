@@ -1,0 +1,36 @@
+DC2300 Dreiver for Windows Install
+Connect USB cable and Power Cable to DC2300
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\DC2300_Driver_1.105.0.5_ENG_02062023\DC2300_Driver_1.105.0.5_ENG\Install.exe
+Run Install.exe
+Select USB
+
+Select Ethernet
+IP Address   Device Name  MAC Address         FW Version
+192.168.117  DC-2300      BC:9D:A5:04:77:7F   $660
+
+Port Name: DS300KPDCP001
+IP Address: 192.168.117
+
+
+Click Windows\Setting\Devices\Printers & Scanners\DASCOM DC-2300\Manage\Print a test page.
+Test Uninstall.exe
+
+*****************************
+Card Editor Software
+USB Drive(E:)\Card Editor V19.02.01.04.exe
+
+D:\WorkerArea\DasCom\Dascom_CardPrinter\Card Editor V19.02.01.04.exe
+Run this installer.
+Run Cardeditor
+
+****************************
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US
+
+libDSDirect300KpApp.dll\so is the principal dynamic link library (DLL) for this SDK.
+
+Open sample C# codes.
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo
+
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo.sln
+
+
