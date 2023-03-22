@@ -28,9 +28,40 @@ D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_0
 
 libDSDirect300KpApp.dll\so is the principal dynamic link library (DLL) for this SDK.
 
-Open sample C# codes.
-D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\bin\x64
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\lib\Win32
+two version x64, Win32
+libDSDirect300KpApp.dll
 
-D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo.sln
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\plugins\x64
+plugin x64.
+
+vcomp140.dll
+
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\bin\x64
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\lib\Win32
+dcrf32.dll
+
+Open sample C# or C++ codes.
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C++\MainDemo\MainDemo
+D:\WorkerArea\DasCom\Dascom_CardPrinter\wetransfer_dc2300_driver_1-105-0-5_eng_02062023-zip_2023-03-17_1830\D300Kp-Windows-SDK-V1.1.0.2_en-US\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo
+MainDemo.sln
+
+D:\WorkerArea\DasCom\Dascom_CardPrinter\SDK_MainDemo\bin\x64\copy_x64_necessary.bat 
+run this batch file to copy all dependence to the build folder SDK_MainDemo\bin\x64
+xcopy /F /Y ..\..\lib\x64\libDSDirect300KpApp.dll .\
+xcopy /F /Y ..\..\lib\x64\D300KpCLR_V2_2.icm .\
+xcopy /F /Y ..\..\lib\x64\D300.img .\
+xcopy /F /Y ..\..\lib\x64\D300_Cfg .\
+xcopy /F /Y ..\..\lib\x64\Direct300Kp_SDKCfg.xml .\
+xcopy /F /Y ..\..\lib\x64\RSWOP.icm .\
+xcopy /F /Y ..\..\lib\x64\dcrf32.dll .\
+
+copy lib folder to SDK_MainDemo\MainDemo\ folder  copy copy_x64_necessary.bat file to SDK_MainDemo\MainDemo\bin\Debug and run it to copy lib files to SDK_MainDemo\MainDemo\bin\debug
+open SDK_MainDemo\MainDemo.sln build and run
+
+
+
+
 
 
