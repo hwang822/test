@@ -1,0 +1,31 @@
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK\doc
+Thermal printer SDK instruction.doc
+
+1. System platform
+（1）Windows PC（32bit/64bit）：XP，win7，win8，win8.1，win10。
+2. Secondary development programming language
+Support all popular programming languages, including but not limited to the following language：
+C/C++
+C#
+Basic（VB，VB.NET）
+Pascal
+Java
+PowerScript（PB）
+delphi
+3. Dependences
+（1）thermal printer SDK main dynnamic library is libDSThermal.dll，the files of calling out process is dssdk.img、sdkcfg.xml，server.exe，all of these files should be with libDSThermal.dll in the same catalogue；
+（2）Function for calling out uses __stdcall mode；
+
+*************************
+open and run C++ sample file D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo.sln using VS-2022
+
+first run get errors: "cannot open source file *.h"
+
+Click VS-2022\Project\Retarget Solution (to megrate the project new version to old verison)
+
+Then build again will scussfully
+
+
+
