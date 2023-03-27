@@ -63,32 +63,29 @@ Print head recode: 2.79 m
 
 The config page will add WIFI Config and Bluetooth Config
 
-Go to devices has blue devices to pair it with fp641.
-
-Go to 192.168.1.1 to see attached device in wifi.
-
-
-
+Go to Wifi Config
+At Available Networks 
+BSSID                Frequency   Signal Level   Flags             SSID           Add/Connect
+a6:40:a0:63:ed:06    2452        -43            [WPA2-PSK-CCMP]   hw-orbi        Click
 
 
+Input Password: dl00
+
+Will have Current Connection
+BSSID                ssid       id     mode     pairwise_cipherFrequency   group_cipher  key_mgmt     wpa_state   ip_address
+a6:40:a0:63:ed:06    hw-orbi    1      station  CCMP                       CCMP          WPA2-PSK     COMPLETED   192.168.1.30
 
 
+Go TestFlight need ask DSJ to send IOS test driver for FP641.
 
+Open TestFlight\PrintTek\641\Wi-Fi,
+Wi-Fi Name: DSPrintWIFI.
+select to connection.
+Click test print.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Open TestFlight\PrintTek\641\bluetooth,
+Select FP641-0JV022520014
+Click test print.
 
 
 
