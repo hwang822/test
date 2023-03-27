@@ -87,6 +87,14 @@ Open TestFlight\PrintTek\641\bluetooth,
 Select FP641-0JV022520014
 Click test print.
 
+at Android device HW meta 10
+
+Go to bluteooth
+Available Devices: FP641-0JV022520014   (select to Pair)
+Paired Devices: FP641-0JV022520014
+
+Run Printek Demo app at Meta 10 connect FP641 and test print.
+
 
 
 *************************************
