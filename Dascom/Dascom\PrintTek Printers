@@ -94,7 +94,11 @@ Available Devices: FP641-0JV022520014   (select to Pair)
 Paired Devices: FP641-0JV022520014
 
 Run Printek Demo app at Meta 10 connect FP641 and test print.
+Select Wifi Print and click CONNECT. Set Print Name : FP641, IP Address: 192.168.1.30:8023
+Click Example Print.
 
+Select Bluetooth Print and click CONNECT. Select Bluetooth DFevice: FP641-0JV022520014
+Click Exmpale 
 
 
 *************************************
