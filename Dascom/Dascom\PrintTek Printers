@@ -1,3 +1,89 @@
+****************************************************
+Setup FP651 new model.
+
+No battery
+
+Connect charger cable and usb cable to the print.
+Push Power button once.
+Green light sold on and display "Ready"
+
+Go to https://www.printek.com/windows-desktop to download and install two drivers.
+I80 / I820 / FP541 / FP530 / FP530L / VP420 / MLP-35	32-bit/64-bit – Printer Driver	Download (for windows fp641 usb driver)
+Select FP541.
+RNDIS	RNDIS driver	Download (setup web model to fp641 printer)
+
+Go to Windows Setting\Devices\Printers & scanners\
+PRINTEK FP-541 will be listed.
+
+Click Manage\Printer properties\Ports.
+Select one avaliable USB005 to PRINTEKFP641 to PRINTEK-541 driver.
+Click Manage\Print a test page.
+   Print out: You have correctly installed your PRINTEK FP-541 on HWANG PC
+
+After install RNDIS.
+
+qickly pushed paper button twice to print out config information.
+
+Primary SW Version: beta_00.01.00.08.
+CoProcessor SW Version: 00.00.00.17
+FPGA Version: 00.00.00.12
+Serial Number: 0JV022520014
+KERNEL_INFO: V00.01.01
+Print head recode: 1.07m
+
+qickly pushed power button twice to Webpage Mode.
+Green light fresh and display "Webpage Mode"
+
+Go to internet browser 169.254.200.1
+to show PRINTTEKMOBILE setup page.
+
+default set
+Main, Image Config, Device Config, Font. Graphics, Updates, Reset to Factory Defaults.
+
+Go to Device Config\Left Margin change 0.0 inches to 0.1 inches. to make print left margin 0.1 inch. 
+Click submit changes.
+
+update frimware to printer.
+
+Download Fp641  drivers from Dascom SharePoint\Main\Documents\Mobile\Service\Firmware\FP641.
+FP641\00.00.00.4C, FP641\00.00.00.24\, FP641\Printek | Printer Driver V1.101.01
+
+Click PRINTEKMOBILE\Updates\Upload Firmware\Choose File\
+Select FP641\00.00.00.4C\rfs-FP641_oo.00.00.4C.sw
+Click Upload.
+
+Print config infomation:
+Primary SW Version: beta_00.01.00.4C.
+CoProcessor SW Version: 00.00.00.1C
+FPGA Version: 00.00.00.15
+Serial Number: 0JV022520014
+KERNEL_INFO: V00.01.01
+Print head recode: 2.79 m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *************************************
 setup FPS541 with wifi
 
