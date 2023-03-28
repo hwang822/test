@@ -22,16 +22,22 @@ Setting\Device\Printers & Scanners\Add a printer or scanner
 
 Automatically Search printer under router 192.168.1.1
 or input ip address 192.168.1.1 to search.
-Find and select Canon MF4700 and download driver to my wifi connected hwang-laptop
+The Printer "Canon MF4700 Sedries" will be added list.
+
+Download and install MF4700 driver MF4700MFDriversV2090W64usEN.exe (select networking driver) 
+to my wifi connected hwang-laptop.
+
+Click "Canon MF4700 Sedries" added list print will get driver with printer.
+Canon MF4700 Series (FAX)
+Canon MF4700 UFRII LT
+Canon MF4700 UFRII LT XPS
+
 After installed app 
 
-Go to canon printer app 
-Select Photo Print or Document Print.
-Printing...
+"Canon MF4700 Sedries"\Manage\Properties 
+Checked CNMFNP_2C9EFC62F5C8   Canon MFNP Port   Canon MF4700
 
-
-
-
+Click Test Printer
 
 
 
