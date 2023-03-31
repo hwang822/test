@@ -1,3 +1,70 @@
+Get SDK source code from https://dascomamericas.sharepoint.com/sites/Main\mobile\service\SDK
+Extract SDK.zip
+
+VS_codes to open folder D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK>dir
+ Volume in drive D is 系统
+ Volume Serial Number is E1BD-BA49
+
+ Directory of D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK
+
+03/31/2023  02:27 PM    <DIR>          .
+03/31/2023  02:27 PM    <DIR>          ..
+03/31/2023  02:27 PM    <DIR>          Android        //java
+03/31/2023  02:27 PM    <DIR>          iOS            //Object C
+03/31/2023  02:37 PM    <DIR>          Windows        //C++
+               0 File(s)              0 bytes
+               5 Dir(s)  975,103,680,512 bytes free
+
+*************************************
+Windows
+
+Rename D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK_xxxx to 
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK to make short path name.
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo.sln
+click vs2022\Project\Retarget Solution to make vs2015 project build able at vs2022
+Clcik vs2022\Buikd\Rebuild to scussfully build.
+
+libDSThermal.dll, incThermal.h, PubFunction.h are SDK dependencies
+
+Run 
+
+Input emulation type--
+【0：ZPL】
+【1：TSPL】
+【2：ESCPOS】
+
+*************************************
+Android
+java project
+
+IntelliJ IDEA import Android SDK Java Project build.gradele
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Android\Dascom SDK 2021.03.23 6720\Demo\DascomPrint\app\build.gradle
+
+create android apps in vs2022
+https://www.youtube.com/watch?v=e1uptykhvU4
+
+
+
+*********************************
+IOS Object-C codes
+
+
+
+
+
+
+
+
+
+
+
+***************************************************
+
+
 D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK
 
 D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK\doc
