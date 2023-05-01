@@ -29,6 +29,90 @@ Clcik vs2022\Buikd\Rebuild to scussfully build.
 
 libDSThermal.dll, incThermal.h, PubFunction.h are SDK dependencies
 
+Total 27 api functions.
+
+	void _th_method_ ThermalModifyDPI(int dpi);  //API construction
+	unsigned int _th_method_ ThermalLibInit();   
+	unsigned int _th_method_ ThermalLibDeInit();
+	unsigned int _th_method_ ThermalEnumPrt(char mode, char *enumlist, unsigned int *size, int *count);
+	unsigned int _th_method_ ThermalConnectIpPrt(const char *ip, int port, char *out, int size);
+	unsigned int _th_method_ ThermalDisconnectIpPrt(void);
+	unsigned int _th_method_ ThermalSetIOTimeOut(char mode, int re
+	unsigned int _th_method_ ThermalSelectPrt(const char *device);
+	unsigned int _th_method_ ThermalClearSelectedPrt();
+	unsigned int _th_method_ ThermalCmdEngineControler(const char *json, void *out, int size, int *out_size);
+	unsigned int _th_method_ ThermalGetPrtStatus(unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalRfidWriteEpc(char isstatic, const char *data, unsigned int size, char *isok);
+	unsigned int _th_method_ ThermalRfidReadEpc(char isstatic, unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalRfidReadTid(char isstatic, unsigned char *data, unsigned int size, unsigned lo
+	unsigned int _th_method_ ThermalRfidWriteUser(char isstatic, const char *data, unsigned int size, char *isok);
+	unsigned int _th_method_ ThermalRfidReadUser(char isstatic, unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalLabelMove(char dir, unsigned char distance);
+	unsigned int _th_method_ ThermalBlackMarkingAutoLocate();
+	unsigned int _th_method_ ThermalRfidGetLabelCount(unsigned int *count, char isstatic);
+	unsigned int _th_method_ ThermalRfidSetPower(char powerType, unsi
+	unsigned int _th_method_ ThermalRfidGetPower(char powerType, unsi
+	unsigned int _th_method_ ThermalRfidAdjustPos(unsigned char pos);
+	unsigned int _th_method_ ThermalRfidGetStatus(unsigned char *status, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalDataTransmit(const char *json, char **out, int *out_size);
+	unsigned int _th_method_ ThermalCombinedPrint(const char *json, char **out, int *out_size);
+	unsigned int _th_method_ ThermalMemFree(char **out);
+	unsigned int _th_method_ ThermalCustomizedCmd(const char *json, void *out, int size, int *out_size);
+	unsigned int _th_method_ ThermalGetDLibInfo(char *out, int size, int *out_size);
+
+
+//web server 
+  run D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64\copy_necessary_windows_x64.bat
+  to copy dependences to server folder
+C:\Users\dell>dir D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64
+ Volume in drive D is 系统
+ Volume Serial Number is E1BD-BA49
+
+ Directory of D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64
+
+05/01/2023  01:25 PM    <DIR>          .
+05/01/2023  01:25 PM    <DIR>          ..
+05/01/2023  01:24 PM            50,855 100004.png
+03/30/2022  12:59 AM               187 copy_necessary_windows_x64.bat
+10/22/2022  02:44 AM           240,564 dssdk.img
+11/18/2022  08:46 PM            70,436 ewl.img
+10/22/2022  02:44 AM         5,612,562 libDSThermal.dll
+11/22/2022  04:04 AM             1,741 sdkcfg.xml
+10/22/2022  02:48 AM           392,704 server.exe
+10/22/2022  02:52 AM         8,502,794 web.co
+               8 File(s)     14,871,843 bytes
+               2 Dir(s)  909,743,611,904 bytes free
+               
+ run D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64\server.exe
+ 
+ open demo web page 
+ D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\demo\index.html
+
+
+at index.htaml
+			<div class="input_row" style="margin-top:5px">
+				<div class="input_title">Text content ：</div>
+				<input class="input_datas" style="margin-right:10px;width:380px" type="text" id="text_data" value="Text printing test " />
+				<div class="input_left_null"></div>
+				<button class="input_item_summbit-n" style="width:100px" onclick="_thermal_text_print_()">Print text </button>
+			</div>
+   
+onclick="_thermal_text_print_()
+at Logic.js
+
+//Draw and print the text
+const _thermal_text_print_ = function(mode) {
+	let device = document.getElementById('enum_list').value
+	if (device != '') {
+		//Print directly（ Print:'true' / Preview :'false' ）
+		let printdirectly  = 'true'
+		
+		//Acquire the preview to base64 data（ base64:'true' / Path:'false' ）
+		let get_base64_img = 'false'
+		
+		let onback = function(isok, res) {
+
+
 Run 
 
 Input emulation type--
