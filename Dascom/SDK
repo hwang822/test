@@ -124,6 +124,28 @@ Input emulation type--
 Android
 java project
 
+download and install android studio 
+run to create new project
+
+select device HUAWEI ALP-AL00
+
+HUAWEI setting\about phone\Build number ->price twice and dispaly you are a alreasy developer
+
+Go to System & updates\Developer options\USB debugging to ON
+Debug mode when USB is connected.
+
+Connected USB with macBook and Huawei phone.
+
+The HUAWEI ALP-AL00 will show at device list.
+click Green Arrow to run
+
+
+
+
+
+
+
+
 IntelliJ IDEA import Android SDK Java Project build.gradele
 
 D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Android\Dascom SDK 2021.03.23 6720\Demo\DascomPrint\app\build.gradle
