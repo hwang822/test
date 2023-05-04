@@ -7,6 +7,9 @@ SDK API
 C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\lib\Win32\libDSDirect300KpApp.dll
 C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\include\libDSDirect300KpApp.h
 
+************************************************************
+Add DLL to C++ project
+
 #ifdef _MSC_VER
 #ifndef DSSDK
 #define DSSDK __stdcall
@@ -23,5 +26,48 @@ unsigned int __attribute ((visibility("default")); => unsigned int DSSDK D300KpL
 
 DLL lib functions in the namespace and hide private functions using the compilation flag -fvisibility=hidden. Then API functions should contain the following attribute: __attribute__ ((visibility ("default"))).
 
+To use this funciton at application
+C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo\MainDemo\MainDemo.cs
+
+        #include "MainFunction.h"
+        static void Main(string[] args)
+        
+        {
+            UInt32 RE = 0;
+
+            //Initialize dynamic library
+            RE = MethodGroup.D300KpLibInit();
+
+
+************************************************************
+Add DLL to C# project
+     
+     Right clieck project\Add\browser\... find libDSDirect300KpApp.dll lcoation
+     
+     package dll to MethodGroup
+     
+C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\examples\C#\MainDemo\MainDemo\MainDemo\MethodGroup.cs
+
+namespace libDSDirect300KpApp
+{
+    class 
+    {
+        [DllImport("libDSDirect300KpApp.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.StdCall)]
+        public static extern UInt32 D300KpLibInit();
+
+        ...
+        
+ To use this function at appliction
+ 
+         static void Main(string[] args)
+        {
+            UInt32 RE = 0;
+
+            //Initialize dynamic library
+            RE = MethodGroup.D300KpLibInit();
+        
+        
+
+************************************************************
 
 
