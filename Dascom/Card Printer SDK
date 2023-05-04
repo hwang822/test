@@ -1,0 +1,27 @@
+Dascom Card Printer SDK
+
+DC-2300 C++ and C#
+
+SDK API
+
+C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\lib\Win32\libDSDirect300KpApp.dll
+C:\Workarea\Dascom\Card Printer\D300Kp-Windows-SDK-V1.1.0.2_en-US\include\libDSDirect300KpApp.h
+
+#ifdef _MSC_VER
+#ifndef DSSDK
+#define DSSDK __stdcall
+#endif
+#else
+#ifndef DSSDK
+#define DSSDK __attribute ((visibility("default")))
+#endif
+#endif
+
+Make pre-define of function in dlls
+
+unsigned int __attribute ((visibility("default")); => unsigned int DSSDK D300KpLibInit();
+
+DLL lib functions in the namespace and hide private functions using the compilation flag -fvisibility=hidden. Then API functions should contain the following attribute: __attribute__ ((visibility ("default"))).
+
+
+
