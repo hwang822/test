@@ -38,37 +38,100 @@ public class DemoApplication {
 
 ****************
 
-
-}
-
 Add api, service folders to using baseing class api and service.
 At project files move controller and model folder to under api.
 add java class
+
 api\controller\UserController.java class.
+package com.example.demo.api.controller;
+
 package com.example.demo.api.controller;
 
 import com.example.demo.api.model.User;
 import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.GetMapping;
-
-
 @RestController
-
 public class UserController {
-    private final UserService userService;
+    //Test method in Postman
+
+    //localhost:8080/data
+    /*
+    [
+        "A",
+        "B",
+        "C"
+    ]
+    */
+
+    @GetMapping("/data")
+    public List getData(){
+        List l = new ArrayList<>();
+        l.add("A");
+        l.add("B");
+        l.add("C");
+        return l;
+    }
 
     @Autowired
-    public UserController(UserService userService){
-        this.userService = userService;  //DJ service to using its api
+    private UserService userService;
+    //localhost:8080/AllUser
+    /*
+    [
+     {
+        "id": 1,
+        "name": "Ida",
+        "age": 32,
+        "email": "Ida@mail.com"
+    },
+    {
+        "id": 1,
+        "name": "Hans",
+        "age": 26,
+        "email": "Hans@mail.com"
+    },
+    {
+        "id": 1,
+        "name": "Lars",
+        "age": 45,
+        "email": "Lars@mail.com"
+    },
+    {
+        "id": 1,
+        "name": "Ben",
+        "age": 32,
+        "email": "Ben@mail.com"
+    },
+    {
+        "id": 1,
+        "name": "Eva",
+        "age": 59,
+        "email": "Eva@mail.com"
     }
+]
+     */
+    @GetMapping("/AllUser")
+
+    public  List<User> getAllUsers(){
+        return userService.getAllUsers();
+    }
+
+    //localhost:8080/User?id=1
+/*
+{
+    "id": 1,
+    "name": "Ida",
+    "age": 32,
+    "email": "Ida@mail.com"
+}
+ */
+
     @GetMapping("/User")
-    //
     public User getUser(@RequestParam Integer id){
 
         Optional user = userService.getUser(id);
@@ -79,19 +142,22 @@ public class UserController {
 
     }
 
+
 }
 
 
 ******************************
 api\model\User.java class.
-public class DemoModel {
+package com.example.demo.api.model;
+
+public class User {
 
     private int id;
     private String name;
     private int age;
     private String email;
 
-    public DemoModel(int id, String name, int age, String email){
+    public User(int id, String name, int age, String email){
         this.id = id;
         this.name = name;
         this.age = age;
@@ -122,39 +188,42 @@ public class DemoModel {
     }
 
     public void setEmail(String email){
-            this.name = email;
+        this.name = email;
     }
+
 }
 
 *************************
-api\model\UserService.java class.
-
 package com.example.demo.service;
-
-import com.example.demo.api.model.DemoModel;
+import com.example.demo.api.model.User;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
+@Service
 
-public class DemoService {
-    private List<DemoModel> userList;
+public class UserService {
+    private List<User> userList;
 
-    public DemoService() {
+    public UserService() {
 
         userList = new ArrayList<>();
-        DemoModel user1 = new DemoModel( 1, "Ida",  32,  "Ida@mail.com");
-        DemoModel user2 = new DemoModel( 1, "Hans",  26,  "Hans@mail.com");
-        DemoModel user3 = new DemoModel( 1, "Lars",  45,  "Lars@mail.com");
-        DemoModel user4 = new DemoModel( 1, "Ben",  32,  "Ben@mail.com");
-        DemoModel user5 = new DemoModel( 1, "Eva",  59,  "Eva@mail.com");
+
+        User user1 = new User( 1, "Ida",  32,  "Ida@mail.com");
+        User user2 = new User( 1, "Hans",  26,  "Hans@mail.com");
+        User user3 = new User( 1, "Lars",  45,  "Lars@mail.com");
+        User user4 = new User( 1, "Ben",  32,  "Ben@mail.com");
+        User user5 = new User( 1, "Eva",  59,  "Eva@mail.com");
+
         userList.addAll(Arrays.asList(user1, user2, user3, user4, user5));
 
     }
 
-    public Optional<DemoModel> getUser(Integer id) {
+    public Optional<User> getUser(Integer id) {
         Optional optinal = Optional.empty();
-        for(DemoModel user : userList) {
+        for(User user : userList) {
+
             if(user.getId() == id){
                 optinal = Optional.of(user);
                 return optinal;
@@ -163,6 +232,11 @@ public class DemoService {
         }
         return null;
     }
+
+    public List<User> getAllUsers(){
+        return userList;
+    }
+
 }
 
 download and install postman to test service.
