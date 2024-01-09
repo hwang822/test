@@ -1,0 +1,161 @@
+Create an REST API in Spring boot using Java
+https://www.youtube.com/watch?v=Zo9xQzibp4Y&t=308s
+
+Download and Install Java developer tool IntelliJ IDEA.
+
+Create new JAVA project at IJ 
+Need add Spring to IJ (not only for Ultimate Edition).
+go to https://start.spring.io/
+add Dependencies spring web
+
+create demo codes
+copy demo codes folder to SpringAPI\demo
+
+in IJ open demo project.
+It may need update SDK to version 17 or up.
+Download SDK v21 and rebuild demo
+
+package com.example.demo;
+
+have a very simple spring boot prject to run.
+
+DemoApplication.java 
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+****************
+
+
+}
+
+Add api, service folders to using baseing class api and service.
+At project files move controller and model folder to under api.
+add java class
+api\controller\UserController.java class.
+package com.example.demo.api.controller;
+
+import com.example.demo.api.model.User;
+import com.example.demo.service.UserService;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@RestController
+
+public class UserController {
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService){
+        this.userService = userService;  //DJ service to using its api
+    }
+    @GetMapping("/User")
+    //
+    public User getUser(@RequestParam Integer id){
+
+        Optional user = userService.getUser(id);
+        if(user.isPresent()){
+            return(User) user.get();
+        }
+        return null;
+
+    }
+
+}
+
+
+******************************
+api\model\User.java class.
+public class User {
+
+    private int id;
+    private String name;
+    private int age;
+    private String email;
+
+    public User(int id, String name, int age, String email){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;   }
+
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+            this.name = email;
+    }
+}
+
+*************************
+api\model\UserService.java class.
+
+public class UserService {
+    private List<User> userList;
+
+    public UserService() {
+
+        userList = new ArrayList<>();
+
+        User user1 = new User( 1, "Ida",  32,  "Ida@mail.com");
+        User user2 = new User( 1, "Hans",  26,  "Hans@mail.com");
+        User user3 = new User( 1, "Lars",  45,  "Lars@mail.com");
+        User user4 = new User( 1, "Ben",  32,  "Ben@mail.com");
+        User user5 = new User( 1, "Eva",  59,  "Eva@mail.com");
+
+        userList.addAll(Arrays.asList(user1, user2, user3, user4, user5));
+
+    }
+
+    public Optional<User> getUser(Integer id) {
+        Optional optinal = Optional.empty();
+        for(User user : userList) {
+
+            if(user.getId() == id){
+                optinal = Optional.of(user);
+                return optinal;
+
+            }
+        }
+        return null;
+    }
+
+}
+
+download and install postman to test service.
+
+
+0 comments on commit
