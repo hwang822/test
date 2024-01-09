@@ -1,0 +1,204 @@
+Get SDK source code from https://dascomamericas.sharepoint.com/sites/Main\mobile\service\SDK
+Extract SDK.zip
+
+VS_codes to open folder D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK>dir
+ Volume in drive D is 系统
+ Volume Serial Number is E1BD-BA49
+
+ Directory of D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK
+
+03/31/2023  02:27 PM    <DIR>          .
+03/31/2023  02:27 PM    <DIR>          ..
+03/31/2023  02:27 PM    <DIR>          Android        //java
+03/31/2023  02:27 PM    <DIR>          iOS            //Object C
+03/31/2023  02:37 PM    <DIR>          Windows        //C++
+               0 File(s)              0 bytes
+               5 Dir(s)  975,103,680,512 bytes free
+
+*************************************
+Windows
+
+Rename D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK_xxxx to 
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK to make short path name.
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo.sln
+click vs2022\Project\Retarget Solution to make vs2015 project build able at vs2022
+Clcik vs2022\Buikd\Rebuild to scussfully build.
+
+libDSThermal.dll, incThermal.h, PubFunction.h are SDK dependencies
+
+Total 27 api functions.
+
+	void _th_method_ ThermalModifyDPI(int dpi);  //API construction
+	unsigned int _th_method_ ThermalLibInit();   
+	unsigned int _th_method_ ThermalLibDeInit();
+	unsigned int _th_method_ ThermalEnumPrt(char mode, char *enumlist, unsigned int *size, int *count);
+	unsigned int _th_method_ ThermalConnectIpPrt(const char *ip, int port, char *out, int size);
+	unsigned int _th_method_ ThermalDisconnectIpPrt(void);
+	unsigned int _th_method_ ThermalSetIOTimeOut(char mode, int re
+	unsigned int _th_method_ ThermalSelectPrt(const char *device);
+	unsigned int _th_method_ ThermalClearSelectedPrt();
+	unsigned int _th_method_ ThermalCmdEngineControler(const char *json, void *out, int size, int *out_size);
+	unsigned int _th_method_ ThermalGetPrtStatus(unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalRfidWriteEpc(char isstatic, const char *data, unsigned int size, char *isok);
+	unsigned int _th_method_ ThermalRfidReadEpc(char isstatic, unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalRfidReadTid(char isstatic, unsigned char *data, unsigned int size, unsigned lo
+	unsigned int _th_method_ ThermalRfidWriteUser(char isstatic, const char *data, unsigned int size, char *isok);
+	unsigned int _th_method_ ThermalRfidReadUser(char isstatic, unsigned char *data, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalLabelMove(char dir, unsigned char distance);
+	unsigned int _th_method_ ThermalBlackMarkingAutoLocate();
+	unsigned int _th_method_ ThermalRfidGetLabelCount(unsigned int *count, char isstatic);
+	unsigned int _th_method_ ThermalRfidSetPower(char powerType, unsi
+	unsigned int _th_method_ ThermalRfidGetPower(char powerType, unsi
+	unsigned int _th_method_ ThermalRfidAdjustPos(unsigned char pos);
+	unsigned int _th_method_ ThermalRfidGetStatus(unsigned char *status, unsigned int size, unsigned long *read_size);
+	unsigned int _th_method_ ThermalDataTransmit(const char *json, char **out, int *out_size);
+	unsigned int _th_method_ ThermalCombinedPrint(const char *json, char **out, int *out_size);
+	unsigned int _th_method_ ThermalMemFree(char **out);
+	unsigned int _th_method_ ThermalCustomizedCmd(const char *json, void *out, int size, int *out_size);
+	unsigned int _th_method_ ThermalGetDLibInfo(char *out, int size, int *out_size);
+
+
+//web server 
+  run D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64\copy_necessary_windows_x64.bat
+  to copy dependences to server folder
+C:\Users\dell>dir D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64
+ Volume in drive D is 系统
+ Volume Serial Number is E1BD-BA49
+
+ Directory of D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64
+
+05/01/2023  01:25 PM    <DIR>          .
+05/01/2023  01:25 PM    <DIR>          ..
+05/01/2023  01:24 PM            50,855 100004.png
+03/30/2022  12:59 AM               187 copy_necessary_windows_x64.bat
+10/22/2022  02:44 AM           240,564 dssdk.img
+11/18/2022  08:46 PM            70,436 ewl.img
+10/22/2022  02:44 AM         5,612,562 libDSThermal.dll
+11/22/2022  04:04 AM             1,741 sdkcfg.xml
+10/22/2022  02:48 AM           392,704 server.exe
+10/22/2022  02:52 AM         8,502,794 web.co
+               8 File(s)     14,871,843 bytes
+               2 Dir(s)  909,743,611,904 bytes free
+               
+ run D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\server\x64\server.exe
+ 
+ open demo web page 
+ D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Windows\Thermal_Windows-SDK\Thermal_Windows-SDK\thermal_web\demo\index.html
+
+
+at index.htaml
+			<div class="input_row" style="margin-top:5px">
+				<div class="input_title">Text content ：</div>
+				<input class="input_datas" style="margin-right:10px;width:380px" type="text" id="text_data" value="Text printing test " />
+				<div class="input_left_null"></div>
+				<button class="input_item_summbit-n" style="width:100px" onclick="_thermal_text_print_()">Print text </button>
+			</div>
+   
+onclick="_thermal_text_print_()
+at Logic.js
+
+//Draw and print the text
+const _thermal_text_print_ = function(mode) {
+	let device = document.getElementById('enum_list').value
+	if (device != '') {
+		//Print directly（ Print:'true' / Preview :'false' ）
+		let printdirectly  = 'true'
+		
+		//Acquire the preview to base64 data（ base64:'true' / Path:'false' ）
+		let get_base64_img = 'false'
+		
+		let onback = function(isok, res) {
+
+
+Run 
+
+Input emulation type--
+【0：ZPL】
+【1：TSPL】
+【2：ESCPOS】
+
+*************************************
+Android
+java project
+
+download and install android studio 
+run to create new project
+
+select device HUAWEI ALP-AL00
+
+HUAWEI setting\about phone\Build number ->price twice and dispaly you are a alreasy developer
+
+Go to System & updates\Developer options\USB debugging to ON
+Debug mode when USB is connected.
+
+Connected USB with macBook and Huawei phone.
+
+The HUAWEI ALP-AL00 will show at device list.
+click Green Arrow to run
+
+
+
+
+
+
+
+
+IntelliJ IDEA import Android SDK Java Project build.gradele
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\Android\Dascom SDK 2021.03.23 6720\Demo\DascomPrint\app\build.gradle
+
+create android apps in vs2022
+https://www.youtube.com/watch?v=e1uptykhvU4
+
+
+
+*********************************
+IOS Object-C codes
+
+
+
+
+
+
+
+
+
+
+
+***************************************************
+
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK
+
+D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK\doc
+Thermal printer SDK instruction.doc
+
+1. System platform
+（1）Windows PC（32bit/64bit）：XP，win7，win8，win8.1，win10。
+2. Secondary development programming language
+Support all popular programming languages, including but not limited to the following language：
+C/C++
+C#
+Basic（VB，VB.NET）
+Pascal
+Java
+PowerScript（PB）
+delphi
+3. Dependences
+（1）thermal printer SDK main dynnamic library is libDSThermal.dll，the files of calling out process is dssdk.img、sdkcfg.xml，server.exe，all of these files should be with libDSThermal.dll in the same catalogue；
+（2）Function for calling out uses __stdcall mode；
+
+*************************
+open and run C++ sample file D:\WorkerArea\DasCom\DasCom_MobilePrinter\SDK\SDK\Windows\Thermal_Windows-SDK(Printek&TallyDascom)_V1.0.0.4\Thermal_Windows-SDK\example\src\C++\ThermalDemo\ThermalDemo\ThermalDemo.sln using VS-2022
+
+first run get errors: "cannot open source file *.h"
+
+Click VS-2022\Project\Retarget Solution (to megrate the project new version to old verison)
+
+Then build again will scussfully
+
+
+

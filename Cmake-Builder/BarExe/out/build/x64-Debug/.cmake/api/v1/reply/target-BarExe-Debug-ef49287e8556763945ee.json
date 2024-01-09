@@ -1,0 +1,193 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "BarExe.exe"
+		},
+		{
+			"path" : "BarExe.pdb"
+		}
+	],
+	"backtrace" : 2,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_add_executable",
+			"add_executable",
+			"include_directories",
+			"add_definitions"
+		],
+		"files" : 
+		[
+			"C:/Workarea/vcpkg_aug5/scripts/buildsystems/vcpkg.cmake",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 45,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 169,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 6,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /ZI /Ob0 /Od /RTC1 /JMC  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 8,
+					"define" : "VTK_EXPORT"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "vtkSlicerRtCommon_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Workarea/vcpkg_aug5/installed/x64-windows/share/vtk/../../share/vtk/UseVTK.cmake"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/libs/vp"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Workarea/test/Cmake-Builder/FooLib"
+				},
+				{
+					"backtrace" : 5,
+					"path" : "C:/Workarea/test/Cmake-Builder/FooLib/out/build/x64-Debug"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "C:/Workarea/test/Cmake-Builder/sqlite4"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "C:/Workarea/test/Cmake-Builder/sqlite4/out/build/x64-Debug"
+				},
+				{
+					"backtrace" : 7,
+					"isSystem" : true,
+					"path" : "C:/Workarea/vcpkg_aug5/installed/x64-windows/include"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "BarExe::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /ZI /Ob0 /Od /RTC1 /JMC",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\zlibd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\freetype.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\freetyped.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\double-conversion.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\lz4.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\lz4d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\lzma.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\expat.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\glew32.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\glew32d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkDomainsChemistryOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkDomainsParallelChemistry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersFlowPaths-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersGeneric-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersHyperTree-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersParallelGeometry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersParallelImaging-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersParallelVerdict-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersPoints-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersProgrammable-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\python37.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\python37_d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkPythonInterpreter-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkWrappingTools-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersPython-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersSMP-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersSelection-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersTexture-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersTopology-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkGUISupportMFC-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\jpeg.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\jpegd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\libpng16.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\libpng16d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\tiff.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\tiffd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\proj.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\projd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\hdf5.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\hdf5_D.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\msmpi.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\hdf5_hl.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\hdf5_hl_D.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOAMR-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOAsynchronous-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOCityGML-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOEnSight-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\netcdf.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOExodus-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOExportOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\libhpdf.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\debug\\lib\\libhpdfd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOExportPDF-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOImport-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\libxml2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOInfovis-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOLSDyna-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOMINC-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOMPIImage-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\jsoncpp.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOMPIParallel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\ogg.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\theoraenc.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\theoradec.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOMovie-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOPLY-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOParallelNetCDF-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOParallelXML-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\share\\vtk\\..\\..\\lib\\sqlite3.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOSQL-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOSegY-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOTecplotTable-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOVeraOut-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOVideo-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingMorphological-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingStatistics-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingStencil-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkInteractionImage-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkParallelMPI4Py-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkPythonContext2D-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingContextOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingImage-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingLOD-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingVolumeOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkViewsContext2D-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkViewsGeovis-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\boost_filesystem-vc140-mt-gd.lib \"C:/Workarea/vcpkg_aug5\"/installed/x64-windows/debug/lib/OpenMeshCored.lib \"C:/Workarea/vcpkg_aug5\"/installed/x64-windows/debug/lib/OpenMeshToolsd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkDomainsChemistry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersParallelMPI-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersVerdict-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkverdict-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersAMR-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOExport-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingGL2PSOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkgl2ps-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\libpng16d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOParallel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersParallel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkexodusII-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\lib\\netcdf.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOGeometry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIONetCDF-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\lib\\ogg.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\lib\\theoraenc.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\lib\\theoradec.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkParallelMPI-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkParallelCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOLegacy-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkWrappingPythonCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\python37_d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingOpenGL2-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingMath-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\glew32d.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkGeovisCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\projd.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkViewsInfovis-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkChartsCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingContext2D-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersImaging-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkInfovisLayout-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkInfovisCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkViewsCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkInteractionWidgets-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersModeling-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersHybrid-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingGeneral-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingSources-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingHybrid-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOImage-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkDICOMParser-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkmetaio-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\zlibd.lib comctl32.lib wsock32.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkInteractionStyle-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersExtraction-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersStatistics-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingFourier-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingAnnotation-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingColor-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingVolume-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkImagingCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOXML-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOXMLParser-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkIOCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingLabel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingFreeType-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkRenderingCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonColor-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersGeometry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersSources-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersGeneral-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonComputationalGeometry-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkFiltersCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonExecutionModel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonDataModel-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonMisc-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonSystem-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtksys-8.2.lib ws2_32.lib Psapi.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonTransforms-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonMath-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\vtkCommonCore-8.2.lib C:\\Workarea\\vcpkg_aug5\\installed\\x64-windows\\debug\\lib\\freetyped.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "BarExe",
+	"nameOnDisk" : "BarExe.exe",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 0,
+			"path" : "bar.cxx",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

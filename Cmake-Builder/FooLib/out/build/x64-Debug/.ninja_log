@@ -1,0 +1,4 @@
+# ninja log v5
+1	146	589743400	CMakeFiles/foo.dir/foo.cxx.obj	a3e40051c652577f
+146	918	589743400	foo.dll	f31034b0ecf1238f
+146	918	589743400	foo.lib	f31034b0ecf1238f

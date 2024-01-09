@@ -1,0 +1,14 @@
+Build app using React JS, .NET Core Web API and Microsoft SQL Server.
+
+https://www.youtube.com/watch?v=O5hKoBV3vaU
+
+To build a simple to do application from scratch using
+React JS as front end, dot net core web API as backend, and microsoft SQL server as the database.
+
+1. First install all the pre requisites.
+
+2. Create the database and objects required for the app.
+
+3. Create the backend project using dot net core web API.
+
+4. Finally ceating the React project.

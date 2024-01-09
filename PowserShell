@@ -1,0 +1,614 @@
+
+
+
+https://www.youtube.com/watch?v=e0bHm5VfnJ4
+
+*********************************
+v1. Why learn Powershell
+
+1. Automation Standard at Microsoft.
+2. Management and Administration UI run Powershell underneath
+3. Azure and AWS both have wonderful Powershell API's
+4. Manager you Linux instances
+5. Full power of .NET Framework.
+6. Automation platform (.NET, Win32, Native)
+7. Simply your life.
+
+v2. *********************************
+get-help and get-command
+
+PS C:\WINDOWS\system32> get-command
+
+CommandType     Name
+-----------     ----
+Alias           Add-ProvisionedAppxPackage
+Alias           Add-ProvisioningPackage
+...
+
+PS C:\WINDOWS\system32> get-command | more
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Add-ProvisionedAppxPackage                         3.0        Dism
+Alias           Add-ProvisioningPackage                            3.0        Provisi...
+Alias           Add-TrustedProvisioningCertificate                 3.0        Provisi...
+Alias           Apply-WindowsUnattend                              3.0        Dism
+Alias           Disable-PhysicalDiskIndication                     2.0.0.0    Storage
+Alias           Disable-StorageDiagnosticLog                       2.0.0.0    Storage
+
+get-help
+
+PS C:\WINDOWS\system32> help Add-PhysicalDisk
+
+NAME
+    Add-PhysicalDisk
+
+SYNOPSIS
+    Adds a physical disk to the specified storage pool or manually assigns a physical
+    disk to a specific virtual disk.
+
+
+SYNTAX
+    Add-PhysicalDisk [-StoragePool] <CimInstance> [-CimSession <CimSession[]>]
+    [-ThrottleLimit <Int32>] [-Usage {AutoSelect | ManualSelect | HotSpare | Retired |
+    Journal}] -PhysicalDisks <CimInstance[]> [-Confirm] [-WhatIf] [<CommonParameters>]
+
+    Add-PhysicalDisk [-VirtualDisk] <CimInstance> [-CimSession <CimSession[]>]
+    [-ThrottleLimit <Int32>] -PhysicalDisks <CimInstance[]> [-Confirm] [-WhatIf]
+    [<CommonParameters>]
+-- More  --
+
+PS C:\WINDOWS\system32> get-childitem -path "c:\"
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        7/19/2017  11:00 PM                e2908f47f0afb35a183737
+d-----        3/22/2018   8:01 PM                HWang
+d-----        1/24/2018   4:32 PM                ldiag
+
+v3. ********************************************
+
+The object pipline
+
+PS C:\WINDOWS\system32> get-process | more
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    20944       9400   1,311.56   3528   0 amazonAssistantService
+    815      42    51712      23472      88.56   6536   2 ApplicationFrameHost
+    420      34    29684       4080       1.92   3640   0 AppService
+    
+
+PS C:\WINDOWS\system32> get-process | get-member | more
+
+
+   TypeName: System.Diagnostics.Process
+
+Name                       MemberType     Definition
+----                       ----------     ----------
+Handles                    AliasProperty  Handles = Handlecount
+Name                       AliasProperty  Name = ProcessName
+NPM                        AliasProperty  NPM = NonpagedSystemMemorySize64
+
+PS C:\WINDOWS\system32> get-process | select-object -Property Id | get-member
+
+
+   TypeName: Selected.System.Diagnostics.Process
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+Id          NoteProperty int Id=3528
+
+
+v4. ********************
+
+Transforming and Filtering my data along pipeline
+
+select-object 
+
+PS C:\WINDOWS\system32> get-process | select-object  -first 5
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    21008       9564   1,316.47   3528   0 amazonAssistantService
+    817      43    50192      23760      91.73   6536   2 ApplicationFrameHost
+    420      34    29684       4000       1.98   3640   0 AppService
+    148       9     1344       1320       0.06   3536   0 armsvc
+   4697     123    76360      28788     330.84   8460   0 audiodg
+
+
+
+v5. *********************
+Scripting your own Cmdlet
+
+get-service | get-member
+ powershell ise is tool to developer scripts
+ 
+ open a new file test.ps at ISE.
+ 
+ coding as 
+ function Foo{
+    [cmdletminding()]
+    
+    param(
+        [Parameter(Mandatory-$true, valueFromPipeline-$true)]
+        [string[]]$ComputerName
+    )
+    
+    BEGIN {
+        write-Output "Hello world."
+        $Counter=0    }
+    EXPRESS {    
+        foreach($Computer in _$ComputerName){
+        
+            write-Output $ComputerName
+            $($Computer Counter)
+            $Counter++
+        }
+    }
+    END{
+        write-output "Ending..."
+        write-Output "Object Counter:" $Counter
+    }
+ }
+ 
+run script as> "Server1", "Server2", "Server3" | Foo
+Hello World
+Server1
+1
+PS C:\HWang\AWS> (Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts)[0..5]
+
+userId id title                                                                      body
+------ -- -----                                                                      ----
+     1  1 sunt aut facere repellat provident occaecati excepturi optio reprehenderit quia et suscipit...
+     1  2 qui est esse                                                               est rerum tempore...
+     1  3 ea molestias quasi exercitationem repellat qui ipsa sit aut                et iusto sed quo ...
+     1  4 eum et est occaecati                                                       ullam et saepe re...
+     1  5 nesciunt quas odio                                                         repudiandae venia...
+     1  6 dolorem eum magni eos aperiam quia                                         ut aspernatur cor...
+Server2
+2
+Server3
+3
+Endiing ...
+Object Counter: 3
+
+*************************
+V6. Working with REST Api's (webserver)
+
+go http://jsonplaceholder.typicode.com/
+to look up base uil to cosume 
+
+var root = "http://jsonplaceholder.typicode.com/"
+
+PS C:\HWang\AWS> help invoke-restmethod -full
+
+NAME
+    Invoke-RestMethod
+
+SYNOPSIS
+    Sends an HTTP or HTTPS request to a RESTful web service.
+
+
+SYNTAX
+    Invoke-RestMethod [-Uri] <Uri> [-Body <Object>] [-Certificate <X509Certificate>]
+    [-CertificateThumbprint <String>] [-ContentType <String>] [-Credential <PSCredential>]
+    
+
+PS C:\HWang\AWS> Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts
+
+userId  id title                                                                           body
+------  -- -----                                                                           ----
+     1   1 sunt aut facere repellat provident occaecati excepturi optio reprehenderit      quia et sus...
+     1   2 qui est esse                                                                    est rerum t...
+     1   3 ea molestias quasi exercitationem repellat qui ipsa sit aut                     et iusto se...
+     1   4 eum et est occaecati                                                            ullam et sa...
+     1   5 nesciunt quas odio                                                              repudiandae...
+     1   6 dolorem eum magni eos aperiam quia
+     ...
+     
+PS C:\HWang\AWS> (Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts)[0]
+
+userId id title                                                                      body
+------ -- -----                                                                      ----
+     1  1 sunt aut facere repellat provident occaecati excepturi optio reprehenderit quia et suscipit...
+
+
+PS C:\HWang\AWS> (Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts)[0..5] | se
+lect-object -Property body
+
+body
+----
+quia et suscipit...
+est rerum tempore vitae...
+et iusto sed quo iure...
+ullam et saepe reiciendis voluptatem adipisci...
+repudiandae veniam quaerat sunt sed...
+ut aspernatur corporis harum nihil quis provident sequi...
+
+PS C:\HWang\AWS> (Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts)[0..5] | se
+lect-object -Property body | convertto-csv
+
+PS C:\HWang\AWS> (Invoke-RestMethod -Method Get -URI http://jsonplaceholder.typicode.com/posts)[0..5] | se
+lect-object -ExpandProperty Content
+will get jason return.
+
+
+
+************************
+
+Microsoft do powershell first. Then make GUI.
+Make powershell the fundation of gui.
+
+You could down laod powershell api for azure or aws.
+
+where-object to filt objects to output. 
+
+PS C:\WINDOWS\system32> get-process | where-object {$_.CPU -gt 1000.00} | more
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    493      37    21008       9556   1,317.53   3528   0 amazonAssistantService
+   9662      83    80700      59588   1,703.86  13020   2 dwm
+   1594     182   399160     344740   1,161.55  13060   2 MicrosoftEdgeCP
+    953      79   210068      85988   3,261.17   3932   0 MsMpEng
+    658      54   144888      27384   2,458.16   3224   0 ReportingServicesService
+    258      14     2864       2024   1,209.73   3860   0 SoundAssService
+    511      47   162756      37984   1,522.05   3484   0 sqlservr
+    414      36   126472      11036  32,336.67   3504   0 sqlservr
+    224      16    60320      56648   2,181.22   1772   0 svchost
+   4495       0      196       1440   4,175.94      4   0 System
+
+PS C:\WINDOWS\system32> get-process | where-object {$_.CPU -gt 1000.00} | Select-ob
+ject -Property Id, CPU
+
+   Id          CPU
+   --          ---
+ 3528  1318.046875
+13020    1710.8125
+13060   1175.15625
+ 3932  3261.640625
+ 3224  2462.171875
+ 3860  1210.171875
+ 3484  1522.328125
+ 3504 32345.015625
+ 1772   2182.59375
+    4   4178.28125
+
+*****************************
+https://www.youtube.com/watch?v=yKstEJKdc4o
+sample of codes
+https://www.codykonior.com/2014/07/24/powershell-with-a-focus-on-automation/
+
+01. Basics
+
+# This is an array, PowerShell automatically shows each 
+# segment on one line
+
+"What about","an array?"
+
+# Proof
+
+("What about","an array?").GetType()
+
+# This is also an array if you want to be explicit about it.
+
+@("What about","an array?")
+
+# This is a hash table
+
+@{ Line1 = "This is"
+   Line2 = "a hash table" }
+
+$myVariable = @{ Line1 = "This is"
+   Line2 = "a hash table too" }
+$myVariable
+
+# This is retrieving a value from the hash table
+
+$myVariable["Line1"]
+
+# This looks kind of stupid but it's called splatting
+
+$myVariable = @{
+    Path = "C:\Temp\Test.txt"
+    Value = "Hi"
+} 
+
+Set-Content @myVariable
+# Set-Content -Path "C:\Temp\Test.txt" -Value "Hi"
+
+Get-Content C:\Temp\Test.txt
+
+# This creates a special .NET object in PowerShell 3 where the 
+# hash table becomes properties, in order
+
+$myVariable = [PSCustomObject] @{ 
+    Line1 = "This is"
+    Line2 = "a hash table" }
+$myVariable
+$myVariable.Line1
+
+# Be careful with dates, they are represented internally as US format
+
+$myVariable = [DateTime] "2014-07-23"
+$myVariable
+
+######
+#PipeLine 
+
+# The Pipeline
+
+1 | Select-Object
+
+1, 2 | Measure-Object
+1, 2, 3, 4, 5 | Measure-Object -Average -Sum -Maximum -Minimum
+
+# Select-Object can be used to grab just parts of objects
+
+$myVariable = [PSCustomObject] @{ 
+    Line1 = "This is"
+    Line2 = "a hash table" }
+$myVariable | Select-Object Line1
+
+# And %{ is a For Each loop where $_ is whatever is being iterated
+
+1, 2 | %{ 
+    "Received $_"
+}
+
+foreach ($myNumber in @(1, 2)) {
+    "Received $myNumber"
+}
+
+# Every member of the pipeline is doing some work on the incoming objects
+
+1,2 | Select-Object -Last 1
+
+# Where-Object is an extremely common and powerful command that takes a block.
+# This also shows some comparison operators too, you can't use ==, >, < etc.
+
+1,2 | Where-Object { $_ -eq 1 } # Equal
+1,2 | Where-Object { $_ -gt 1 } # Greater than
+1,2 | Where-Object { $_ -lt 1 } # Less than
+
+# Now for some other default "variables"
+
+Get-Variable *Ver*
+
+# This variable has our version information
+
+$PSVersionTable
+
+# Environment variables are stored under another
+# variable called $env. You can't list them out like this:
+
+$env
+
+# But you can reference them like:
+
+$env:COMPUTERNAME
+
+# PowerShell also emulates a disk for it
+
+Get-PSDrive Env
+Dir Env:
+
+# Lots of stuff in PowerShell is like this.
+
+Set-Location Env: # cd
+Get-ChildItem     # dir
+Set-Item myEnvironmentVariable "Great!"
+Dir
+C:
+# Inspect our variable
+$env:myEnvironmentVariable
+
+# Some commands you can execute if they're in your path
+
+ping localhost -n 1
+
+# Or you can run them if you specify their directory
+
+C:\Windows\System32\ping localhost -n 1
+
+# Or you can use variables, too
+
+ping $env:COMPUTERNAME -n 1
+
+# But it's considered polite to put an ampersand in front,
+# and also lets you execute programs dynamically too
+
+$myCommand = "ping"
+&$myCommand $env:COMPUTERNAME -n 1
+
+# Let's deal with some errors!
+
+$myCommand = "pign"
+&$myCommand $env:COMPUTERNAME -n 1
+
+try { 
+    &$myCommand $env:COMPUTERNAME -n 1
+} catch {
+    # $_ is the "last error". It's best to quickly save it.
+    $thisError = $_
+
+    # Now we can do anything, or...
+    "You're out! Why? $($thisError.Exception.Message)"
+}
+
+# But it only works on terminating errors...
+
+Copy-Item Test.txt C:\
+
+try { 
+    Copy-Item Test.txt C:\
+} catch { 
+    "You'll never catch me!"
+}
+
+$ErrorActionPreference = "Stop"
+try { 
+    Copy-Item Test.txt C:\
+} catch { 
+    "You'll never catch me!"
+}
+
+<# You could also:
+
+try { 
+    Copy-Item Test.txt C:\ -ErrorAction:Stop
+} catch { 
+    "You'll never catch me!"
+}
+
+#>
+
+## Next slide
+
+###########
+
+# Basic IO (you can't just "wait for a keypress" though)
+
+$myInput = Read-Host "Tell me anything"
+
+# Saying nothing is like Write-Output
+
+$myInput
+Write-Host $myInput      # It's a lot like PRINT
+Write-Output $myInput    # It's a lot like SELECT
+
+# It's a lot like the difference between PRINT and SELECT.
+
+$myOutput = Write-Host $myInput
+"myOutput is: $myOutput" # Blank
+$myOutput = Write-Output $myInput
+"myOutput is: $myOutput" # Not on your life
+
+$myInput | Clip
+&notepad
+
+# We'll write out all the files in our Windows directory into a CSV
+
+$myFiles = Get-ChildItem C:\Windows
+$myFiles | Measure-Object
+$myFiles | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# It has a lot of columns...
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# Oh no, we lost it
+
+$myFiles = $null
+
+# We can recreate it
+
+$myFiles = Get-Content C:\Temp\MyWindowsFiles.csv | ConvertFrom-Csv 
+
+# Manipulate it, writing out just the columns we want
+
+$myFiles | Select-Object -Property Name, Attributes | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# That's better
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# If we wanted to do XML we have to jump through a few more hoops
+# This is a fully serialized .NET object stored to a file. We have
+# an Import-CliXml cmdlet too.
+
+$myFiles | Select-Object -Property Name, Attributes | Export-CliXml C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+# We also have a ConvertTo-Xml but it returns an XML type. We can
+# however grab a string property of that type, and pipe it to a file.
+
+$myFiles | Select-Object -Property Name, Attributes | 
+    ConvertTo-Xml | 
+    Select-Object -ExpandProperty OuterXml | 
+    Set-Content C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+## Next Part, Basic Investigation
+
+###############
+
+# Basic IO (you can't just "wait for a keypress" though)
+
+$myInput = Read-Host "Tell me anything"
+
+# Saying nothing is like Write-Output
+
+$myInput
+Write-Host $myInput      # It's a lot like PRINT
+Write-Output $myInput    # It's a lot like SELECT
+
+# It's a lot like the difference between PRINT and SELECT.
+
+$myOutput = Write-Host $myInput
+"myOutput is: $myOutput" # Blank
+$myOutput = Write-Output $myInput
+"myOutput is: $myOutput" # Not on your life
+
+$myInput | Clip
+&notepad
+
+# We'll write out all the files in our Windows directory into a CSV
+
+$myFiles = Get-ChildItem C:\Windows
+$myFiles | Measure-Object
+$myFiles | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# It has a lot of columns...
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# Oh no, we lost it
+
+$myFiles = $null
+
+# We can recreate it
+
+$myFiles = Get-Content C:\Temp\MyWindowsFiles.csv | ConvertFrom-Csv 
+
+# Manipulate it, writing out just the columns we want
+
+$myFiles | Select-Object -Property Name, Attributes | ConvertTo-Csv | Set-Content C:\Temp\MyWindowsFiles.csv
+
+# That's better
+
+&notepad C:\Temp\MyWindowsFiles.csv
+
+# If we wanted to do XML we have to jump through a few more hoops
+# This is a fully serialized .NET object stored to a file. We have
+# an Import-CliXml cmdlet too.
+
+$myFiles | Select-Object -Property Name, Attributes | Export-CliXml C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+# We also have a ConvertTo-Xml but it returns an XML type. We can
+# however grab a string property of that type, and pipe it to a file.
+
+$myFiles | Select-Object -Property Name, Attributes | 
+    ConvertTo-Xml | 
+    Select-Object -ExpandProperty OuterXml | 
+    Set-Content C:\Temp\MyWindowsFiles.xml
+
+&notepad C:\Temp\MyWindowsFiles.xml
+
+## Next Part, Basic Investigation
+
+#################
+

@@ -1,0 +1,151 @@
+Install VMware Workstation Play.
+Install Centos from VM as server and client vm.
+
+Change Host name
+hostnamectl set-hostname server
+reboot
+hostnamectl set-hostname client
+reboot
+
+su -
+pw: root
+open visudo file
+add developer  ALL=(ALL)  ALL    NOPASSWD: ALL
+save
+
+set domain name at hosts file
+sudo vi /etc/hosts
+192.168.150.132   server.com
+192.168.150.130   client.com
+save
+
+ping server.com
+
+set ssh between server and client without password.
+
+at server.com
+ssh-keygen
+ssh-copy-id developer@server.com
+ssh-copy-id developer@client.com
+
+at client.com
+ssh-keygen
+ssh-copy-id developer@server.com
+ssh-copy-id developer@client.com
+
+instaall ansible
+
+yum install https:/dl.fedor
+yum install http://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.4.0.0-1.el7.ans.noarch.rpm
+
+
+Get The Complete Linux Administration Course Bundle! https://josephdelgadillo.com/product/...
+
+https://www.youtube.com/watch?v=wBp0Rb-ZJak&t=326s
+
+1. Download Ubuntu Desktop
+Debian is first Linux OS developer. Right now has many many Linux OS versions.
+
+Ubuntu 14.04.3 LTS
+
+2. VirtualBNox. Could run Linux at Hoster Windows OS.
+SWAP area is not ram but in HD.
+
+3. Configuration system.
+
+4. Command Line.
+
+   pwd -  print working directory
+   cd - change directory
+   . - currently directory
+   ~ - Home directory
+   ../ - one leave up
+   / - root directory
+   ls - list contains.
+   ls -l - get more detail information. permission, owner, group, size,  modified time of files.
+
+   ls -r reverses order
+   ls -s sort file size.
+
+  clear - clear terminal.
+
+  vi ./file edit file.
+  sudo vi ,/file to edit super user do. you edit the file.
+  
+  su - switch user.
+
+  root user ash %control.
+
+  sudo yum install to install package to download and install from repository of centos.
+
+  remove program to uninstall package.
+  
+  look to search package at repository.
+
+  chown   change file ownership.
+
+  sudo chmod 646 1,2,3 colum 4 read, 7 read/write.
+
+  rm filename  delete file
+
+  sudo mkdir - make directory.
+
+  chmod -R means recursive to chang every file under this folder.
+
+  touch - create file.\
+  rm mydir/* remove all files
+  
+
+  cp - copy file
+  
+  find . -tymr 
+  
+  grep -i - n 
+
+
+5. Process.
+   Top 
+   ps aux : grep liri-browser
+   pgrep
+   kill -9 pid. to kill processor 
+
+   service servicename start (stop, status, restart).
+
+   systemctl same as service command.
+
+6. Schedule Task.
+    crontab -e
+
+    m h dow mon dow command
+15 14 . . . ls > /home/nick/it
+
+7. Developer
+   choice IDE for multiple language
+
+   Eclipse, CodeBlack, QT, Pycharm
+
+   
+8. version control
+   Git allow multiple developer working at same files in same time
+
+   install git.
+   
+   
+   create folder and git init.
+
+   create git hub or git server to create new repository
+
+     git remote add origin https://github.com/hwang822/projectname
+     git config --global user.name
+     git config --global email.com
+
+     git pull origin master
+     git clone addr
+     git add -A
+     git rm 
+     git commit -m ""
+     git push origin master
+
+    
+7 Meteor
+     

@@ -1,0 +1,140 @@
+Device name: Bowen-PC dl31
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.16GHz 3.10GHz
+Installed RAM: 24.GB
+System: 64-Bit OS, x64-based processor
+
+9/24/2018 (after clean up)
+
+C: 135GB        
+    Used space: 91,649,110.016 bytes     85.3GB
+    Free sapce: 27.408.904 bytes         25.5GB
+    Capacity:   119.058.014.208 bytes    110GB
+    inetpub: 
+    Size: 32.1 MB (33,693,239 bytes)
+    Size on disk: 33.3 MB (35,004,416 bytes)
+    Contains: 700 Files, 112 Folders
+    Program Files: 
+    Size: 196 MB (206,389,718 bytes)
+    Size on disk: 141 MB (148,692,992 bytes)
+    Contains: 610 Files, 192 Folders
+    Program Files (x86):
+    Size: 445 MB (466,654,658 bytes)
+    Size on disk: 392 MB (411,111,424 bytes)
+    Contrains: 3,183 Files, 369 Folders
+    User: 
+    Size: 1.00 GB (1,080,025,296 bytes)
+    Size on disk: 1.01 GB (1,091,522,560 bytes)
+    Contrains: 11,213 Files, 4,024 Folders
+    Windows:
+    Size: 5.70 GB (6,130,562,689 bytes)
+    Size on disk: 4.33 GB (4,655,890,432 bytes)
+    Contains: 26,460 Files, 6,073 Folders
+    Windows.old:
+    Size: 6.61 GB (7,106,816,726 bytes)
+    Size on disk: 5.46 GB (5,873,975,296 bytes)
+    Contains: 23,819 Files, 7,288 Folders
+    Windows 10Upgrade:
+    Size: 20.5 MB (21,531,672 bytes)
+    Size of disk: 20.7 MB (21,749,760 bytes)
+    Contains: 116 Files, 11 Folders
+                   
+D:(Program files)/E:(Bowen): 1T/1T = 2T
+   D: (Program Files)
+     Used space: 36.713.456 bytes  34.1 GB
+     Free sapce: 840.711.430.144 bytes 817GB
+     Capacity: 877.424.537.600 bytes 817 GB
+     Empty     
+   E: (Bowen)
+     Used space: 547.375.005.696 bytes 509 GB
+     Free space: 575.488.770.048 bytes 535 GB
+     Capacity: 1.122.863.775.744 bytes 1.02 TB
+     
+F(Hongbo): 4T 
+     Used space: 166.234.791.936 bytes   154 GB
+     Free space: 3.834.416.091.136 bytes 3.48TB
+     
+     Location: All in F:\
+     Size: 154GB (165,606,416,611 bytes)
+     Size on disk: 154 GB (165,711,085,568 bytes) 
+
+Software will be download and installed at D: 
+
+1. Dropbox
+  downlaod and install. it default path to C:\Users\hwang_000\Dropbox.
+2. TeamViewer
+  Download and install to D:\Program Files (x86)\TeamViewer 
+3. vs_2017_community
+  Download and install to D:\Program Files (x86)\
+4. Git service
+  Download and isntall to D:\Program Files (x86)\
+  $ git clone https://github.com/hwang822/WCFandWVC
+5. Install MS-Office-2010
+  Install from download folder to D:\Program Files (x86)\
+  
+6. Install VM, Putty, VcXsrv
+7. Install CCleaner
+8. Install SQL Server.
+9. Install SQL Server Managerment IDE 
+
+9/26/2018 reinstall windows system.
+  GPU device ASUS DirectCU II
+  remove orignail system C:/ (135 GB)  D:/E:/ (2TB flash memory) only keep F:/ (4TB)
+  
+  insert Windows Server 2012 R2 DVD to DVD driver
+  Install now
+  it need key xxxx.xxxx.xxxx.xxxx.xxxx....
+  
+  put windows10 to DVD driver for install
+  
+  install at only one 3.5T driver 0
+  
+  after install the c: driver
+  Disk 0  Basic 3726.02 GB online
+  System Reserved 500 MB NTFS 
+  Healthy(system, Active, Primary Partition)
+  
+  (D:)  
+  2047.51 GB 
+  NTFS Hearth (Boot, Page Files, Crash Dump, Primary Partition
+  
+  While using Diskpart utility to manage a hard drive beyond 2TB, you may find out that Diskpart cannot extend partitions beyond the 2TB with the Virtual Disk Service errors:
+  Only the first 2TB are usable on large MBR disks. Cannot create partitions beyond the 2TB mark, nor convert the disk to dynamic.
+
+  Need to convert it to GDP disk.
+  
+  reboot pc and click f2,f10,f11 to slect boot from DVD
+  At mid installation at WIndows Setup
+  Click Shift + F10 to go Administrator: X:\Windows\system32\cmd.exe
+ 
+  X:\Sources>diskpart  
+  at diskpart.exe console window
+  type 
+  DISKPART> list disk
+  Disk 0 online 3726 GB 
+  DISKPART> select disk 0
+  Disk 0 is now the selected disk
+  DISKPART> clean
+  DiskPart succeeded in cleaning the disk.
+  DISKPART> convert GDP
+  Diskpart successfully converted the selected disk to GDP format.
+  DISKPART>list disk
+  Disk ###: Disk 0, status: Online, size: 3726 GB, Free: 3726 GB, Gpt *
+  DISKPART> exit
+  
+  Refrash Windows Setup 
+  Drive 0 unallocated Space 3726 GB. Click Next button
+
+  after install go to windows OS.
+  
+  PC Restart Automatically After a Power Outage
+  Go to BIOS click f11 after restart.
+  Go to Settings/Power Management Setup/Restore after AC Power Loss [Power On]/Save Changes and Reboot.
+  
+  Set teamviewer as Start TeamViewer with Windows
+  Set static IP address.
+  
+ 
+  
+  
+  
+  

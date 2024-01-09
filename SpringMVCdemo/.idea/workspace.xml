@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c0daa65-18ec-4376-9675-6f14e47f4318" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../AWS codepipelline and codebuilder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ansible" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Build app using React JS, .NET Core Web API and Microsoft SQL Server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BuildVTK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Centos &amp; qt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/BarExe/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/BarExe/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/BarExe/v16/ipch/AutoPCH/316fc605b624e195/BAR.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/bar.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-cf66a69fac8b973e4fe4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-5a08adcaa7b5ac122e73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-3c9001a90c3632fc520b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-20T12-46-17-0268.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.cmake/api/v1/reply/target-BarExe-Debug-ef49287e8556763945ee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/BarExe.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/BarExe.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/BarExe.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/bar.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/embed.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/intermediate.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/manifest.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/manifest.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/vc140.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/BarExe.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/CMakeFiles/vcpkg.config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/BarExe/out/build/x64-Debug/sqlite3.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/CMakeSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/FooBarConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/FooBarConfigVersion.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/bar/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/bar/bar.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/foo/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/foo/config.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/foo/foo.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooBar/foo/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/.vs/FooLib/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/.vs/FooLib/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/config.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/config.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/foo.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/fooConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/fooVersionConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-81cbf9b4ddd087201b53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-4c680d94781b681aa68d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-f2ee7bbdc74f3e7a4ac5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-09T14-47-49-0730.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.cmake/api/v1/reply/target-foo-Debug-ea54ce90d0c610189f2f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/Export/C_/Workarea/test/Cmake-Builder/FooLib/out/install/x64-Debug/CMake/fooTargets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/Export/C_/Workarea/test/Cmake-Builder/FooLib/out/install/x64-Debug/CMake/fooTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/embed.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/foo.cxx.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/intermediate.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/manifest.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/manifest.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/vc140.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/foo.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/fooConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/CMakeFiles/vcpkg.config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/foo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/foo.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/foo.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/fooConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/fooTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/fooVersionConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/out/build/x64-Debug/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/FooLib/stale_outputs_checked" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/exp.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/solid3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/.vs/src/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/.vs/src/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-f10cf4c7bea965ed3fbb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-ac5d31a3f91d6fa726bf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-91453d8760473fa52fee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-08T19-56-42-0407.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/target-sqlite3-Debug-d98cef8e949c2301587b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.cmake/api/v1/reply/target-sqlite3-bin-Debug-91d674a3ae5caa65ebef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/Export/share/sqlite3/sqlite3-targets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/Export/share/sqlite3/sqlite3-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/embed.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/intermediate.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/manifest.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/manifest.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/shell.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/vc140.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3.dir/sqlite3.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3.dir/sqlite3.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3.dir/sqlite3.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/vcpkg.config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/install_manifest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/sqlite3-bin.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/sqlite3-bin.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/sqlite3-bin.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/build/x64-Debug/sqlite3.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/install/x64-Debug/lib/sqlite3.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/install/x64-Debug/share/sqlite3/sqlite3-targets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/install/x64-Debug/share/sqlite3/sqlite3-targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/out/install/x64-Debug/tools/sqlite3-bin.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/shell.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/sqlite3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/sqlite3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite3/src/sqlite3ext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/.vs/sqlite4/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/.vs/sqlite4/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/CMakeLists-org.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-06e18af703e45d39747d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-5bbe3565ce89c0eddc1e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-7f5f8eee0a01a21f046f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/reply/index-2019-09-09T18-54-46-0024.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.cmake/api/v1/reply/target-sqlite4-Debug-330813512fa41d748e7a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/3.14.19060802-MSVC_2/CompilerIdC/CMakeCCompilerId.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/Export/C_/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/Export/C_/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/embed.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/intermediate.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/manifest.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/manifest.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/sqlite4.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/vc140.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4.dir/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/sqlite4Config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/CMakeFiles/vcpkg.config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/install_manifest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4Config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4Targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/build/x64-Debug/sqlite4VersionConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Config.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4VersionConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/bin/sqlite4.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/out/install/x64-Debug/include/sqlite4.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/shell.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/sqlite4.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/sqlite4.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/sqlite4Config.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/sqlite4VersionConfig.cmake.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/sqlite4/sqlite4ext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/vtkSlicerRtCommonConfigure.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/vtkTypeListMacros.h.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/vtkbool-testing.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cmake-Builder/vtkbool.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Create AWS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Create SQLite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Creating Demo APIs with json-server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/Card Printer SDK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/Dascom/PrintTek Printers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/Dsacom Card Printer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/Mobile Printer SDK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/SDK emulator for windows, android and IOS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dascom/android studio tutorial for beginners windows 10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker and pull image to run" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Harvard CS50’s Web Programming with Python and JavaScript – Full University Course" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Home networking and systems setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Infrastructure Developer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IntelliJ IDEA - Gradle - JAVA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Interview Q&amp;A" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JS_DotNET_SQLServer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/5.5.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/distributions/Java-Gradle.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/distributions/Java-Gradle.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/distributions/Java-Gradle/Java-Gradle/bin/Java-Gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/distributions/Java-Gradle/Java-Gradle/bin/Java-Gradle.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/distributions/Java-Gradle/Java-Gradle/lib/Java-Gradle.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/libs/Java-Gradle.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/scripts/Java-Gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/scripts/Java-Gradle.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/demo/HelloGradle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/math/BoundingBoxUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/math/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/math/MathUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/math/PolynomialRegressionUtilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Gradle/src/java/math/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/Java-Jni.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java-Jni/src/com/mixwell/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linux Server Setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MS Azure Setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PowserShell" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Printer Wifi Connection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python Scripting and AWS automation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REST API in Spring boot using Java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React JS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React js Tutorial - How To Get Data From An API with React" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Remote Desktop Connection Setup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/.vs/RestFulServiceAPI/DesignTimeBuild/.dtbcache.v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/.vs/RestFulServiceAPI/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/.vs/RestFulServiceAPI/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Controllers/HomeController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Controllers/WeatherController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Models/WeatherInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Properties/launchSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/RestFulServiceAPI.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/RestFulServiceAPI.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/Startup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/RestFulServiceAPI.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.RazorTargetAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/RestFulServiceAPI.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/apphost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/staticwebassets/RestFulServiceAPI.StaticWebAssets.Manifest.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/Debug/netcoreapp3.1/staticwebassets/RestFulServiceAPI.StaticWebAssets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/RestFulServiceAPI.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/RestFulServiceAPI.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/RestFulServiceAPI.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RestFulServiceAPI/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Set Git Server or Git Hub In Server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VM_Mac_XCode" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Vcpkg_Camke_GitHub" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web Clouding architectural" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/.vs/WebService.REST/config/applicationhost.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/.vs/WebService.REST/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/App_Start/RouteConfig.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/App_Start/WebApiConfig.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Global.asax" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Global.asax.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Application.Designer.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Application.myapp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/AssemblyInfo.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/MyExtensions/MyWebExtension.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Resources.Designer.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Settings.Designer.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/My Project/Settings.settings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Views/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Web.Debug.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Web.Release.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/Web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/WebService.REST.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/WebService.REST.vbproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/WebService.REST.vbproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/Microsoft.Web.Infrastructure.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Net.Http.Formatting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Net.Http.Formatting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Helpers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Helpers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Http.WebHost.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Http.WebHost.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Http.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Mvc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.Deployment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.Deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/System.Web.Webpages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/WebService.REST.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/WebService.REST.dll.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/WebService.REST.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/WebService.REST.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CSharp.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.Managed.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/Microsoft.Win32.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.AppContext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Console.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Diagnostics.FileVersionInfo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Diagnostics.StackTrace.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Globalization.Calendars.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.IO.Compression.ZipFile.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.IO.Compression.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.IO.FileSystem.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.IO.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Net.Sockets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Reflection.Metadata.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Xml.ReaderWriter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Xml.XPath.XDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Xml.XPath.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/System.Xml.XmlDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/VBCSCompiler.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/VBCSCompiler.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csi.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/csi.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/vbc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/vbc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/bin/roslyn/vbc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/.NETFramework,Version=v4.7.2.AssemblyAttributes.vb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.Resources.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.vbproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.vbproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.vbproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.vbproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.vbproj.GenerateResource.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/obj/Debug/WebService.REST.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/Content/Web.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/Content/Web.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/Microsoft.AspNet.Mvc.5.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/lib/net45/System.Web.Mvc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Mvc.5.2.7/lib/net45/System.Web.Mvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Razor.3.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Razor.3.2.7/Microsoft.AspNet.Razor.3.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Razor.3.2.7/lib/net45/System.Web.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.Razor.3.2.7/lib/net45/System.Web.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.5.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.5.2.7/Microsoft.AspNet.WebApi.5.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/Microsoft.AspNet.WebApi.Client.5.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/net45/System.Net.Http.Formatting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/net45/System.Net.Http.Formatting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/netstandard2.0/System.Net.Http.Formatting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/netstandard2.0/System.Net.Http.Formatting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/portable-wp8%2Bnetcore45%2Bnet45%2Bwp81%2Bwpa81/System.Net.Http.Formatting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Client.5.2.7/lib/portable-wp8%2Bnetcore45%2Bnet45%2Bwp81%2Bwpa81/System.Net.Http.Formatting.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Core.5.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Core.5.2.7/Content/web.config.transform" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Core.5.2.7/Microsoft.AspNet.WebApi.Core.5.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Core.5.2.7/lib/net45/System.Web.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.Core.5.2.7/lib/net45/System.Web.Http.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.WebHost.5.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.WebHost.5.2.7/Microsoft.AspNet.WebApi.WebHost.5.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.WebHost.5.2.7/lib/net45/System.Web.Http.WebHost.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebApi.WebHost.5.2.7/lib/net45/System.Web.Http.WebHost.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/Content/Web.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/Content/Web.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/Microsoft.AspNet.WebPages.3.2.7.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.Helpers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.Helpers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.Deployment.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.Deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.Razor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.AspNet.WebPages.3.2.7/lib/net45/System.Web.WebPages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net46/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/build/net46/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/app.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/app.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/web.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net45/web.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/app.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/app.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/web.config.install.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/content/net46/web.config.uninstall.xdt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/lib/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/lib/net45/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CSharp.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.AppContext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.Diagnostics.StackTrace.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.IO.FileSystem.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.IO.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/System.Reflection.Metadata.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/VBCSCompiler.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/VBCSCompiler.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/csi.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/vbc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/vbc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/Roslyn45/vbc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.Build.Tasks.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CSharp.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CodeAnalysis.CSharp.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CodeAnalysis.Scripting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CodeAnalysis.VisualBasic.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.DiaSymReader.Native.amd64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.DiaSymReader.Native.x86.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.Managed.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.VisualBasic.Core.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/Microsoft.Win32.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.AppContext.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Collections.Immutable.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Console.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.DiagnosticSource.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.FileVersionInfo.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Diagnostics.StackTrace.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Globalization.Calendars.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.Compression.ZipFile.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.Compression.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.FileSystem.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.IO.FileSystem.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Net.Http.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Net.Sockets.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Reflection.Metadata.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Runtime.InteropServices.RuntimeInformation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Algorithms.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Encoding.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.Primitives.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Security.Cryptography.X509Certificates.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Text.Encoding.CodePages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.ValueTuple.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.ReaderWriter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XPath.XDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XPath.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/System.Xml.XmlDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/VBCSCompiler.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/VBCSCompiler.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csi.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csi.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/csi.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/vbc.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/vbc.exe.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/RoslynLatest/vbc.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/net45/install.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1/tools/net45/uninstall.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.Web.Infrastructure.1.0.0.0/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.Web.Infrastructure.1.0.0.0/Microsoft.Web.Infrastructure.1.0.0.0.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Microsoft.Web.Infrastructure.1.0.0.0/lib/net40/Microsoft.Web.Infrastructure.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/Newtonsoft.Json.12.0.2.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net20/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net20/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net35/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net35/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net40/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net40/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net45/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/net45/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard1.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard1.0/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard1.3/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard1.3/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard2.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/netstandard2.0/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebService.REST/packages/Newtonsoft.Json.12.0.2/lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Wechat Developer Tools" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake+msbuild" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../create angular" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../https:/dotnet.microsoft.com/en-us/apps/MS .net maui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup domain name and webserver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup vpn server in owner win10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup wxyz cam stream in PC/win/mac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smartphone programming" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/iisstart.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/iisstart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/libraries/backup.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/mixwell.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/archive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/all.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/aos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/lightbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/owl.carousel.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/owl.theme.default.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/phtots.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Abel/Abel-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Abel/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Anton/Anton-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Anton/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-RegularItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/JosefinSans-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Josefin_Sans/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Lexend_Deca/LexendDeca-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Lexend_Deca/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-RegularItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/Livvic-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/fonts/Livvic/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/Abract01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/Background-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/IMG_5961_smail.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201901062122220.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201901062122221.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201901080340471.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201901140507316.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201901270638550.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201902060642517.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201902251143331.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201903252321011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201903252321015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201904242143357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/cruise/201904280059581.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/instagram/thumb-card8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/js/Jquery3.4.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/js/aos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/js/lightbox-plus-jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/js/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/pages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/photos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/travel/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/2019CrusieWorld.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/2019CrusieWorld.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/HTMLTutorial-EX.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/HTMLTutorial-JS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/HTMLTutorial-pyton.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/HTMLTutorial.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/demo_iframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/demo_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/img_chania.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/img_girl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/pic_trulli.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/w3schools/sample-file.json.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../website-html-css/wwwroot/web.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2aQCTGs5c2PYjMvkhIMN2pvcjhG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Workarea/test/SpringMVCdemo"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DemoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c0daa65-18ec-4376-9675-6f14e47f4318" name="Changes" comment="" />
+      <created>1704241421909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704241421909</updated>
+    </task>
+    <servers />
+  </component>
+</project>

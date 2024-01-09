@@ -1,0 +1,163 @@
+
+git clone https://github.com/Microsoft/vcpkg.git
+vcpkg>bootstrap-vcpkg.bat
+.\vcpkg integrate install
+
+vcpkg is tool to build open source codes to libs.
+download to vcpkg, cd to vcpkg location.
+direct to using vcpkg command.
+
+vcpkg search => list all available open source codes software.
+
+vcpkg search sqlite3.  
+
+C:\Workarea\vcpkg>vcpkg search sqlite3
+soci[sqlite3]                         Build sqlite3 backend
+sqlite3              3.28.0-1         SQLite is a software library that implements a self-contained, serverless, zer...
+sqlite3[tool]                         sqlite3 executable
+sqlitecpp            2.3.0            SQLiteC++ (SQLiteCpp) is a smart and easy to use C++ SQLite3 wrapper.
+sqlpp11-connector... 0.29-1           A C++ wrapper for sqlite3 meant to be used in combination with sqlpp11.
+
+C:\Workarea\vcpkg>vcpkg install sqlite3:x64-windows
+The following packages are already installed:
+    sqlite3[core]:x86-windows
+Starting package 1/1: sqlite3:x86-windows
+Package sqlite3:x86-windows is already installed
+Elapsed time for package sqlite3:x86-windows: 1.749 ms
+
+Total elapsed time: 1.898 ms
+
+Download and install Cmake
+Download VTK zip file VTK-8.2.0.zip and extact files at VTK-8.2.0
+
+create VTK folder  VTK\src and VTK\bin
+copy VTK-8.2.0\*.* to VTK\src
+
+run CMake
+set Where is the source code: VTK\src
+set Where is build the binaries: VTK\bin
+
+check Advanced.
+Click Configure button
+
+check BUILD_EXAMPLE
+Module_vtkTestingCore
+Module_vtkTestingrendering
+
+Click Configure button again.
+
+Click generate button.
+
+open using VS2019 as administrator to open VTK\bin\VTK.sln
+BUILD_ALL
+
+build INSTALL package
+
+After complated
+C:\Program Files (x86)\VTK\bin
+
+set PATH = C:\Program Files (x86)\VTK\bin
+
+
+
+
+******************************
+Download VTK sample CylinderExample
+
+CylinderExample.cxx and CMakeLists.txt
+using CMake to build CMakeLists.exe
+
+*************************
+
+Vcpkg helps you get C and C++ libraries on Windows.
+
+https://github.com/Microsoft/vcpkg/blob/8379a80abe5288c7c06d5b9ab16efe355d1c6f62/docs/EXAMPLES.md#example-1
+
+vcpkg install boost:x64-windows
+
+The recommended and most productive way to use vcpkg is via user-wide integration, making the system available 
+for all projects you build. The user-wide integration will require administrator access the first time it is used on 
+a given machine. After the first use, administrator access is no longer required and the integration is on a per-user basis.
+
+C:\Workarea\vcpkg>vcpkg integrate install
+Applied user-wide integration for this vcpkg root.
+
+All MSBuild C++ projects can now #include any installed libraries.
+Linking will be handled automatically.
+Installing new libraries will make them instantly available.
+
+Check what vcpkg libs have been installed
+
+https://github.com/Microsoft/vcpkg/tree/master/triplets
+could see all platform x64-windows.
+
+*******************************************
+vcpkg install vtk:x64-windows
+get errors: vtk_glew.h(40): fatal error C1083: Cannot open include file: 'GL/glew.h'
+after google and know The vtk-package needs cmake v3.14.0
+On my device cmake v3.15.x was installed.
+After uninstalling cmake, vcpkg downloaded the needed version of CMake and it worked. 
+
+Installing package vtk[core]:x64-windows... done
+Elapsed time for package vtk:x64-windows: 14.99 min
+
+Total elapsed time: 14.99 min
+
+The package vtk:x64-windows provides CMake targets:
+
+    find_package(VTK CONFIG REQUIRED)
+    # Note: 106 target(s) were omitted.
+    target_link_libraries(main PRIVATE foo vtksys ${name} somelib)
+
+*****************************************
+vcpkg install glfw3:x64-windows
+....
+Installing package glfw3[core]:x64-windows... done
+Elapsed time for package glfw3:x64-windows: 9.376 s
+
+Total elapsed time: 9.376 s
+
+The package glfw3:x64-windows provides CMake targets:
+
+    find_package(glfw3 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE glfw)
+
+create CMake projects file 
+************************************************
+
+open visual studio 2019 and create an c++ proejct.
+
+if like to include x64-windows libs from vcpkg, select vs2019 platform
+create a sample c++ file include sqlite3 in the file.
+and complier will scussfully
+
+C:\Workarea\vcpkg>vcpkg list
+atlmfc:x64-windows                                 0                a stub package that ensures VS has ATL/MFC insta...
+boost-any:x64-windows                              1.70.0           Boost any module
+sqlite3:x64-windows-static                         3.29.0-1         SQLite is a software library that implements a s...
+sqlitecpp:x64-windows                              2.3.0            SQLiteC++ (SQLiteCpp) is a smart and easy to use...
+vtk:x64-windows                                    8.2.0-5          Software system for 3D computer graphics, image ...
+
+******************
+#include <stdio.h>
+#include <sqlite3.h>
+#include <SQLiteCpp/Assertion.h>
+#include <boost/any.hpp>
+  
+static int callback(void *NotUsed, int argc, char **argv, char **azColName){
+	int i;
+    	for(i=0; i<argc; i++){
+      		printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    	}
+    	printf("\n");
+    	return 0;
+}
+  
+int main(int argc, char **argv){
+    	sqlite3 *db;
+	char *zErrMsg = 0;
+	int rc;
+    
+}
+
+*******************************
