@@ -1,6 +1,0 @@
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/bin/sqlite4.dll
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/include/sqlite4.h
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Config.cmake
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4VersionConfig.cmake
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets.cmake
-C:/Workarea/test/Cmake-Builder/sqlite4/out/install/x64-Debug/CMake/sqlite4Targets-debug.cmake

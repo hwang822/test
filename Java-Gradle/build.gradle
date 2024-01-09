@@ -1,4 +1,0 @@
-apply plugin : 'java'  //do not need mainclass
-
-//apply plugin : 'application'
-//mainClassName = 'demo.HelloGradle'

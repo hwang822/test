@@ -1,7 +1,0 @@
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/list_install_components.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/sqlite3-bin.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/install/local.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/install.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Workarea/test/Cmake-Builder/sqlite3/src/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

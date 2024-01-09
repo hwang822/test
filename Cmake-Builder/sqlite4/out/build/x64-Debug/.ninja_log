@@ -1,9 +1,0 @@
-# ninja log v5
-1	867	589758325	CMakeFiles/sqlite4.dir/sqlite4.c.obj	b57050573273fc88
-867	1783	589758325	sqlite4.dll	cc76fb9eaae1d8b3
-867	1783	589758325	sqlite4.lib	cc76fb9eaae1d8b3
-1	676	589758325	sqlite4.dll	cc76fb9eaae1d8b3
-1	676	589758325	sqlite4.lib	cc76fb9eaae1d8b3
-676	769	0	CMakeFiles/install.util	6d2570ca24b7a9d
-1	678	589758325	sqlite4.dll	cc76fb9eaae1d8b3
-1	678	589758325	sqlite4.lib	cc76fb9eaae1d8b3
