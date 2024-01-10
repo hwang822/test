@@ -133,25 +133,25 @@ public class UserController {
         "email": "Ida@mail.com"
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Hans",
         "age": 26,
         "email": "Hans@mail.com"
     },
     {
-        "id": 1,
+        "id": 3,
         "name": "Lars",
         "age": 45,
         "email": "Lars@mail.com"
     },
     {
-        "id": 1,
+        "id": 4,
         "name": "Ben",
         "age": 32,
         "email": "Ben@mail.com"
     },
     {
-        "id": 1,
+        "id": 5,
         "name": "Eva",
         "age": 59,
         "email": "Eva@mail.com"
@@ -175,7 +175,7 @@ public class UserController {
  */
 
     @GetMapping("/User")
->>>>>>> parent of 8bd8900 (init add SpringMVCDeom)
+
     public User getUser(@RequestParam Integer id){
 
         Optional user = userService.getUser(id);
@@ -186,20 +186,19 @@ public class UserController {
 
     }
 
-<<<<<<< HEAD
 =======
 
->>>>>>> parent of 8bd8900 (init add SpringMVCDeom)
+
 }
 
 
 ******************************
 api\model\User.java class.
-<<<<<<< HEAD
+
 =======
 package com.example.demo.api.model;
 
->>>>>>> parent of 8bd8900 (init add SpringMVCDeom)
+
 public class User {
 
     private int id;
@@ -260,7 +259,7 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 @Service
->>>>>>> parent of 8bd8900 (init add SpringMVCDeom)
+
 
 public class UserService {
     private List<User> userList;
@@ -270,10 +269,10 @@ public class UserService {
         userList = new ArrayList<>();
 
         User user1 = new User( 1, "Ida",  32,  "Ida@mail.com");
-        User user2 = new User( 1, "Hans",  26,  "Hans@mail.com");
-        User user3 = new User( 1, "Lars",  45,  "Lars@mail.com");
-        User user4 = new User( 1, "Ben",  32,  "Ben@mail.com");
-        User user5 = new User( 1, "Eva",  59,  "Eva@mail.com");
+        User user2 = new User( 2, "Hans",  26,  "Hans@mail.com");
+        User user3 = new User( 3, "Lars",  45,  "Lars@mail.com");
+        User user4 = new User( 4, "Ben",  32,  "Ben@mail.com");
+        User user5 = new User( 5, "Eva",  59,  "Eva@mail.com");
 
         userList.addAll(Arrays.asList(user1, user2, user3, user4, user5));
 
@@ -292,7 +291,6 @@ public class UserService {
         return null;
     }
 
-<<<<<<< HEAD
 }
 
 download and install postman to test service.
@@ -308,6 +306,4 @@ download and install postman to test service.
 
 download and install postman to test service.
 test sample 
-localhost:8080/User?id=1
 
->>>>>>> parent of 8bd8900 (init add SpringMVCDeom)
