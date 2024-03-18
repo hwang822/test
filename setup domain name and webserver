@@ -1,12 +1,12 @@
 gpay domain name at 101domain.com gm_dl00 mixwellsoftware.com
-get myip from google 73.76.111.140
+get myip from google 73.232.210.61
 set myip to www.mixwellsfotware.com. click mixwellsfotware\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX)
-Edit mixwellsoftware.com Record to 73.76.111.140
+Edit mixwellsoftware.com Record to 73.232.210.61
 \ViewDNSRecord\ModifyDNSRecord
 at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
 At Network tab: to makesure IP address 73.76.111.140 
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
-ping http://73.76.111.140 for http://mixwellsoftware.com
+ping http://73.232.210.61 for http://mixwellsoftware.com
 set web page at pc webroot.
 go to iis magager
 right cleck BPWEN-PC\hwang822\Sites\mxiwellmvc\Edit Bindings...
