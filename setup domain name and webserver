@@ -4,7 +4,7 @@ set myip to www.mixwellsfotware.com. click mixwellsfotware\DNS Records\Manage Ad
 Edit mixwellsoftware.com Record to 73.232.210.61
 \ViewDNSRecord\ModifyDNSRecord
 at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
-At Network tab: to makesure IP address 73.76.111.140 
+At Network tab: to makesure IP address 73.232.210.61 
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
 ping http://73.232.210.61 for http://mixwellsoftware.com
 
