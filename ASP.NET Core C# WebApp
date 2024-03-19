@@ -1,0 +1,24 @@
+ASP.NET Core Crash Course - C# App
+
+https://www.youtube.com/watch?v=BfEjDD8mWYg
+
+Create PDSES webapp broject type ASP.NET Core Web App (Model-View-Controller)
+Select Autherticaltion type -> Individual Account
+
+Build scussfull
+At view could see Sql Server Explorer 
+Select Run at IIS Express home page 
+Run well load web browser at 
+https://localhost:44360/
+*****************
+PDSESWebApp   Home Privacy           Register Login        
+Welcome 
+Learn about building Web apps with ASP.NET Core.
+*****************
+
+
+
+
+
+
+
