@@ -162,6 +162,69 @@ StudentParent\View\Shared\Layout.cshtml
 
 ********************
 
+Add Search item at Navgitar bar
+At Views\Shared\layout.chhml
+add 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="StudentParents" asp-action="Search">Search</a>
+                        </li>
+
+
+At StudentParentControl
+add 
+        // GET: StudentParent/Search
+        public async Task<IActionResult> Search()
+        {
+            return View();
+        }
+
+At StudentParentControl\view
+add Search.cs
+    Right click StudentParentControl Search to add Razor View.
+View Name: Search
+Template" Create
+Model Class: PDSESWebApp.Models.StudentParent
+Options: Create as a partial view
+
+<h4>Seach Student Parent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Results">
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"></label>
+                <input name="SearchPhrase" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+Add Search Results Control Method for asp-action="Results" 
+
+// POST: StudentParent/Results
+        public async Task<IActionResult> Results(String searchPhrase)
+        {
+            return View("Index", await _context.StudentParent.Where( j => j.Name.Contains
+            (searchPhrase)).ToListAsync());
+        }
+
+****************
+Add required Log In function
+
+Add Authorize function to StudentParentsController.cs
+using Microsoft.AspNetCore.Authorization;
+[Authorize]
+
+******************************
+
+
 
 
 
