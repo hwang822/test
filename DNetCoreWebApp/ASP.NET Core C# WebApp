@@ -2,22 +2,22 @@ ASP.NET Core Crash Course - C# App
 
 https://www.youtube.com/watch?v=BfEjDD8mWYg
 
-Create PDSES webapp broject type ASP.NET Core Web App (Model-View-Controller)
+Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
 Select Autherticaltion type -> Individual Account
 
 Build scussfull
 At view could see Sql Server Explorer 
 Select Run at IIS Express home page 
-Build and launch PDSESWebApp at web browser 
+Build and launch TestAppWeb at web browser 
 https://localhost:44360/
 
 *****************
-PDSESWebApp   Home Privacy           Register Login        
+TestAppWeb  Home Privacy           Register Login        
 Welcome 
 Learn about building Web apps with ASP.NET Core.
 *****************
 Add model folder add StudentParent class with properties. 
-namespace PDSESWebApp.Models
+namespace TestAppWebModels
 {
     public class StudentParent
     {
@@ -43,10 +43,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PDSESWebApp.Data;
-using PDSESWebApp.Models;
+using TestAppWeb.Data;
+using TestAppWeb.Models;
 
-namespace PDSESWebApp.Controllers
+namespace TestAppWeb.Controllers
 {
     public class StudentParentsController : Controller
     {
@@ -75,7 +75,7 @@ StudentParent view files with Delete, Create, Detail, Edit, index cshtml files a
 test https://localhost:44360/StudentParents
 Get error:
 A database operation failed while processing the request.
-SqlException: Cannot open database "aspnet-PDSESWebApp-5cd0c076-6599-4c82-b386-34a15bcbc386" requested by the login. The login failed. Login failed for user 'TEA\hwang'.
+SqlException: Cannot open database "aspnet-TestAppWeb-5cd0c076-6599-4c82-b386-34a15bcbc386" requested by the login. The login failed. Login failed for user 'TEA\hwang'.
 
 Need add database
 
@@ -93,7 +93,7 @@ To undo this action, use Remove-Migration.
 
 new files 20240319185233_initialsetup.cs created under PDSESWebApp\Data\Migrations\20240319185233_initialsetup.cs
 
-namespace PDSESWebApp.Data.Migrations
+namespace TestAppWeb.Data.Migrations
 {
     public partial class initialsetup : Migration
     {
@@ -111,7 +111,7 @@ Could view at SQL server object exploer
 
 Run https://localhost:44360/StudentParents again
 Could see page
-PDSESWebApp Home Privacy         Register    Login
+TestAppWeb Home Privacy         Register    Login
 Index
 Create New
 Name	Infomation
@@ -183,7 +183,7 @@ add Search.cs
     Right click StudentParentControl Search to add Razor View.
 View Name: Search
 Template" Create
-Model Class: PDSESWebApp.Models.StudentParent
+Model Class: TestAppWeb.Models.StudentParent
 Options: Create as a partial view
 
 <h4>Seach Student Parent</h4>
