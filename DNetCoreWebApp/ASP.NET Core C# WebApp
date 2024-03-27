@@ -237,6 +237,94 @@ using Microsoft.AspNetCore.Authorization;
 [Authorize]
 
 ******************************
+html design 
+https://www.youtube.com/watch?v=FQdaUv95mR8
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta>
+</head>
+<body>
+
+	<img src="teasses.jpg" width="400" height="50" alt="teasses main page">
+	<h1>PDSES Application</h1>
+	<h2>Student</h2>
+<!-- add comments here -->
+	<section>
+		 
+		<p><em><b>Parent/Guardian</b></em>
+		<u>Educator</u>
+		Other
+		New
+		</p>
+		<ul>
+			<li>Parent/Guardian</li>
+			<li>Educator</li>
+			<li>Other</li>
+			<li>New</li>
+		</ul>
+		
+		<ol>
+			<li>Parent/Guardian</li>
+			<li>Educator</li>
+			<li>Other</li>
+			<li>New</li>
+		</ol>
+		
+		<p>
+		I want to learn more about </br>
+		Special Education Referral Process </br>
+		Special Education Resources/Information </br>
+		Complaints/Dispute Resolution </br>
+		</p>
+		
+		<a herf="www.cnn.com">www.cnn.com</a>
+
+		<p><vidio> src="tea.mp4" controls type="vidio/mp4 "width="400"</vidio></p>
+
+		<p><audio> src="tea.mp3" controls type="audio/mp3"</audio></p>
+		
+		<p>
+			<table border='1'>
+				<tr>  <!-- table row -->
+					<th>Last Name>  
+					
+					<th>First Name>
+				</tr>
+				<tr>				
+					<td>Address>
+					<td>City>
+				</tr>
+			<table>
+		</p>
+		<p>
+		<form>
+			<lable>Last Name:</lable>  		
+			<input name ="lastName"></br></br>  				
+			<lable>First Name:<>
+			<input name ="firstName"></br></br>		
+			<lable>Address:</lable>
+			<input name ="address"></br></br>
+			<lable>City:</lable>
+			<input name ="city"></br></br>
+			<lable>DOB:</lable>
+			<input type"date" name ="dob"></br></br>
+			<input type="submit" name ="submit"></br></br>
+			
+			<label for="Would you like to receive communication from the Texas Eduction Agency">Yes</label><br>
+			<input type="checkbox" id="html" name="fav_language" value="HTML">
+			<label for="html">Yes</label><br>
+			<input type="checkbox" id="css" name="fav_language" value="CSS">
+			<label for="css">No</label><br>
+			
+		</form>		
+		</p>
+
+	</section>
+</body>
+</html>
 
 
 
