@@ -36,6 +36,20 @@ namespace TestAppWebModels
 
 ***********************************
 Add MVC Controller with views, using Enity Framwrlk
+
+Right click controller to select add MVC Controller with view using Entity Framework, click Add
+Select Model class with studient model, DBContext class with db.
+Views checks
+Generate Views
+Reference script lib
+Use a layout page
+Click Add button 
+
+Will create Controllers and Views file base on data model.
+
+
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
