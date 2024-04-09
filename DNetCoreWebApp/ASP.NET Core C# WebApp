@@ -2,14 +2,40 @@ ASP.NET Core Crash Course - C# App
 
 https://www.youtube.com/watch?v=BfEjDD8mWYg
 
-Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
+Create new project 
+select option C#, Windows, Web 
+select ASP.NET Core Web Applcation
+Click Create button
+Select MVC
+
+Wukk Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
 Select Autherticaltion type -> Individual Account
+
+Add model Joke
+namespace TestAppWeb.Models
+{
+	public class Joke
+	{
+        public int Id { get; set; }
+		public string JokeQuestion { get; set; }
+		public string JokeAnswer { get; set; }
+		public Joke()
+		{
+
+		}
+
+	}
+}
 
 Build scussfull
 At view could see Sql Server Explorer 
 Select Run at IIS Express home page 
 Build and launch TestAppWeb at web browser 
 https://localhost:44360/
+
+Make sure Data floder has ApplcationDBContext.cs file
+
+Add Controller MVC Controller with views, using Entity Framework
 
 *****************
 TestAppWeb  Home Privacy           Register Login        
