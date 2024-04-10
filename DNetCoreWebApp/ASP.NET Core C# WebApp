@@ -208,6 +208,12 @@ add
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="StudentParents" asp-action="Search">Search</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="ShowSearchForm">Search</a>
+                        </li>
 
 
 At StudentParentControl
