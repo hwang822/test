@@ -2,14 +2,40 @@ ASP.NET Core Crash Course - C# App
 
 https://www.youtube.com/watch?v=BfEjDD8mWYg
 
-Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
+Create new project 
+select option C#, Windows, Web 
+select ASP.NET Core Web Applcation
+Click Create button
+Select MVC
+
+Wukk Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
 Select Autherticaltion type -> Individual Account
+
+Add model Joke
+namespace TestAppWeb.Models
+{
+	public class Joke
+	{
+        public int Id { get; set; }
+		public string JokeQuestion { get; set; }
+		public string JokeAnswer { get; set; }
+		public Joke()
+		{
+
+		}
+
+	}
+}
 
 Build scussfull
 At view could see Sql Server Explorer 
 Select Run at IIS Express home page 
 Build and launch TestAppWeb at web browser 
 https://localhost:44360/
+
+Make sure Data floder has ApplcationDBContext.cs file
+
+Add Controller MVC Controller with views, using Entity Framework
 
 *****************
 TestAppWeb  Home Privacy           Register Login        
@@ -36,6 +62,20 @@ namespace TestAppWebModels
 
 ***********************************
 Add MVC Controller with views, using Enity Framwrlk
+
+Right click controller to select add MVC Controller with view using Entity Framework, click Add
+Select Model class with studient model, DBContext class with db.
+Views checks
+Generate Views
+Reference script lib
+Use a layout page
+Click Add button 
+
+Will create Controllers and Views file base on data model.
+
+
+
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -168,6 +208,12 @@ add
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="StudentParents" asp-action="Search">Search</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Search" asp-action="ShowSearchForm">Search</a>
+                        </li>
 
 
 At StudentParentControl
@@ -223,6 +269,94 @@ using Microsoft.AspNetCore.Authorization;
 [Authorize]
 
 ******************************
+html design 
+https://www.youtube.com/watch?v=FQdaUv95mR8
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta>
+</head>
+<body>
+
+	<img src="teasses.jpg" width="400" height="50" alt="teasses main page">
+	<h1>PDSES Application</h1>
+	<h2>Student</h2>
+<!-- add comments here -->
+	<section>
+		 
+		<p><em><b>Parent/Guardian</b></em>
+		<u>Educator</u>
+		Other
+		New
+		</p>
+		<ul>
+			<li>Parent/Guardian</li>
+			<li>Educator</li>
+			<li>Other</li>
+			<li>New</li>
+		</ul>
+		
+		<ol>
+			<li>Parent/Guardian</li>
+			<li>Educator</li>
+			<li>Other</li>
+			<li>New</li>
+		</ol>
+		
+		<p>
+		I want to learn more about </br>
+		Special Education Referral Process </br>
+		Special Education Resources/Information </br>
+		Complaints/Dispute Resolution </br>
+		</p>
+		
+		<a herf="www.cnn.com">www.cnn.com</a>
+
+		<p><vidio> src="tea.mp4" controls type="vidio/mp4 "width="400"</vidio></p>
+
+		<p><audio> src="tea.mp3" controls type="audio/mp3"</audio></p>
+		
+		<p>
+			<table border='1'>
+				<tr>  <!-- table row -->
+					<th>Last Name>  
+					
+					<th>First Name>
+				</tr>
+				<tr>				
+					<td>Address>
+					<td>City>
+				</tr>
+			<table>
+		</p>
+		<p>
+		<form>
+			<lable>Last Name:</lable>  		
+			<input name ="lastName"></br></br>  				
+			<lable>First Name:<>
+			<input name ="firstName"></br></br>		
+			<lable>Address:</lable>
+			<input name ="address"></br></br>
+			<lable>City:</lable>
+			<input name ="city"></br></br>
+			<lable>DOB:</lable>
+			<input type"date" name ="dob"></br></br>
+			<input type="submit" name ="submit"></br></br>
+			
+			<label for="Would you like to receive communication from the Texas Eduction Agency">Yes</label><br>
+			<input type="checkbox" id="html" name="fav_language" value="HTML">
+			<label for="html">Yes</label><br>
+			<input type="checkbox" id="css" name="fav_language" value="CSS">
+			<label for="css">No</label><br>
+			
+		</form>		
+		</p>
+
+	</section>
+</body>
+</html>
 
 
 
