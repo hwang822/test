@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\HWang\\test\\ReciptBook.api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|c:\\hwang\\test\\reciptbook.api\\reciptbook.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|solutionrelative:reciptbook.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|c:\\hwang\\test\\reciptbook.api\\reciptbook.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|solutionrelative:reciptbook.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|c:\\hwang\\test\\reciptbook.api\\reciptbook.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E5E5C005-1AED-420F-AF42-483981138B9E}|ReciptBook.api\\ReciptBook.api.csproj|solutionrelative:reciptbook.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ReciptBook.api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ReciptBook.api\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T20:37:23.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\appsettings.json",
+              "RelativeDocumentMoniker": "ReciptBook.api\\appsettings.json",
+              "ToolTip": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\appsettings.json",
+              "RelativeToolTip": "ReciptBook.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-22T20:36:28.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ReciptBook.api\\appsettings.Development.json",
+              "ToolTip": "C:\\HWang\\test\\ReciptBook.api\\ReciptBook.api\\appsettings.Development.json",
+              "RelativeToolTip": "ReciptBook.api\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-22T20:31:30.959Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+ASP.NET Core Crash Course - C# App
+
+https://www.youtube.com/watch?v=BfEjDD8mWYg
+
+Create Test webapp broject type ASP.NET Core Web App (Model-View-Controller)
+Select Autherticaltion type -> Individual Account
+
+Build scussfull
+At view could see Sql Server Explorer 
+Select Run at IIS Express home page 
+Build and launch TestAppWeb at web browser 
+https://localhost:44360/
+
+*****************
+TestAppWeb  Home Privacy           Register Login        
+Welcome 
+Learn about building Web apps with ASP.NET Core.
+*****************
+Add model folder add StudentParent class with properties. 
+namespace TestAppWebModels
+{
+    public class StudentParent
+    {
+        public int Id { get; set; }
+        public int Name { get; set; }
+        public int Infomation { get; set; }
+
+        public StudentParent()
+        {
+
+        }
+
+
+    }
+}
+
+***********************************
+Add MVC Controller with views, using Enity Framwrlk
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using TestAppWeb.Data;
+using TestAppWeb.Models;
+
+namespace TestAppWeb.Controllers
+{
+    public class StudentParentsController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public StudentParentsController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: StudentParents
+        public async Task<IActionResult> Index()
+        {
+              return _context.StudentParent != null ? 
+                          View(await _context.StudentParent.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.StudentParent'  is null.");
+        }
+
+        // GET: StudentParents/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.StudentParent == null)
+
+StudentParent view files with Delete, Create, Detail, Edit, index cshtml files are created.
+
+test https://localhost:44360/StudentParents
+Get error:
+A database operation failed while processing the request.
+SqlException: Cannot open database "aspnet-TestAppWeb-5cd0c076-6599-4c82-b386-34a15bcbc386" requested by the login. The login failed. Login failed for user 'TEA\hwang'.
+
+Need add database
+
+*******************
+Go VS\View\Other Windows\Package Manager Consoles 
+Install new dependences
+
+
+PM> add-migration "initialsetup"
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 6.0.28 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.28' with options: None
+To undo this action, use Remove-Migration.
+
+new files 20240319185233_initialsetup.cs created under PDSESWebApp\Data\Migrations\20240319185233_initialsetup.cs
+
+namespace TestAppWeb.Data.Migrations
+{
+    public partial class initialsetup : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.CreateTable(
+                name: "StudentParent",
+
+O ject Relation Mapper (ORM) Mapping Model class SutdentParent to db table StudentParent
+Traditon way DAO
+
+Run PM> update-database
+two tables are created User, StudentParent
+Could view at SQL server object exploer
+
+Run https://localhost:44360/StudentParents again
+Could see page
+TestAppWeb Home Privacy         Register    Login
+Index
+Create New
+Name	Infomation
+
+Click Create New Button
+
+Create  
+StudentParent
+Name
+Infomation
+Back to List
+To input new name and information
+
+***************
+Test Create, Exit, Delete, Detail button
+
+Index
+Create New
+
+Name	               Infomation	
+Henry Wang	         Houston, TX	      Edit | Details | Delete
+Bill Akin	           Austin, TX	        Edit | Details | Delete  
+Troy Dudley	         Woodland, TX	      Edit | Details | Delete
+
+https://localhost:44360/StudentParents/Details/3
+Details
+StudentParent
+Name
+Troy Dudley
+Infomation
+Woodland, TX
+Edit | Back to List
+********************
+Chagne Home page in CSS, html, and bootstrap
+At
+StudentParent\View\Shared\Layout.cshtml
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+
+********************
+
+Add Search item at Navgitar bar
+At Views\Shared\layout.chhml
+add 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="StudentParents" asp-action="Search">Search</a>
+                        </li>
+
+
+At StudentParentControl
+add 
+        // GET: StudentParent/Search
+        public async Task<IActionResult> Search()
+        {
+            return View();
+        }
+
+At StudentParentControl\view
+add Search.cs
+    Right click StudentParentControl Search to add Razor View.
+View Name: Search
+Template" Create
+Model Class: TestAppWeb.Models.StudentParent
+Options: Create as a partial view
+
+<h4>Seach Student Parent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Results">
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"></label>
+                <input name="SearchPhrase" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+Add Search Results Control Method for asp-action="Results" 
+
+// POST: StudentParent/Results
+        public async Task<IActionResult> Results(String searchPhrase)
+        {
+            return View("Index", await _context.StudentParent.Where( j => j.Name.Contains
+            (searchPhrase)).ToListAsync());
+        }
+
+****************
+Add required Log In function
+
+Add Authorize function to StudentParentsController.cs
+using Microsoft.AspNetCore.Authorization;
+[Authorize]
+
+******************************
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+@ReciptBook.api_HostAddress = http://localhost:5199
+
+GET {{ReciptBook.api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

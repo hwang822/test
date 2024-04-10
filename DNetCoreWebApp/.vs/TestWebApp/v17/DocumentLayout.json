@@ -1,7 +1,74 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\HWang\\test\\DNetCoreWebApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\controllers\\studentparentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\controllers\\studentparentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\migrations\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\migrations\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\studentparents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\studentparents\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\studentparents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\studentparents\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\studentparents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\studentparents\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\studentparents\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\studentparents\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\models\\studentparents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\models\\studentparents.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|c:\\hwang\\test\\dnetcorewebapp\\testappweb\\views\\studentparents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E646277D-AC4C-4D4D-905F-9F49D8B55C31}|TestAppWeb\\TestAppWeb.csproj|solutionrelative:testappweb\\views\\studentparents\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\Home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\PdsesApplication\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6676094-83C5-4DAB-89CD-B9069781285C}|TestWebApi\\TestAppWebApi.csproj|c:\\hwang\\test\\dnetcorewebapp\\testwebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6676094-83C5-4DAB-89CD-B9069781285C}|TestWebApi\\TestAppWebApi.csproj|solutionrelative:testwebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +76,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -21,7 +88,216 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JokesController.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\JokesController.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Controllers\\JokesController.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\JokesController.cs",
+              "RelativeToolTip": "TestAppWeb\\Controllers\\JokesController.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAUwFgAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:48:30.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TestAppWeb\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAMwAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:36:17.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentParentsController.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\StudentParentsController.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Controllers\\StudentParentsController.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\StudentParentsController.cs",
+              "RelativeToolTip": "TestAppWeb\\Controllers\\StudentParentsController.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAowG0AAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T13:18:48.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Migrations\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Migrations\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Migrations\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TestAppWeb\\Migrations\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAAAUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:34:09.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Joke.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Models\\Joke.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Models\\Joke.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Models\\Joke.cs",
+              "RelativeToolTip": "TestAppWeb\\Models\\Joke.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:28:25.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-09T23:15:45.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-09T23:19:53.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TestAppWeb\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T23:25:46.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\StudentParents\\Edit.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Edit.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\StudentParents\\Edit.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-27T13:35:20.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Index.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\StudentParents\\Index.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Index.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\StudentParents\\Index.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T18:37:45.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Search.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\StudentParents\\Search.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Search.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\StudentParents\\Search.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T18:39:12.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Details.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\StudentParents\\Details.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Details.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\StudentParents\\Details.cshtml",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-08T18:41:20.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudentParents.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Models\\StudentParents.cs",
+              "RelativeDocumentMoniker": "TestAppWeb\\Models\\StudentParents.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Models\\StudentParents.cs",
+              "RelativeToolTip": "TestAppWeb\\Models\\StudentParents.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T19:50:09.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-28T20:20:31.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Create.cshtml",
+              "RelativeDocumentMoniker": "TestAppWeb\\Views\\StudentParents\\Create.cshtml",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestAppWeb\\Views\\StudentParents\\Create.cshtml",
+              "RelativeToolTip": "TestAppWeb\\Views\\StudentParents\\Create.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAAAwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-27T13:17:13.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\PdsesApplication\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\..\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\PdsesApplication\\Index.cshtml",
+              "ToolTip": "C:\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\PdsesApplication\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\..\\PDSES\\pdses\\Solution\\Tea.PDSES.Web\\Views\\PdsesApplication\\Index.cshtml",
+              "ViewState": "AQIAAJoAAAAAAAAAAADwv6YAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-27T14:45:17.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\HWang\\test\\DNetCoreWebApp\\TestWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "TestWebApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\HWang\\test\\DNetCoreWebApp\\TestWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "TestWebApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T21:42:00.678Z"
             }
           ]
         }
