@@ -328,5 +328,75 @@ namespace Delegates
     5. Strengthen CPU - 
     6. Review Access - 
     
+❤.NET design patterns
 
+1. What are SOLID principles?
+SOLID principles are a set of design guidelines that enhance software structure, making it more understandable, maintainable, and extensible. They were proposed by Robert C. Martin and include the following principles:
 
+	Single Responsibility Principle (SRP): A class should have only one responsibility, ensuring 	neat and compact code.
+
+	Open/Closed Principle (OCP): Classes should be open for extension but closed for 	modification. New functionalities can be added through inheritance.
+	Liskov Substitution Principle (LSP): Derived classes should seamlessly replace base class 	objects without breaking code.
+	
+	Interface Segregation Principle (ISP): Interfaces should be specific to client needs.
+
+	Dependency Inversion Principle (DIP): High-level modules should not depend on low-level 	modules; both should depend on abstractions.
+
+	What is the Single Responsibility Principle (SRP)?
+	SRP states that a class should have one and only one responsibility. Each class should 	handle a single problem, task, or concern. For example:
+
+C#
+
+public class Membership
+{
+    public void Add()
+    {
+        try
+        {
+            // TO DO
+        }
+        catch (Exception ex)
+        {
+            var logger = new FileLogger();
+            logger.LogError(ex.Message);
+        }
+    }
+}
+
+public class FileLogger
+{
+    public void LogError(string error)
+    {
+        File.WriteAllText(@"c:\Error.txt", error);
+    }
+}
+
+	AI-generated code. Review and use carefully. More info on FAQ.
+	Here, each class has a distinct responsibility: Membership handles addition, and FileLogger 	logs errors1.
+	What is the Open/Closed Principle (OCP)?
+	OCP states that a class should be open for extension but closed for modification. Once a 	class is developed and tested, changes should be limited to bug fixes. New functionalities 	can be introduced by extending existing classes. For instance:
+
+C#
+
+public class Membership
+{
+    public virtual int GetTraining()
+    {
+        return 2;
+    }
+}
+
+public class PlusMembership : Membership
+{
+    public override int GetTraining()
+    {
+        return 10;
+    }
+}
+
+AI-generated code. Review and use carefully. More info on FAQ.
+The PlusMembership class extends the base Membership class, adhering to the OCP1.
+
+What is the Liskov Substitution Principle (LSP)?
+LSP asserts that derived classes must be able to substitute any object for their base classes without breaking code. In other words, objects of a parent class can be replaced by objects of its derived classes. Behavior matters more than structure when applying this principle1.
+Feel free to explore these concepts further and practice implementing them in your code! 🚀🔍
