@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{50A734AE-2889-4A8E-88DC-8ED5E511FAB0}|JokeWebApp\\JokeWebApp.csproj|c:\\workarea\\test\\dnetcorewebappandapi\\jokewebapp\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50A734AE-2889-4A8E-88DC-8ED5E511FAB0}|JokeWebApp\\JokeWebApp.csproj|solutionrelative:jokewebapp\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|c:\\workarea\\test\\dnetcorewebappandapi\\jokewebapi\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|solutionrelative:jokewebapi\\controllers\\jokescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6061FCFD-F77D-49E1-A2E2-FB1456CBFDB7}|Joke.Data\\Joke.Data.csproj|c:\\workarea\\test\\dnetcorewebappandapi\\joke.data\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6061FCFD-F77D-49E1-A2E2-FB1456CBFDB7}|Joke.Data\\Joke.Data.csproj|solutionrelative:joke.data\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|c:\\workarea\\test\\dnetcorewebappandapi\\jokewebapi\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|solutionrelative:jokewebapi\\models\\joke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC3DEFC9-BAF2-43B2-BB2B-8A48F49FE0C1}|Solution Items{FC3DEFC9-BAF2-43B2-BB2B-8A48F49FE0C1}|C:\\Workarea\\test\\DNetCoreWebAppAndApi\\ASP.NET Core C# Web App and Api Readme||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FC3DEFC9-BAF2-43B2-BB2B-8A48F49FE0C1}|Solution Items{FC3DEFC9-BAF2-43B2-BB2B-8A48F49FE0C1}|solutionrelative:ASP.NET Core C# Web App and Api Readme||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|c:\\workarea\\test\\dnetcorewebappandapi\\jokewebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2C747F2-341D-4645-82DC-C871E26F6E9B}|JokeWebApi\\JokeWebApi.csproj|solutionrelative:jokewebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JokesController.cs",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApp\\Controllers\\JokesController.cs",
+              "RelativeDocumentMoniker": "JokeWebApp\\Controllers\\JokesController.cs",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApp\\Controllers\\JokesController.cs",
+              "RelativeToolTip": "JokeWebApp\\Controllers\\JokesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T21:09:54.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Joke.cs",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\Joke.Data\\Models\\Joke.cs",
+              "RelativeDocumentMoniker": "Joke.Data\\Models\\Joke.cs",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\Joke.Data\\Models\\Joke.cs",
+              "RelativeToolTip": "Joke.Data\\Models\\Joke.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T20:50:12.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "JokeWebApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "JokeWebApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T20:33:22.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Joke.cs",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Models\\Joke.cs",
+              "RelativeDocumentMoniker": "JokeWebApi\\Models\\Joke.cs",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Models\\Joke.cs",
+              "RelativeToolTip": "JokeWebApi\\Models\\Joke.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T20:24:40.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JokesController.cs",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Controllers\\JokesController.cs",
+              "RelativeDocumentMoniker": "JokeWebApi\\Controllers\\JokesController.cs",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\Controllers\\JokesController.cs",
+              "RelativeToolTip": "JokeWebApi\\Controllers\\JokesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T20:02:49.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ASP.NET Core C# Web App and Api Readme",
+              "DocumentMoniker": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\ASP.NET Core C# Web App and Api Readme",
+              "RelativeDocumentMoniker": "ASP.NET Core C# Web App and Api Readme",
+              "ToolTip": "C:\\Workarea\\test\\DNetCoreWebAppAndApi\\ASP.NET Core C# Web App and Api Readme",
+              "RelativeToolTip": "ASP.NET Core C# Web App and Api Readme",
+              "ViewState": "AQIAAAoBAAAAAAAAAADwvxYBAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-14T19:52:31.91Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

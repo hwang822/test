@@ -1,0 +1,2 @@
+C:\Workarea\test\DNetCoreWebAppAndApi\Joke.Data\obj\Debug\Joke.Data.csproj.AssemblyReference.cache
+C:\Workarea\test\DNetCoreWebAppAndApi\Joke.Data\obj\Debug\Joke.Data.csproj.CoreCompileInputs.cache
