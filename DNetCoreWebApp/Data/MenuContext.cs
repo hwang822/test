@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace JokeWebApp.Data
 {
-/*
+
     public class MenuContext : DbContext
     {
         public MenuContext(DbContextOptions <MenuContext> options ) : base(options)
@@ -42,6 +42,4 @@ namespace JokeWebApp.Data
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<DishIngredient> DashIngredients { get; set; }
     }
-*/
-
 }

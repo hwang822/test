@@ -225,6 +225,37 @@ using Microsoft.AspNetCore.Authorization;
 ******************************
 
 
+create new database todoappDB at SQL Server HWNAG-LENOVO
+
+change connection string at appsettings.json
+
+  "ConnectionStrings": {
+    //wokring at local database SQLServerExpress file SQLServer mssqllocaldb and table scame Database=aspnet-JokeWebApp-6d90364e-91b9-4811-90ac-3ed177714396;
+    //"DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=aspnet-JokeWebApp-6d90364e-91b9-4811-90ac-3ed177714396;Trusted_Connection=True;MultipleActiveResultSets=true",
+    //wokring at SQLServer at HWANG-LENOVO table todoappDB; need table scame MenuContext.cs  update-database at project mnager console
+    "DefaultConnection": "Server=HWANG-LENOVO;Database=todoappDB;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+
+Create three models Dish.cs, Ingredient.cs and DishIngredient.cs
+Create MenuContext.cs
+
+run view\Other Windows\Pack Manager Console 
+PM> Add-Migration firstMigration
+It will migrate and ApplicationDbContext.cs (joke) MenuContext.cs (dish, ingerdient, dishingerdient) to thress table schames 
+
+PM> update-database
+
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+      ...
+      Done.
+PM> 
+
+It will using schames to create database tables in DB
+
+
 
 
 
