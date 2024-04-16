@@ -7,13 +7,11 @@ namespace JokeWebApi.Controllers
 {
 
 
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class JokesController : ControllerBase
     {
         [HttpGet]
-
-        //public async Task<IActionResult> GetAllJokes()
         public async Task<ActionResult<List<Joke>>> GetAllJokes()
         {
             var jokes = new List<Joke>{

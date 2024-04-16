@@ -8,74 +8,73 @@ Select Autherticaltion type -> Individual Account
 Build scussfull
 At view could see Sql Server Explorer 
 Select Run at IIS Express home page 
-Build and launch TestAppWeb at web browser 
+Build and launch JokeAppWeb at web browser 
 https://localhost:44360/
 
 *****************
-TestAppWeb  Home Privacy           Register Login        
+JokeAppWeb  Home Privacy           Register Login        
 Welcome 
 Learn about building Web apps with ASP.NET Core.
 *****************
-Add model folder add StudentParent class with properties. 
-namespace TestAppWebModels
+Add models folder add JokeApp class with properties. 
+namespace JokeWebApp.Models
 {
-    public class StudentParent
-    {
+	public class JokeApp
+	{
+
+        [Required]
         public int Id { get; set; }
-        public int Name { get; set; }
-        public int Infomation { get; set; }
 
-        public StudentParent()
-        {
+        [Required]
+        [DisplayName("Joke Question")]
 
-        }
+        public string JokeQuestion { get; set; }
+
+        [Required]
+        [DisplayName("Joke Answer")]
+        public string JokeAnswer { get; set; }
 
 
-    }
+	}
 }
 
 ***********************************
 Add MVC Controller with views, using Enity Framwrlk
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using TestAppWeb.Data;
-using TestAppWeb.Models;
 
-namespace TestAppWeb.Controllers
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using JokeWebApp.Data;
+using JokeWebApp.Models;
+
+namespace JokeWebApp.Controllers
 {
-    public class StudentParentsController : Controller
+    public class JokeAppController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public StudentParentsController(ApplicationDbContext context)
+
+        public JokeAppController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: StudentParents
+        // GET: Jokes
         public async Task<IActionResult> Index()
         {
-              return _context.StudentParent != null ? 
-                          View(await _context.StudentParent.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.StudentParent'  is null.");
+            return View(await _context.Joke.ToListAsync());
         }
 
-        // GET: StudentParents/Details/5
-        public async Task<IActionResult> Details(int? id)
+        // GET: Jokes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
         {
-            if (id == null || _context.StudentParent == null)
+            return View();
+        }
 
-StudentParent view files with Delete, Create, Detail, Edit, index cshtml files are created.
+Right Click JokeAppConroler to add JokeApp View With JokeApp Model 
 
-test https://localhost:44360/StudentParents
-Get error:
-A database operation failed while processing the request.
-SqlException: Cannot open database "aspnet-TestAppWeb-5cd0c076-6599-4c82-b386-34a15bcbc386" requested by the login. The login failed. Login failed for user 'TEA\hwang'.
+Right Click JokeAppConroler to add JokeApp View view files with Delete, Create, Detail, Edit, index cshtml files are created.
+
+
 
 Need add database
 
@@ -83,6 +82,26 @@ Need add database
 Go VS\View\Other Windows\Package Manager Consoles 
 Install new dependences
 
+defatul ApplicationDbContext is avalaible 
+
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using JokeWebApp.Models;
+
+namespace JokeWebApp.Data
+{
+	public class ApplicationDbContext : IdentityDbContext
+	{
+		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+			: base(options)
+		{
+		}
+	    public DbSet<JokeWebApp.Models.JokeApp> Joke { get; set; } = default!;
+	    public DbSet<JokeWebApp.Models.JokeApi> JokeViewModel { get; set; } = default!;
+    }
+}
+
+default db at Server=(localdb)\\mssqllocaldb file. Set database server at later
 
 PM> add-migration "initialsetup"
 Build started...
@@ -93,57 +112,82 @@ To undo this action, use Remove-Migration.
 
 new files 20240319185233_initialsetup.cs created under PDSESWebApp\Data\Migrations\20240319185233_initialsetup.cs
 
-namespace TestAppWeb.Data.Migrations
+It is database schame
+
+namespace JokeWebApp.Data.Migrations
 {
+    /// <inheritdoc />
     public partial class initialsetup : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "StudentParent",
+                name: "Joke",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    JokeQuestion = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    JokeAnswer = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Joke", x => x.Id);
+                });
+        }
 
-O ject Relation Mapper (ORM) Mapping Model class SutdentParent to db table StudentParent
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "Joke");
+        }
+    }
+}
+
+
+O ject Relation Mapper (ORM) Mapping Model class JokeApp to db table StudentParent
 Traditon way DAO
 
 Run PM> update-database
-two tables are created User, StudentParent
+two tables are created User, Joke
 Could view at SQL server object exploer
 
-Run https://localhost:44360/StudentParents again
+Run https://localhost:7268/JokeApp again
 Could see page
-TestAppWeb Home Privacy         Register    Login
+JokeAppWeb Home Privacy         Register    Login
 Index
 Create New
 Name	Infomation
 
 Click Create New Button
 
-Create  
-StudentParent
-Name
-Infomation
+Create
+Joke
+Joke Question
+Joke Answer
 Back to List
-To input new name and information
 
 ***************
 Test Create, Exit, Delete, Detail button
 
-Index
-Create New
+Edit
+Joke
+Joke Question
+Who is Henry?
+Joke Answer
+Not me.
+Back to List
 
-Name	               Infomation	
-Henry Wang	         Houston, TX	      Edit | Details | Delete
-Bill Akin	           Austin, TX	        Edit | Details | Delete  
-Troy Dudley	         Woodland, TX	      Edit | Details | Delete
-
-https://localhost:44360/StudentParents/Details/3
 Details
-StudentParent
-Name
-Troy Dudley
-Infomation
-Woodland, TX
+Joke
+Joke Question
+Who is Henry?
+Joke Answer
+Not me.
 Edit | Back to List
+
 ********************
 Chagne Home page in CSS, html, and bootstrap
 At
@@ -165,25 +209,25 @@ StudentParent\View\Shared\Layout.cshtml
 Add Search item at Navgitar bar
 At Views\Shared\layout.chhml
 add 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="StudentParents" asp-action="Search">Search</a>
-                        </li>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="JokeApp" asp-action="ShowSearchForm">Search</a>
+    </li>
 
-
-At StudentParentControl
+At JokeAppController
 add 
-        // GET: StudentParent/Search
+        // GET: JokeApp/Search
         public async Task<IActionResult> Search()
         {
             return View();
         }
 
-At StudentParentControl\view
+At JokeAppControl\view
 add Search.cs
-    Right click StudentParentControl Search to add Razor View.
+    Right click JokeAppControl Search to add Razor View.
 View Name: Search
 Template" Create
-Model Class: TestAppWeb.Models.StudentParent
+Model Class: Models.JokeApp
 Options: Create as a partial view
 
 <h4>Seach Student Parent</h4>
@@ -208,7 +252,7 @@ Options: Create as a partial view
 
 Add Search Results Control Method for asp-action="Results" 
 
-// POST: StudentParent/Results
+// POST: JokeAppController/Results
         public async Task<IActionResult> Results(String searchPhrase)
         {
             return View("Index", await _context.StudentParent.Where( j => j.Name.Contains
@@ -218,7 +262,7 @@ Add Search Results Control Method for asp-action="Results"
 ****************
 Add required Log In function
 
-Add Authorize function to StudentParentsController.cs
+Add Authorize function to JokeAppController.cs
 using Microsoft.AspNetCore.Authorization;
 [Authorize]
 
@@ -269,13 +313,15 @@ Add new api controller (Empty) at JokeWebApi project
 
 namespace JokeWebApi.Controllers
 {
-    [Route("api/[controller]")]
+namespace JokeWebApi.Controllers
+{
+
+
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class JokesController : ControllerBase
     {
         [HttpGet]
-
-        //public async Task<IActionResult> GetAllJokes()
         public async Task<ActionResult<List<Joke>>> GetAllJokes()
         {
             var jokes = new List<Joke>{
@@ -293,12 +339,108 @@ namespace JokeWebApi.Controllers
 
 to ring up Swagger UI for API data transation
 
-Joke{
-id	integer($int32)
-jokeQuestion	string
-nullable: true
-jokeAnswer	string
-nullable: true
+Jokes
+GET
+/api/Jokes/GetAllJokes
+
+'https://localhost:7281/api/Jokes/GetAllJokes'
+
+	
+Response body
+Download
+[
+  {
+    "id": 1,
+    "jokeQuestion": "Who is John?",
+    "jokeAnswer": "He is a dog"
+  }
+]
+
+***************************
+JokeApp share api data 
+
+https://www.youtube.com/watch?v=_TgiJR13cT4
+
+How To Consume WEB API in ASP.NET Core MVC | ASP.NET Web API | Read Data
+
+Add JokeApiController at JokeApp Controllers
+
+using JokeWebApp.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+
+namespace JokeWebApp.Controllers
+{
+    public class JokeApiController : Controller
+    {
+        Uri baseAddress = new Uri("https://localhost:7281/api");
+
+        private readonly HttpClient _client;
+
+        public JokeApiController()
+        {
+            _client = new HttpClient();
+            _client.BaseAddress = baseAddress;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            List<JokeApi> jokeList = new List<JokeApi>();
+            HttpResponseMessage respone = _client.GetAsync(_client.BaseAddress + "/Jokes/GetAllJokes").Result;
+            //api url action format  [Route("api/[controller]/[action]")] 
+
+            if (respone.IsSuccessStatusCode)
+            {
+                string data = respone.Content.ReadAsStringAsync().Result;
+                jokeList = JsonConvert.DeserializeObject<List<JokeApi>>(data);
+            }
+            return View(jokeList);
+        }
+    }
 }
 
+Right cleck JokeApiController to
+Add JokeApi View at Views folder with JokeApi model
+
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace JokeWebApp.Models
+{
+    public class JokeApi
+    {
+        public int Id { get; set; }
+
+        [Required]
+        [DisplayName("Joke Question")]
+
+        public string JokeQuestion { get; set; }
+
+        [Required]
+        [DisplayName("Joke Answer")]
+        
+        public string JokeAnswer { get; set; }
+
+    }
+}
+
+Test run https://localhost:7268/JokeApi
+
+will see data from api
+
+JokeWebApp
+Home
+Privacy
+JokeApp
+JokeApi
+Search
+Register
+Login
+Create New
+
+Joke Question	Joke Answer	
+Who is John?	He is a dog	Edit | Details | Delete
+
+***********************
 

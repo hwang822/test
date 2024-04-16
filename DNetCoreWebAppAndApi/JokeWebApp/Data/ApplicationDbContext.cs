@@ -10,6 +10,7 @@ namespace JokeWebApp.Data
 			: base(options)
 		{
 		}
-	    public DbSet<JokeWebApp.Models.Joke> Joke { get; set; } = default!;
+	    public DbSet<JokeWebApp.Models.JokeApp> Joke { get; set; } = default!;
+	    public DbSet<JokeWebApp.Models.JokeApi> JokeViewModel { get; set; } = default!;
     }
 }

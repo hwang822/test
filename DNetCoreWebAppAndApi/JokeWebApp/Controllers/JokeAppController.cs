@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using JokeWebApp.Data;
 using JokeWebApp.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace JokeWebApp.Controllers
 {
-    public class JokesController : Controller
+    public class JokeAppController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public JokesController(ApplicationDbContext context)
+
+        public JokeAppController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -35,6 +30,7 @@ namespace JokeWebApp.Controllers
         // POST: Jokes/ShowSearchResult
         public async Task<IActionResult> ShowSearchResult(String SearchPhrase)
         {
+
             return View("Index", await _context.Joke.Where(j => j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());
         }
 
@@ -71,7 +67,7 @@ namespace JokeWebApp.Controllers
         [ValidateAntiForgeryToken]
         //[Authorize]
 
-        public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
+        public async Task<IActionResult> Create([Bind("Id,JokeQuestion,JokeAnswer")] JokeApp joke)
         {
             if (ModelState.IsValid)
             {
@@ -105,7 +101,7 @@ namespace JokeWebApp.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //[Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,JokeQuestion,JokeAnswer")] Joke joke)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,JokeQuestion,JokeAnswer")] JokeApp joke)
         {
             if (id != joke.Id)
             {

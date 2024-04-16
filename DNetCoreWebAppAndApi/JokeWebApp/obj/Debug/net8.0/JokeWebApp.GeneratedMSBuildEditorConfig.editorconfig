@@ -38,28 +38,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcQ3JlYXRlLmNzaHRtbA==
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwaVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRGVsZXRlLmNzaHRtbA==
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRGV0YWlscy5jc2h0bWw=
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcRWRpdC5jc2h0bWw=
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcSW5kZXguY3NodG1s
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Jokes/ShowSearchForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZXNcU2hvd1NlYXJjaEZvcm0uY3NodG1s
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/JokeApp/ShowSearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9rZUFwcFxTaG93U2VhcmNoRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Workarea/test/DNetCoreWebAppAndApi/JokeWebApp/Views/Shared/Error.cshtml]
