@@ -444,3 +444,131 @@ Who is John?	He is a dog	Edit | Details | Delete
 
 ***********************
 
+https://www.youtube.com/watch?v=Fp6s89A136Q
+Asp.Net Core Web API - CRUD operations in REST API using Entity Framework Core and SQL Server
+
+Create Models\Brands.cs
+
+namespace JokeWebApi.Models
+{
+    public class Brands
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public string Category { get; set; }
+        public int IsActive { get; set; }
+
+    }
+}
+
+add Microsoft.EntityFrameworkCore to Api project
+
+Creates Models\BrandContext.cs
+
+{
+    public class BrandContext : DbContext
+    {
+        public BrandContext(DbContextOptions<BrandContext> options) : base(options)
+        {
+            
+        }
+
+        public DbSet<Brands> Brands {  get; set; }
+        
+    }
+}
+
+add db connection string to appsetings.json
+    "DefaultConnection": "Server=HWANG-LENOVO;Database=todoappDB;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+
+
+
+
+// Add services to the container to Api/Program.
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+    builder.Services.AddDbContext<BrandContext>(options =>
+        options.UseSqlServer(connectionString));
+
+    var app = builder.Build();
+
+Build and run api
+
+Go to View\Other Windows\Package Manager Console
+
+PM>  add-migration initial
+Build started...
+Build succeeded.
+To undo this action, use Remove-Migration.
+PM> 
+
+build database schame
+
+PM> update-database
+Build started...
+Build succeeded.
+Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+
+will create new database Brands
+
+Will see database Brands
+Id	Name	Category	IsActive
+
+Add BrandController
+with Get, Post,...
+
+Build Run
+
+Click Post Brand
+
+{
+  "id": 0,
+  "name": "Apple IPhone",
+  "category": "Mobile Phone",
+  "isActive": 1
+}
+
+Execut
+
+Crate a data a db table
+
+Id	Name	Category	IsActive
+1	Apple   IPhone	    Mobile Phone	1
+
+
+{
+  "id": 0,
+  "name": "Huaiwek IPhone",
+  "category": "Mobile Phone",
+  "isActive": 1
+}
+
+Execut
+
+Crate another data a db table
+
+Id	Name	        Category	    IsActive
+1	Apple IPhone	Mobile Phone	1
+2	Huaiwei Phone	mobile phone	1
+
+
+Click Get Brands
+
+	
+Response body
+Download
+[
+  {
+    "id": 1,
+    "name": "Apple IPhone",
+    "category": "Mobile Phone",
+    "isActive": 1
+  },
+  {
+    "id": 2,
+    "name": "Huaiwei Phone",
+    "category": "mobile phone",
+    "isActive": 1
+  }
+]
