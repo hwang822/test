@@ -1,4 +1,4 @@
-using JokeWebApi.Models;
+using JokeWebApi.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,12 +10,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
     builder.Services.AddDbContext<BrandContext>(options =>
         options.UseSqlServer(connectionString));
 
-    var app = builder.Build();
+// Add services to the container.
+//builder.Services.AddDbContext<JockContext>(options =>
+//    options.UseSqlServer(connectionString));
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

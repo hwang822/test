@@ -1,4 +1,5 @@
-﻿using JokeWebApi.Models;
+﻿using JokeWebApi.Data;
+using JokeWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -11,18 +12,26 @@ namespace JokeWebApi.Controllers
     {
         private readonly BrandContext _dbContext;
 
-        public BrandController(BrandContext brandContext)
+        public BrandController(BrandContext dbContext)
         {
-            _dbContext = brandContext;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Brand>>> GetBrands()
+        public async Task<ActionResult<Brand>> GetBrands()
         {
-            if (_dbContext.Brands == null) {
+            if (_dbContext.Brands == null)
+            {
                 return NotFound();
             }
-            return await _dbContext.Brands.ToListAsync();
+
+            var brand = await _dbContext.Brands.ToListAsync();    ;
+
+            if ((brand == null) || brand.Count == 0)
+            {
+                return NotFound();
+            }
+            return Ok(brand); ;
         }
 
         [HttpGet("{id}")]

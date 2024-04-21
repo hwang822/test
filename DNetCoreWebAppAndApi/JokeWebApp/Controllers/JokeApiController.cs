@@ -20,9 +20,7 @@ namespace JokeWebApp.Controllers
         public IActionResult Index()
         {
             List<JokeApi> jokeList = new List<JokeApi>();
-            HttpResponseMessage respone = _client.GetAsync(_client.BaseAddress + "/Jokes/GetAllJokes").Result;
-            //api url action format  [Route("api/[controller]/[action]")] 
-
+            HttpResponseMessage respone = _client.GetAsync(_client.BaseAddress + "/Brand/GetBrands").Result;
             if (respone.IsSuccessStatusCode)
             {
                 string data = respone.Content.ReadAsStringAsync().Result;

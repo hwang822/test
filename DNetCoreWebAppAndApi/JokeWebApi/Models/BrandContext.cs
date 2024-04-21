@@ -1,16 +1,17 @@
 ﻿using JokeWebApi.Controllers;
+using JokeWebApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace JokeWebApi.Models
+namespace JokeWebApi.Data
 {
     public class BrandContext : DbContext
     {
         public BrandContext(DbContextOptions<BrandContext> options) : base(options)
         {
-            
+
         }
 
-        public DbSet<Brand> Brands {  get; set; }
-        
+        public DbSet<Brand> Brands { get; set; }
+
     }
 }
