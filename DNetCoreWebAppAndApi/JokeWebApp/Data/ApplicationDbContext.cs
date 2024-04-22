@@ -11,6 +11,5 @@ namespace JokeWebApp.Data
 		{
 		}
 	    public DbSet<JokeWebApp.Models.JokeApp> Joke { get; set; } = default!;
-	    public DbSet<JokeWebApp.Models.JokeApi> JokeViewModel { get; set; } = default!;
     }
 }

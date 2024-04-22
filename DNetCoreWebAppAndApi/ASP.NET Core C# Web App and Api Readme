@@ -386,16 +386,16 @@ namespace JokeWebApp.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            List<JokeApi> jokeList = new List<JokeApi>();
+            List<JokeApi> brandList = new List<BrandApi>();
             HttpResponseMessage respone = _client.GetAsync(_client.BaseAddress + "/Jokes/GetAllJokes").Result;
             //api url action format  [Route("api/[controller]/[action]")] 
 
             if (respone.IsSuccessStatusCode)
             {
                 string data = respone.Content.ReadAsStringAsync().Result;
-                jokeList = JsonConvert.DeserializeObject<List<JokeApi>>(data);
+                brandList = JsonConvert.DeserializeObject<List<JokeApi>>(data);
             }
-            return View(jokeList);
+            return View(brandList);
         }
     }
 }
