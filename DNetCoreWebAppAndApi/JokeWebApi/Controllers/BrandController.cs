@@ -1,12 +1,15 @@
 ﻿using JokeWebApi.Data;
 using JokeWebApi.Models;
+using JokeWebApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace JokeWebApi.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    //[ServiceFilter(typeof(AuthorizeAttribute))]
+    [Authorize]
+	[Route("api/[controller]/[action]")]
     [ApiController]
     public class BrandController : ControllerBase
     {
