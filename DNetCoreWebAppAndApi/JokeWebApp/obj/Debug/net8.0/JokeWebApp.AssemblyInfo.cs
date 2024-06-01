@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-JokeWebApp-6d90364e-91b9-4811-90ac-3ed177714396")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JokeWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb80668f65f5c756e747c3ea8ac493eb0b853d49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0da0d1289f6c3840367a906bd5809b48462978c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("JokeWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JokeWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
