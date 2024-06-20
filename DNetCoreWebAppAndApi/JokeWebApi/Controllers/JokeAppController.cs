@@ -101,7 +101,7 @@ namespace JokeWebApp.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //[Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,JokeQuestion,JokeAnswer")] JokeApp joke)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,JokeQuestion,JokeAnswer")] JokeWebApp.Models.JokeApp joke)
         {
             if (id != joke.Id)
             {

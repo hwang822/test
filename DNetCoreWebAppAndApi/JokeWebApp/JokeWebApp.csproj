@@ -8,11 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\MenuContext.cs" />
+    <Compile Remove="Data1\MenuContext.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Data\MenuContext.cs" />
+    <None Include="Data1\MenuContext.cs" />
   </ItemGroup>
 
   <ItemGroup>
