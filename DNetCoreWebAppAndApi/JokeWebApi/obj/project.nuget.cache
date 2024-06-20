@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3qgQhNjRqF36DYdAYGl7+0XIf4iVaDz8A9V2D4XREk2SOYR5nvq+zzJDtL3oghMeDkWI3D9UWVpVNAcaio8Www==",
+  "dgSpecHash": "tqj6AxrX6tQFkh4OSwQAKIGtqMrIecqXDuaZbUdkOwbTxA7cNPrZpUBWFN5VJ5DDAnU6oW0rkd3pPEiLnNsvxQ==",
   "success": true,
   "projectFilePath": "C:\\HWang\\test\\test\\DNetCoreWebAppAndApi\\JokeWebApi\\JokeWebApi.csproj",
   "expectedPackageFiles": [
