@@ -7,6 +7,7 @@ namespace JokeWebApp.Controllers
 {
     public class JokeAppController : Controller
     {
+
         private readonly ApplicationDbContext _context;
 
 

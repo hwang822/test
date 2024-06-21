@@ -103,6 +103,7 @@ namespace JokeWebApp.Data
 
 default db at Server=(localdb)\\mssqllocaldb file. Set database server at later
 
+VS/View/Other Windows/Package Manager Console
 PM> add-migration "initialsetup"
 Build started...
 Build succeeded.
