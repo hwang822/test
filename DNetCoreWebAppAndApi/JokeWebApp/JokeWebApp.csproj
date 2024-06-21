@@ -9,12 +9,10 @@
 
   <ItemGroup>
     <None Remove="Views\JokeApp\JavascriptView.html" />
-    <None Remove="Views\JSApp\JavascriptView.html" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Views\JokeApp\JavascriptView.html" />
-    <Content Include="Views\JSApp\JavascriptView.html" />
   </ItemGroup>
 
   <ItemGroup>

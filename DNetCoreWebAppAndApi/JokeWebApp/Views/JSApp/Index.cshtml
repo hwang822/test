@@ -64,18 +64,23 @@
             <label for="website">Website Name</label>
             <input type="text" name="website" id="website" />
         </div>
+        <label for="attachfile" class="btn btn-primary">Attach...</label>
+        <div class="file_inputs">
+            <input id="attachfile" name="UploadedFiles" type="file" class="form-control" style="visibility:hidden;" multiple>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Url</th>
+                    <th>Website</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
         <button>Submit</button>
     </form>
-    <table>
-        <thead>
-            <tr>
-                <th>Url</th>
-                <th>Website</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+
     <script>
         const formEl = document.querySelector("form");
         const tbodyEl = document.querySelector("tbody");
