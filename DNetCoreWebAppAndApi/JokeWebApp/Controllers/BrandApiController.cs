@@ -1,6 +1,7 @@
-﻿using JokeWebApp.Models;
+﻿//using JokeWebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using JokeWebApi.Models;
 
 namespace JokeWebApp.Controllers
 {
