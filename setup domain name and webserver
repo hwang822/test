@@ -1,4 +1,49 @@
-gpay domain name at 101domain.com gm_dl00 mixwellsoftware.com
+Pay domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
+
+get myip from google 73.76.215.86
+
+C:\Users\hwang>ping 73.76.215.86
+
+Pinging 73.76.215.86 with 32 bytes of data:
+Reply from 73.76.215.86: bytes=32 time=17ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+
+go to Squarespace.com hwem_Dl@00
+Select Domains\mixwellsoftware.com\DNS
+
+remove Squarespace Ddefault reocred for mixwellsoftware.com host
+Add Custome records
+Host: @, Type: A, Priority: -, Data: 73.76.215.86
+Save cahnged.
+
+Would be able to ping: www.mixwellsoftware.com
+
+*****************
+
+open a browser on your device and type the Arris modem login IP in the address bar, which is 192.168.0.1. After you press enter, you will be taken to the Arris modem login page. 
+
+https://www.cleancss.com/router-default/192.168.0.1
+
+192.168.0.1 Admin Login
+Username: admin
+Password: admin
+Login To Your Router
+http://192.168.0.1Enter the IP 192.168.0.1 into your browser and pressing enter.
+If no login screen shows up, try finding the correct IP address for your router by Searching for your router
+adminadminEnter your router username.
+This could be admin, or one of these If you changed the username on the router and can't remember it, try resetting your router
+Enter your router password.
+This could be admin, or one of these
+Press Enter, or click the login button.
+If you get a login error, try finding the correct default login info for your router and try again.
+
+Click Admin Login
+***************************
+
+
+
+
+pay domain name at 101domain.com gm_dl00 mixwellsoftware.com
 get myip from google 73.232.210.61
 set myip to www.mixwellsfotware.com. click mixwellsfotware\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX)
 Edit mixwellsoftware.com Record to 73.232.210.61
