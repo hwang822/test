@@ -18,6 +18,12 @@ Save cahnged.
 
 Would be able to ping: www.mixwellsoftware.com
 
+Could set bublic SSL certificate squarespace.com
+
+access Arris Router
+http://192.168.0.1/
+
+
 *****************
 
 open a browser on your device and type the Arris modem login IP in the address bar, which is 192.168.0.1. After you press enter, you will be taken to the Arris modem login page. 
