@@ -22,7 +22,8 @@ Could set bublic SSL certificate squarespace.com
 
 access Arris Router
 http://192.168.0.1/
-
+username: admin
+password: Dl@00
 
 ******************
 TeamViewer download and install\
