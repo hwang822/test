@@ -33,7 +33,58 @@ Wireless 5 GHz
 Wireless Network Name (SSID): ARRIS-D86D-5G
 Wi-Fi Security Key: delanyin00
 
+DHCP
+Enable DHCP	
+IP Address	
+73.76.215.86
 
+Subnet Mask	
+255.255.254.0
+
+Gateway Address	
+73.76.214.1
+
+
+LAN Settings
+You can make changes to the Local Area Network (LAN) here. For changes to take effect, you must press the 'Apply' button at the bottom of the screen.
+LAN IP Settings
+IP Address	
+192.168.0.1
+
+Subnet Mask	
+255.255.255.0
+
+DHCP Server Settings
+Enable DHCP Server	
+Start IP Address	
+192.168.0.2
+
+End IP Address	
+192.168.0.254
+
+Lease Time	
+3600
+
+Domain Name	
+www.mixwellsoftware.com
+
+DNS Override
+Enable DNS Override	
+Primary DNS Server IP	
+75.75.75.75
+
+Secondary DNS Server IP	
+75.75.76.76
+
+Tertiary DNS Server IP	
+0.0.0.0
+
+NAT
+NAT Mode	
+RoutedWithNAT
+
+UPnP
+Enable UPnP	
 
 ******************
 TeamViewer download and install\
