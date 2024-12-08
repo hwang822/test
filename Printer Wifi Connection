@@ -1,18 +1,20 @@
-******************************************************https://www.youtube.com/watch?v=7Q1TkTBNV9wHow to print from iPad /iPhone with non Airprint PrinterLook for your printer to be listed at support.apple.com/kb/HT4356...Canon MF449dwCanon MF449x...
+******************************************************
+
+https://www.youtube.com/watch?v=7Q1TkTBNV9wHow to print from iPad/iPhone with non Airprint 
+PrinterLook for your printer to be listed at support.apple.com/kb/HT4356...Canon MF449dwCanon MF449x...
+
 Canon MF4700 is not in the list. no airprint compatible.
 Have to use a wifi/ethernet networking print driver.
+
 Go to ipad setting wifi to select Canon MF4700 connected to home networking hw-orbi.Go to photo to select one photo to share\print.It can not select one printer.No AirPrint Printers Found.
 have to download the Canon Printer driver for MF4700 IOS driver IOS version.
 Canon PRINT Inkjet/SELPHY is the print and scan app for PIXMA, MAXIFY and SELPHY from you iPad, iPhone or iPod touch.
-
-
 
 ******************************************************
 https://www.youtube.com/watch?v=CWMPMs0W29o
 How to Connect Printer to Wifi Router | Convert Any Printer using Ethernet Port
 
 My home printer Canon printer MF7500 series connected to router at IP: 192.168.1.2
-
 go to 192.168.1.1 Router site
 ADVANCED\Attached Devices
 Canon Printer MF4700 IP: 192.168.1.2
@@ -31,14 +33,7 @@ Click "Canon MF4700 Sedries" added list print will get driver with printer.
 Canon MF4700 Series (FAX)
 Canon MF4700 UFRII LT
 Canon MF4700 UFRII LT XPS
-
 After installed app 
-
 "Canon MF4700 Sedries"\Manage\Properties 
 Checked CNMFNP_2C9EFC62F5C8   Canon MFNP Port   Canon MF4700
-
 Click Test Printer
-
-
-
-
