@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=QG7fYShkNXA
 
-Remote access Bowen-PC
+Remote access HWang822-PC-HOME 
 
 Step1: Enable Remote Desktop
 
@@ -9,21 +9,15 @@ Control Panel\System and Security\System\Advanced system sttings\System Properti
         
 Step2: Configure Remote Desktop without Password
 
-Search and Run gpedit.msc command
+run window left-lower coner Windows Start Icon\Setting\Sign-in options\Passwrod.
+remote Password setting and save.
 
-Local Group Policy Editor 
- Select Local Computer Policy\Computer Configuration\Windows Settings\Security Settings\Local Policy\Security Options
-         \Accounts:Limit local account use of blank passowrd to console logon only\check Disabled
-         
-Step3: Update Policy
+Step3: HW822 as defautl windows login user.
+type netplwiznet at run box to start
+select defatut UserName Mixwell Software as Administrators
+Check Users must enter a User name and password (empty password) to use this computer.
 
-Run CMD as Administorator (search and right click)
-
-C:\WINDOWS\system32>gpupdate /force
-Updating policy...
-
-Computer Policy update has completed successfully.
-User Policy update has completed successfully.
+Computer login without password has completed successfully.
 
 Step4: Check IP Client
 Set statick IP addr: 192.168.1.200
