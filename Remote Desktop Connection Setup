@@ -19,8 +19,44 @@ Check Users must enter a User name and password (empty password) to use this com
 
 Computer login without password has completed successfully.
 
+************************
+
+Download and Run Remote Desktop Connections app to other pc (HWANG-LAPTOP)
+
+connection computer to: HWANG-PC or 192.168.1.200. Click connect.
+Will ask Remote PC login user name: Mixwell Software and Password: 
+It hads logor in error.
+
+https://www.youtube.com/watch?v=k6qwAc8U5xM
+Fix Enter Network Credentials Error on Windows 11/10 (Guide)
+
+1. user right username and password.
+    HWANG-PC username is Mixwell Software but not HWANG822
+2. Go to Control Panel, Select Catgeory/Lager Icons
+   Select Network and Sharing Center/Change advanced Sharein setting.
+    Expended All Networks
+    turn password protection Shareing. 
+3. At run box type local sectuity Policy and Open it.
+   Select Local policy\Security Options/Account LImit Local account use of blank passwords to console logon only
+    double click to open to make sure it is enabled.
+4. Search Setting. Select Network & Internet\Advanced network settings\Nwtowrk reset\REset Now \Yes
+5. Restart PC to cofimed change.
+
+************************************************
+connection coputer to HWANG-PC cross internet.
+
+
+
+
+
+
+
+
+
 Step4: Check IP Client
 Set statick IP addr: 192.168.1.200
+
+
 
 For remote from outside networking
 go to 192.168.1.1 (admin dl00)
