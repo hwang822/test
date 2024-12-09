@@ -31,75 +31,20 @@ https://www.youtube.com/watch?v=k6qwAc8U5xM
 Fix Enter Network Credentials Error on Windows 11/10 (Guide)
 
 1. user right username and password.
-    HWANG-PC username is Mixwell Software but not HWANG822
+    HWANG-PC username is Contro but not HWANG822
 2. Go to Control Panel, Select Catgeory/Lager Icons
    Select Network and Sharing Center/Change advanced Sharein setting.
     Expended All Networks
-    turn password protection Shareing. 
+    turn off password protection Shareing. 
 3. At run box type local sectuity Policy and Open it.
    Select Local policy\Security Options/Account LImit Local account use of blank passwords to console logon only
     double click to open to make sure it is enabled.
-4. Search Setting. Select Network & Internet\Advanced network settings\Nwtowrk reset\REset Now \Yes
+4. Search Setting. Select Network & Interne\Nwtowrk reset\Reset Now \Yes
 5. Restart PC to cofimed change.
 
 ************************************************
 connection coputer to HWANG-PC cross internet.
 
+1. At remote PC seach Remote Desktop Setting.
 
-
-
-
-
-
-
-
-Step4: Check IP Client
-Set statick IP addr: 192.168.1.200
-
-
-
-For remote from outside networking
-go to 192.168.1.1 (admin dl00)
-http://192.168.1.1/adv_index.htm\BASIC\Internet Setup\Use Static IP Address: 98.197.25.132
-http://192.168.1.1/adv_index.htm\ADVANCED\Advanced Setup\Port Forwarding/Port Triggering\Sernce Name: Remote\External Ports: 3389\Internal Ports: 3389\Internal IP address 192.168.1.200
-
-Step 5: Check Username
-This PC\Manager\System Tools\Local Users and Groups\Users\hwang822
-
-Go to client PC to install and run Rmeote Desktop Connection
-Copunter: 192.168,1.200
-Connect Button
-
-username: hw822 password: dl00
-
-only one could access this coputer. Leave hoem, log out BOWEN_PC to let remote connection only (to avoid ask access permit).
-
-how to setup remote desktop connection from outside network
-https://www.youtube.com/watch?v=2-gFrpI0GxU
-
-Set statice IP Address
-
-Use the following IP address
-IP address:     192.168.1.200
-Subnet mask:    255.255.55.0
-Defatul gateway:192.158.1.1
-
-Use the follwing DNS Server addresses
-Preferred DNS server: 192.168.1.1
-Alternate DNS server: 8.8.8.8
-
-Go to client PC to install and run Rmeote Desktop Connection
-Copunter: 98.197.25.132:3389
-Connect Button
-
-username: hw822 password: dl00
-
-
-
-
-
-
-
-
-
-
+2. Run Remote Desktop UserName: Mixwell Software, 
