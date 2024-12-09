@@ -16,6 +16,74 @@ Add Custome records
 Host: @, Type: A, Priority: -, Data: 73.76.215.86
 Save cahnged.
 
+C:\Users\hwang>ping mixwellsoftware.com
+
+Pinging mixwellsoftware.com [73.76.215.86] with 32 bytes of data:
+Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=1ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=1ms TTL=63
+
+Ping statistics for 73.76.215.86:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 2ms, Average = 1ms
+
+C:\Users\hwang>
+
+******************************
+At local server under xfintes through Arris Modlem 73.76.215.86. And gateway raute TP-LINK (192.168.1.1)
+The server PC name is HWANG-PC. AAssigned IP 192.168.1.100
+
+How to Port Forward in TP-Link Router
+https://www.youtube.com/watch?v=LtkOeZ907p0
+
+Got TP-LINK login 
+192.168.1.1
+un: admin
+pw: dl00
+
+Step1; Set route static ip address
+
+Go to: 192.168.1.1/TP-LINK/DHCP/DHCP Clients List/
+
+DHCP Clients List
+ID	Client Name	    MAC Address	      Assigned IP	  Lease Time
+1	  HWang-PC	      6C-62-6D-44-A5-72	192.168.1.100	01:08:24
+2	  hwang822-Laptop	60-D8-19-12-BA-70	192.168.1.101	01:28:03
+3	  SipuraSPA	      00-0E-08-2E-81-96	192.168.1.103	01:27:56
+4	  HWANG-Lenovo	  9C-2D-CD-D6-77-A9	192.168.1.120
+
+Go to: 192.168.1.1/TP-LINK/DHCP/Address Reservation/Add New
+MAC Address: 6C-62-6D-44-A5-72
+Reserved IP Address: 192.168.1.100
+
+Go to: 192.168.1.1/TP-LINK/DHCP/Forwarding/Vistual Servers
+Add or Modify a Virtual Server Entry
+Service Port:	25565
+Internal Port:	
+IP Address:	192.168.1.100
+Protocol:	TCP
+Status:	Enabled
+Common Service Port:--Select One--
+
+ID	Service Port	Internal Port	IP Address	  Protocol	Status	  Modify
+1	  7771	        7771	        192.168.0.102	ALL	      Disabled	Modify Delete
+2	  7772	        7772	        192.168.0.108	ALL	      Disabled	Modify Delete
+3	  7770	        7770	        192.168.0.109	ALL	      Disabled	Modify Delete
+4	  25565	        25565	        192.168.1.100	TCP	      Enabled	  Modify Delete
+5	  19132-19133	  19132-19133	  192.168.1.100	UDP	      Enabled	  Modify Delete
+6	  25565	        25565	        192.168.1.100	UDP	      Enabled	  Modify Delete
+
+Go to networkappers.com to check port forarding.
+
+
+
+
+
+
+
+
 Would be able to ping: www.mixwellsoftware.com
 
 Could set bublic SSL certificate squarespace.com
