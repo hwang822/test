@@ -48,11 +48,11 @@ Step1; Set route static ip address
 Go to: 192.168.1.1/TP-LINK/DHCP/DHCP Clients List/
 
 DHCP Clients List
-ID	Client Name	    MAC Address	      Assigned IP	  Lease Time
-1	  HWang-PC	      6C-62-6D-44-A5-72	192.168.1.100	01:08:24
-2	  hwang822-Laptop	60-D8-19-12-BA-70	192.168.1.101	01:28:03
-3	  SipuraSPA	      00-0E-08-2E-81-96	192.168.1.103	01:27:56
-4	  HWANG-Lenovo	  9C-2D-CD-D6-77-A9	192.168.1.120
+ID	Client Name	    MAC Address	          Assigned IP	    Lease Time
+1	HWang-PC	    6C-62-6D-44-A5-72	  192.168.1.100	    01:08:24
+2	hwang822-Laptop	60-D8-19-12-BA-70	  192.168.1.101	    01:28:03
+3	SipuraSPA	    00-0E-08-2E-81-96	  192.168.1.103	    01:27:56
+4	HWANG-Lenovo	9C-2D-CD-D6-77-A9	  192.168.1.120
 
 Go to: 192.168.1.1/TP-LINK/DHCP/Address Reservation/Add New
 MAC Address: 6C-62-6D-44-A5-72
@@ -72,128 +72,41 @@ ID	Service Port	Internal Port	IP Address	  Protocol	Status	  Modify
 2	  7772	        7772	        192.168.0.108	ALL	      Disabled	Modify Delete
 3	  7770	        7770	        192.168.0.109	ALL	      Disabled	Modify Delete
 4	  25565	        25565	        192.168.1.100	TCP	      Enabled	  Modify Delete
-5	  19132-19133	  19132-19133	  192.168.1.100	UDP	      Enabled	  Modify Delete
+5	  19132-19133	19132-19133	    192.168.1.100	UDP	      Enabled	  Modify Delete
 6	  25565	        25565	        192.168.1.100	UDP	      Enabled	  Modify Delete
+
+
 
 Go to networkappers.com to check port forarding.
 
+*****************************************
+Could not ping 192.168.1.100
+C:\Users\hwang>ping 192.168.1.100
+
+Pinging 192.168.1.100 with 32 bytes of data:
+Request timed out.
+
+need set firewall in HWANG-PC
+
+go to run box type firewall and got Check firewall status\Turn Windows Defender Firewall off in Private networks Guest or public networks and save.
+
+Then I can ping 192.168.1.100 from hwang822-Laptop
+
+C:\Users\hwang>ping 192.168.1.100
+
+Pinging 192.168.1.100 with 32 bytes of data:
+Reply from 192.168.1.100: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.100: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.100: bytes=32 time<1ms TTL=128
+Reply from 192.168.1.100: bytes=32 time<1ms TTL=128
+
+Ping statistics for 192.168.1.100:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
 
-
-
-
-
-
-Would be able to ping: www.mixwellsoftware.com
-
-Could set bublic SSL certificate squarespace.com
-
-access Arris Router
-http://192.168.0.1/
-username: admin
-password: Dl@00
-
-Wireless 2.4 GHz
-Wireless Network Name (SSID): ARRIS-D86D
-Wi-Fi Security Key: delanyin00
-
-Wireless 5 GHz
-Wireless Network Name (SSID): ARRIS-D86D-5G
-Wi-Fi Security Key: delanyin00
-
-DHCP
-Enable DHCP	
-IP Address	
-73.76.215.86
-
-Subnet Mask	
-255.255.254.0
-
-Gateway Address	
-73.76.214.1
-
-
-LAN Settings
-You can make changes to the Local Area Network (LAN) here. For changes to take effect, you must press the 'Apply' button at the bottom of the screen.
-LAN IP Settings
-IP Address	
-192.168.0.1
-
-Subnet Mask	
-255.255.255.0
-
-DHCP Server Settings
-Enable DHCP Server	
-Start IP Address	
-192.168.0.2
-
-End IP Address	
-192.168.0.254
-
-Lease Time	
-3600
-
-Domain Name	
-www.mixwellsoftware.com
-
-DNS Override
-Enable DNS Override	
-Primary DNS Server IP	
-75.75.75.75
-
-Secondary DNS Server IP	
-75.75.76.76
-
-Tertiary DNS Server IP	
-0.0.0.0
-
-NAT
-NAT Mode	
-RoutedWithNAT
-
-UPnP
-Enable UPnP	
-
-******************
-TeamViewer download and install remote computer login user is mamaber of administrator group. (computer management app could setup)
-
-hwem_dl00
-input remote computer id and pw to connection.
-also could chat and transfer files.
-
-Add coputer to teamviewer group as trust device.
-email will be sent to verify.
-HWang822-Laptop Home\Home\Remote Control\Unattended Access\Easy Access for Henry Wang is granted.
-
-All managed devices: 3/3 devices
-HWANG-LENOVOThis device 1 764 815 629 Now
-HWANG822-LAPTOP-Home 1 524 541 305 Now
-HWANG-PC 1 072 449 548 Now
-
-*****************
-
-open a browser on your device and type the Arris modem login IP in the address bar, which is 192.168.0.1. After you press enter, you will be taken to the Arris modem login page. 
-
-https://www.cleancss.com/router-default/192.168.0.1
-
-192.168.0.1 Admin Login
-Username: admin
-Password: admin
-Login To Your Router
-http://192.168.0.1Enter the IP 192.168.0.1 into your browser and pressing enter.
-If no login screen shows up, try finding the correct IP address for your router by Searching for your router
-adminadminEnter your router username.
-This could be admin, or one of these If you changed the username on the router and can't remember it, try resetting your router
-Enter your router password.
-This could be admin, or one of these
-Press Enter, or click the login button.
-If you get a login error, try finding the correct default login info for your router and try again.
-
-Click Admin Login
-***************************
-
-
-
+****************
 
 pay domain name at 101domain.com gm_dl00 mixwellsoftware.com
 get myip from google 73.232.210.61
