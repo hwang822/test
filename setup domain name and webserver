@@ -16,18 +16,39 @@ Add Custome records
 Host: @, Type: A, Priority: -, Data: 73.76.215.86
 Save cahnged.
 
+Add CNAME www format Custome records
+Host: www, Type: CNAME, Priority: -, Data: mixwellsofteare.com
+Save cahnged.
+
+
+C:\Users\hwang>
 C:\Users\hwang>ping mixwellsoftware.com
 
 Pinging mixwellsoftware.com [73.76.215.86] with 32 bytes of data:
-Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=1ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=1ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
 
 Ping statistics for 73.76.215.86:
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
 Approximate round trip times in milli-seconds:
-    Minimum = 1ms, Maximum = 2ms, Average = 1ms
+    Minimum = 3ms, Maximum = 3ms, Average = 3ms
+
+C:\Users\hwang>https://www.youtube.com/watch?v=LtkOeZ907p0
+
+C:\Users\hwang>ping www.mixwellsoftware.com
+
+Pinging mixwellsoftware.com [73.76.215.86] with 32 bytes of data:
+Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+
+Ping statistics for 73.76.215.86:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 2ms, Maximum = 3ms, Average = 2ms
 
 C:\Users\hwang>
 
