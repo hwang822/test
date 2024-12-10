@@ -150,3 +150,32 @@ type: http/port: 80/IP Address: 192.168.0.109
 click browser to make sure web page could run.
 right cleck BPWEN-PC\hwang822\Sites\mxiwellmvc\Manager Website to start or stop website.
 
+
+
+*********************
+https://www.youtube.com/watch?v=jfSLxs40sIw
+Beginners Guide to Port Forwarding
+
+https://www.youtube.com/watch?v=bh61ngQzE_o
+Watch BEFORE Port Forwarding - The Complete Guide to Port Forwarding
+
+WAN(Arris Modem, 73.76.215.86) ->LAN(Router Default Gateway  192.168.1.1)->
+DHCP Clients List
+ID	Client Name	    MAC Address	          Assigned IP	    Lease Time
+1	HWang-PC	    6C-62-6D-44-A5-72	  192.168.1.100	    01:08:24
+2	hwang822-Laptop	60-D8-19-12-BA-70	  192.168.1.101	    01:28:03
+3	SipuraSPA	    00-0E-08-2E-81-96	  192.168.1.103	    01:27:56
+4	HWANG-Lenovo	9C-2D-CD-D6-77-A9	  192.168.1.120
+
+go to 192.168.1.1
+un: admin
+pw: dl00
+
+TP-LINK(192.168.1.1)\Forwarding\Virtual Servers\Add New..
+Web port would be 80.
+
+Service Port: 80
+Internal Port: 80
+IP Address:	192.168.1.100
+Protocol: ALL
+Status: Enabled
