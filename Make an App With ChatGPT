@@ -1,0 +1,49 @@
+https://www.youtube.com/watch?v=5UYgJ4RFEBI
+
+How To Make an App With ChatGPT (Without Knowing Code)
+
+Capture a Scribe
+Capture a browser.
+
+for example capture a amazion.com
+create a amazion itmes pictures at bowser.
+
+
+At ChatGPT type: can you make a python script that captures a screenshot every time a click my mouse?
+
+ChatGPT: Yes! Here's a Python script that captures a screenshot every time you click your mouse, using the pynput and Pillow libraries:
+
+🔧 Requirements
+Install these Python packages if you haven't already:
+go to VSCode\View\Terminal to run
+pip install pynput pillow
+
+Create pyhon codes:
+
+from pynput import mouse
+from PIL import ImageGrab
+import os
+import time
+
+# Directory to save screenshots
+output_dir = "screenshots"
+os.makedirs(output_dir, exist_ok=True)
+
+def on_click(x, y, button, pressed):
+    if pressed:
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        filename = os.path.join(output_dir, f"screenshot_{timestamp}.png")
+        screenshot = ImageGrab.grab()
+        screenshot.save(filename)
+        print(f"Screenshot saved to {filename}")
+
+# Start listening for mouse clicks
+with mouse.Listener(on_click=on_click) as listener:
+    print("Listening for mouse clicks... Press Ctrl+C to stop.")
+    listener.join()
+
+Opwen VSCode and copy code to VSCode and create a new python codes.
+
+PS C:\Users\hwang\Documents> python C:\Users\hwang\OneDrive\Documents\chatGPTtoPythonApp.py
+click mouse and creted screenshots.png files at 
+C:\Users\hwang\Documents\screenshots
