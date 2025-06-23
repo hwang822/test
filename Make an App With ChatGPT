@@ -47,3 +47,103 @@ Opwen VSCode and copy code to VSCode and create a new python codes.
 PS C:\Users\hwang\Documents> python C:\Users\hwang\OneDrive\Documents\chatGPTtoPythonApp.py
 click mouse and creted screenshots.png files at 
 C:\Users\hwang\Documents\screenshots
+
+
+#########################################
+python_book analysis
+Read pdf file and analyis text data.
+
+open file C:\Workarea\python_book analysis\Read_pdf.py at VSCodes.
+RUnning debug of Read_pdf.py file.
+
+first install pip
+then 
+C:\Workarea\python_book analysis>pip install pydef --user
+C:\Workarea\python_book analysis>pip install pdfplumber --user
+C:\Workarea\python_book analysis>pip install transformers --user
+C:\Workarea\python_book analysis>pip install pandas --user
+
+Running Read_pdf.py
+
+import pypdf
+import pdfplumber
+from transformers import pipeline
+import pandas as pd
+
+def extract_paragraphs_from_pdf(file_path):
+    paragraphs = []
+    with pdfplumber.open(file_path) as pdf:
+        for page in pdf.pages:
+            text = page.extract_text()
+            if text:
+                for line in text.split('\n'):
+                    if line.strip():
+                        paragraphs.append(line.strip())
+    return paragraphs
+
+def split_long_paragraphs(paragraphs, max_length=300):
+    res = []
+    for p in paragraphs:
+        if len(p) <= max_length:
+            res.append(p)
+        else:
+            buf = ""
+            for sent in p.split('。'):
+                if len(buf) + len(sent) < max_length:
+                    buf += sent + "。"
+                else:
+                    res.append(buf)
+                    buf = sent + "。"
+            if buf:
+                res.append(buf)
+    return res
+
+def classify_paragraphs(paragraphs, labels):
+    # Ensure the classifier is initialized
+    if 'classifier' not in globals():
+        global classifier
+        classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
+
+    out = []
+    for i, p in enumerate(paragraphs):
+        res = classifier(p, candidate_labels=labels)
+        out.append({"段落编号": i+1, "分类标签": res['labels'][0], "原文内容": p})
+        if (i+1)%20 == 0:
+            print(f"已分类 {i+1}/{len(paragraphs)} 段...")
+    return out
+
+def save_to_excel(data, path):
+    pd.DataFrame(data).to_excel(path, index=False)
+    print("已保存 Excel：", path)
+
+# Define labels here
+labels = ["事实", "议论", "抒情", "逻辑推理", "结论"]
+
+
+if __name__ == "__main__":
+    paras = extract_paragraphs_from_pdf("Bridge Launching (Marco Rosignoli)(readable).pdf")
+    print(paras)
+
+    split_paras = split_long_paragraphs(paras)
+    print(f"总段落数（拆分后）：{len(split_paras)}")
+
+    # Add the code from cell q3XVaC6A8mvx here
+    print("原始段落数量：", len(paras))
+    print("拆分后段落数量：", len(split_paras))
+
+    # 只看前 2 段是否正常
+    for i, p in enumerate(split_paras[:2]):
+        print(f"段落 {i+1}：{p[:60]}...")
+
+
+    # 只处理前50段以便测试，可根据需要增加
+    results = classify_paragraphs(split_paras[:50], labels)
+
+    if results:
+        excel_path = "bridge_summary.xlsx"
+        save_to_excel(results, excel_path)
+    else:
+        print("没有生成分类结果，跳过保存Excel和Word报告。")
+
+
+
