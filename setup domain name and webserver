@@ -42,8 +42,8 @@ Computer Management (Local)\System Tools\Local Users and Groups\Administrators\
 
 Step3
 Download and Run Remote Desktop Connections app to other pc (HWANG-LAPTOP)
-connection computer to: HWANG-PC or 192.168.1.101 
-at HWang822-LAPTOP-Home run1
+connection computer to: HWang822-LAPTOP-Home or 192.168.1.101 
+at HWang822-LAPTOP-Home run
 C:\Users\hwang>inconfig
 Ethernet adapter 以太网 4:
 
@@ -98,8 +98,8 @@ C:\Users\hwang>ping www.mixwellsoftware.com
 Pinging www.mixwellsoftware.com [73.232.210.61] with 32 bytes of data:
 Reply from 73.232.210.61: bytes=32 time=4ms TTL=64
 
-set web page at pc webroot.
-go to iis magager
+set web page at HWang822-LAPTOP-Home webroot.
+go to iis manager
 right cleck BPWEN-PC\hwang822\Sites\mxiwellmvc\Edit Bindings...
 type: http/port: 80/IP Address: 192.168.0.109
 click browser to make sure web page could run.
