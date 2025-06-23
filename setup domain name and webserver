@@ -1,7 +1,7 @@
 Pay domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
+(Previous DNS pay domain name at 101domain.com gm_dl00 mixwellsoftware.com  3$/year)
 
 get myip from google 73.76.215.86
-
 C:\Users\hwang>ping 73.76.215.86
 
 Pinging 73.76.215.86 with 32 bytes of data:
@@ -30,35 +30,65 @@ Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
 Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
 Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
 
-Ping statistics for 73.76.215.86:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 3ms, Maximum = 3ms, Average = 3ms
+************************************
+Remote access virtue server at HWang822-LAPTOP-Home Setup
+https://www.youtube.com/watch?v=QG7fYShkNXA
+Step1: Enable Remote Desktop
+HWang822-LAPTOP-Home\Control Panel\System\Remote\Desktop\Enable Remote Desktop
 
-C:\Users\hwang>https://www.youtube.com/watch?v=LtkOeZ907p0
+tep2.Add user Mixwell Software - HWang822 to Administrators group
+Run box search Computer Management
+Computer Management (Local)\System Tools\Local Users and Groups\Administrators\
 
-C:\Users\hwang>ping www.mixwellsoftware.com
+Step3
+Download and Run Remote Desktop Connections app to other pc (HWANG-LAPTOP)
+connection computer to: HWANG-PC or 192.168.1.101 
+at HWang822-LAPTOP-Home run1
+C:\Users\hwang>inconfig
+Ethernet adapter 以太网 4:
 
-Pinging mixwellsoftware.com [73.76.215.86] with 32 bytes of data:
-Reply from 73.76.215.86: bytes=32 time=2ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
-Reply from 73.76.215.86: bytes=32 time=3ms TTL=63
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::96d0:1cf:c896:dd65%24
+   IPv4 Address. . . . . . . . . . . : 192.168.1.101
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.1.1
 
-Ping statistics for 73.76.215.86:
-    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-Approximate round trip times in milli-seconds:
-    Minimum = 2ms, Maximum = 3ms, Average = 2ms
+After setup PortForwarding, could connect computer www.mixwellsoftware.com., or 73.76.215.86  Click connect.
+Will ask Remote PC login UN Mixwell Software (HWang822), PW dl00
 
-C:\Users\hwang>
+***********************
 
-*****************************************
-Previous DNS
-pay domain name at 101domain.com gm_dl00 mixwellsoftware.com
-get myip from google 73.232.210.61
-set myip to www.mixwellsfotware.com. click mixwellsfotware\DNS Records\Manage Advanced Domain Record Settings (CNAME, A, MX)
-Edit mixwellsoftware.com Record to 73.232.210.61
-\ViewDNSRecord\ModifyDNSRecord
+Remote Desktop Connection, website, FTP, email, db webapi, TeamViewer, SSL . 
+
+https://www.youtube.com/watch?v=ujMnVCnTFvw
+Double Router Port Forwarding - Port forward through modem and router
+
+https://www.geeksforgeeks.org/50-common-ports-you-should-know/
+
+Arris Modem: External IP Address (public from my IP) 73.76.215.86 , internal address:. 192.168.0.1
+At Arris Modem Setup page 192.168.0.1
+192.168.0.1\DMZ\IP Address Of Virtual DMZ Host\WAN IP\73.76.215.86 (find extern IP address)
+Arris Setup 192.168.0.1\Firewall\Visual Service and Port Forwarding\Add Virtual Sercer
+Description      Inbound Port    Format     Private IP Address      Local Port
+Remote Desktop   3389-3389        Both      192.168.0.15            3389-3389  
+HTTP             80-80            Both      192.168.0.15            80-80
+FTP              21-21            Both      192.168.0.15            21-21
+OpenVPN          1194-1194        Both      192.168.0.15            1194-1194
+MySQL            3306-3306        Both      192.168.0.15            3306-3306
+
+go to 192.168.1.1 to find TP-Linker Router WAN IP Address:	192.168.0.15 
+:TP-Link Router. External IP address: 192.168.0.15, , internal address: 192.168.1.1
+TP-Link Setup 192.168.1.1\Forwarding\Vitual Servers
+
+Description      Inbound Port    Format     Private IP Address       Local Port
+Remote Desktop   3389-3389        Both      192.168.1.101            3389-3389  
+HTTP             80-80            Both      192.168.1.101            80-80
+FTP              21-21            Both      192.168.1.101            21-21
+OpenVPN          1194-1194        Both      192.168.1.101            1194-1194
+MySQL            3306-3306        Both      192.168.1.101            3306-3306
+
+
+
 at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
 At Network tab: to makesure IP address 73.232.210.61
 At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
