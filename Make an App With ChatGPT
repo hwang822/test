@@ -146,4 +146,86 @@ if __name__ == "__main__":
         print("没有生成分类结果，跳过保存Excel和Word报告。")
 
 
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+https://chatgpt.com/c/685afb2f-99ec-800c-8a93-059634a91886
+
+✅ Goal Recap
+Fixed-size window: e.g., 400x300.
+
+Each video frame is resized to fit within that window, preserving aspect ratio.
+
+The result is centered inside the window.
+
+If the aspect ratio doesn't match, it will show black bars (letterboxing or pillarboxing).
+
+✅ Python Script: Fit Entire Video Frame Within a Crop Window
+
+import cv2
+import glob
+import os
+import time
+import numpy as np
+
+# Folder containing videos
+video_folder = "path/to/your/videos"
+video_extensions = ('*.mp4', '*.avi', '*.mov', '*.mkv')
+
+# Size of the fixed crop window
+target_width = 400
+target_height = 300
+
+def get_video_files(folder, extensions):
+    video_files = []
+    for ext in extensions:
+        video_files.extend(glob.glob(os.path.join(folder, ext)))
+    return sorted(video_files)
+
+def letterbox_frame(frame, target_w, target_h):
+    h, w = frame.shape[:2]
+    scale = min(target_w / w, target_h / h)
+    new_w, new_h = int(w * scale), int(h * scale)
+    
+    resized = cv2.resize(frame, (new_w, new_h))
+    result = np.zeros((target_h, target_w, 3), dtype=np.uint8)
+
+    x_offset = (target_w - new_w) // 2
+    y_offset = (target_h - new_h) // 2
+
+    result[y_offset:y_offset+new_h, x_offset:x_offset+new_w] = resized
+    return result
+
+def play_video_fit_in_window(file_path):
+    cap = cv2.VideoCapture(file_path)
+    if not cap.isOpened():
+        print(f"Failed to open {file_path}")
+        return
+
+    print(f"Playing: {file_path}")
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
+
+        fitted = letterbox_frame(frame, target_width, target_height)
+        cv2.imshow("Fit Video in Crop Area", fitted)
+
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            break
+
+    cap.release()
+
+while True:
+    video_files = get_video_files(video_folder, video_extensions)
+    if not video_files:
+        print("No video files found.")
+        break
+
+    for video_file in video_files:
+        play_video_fit_in_window(video_file)
+        time.sleep(1)
+
+cv2.destroyAllWindows()
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 
