@@ -48,13 +48,91 @@ PS C:\Users\hwang\Documents> python C:\Users\hwang\OneDrive\Documents\chatGPTtoP
 click mouse and creted screenshots.png files at 
 C:\Users\hwang\Documents\screenshots
 
+#######################################
 
-#########################################
 python_book analysis
 Read pdf file and analyis text data.
 
 open file C:\Workarea\python_book analysis\Read_pdf.py at VSCodes.
 RUnning debug of Read_pdf.py file.
+
+
+#################################################
+JS to diaply videos at brower
+
+--------------------
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <video id="videoPlayer" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="nextButton">Next Video</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+--------------------
+styles.cs
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+video {
+    width: 80%;
+    max-width: 600px;
+}
+----------------------------
+scripts.js
+const videoFiles = [
+    "videos/20241218 Panama.mp4",
+    "videos/20241221_22 Manta.mp4",
+    "videos/20241222_23 Guito.mp4" // Add more video files as needed
+];
+
+let currentVideoIndex = 0;
+
+const videoPlayer = document.getElementById('videoPlayer');
+const videoSource = document.getElementById('videoSource');
+const nextButton = document.getElementById('nextButton');
+
+function loadVideo(index) {
+    videoSource.src = videoFiles[index];
+    videoPlayer.load();
+}
+
+nextButton.addEventListener('click', () => {
+    currentVideoIndex = (currentVideoIndex + 1) % videoFiles.length;
+    loadVideo(currentVideoIndex);
+});
+
+// Load the first video on page load
+loadVideo(currentVideoIndex);
+
+
+
+
+
+
+#########################################
 
 first install pip
 then 
