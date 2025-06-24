@@ -41,20 +41,28 @@ Run box search Computer Management
 Computer Management (Local)\System Tools\Local Users and Groups\Administrators\
 
 Step3
-Download and Run Remote Desktop Connections app to other pc (HWANG-LAPTOP)
-connection computer to: HWang822-LAPTOP-Home or 192.168.1.101 
-at HWang822-LAPTOP-Home run
+
+at HWang822-LAPTOP-Home using ethernet cable/wilress to Arris-B86DS modelm\router 
+
 C:\Users\hwang>inconfig
 Ethernet adapter 以太网 4:
 
-   Connection-specific DNS Suffix  . :
-   Link-local IPv6 Address . . . . . : fe80::96d0:1cf:c896:dd65%24
-   IPv4 Address. . . . . . . . . . . : 192.168.1.101
+   Connection-specific DNS Suffix  . : www.mixwellsoftware.com
+   IPv6 Address. . . . . . . . . . . : 2601:2c5:c200:cef0:b40a:8dc2:10e5:e664
+   Temporary IPv6 Address. . . . . . : 2601:2c5:c200:cef0:f4f1:5d24:ab53:3e64
+   Link-local IPv6 Address . . . . . : fe80::96d0:1cf:c896:dd65%23
+   IPv4 Address. . . . . . . . . . . : 192.168.0.42
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : 192.168.1.1
+   Default Gateway . . . . . . . . . : fe80::b25d:d4ff:fef7:cf1c%23
+                                       192.168.0.1
 
-After setup PortForwarding, could connect computer www.mixwellsoftware.com., or 73.76.215.86  Click connect.
-Will ask Remote PC login UN Mixwell Software (HWang822), PW dl00
+
+Download and Run Remote Desktop Connections app to other pc (HWANG-LAPTOP-Travel)
+connection computer to: HWang822-LAPTOP-Home or 192.168.0.42 
+
+After setup PortForwarding, could connect computer www.mixwellsoftware.com, or 73.76.215.86  Click connect.
+Will ask Remote PC login UserName: MixwellSoftware (HWang822), PassWord: dl00.
+Saved credentials will be used to connect to this computer. You can edit or delete this credentials.
 
 ***********************
 
@@ -66,37 +74,20 @@ Double Router Port Forwarding - Port forward through modem and router
 https://www.geeksforgeeks.org/50-common-ports-you-should-know/
 
 Arris Modem: External IP Address (public from my IP) 73.76.215.86 , internal address:. 192.168.0.1
-At Arris Modem Setup page 192.168.0.1
+At Arris Modem Setup page 192.168.0.1  (Admin, Dl@00)
 192.168.0.1\DMZ\IP Address Of Virtual DMZ Host\WAN IP\73.76.215.86 (find extern IP address)
 Arris Setup 192.168.0.1\Firewall\Visual Service and Port Forwarding\Add Virtual Sercer
 Description      Inbound Port    Format     Private IP Address      Local Port
-Remote Desktop   3389-3389        Both      192.168.0.15            3389-3389  
-HTTP             80-80            Both      192.168.0.15            80-80
-FTP              21-21            Both      192.168.0.15            21-21
-OpenVPN          1194-1194        Both      192.168.0.15            1194-1194
-MySQL            3306-3306        Both      192.168.0.15            3306-3306
-
-go to 192.168.1.1 to find TP-Linker Router WAN IP Address:	192.168.0.15 
-:TP-Link Router. External IP address: 192.168.0.15, , internal address: 192.168.1.1
-TP-Link Setup 192.168.1.1\Forwarding\Vitual Servers
-
-Description      Inbound Port    Format     Private IP Address       Local Port
-Remote Desktop   3389-3389        Both      192.168.1.101            3389-3389  
-HTTP             80-80            Both      192.168.1.101            80-80
-FTP              21-21            Both      192.168.1.101            21-21
-OpenVPN          1194-1194        Both      192.168.1.101            1194-1194
-MySQL            3306-3306        Both      192.168.1.101            3306-3306
-
-
+Remote Desktop   3389-3389        Both      192.168.0.42            3389-3389  
+HTTP             80-80            Both      192.168.0.42            80-80
+FTP              21-21            Both      192.168.0.42            21-21
+OpenVPN          1194-1194        Both      192.168.0.42            1194-1194
+MySQL            3306-3306        Both      192.168.0.42            3306-3306
 
 at host pc to expore 192.168.0.1 admin dl00 to my router TP-LINK setup
 At Network tab: to makesure IP address 73.232.210.61
-At Forwarding tab: add visutal servers port=80 IP address 192.168.0.109 (get from ipconfig at PC).
+At Forwarding tab: add visutal servers port=80 IP address 192.168.0.42 (get from ipconfig at HW822-Laptop-Home).
 ping http://73.232.210.61 for http://mixwellsoftware.com
-
-C:\Users\hwang>ping www.mixwellsoftware.com
-Pinging www.mixwellsoftware.com [73.232.210.61] with 32 bytes of data:
-Reply from 73.232.210.61: bytes=32 time=4ms TTL=64
 
 set web page at HWang822-LAPTOP-Home webroot.
 go to iis manager
