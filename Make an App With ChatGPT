@@ -226,6 +226,9 @@ if __name__ == "__main__":
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+first install OpenCV lib
+pip install opencv-python --user
+
 https://chatgpt.com/c/685afb2f-99ec-800c-8a93-059634a91886
 
 ✅ Goal Recap
