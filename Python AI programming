@@ -7,7 +7,22 @@ Go to openai.com\api
 login Api platfrom.
 OpenAI developer platform
 
+sample code:
+
+from openai import OpenAI
+client = OpenAI()
+
+response = client.responses.create(
+    model="gpt-5",
+    input="Write a short bedtime story about a unicorn."
+)
+
+print(response.output_text)
+
+run error need to pay
 openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.
+"sk-proj"
+
 ********************
 from openai import OpenAI
 
@@ -51,3 +66,26 @@ response = client.chat.completions.create(
 # Check if the model wants to call a function
 message = response.choices[0].message
 print(message)
+
+******************
+response = client.responses.create(
+    model="gpt-5",
+    input=[
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "input_text",
+                    "text": "What teams are playing in this image?",
+                },
+                {
+                    "type": "input_image",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LeBron_James_Layup_%28Cleveland_vs_Brooklyn_2018%29.jpg"
+                }
+            ]
+        }
+    ]
+)
+
+print(response.output_text)
+
