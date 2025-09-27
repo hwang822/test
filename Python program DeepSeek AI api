@@ -1,0 +1,229 @@
+Yes! DeepSeek provides free and open-source AI APIs that developers can use. Here are the key details:
+
+Free API Access:
+Completely free - no charges for API usage
+
+Rate limits: Currently 100 free requests per day
+
+API endpoints available for various tasks
+
+Available APIs:
+Chat completions (similar to OpenAI's API format)
+
+Embeddings for text representations
+
+Various model sizes to choose from
+
+Open Source Models:
+DeepSeek releases many models as open source on platforms like Hugging Face
+
+Models can be self-hosted for complete control
+
+Commercial use allowed under permissive licenses
+
+Getting Started:
+Sign up for an API key on DeepSeek's platform
+
+Check the official documentation for current rate limits and endpoints
+
+Use the API with standard HTTP requests
+
+Self-Hosting Option:
+Since the models are open source, you can also download and run them on your own infrastructure if you prefer not to use the API.
+
+The free tier is quite generous for development and small projects! Would you like me to help you get started with any specific aspect of using DeepSeek's API?
+
+Give a sample code for Python to program with deepseek api.
+Here's a sample Python code to get started with DeepSeek's API:
+
+Basic Setup
+First, install the required package:
+
+bash
+pip install requests
+Sample Code
+python
+import requests
+import json
+
+class DeepSeekAPI:
+    def __init__(self, api_key):
+        self.api_key = api_key
+        self.base_url = "https://api.deepseek.com/v1"  # Check latest URL in docs
+        self.headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}"
+        }
+    
+    def chat_completion(self, messages, model="deepseek-chat", temperature=0.7, max_tokens=2048):
+        """
+        Send a chat completion request to DeepSeek API
+        """
+        data = {
+            "model": model,
+            "messages": messages,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "stream": False
+        }
+        
+        try:
+            response = requests.post(
+                f"{self.base_url}/chat/completions",
+                headers=self.headers,
+                json=data
+            )
+            response.raise_for_status()
+            
+            result = response.json()
+            return result["choices"][0]["message"]["content"]
+            
+        except requests.exceptions.RequestException as e:
+            print(f"Error making API request: {e}")
+            return None
+
+# Usage example
+def main():
+    # Replace with your actual API key
+    API_KEY = "your_deepseek_api_key_here"
+    
+    # Initialize the API client
+    deepseek = DeepSeekAPI(API_KEY)
+    
+    # Create conversation messages
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Explain quantum computing in simple terms."}
+    ]
+    
+    # Get response from DeepSeek
+    response = deepseek.chat_completion(messages)
+    
+    if response:
+        print("DeepSeek Response:")
+        print(response)
+    else:
+        print("Failed to get response")
+
+if __name__ == "__main__":
+    main()
+More Advanced Example with Error Handling
+python
+import requests
+import json
+from typing import List, Dict, Optional
+
+class DeepSeekChat:
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.base_url = "https://api.deepseek.com/v1"
+        self.headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        }
+        self.conversation_history = []
+    
+    def add_message(self, role: str, content: str):
+        """Add a message to conversation history"""
+        self.conversation_history.append({"role": role, "content": content})
+    
+    def chat(self, 
+             user_message: str,
+             model: str = "deepseek-chat",
+             temperature: float = 0.7,
+             max_tokens: int = 2000) -> Optional[str]:
+        """
+        Send a message and get response
+        """
+        # Add user message to history
+        self.add_message("user", user_message)
+        
+        payload = {
+            "model": model,
+            "messages": self.conversation_history,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "stream": False
+        }
+        
+        try:
+            response = requests.post(
+                f"{self.base_url}/chat/completions",
+                headers=self.headers,
+                json=payload,
+                timeout=30
+            )
+            
+            if response.status_code == 200:
+                data = response.json()
+                assistant_reply = data["choices"][0]["message"]["content"]
+                
+                # Add assistant reply to history
+                self.add_message("assistant", assistant_reply)
+                
+                return assistant_reply
+            else:
+                print(f"API Error: {response.status_code} - {response.text}")
+                return None
+                
+        except Exception as e:
+            print(f"Request failed: {e}")
+            return None
+    
+    def clear_history(self):
+        """Clear conversation history"""
+        self.conversation_history = []
+
+# Example usage
+def example_conversation():
+    API_KEY = "your_api_key_here"  # Get this from DeepSeek platform
+    
+    chat = DeepSeekChat(API_KEY)
+    
+    # Start a conversation
+    responses = [
+        chat.chat("Hello! Can you help me learn Python?"),
+        chat.chat("What are the key features of Python?"),
+        chat.chat("Can you give me a simple example of a Python class?")
+    ]
+    
+    for i, response in enumerate(responses, 1):
+        if response:
+            print(f"Response {i}: {response}\n")
+        else:
+            print(f"Failed to get response {i}")
+    
+    # Clear history for new conversation
+    chat.clear_history()
+
+# Quick one-shot query
+def quick_query():
+    API_KEY = "your_api_key_here"
+    
+    chat = DeepSeekChat(API_KEY)
+    response = chat.chat("What is the capital of France?")
+    print(response)
+
+if __name__ == "__main__":
+    example_conversation()
+    # quick_query()
+Getting Your API Key
+Go to DeepSeek's developer platform
+
+Sign up for an account
+
+Generate an API key in the dashboard
+
+Replace "your_api_key_here" with your actual key
+
+Important Notes
+Rate Limits: Remember the free tier has daily limits (currently 100 requests/day)
+
+Model Options: Check DeepSeek's documentation for available models
+
+Endpoint URL: Verify the latest API endpoint URL in the official documentation
+
+Error Handling: Always implement proper error handling for production use
+
+This should get you started! Would you like me to explain any part in more detail or show you how to implement specific features?
+
