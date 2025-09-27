@@ -1,0 +1,53 @@
+Open VS codes.
+Create a new Pyhon file.
+Open terminal 
+PS C:\Users\hwang> pip3 install openai --user to install openai
+Go to openai.com\api
+
+login Api platfrom.
+OpenAI developer platform
+
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details.
+********************
+from openai import OpenAI
+
+# Initialize the client
+client = OpenAI(api_key="-I6Gmwk_QEsm9sLVwQ4B6n0rhounMsRXUws0QsYU95X5Ezh3ietTSjEld-LsJiTKurJx0bm-uWXT3BlbkFJkjpN1wu4RX1q3dspuXFgMhB21Ebnpwdor0B5SsEs_-fDrtjG_4Nf5B2_c6rWN3GqJOfKCd_b0A")
+
+# Define the function you want the model to call
+functions = [
+    {
+        "name": "get_weather",
+        "description": "Get the current weather for a given location",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "location": {
+                    "type": "string",
+                    "description": "The city and state, e.g. San Francisco, CA"
+                },
+                "unit": {
+                    "type": "string",
+                    "enum": ["celsius", "fahrenheit"],
+                    "description": "Temperature unit"
+                }
+            },
+            "required": ["location"]
+        }
+    }
+]
+
+# Send a chat completion request
+
+response = client.chat.completions.create(
+    model="gpt-4o-mini",  # you can change model
+    messages=[
+        {"role": "user", "content": "What’s the weather like in New York in celsius?"}
+    ],
+    functions=functions,
+    function_call="auto"  # let the model decide
+)
+
+# Check if the model wants to call a function
+message = response.choices[0].message
+print(message)
