@@ -12,6 +12,9 @@ sample code:
 from openai import OpenAI
 client = OpenAI()
 
+https://platform.openai.com/docs/overview
+DlW@000 (12C)
+
 response = client.responses.create(
     model="gpt-5",
     input="Write a short bedtime story about a unicorn."
