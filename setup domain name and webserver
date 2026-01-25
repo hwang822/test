@@ -1,3 +1,57 @@
+After get new router T-Mobile 5G Home netwroking route with mintmobile SIM card. No Static IP avalaible.
+Have to using Cloudflare networking to transfer service requests to my home servers.
+
+外界访问服务时，公网请求首先进入 Cloudflare Edge Network。
+Cloudflare 再通过已建立的 Tunnel，把请求安全地转发到用户内网。
+本地网络只发起出站连接，不再暴露任何入站端口或公网 IP。
+
+1. Go to cloudflare.com hwem-Dl@00
+could buy a new DNS name at cloudflare but I aready has one domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
+cloudflare.com->Account home -> Buy a domain -> Register Domain 
+
+for example
+hwang822.com $10.46 Renews at $10.46/year
+mixwell.ai
+Registry policy requires a minimum registration period of 2 years for the .ai extension.  $70.00/year Renews at $70.00
+
+2. Connect and secure your users, networks, and data with Zero Trust security.
+
+Cloudflare.com->Protect & Connect -> Zeor Trust -> Networks -> Connectors -> Cloudflare Tunnels -> Create a tunnel -> Name your tunnel ->mxiwellsoftware ->Save Tunnel
+-> Choose your environment -> Windows -> Choose an architecture -> 32-bit
+
+A. Download and install https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-386.msi. 
+run cloudflared-windows-386.msi to setup clouddflare tunnel app at home network gateway macehine HWANG-LAPTOP-TRAVEL
+B. open CMD at administorator at HWANG-LAPTOP-TRAVEL and run cloudflared.exe service install eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiMzk3OTkyNTgtZTY3OC00ZjQ2LTgwMmUtNzE1MzBiODQzZmVjIiwicyI6Ik5EZzRNakkwT1dRdFpUTTBZeTAwTlRBNUxXRmpNbUl0TnpjM1lqSTVZamRsTVRnMCJ9
+ INF Installing cloudflared Windows service.
+Your connectors will automatically show here once cloudflared has been successfully installed on your machine.
+It will display install scussfullly 
+-> Click Next button
+C. Route Traffic Add a published application route for pdp.mixwellsoftware.com html  Click  up-right arrow to open
+   Connector diagnostics: Tunnels establish a secure connection between Cloudflare’s edge and your infrastructure
+   Connector ID:  8cec0c6f-7d4b-48ec-84ec-1cf10d1b9c9c
+
+Hostname
+Subdomain:     Domain mixwellsoftware.com  /Path (option)
+DNS Record for pdp.mixwellsoftware.com will be created
+Service
+Type: HTTP     URL: 192.168.12.100:8001 ->Complete Setup
+Data centers: dfw11, dfw06, dfw09, dfw08
+Origin IP: 172.58.48.77: 
+Version: 2026.1.1
+Platform: windows_386
+Private IP: 192.168.1.116
+Hostname: HWANG-LAPTOP-TRAVEL
+
+D. Test 
+
+
+
+
+
+
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 Pay domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
 (Previous DNS pay domain name at 101domain.com gm_dl00 mixwellsoftware.com  3$/year)
 
