@@ -1,4 +1,4 @@
-After get new router T-Mobile 5G Home netwroking route with mintmobile SIM card. No Static IP avalaible.
+After get new router T-Mobile 5G Home netwroking route (T-Mobile 5G Gateway：TMO-G4AR) with mintmobile SIM card. No Static IP avalaible.
 Have to using Cloudflare networking to transfer service requests to my home servers.
 
 外界访问服务时，公网请求首先进入 Cloudflare Edge Network。
@@ -14,6 +14,11 @@ hwang822.com $10.46 Renews at $10.46/year
 mixwell.ai
 Registry policy requires a minimum registration period of 2 years for the .ai extension.  $70.00/year Renews at $70.00
 
+OR
+在 Cloudflare 添加你的域名
+Cloudflare 会给你 2 个 NS
+去 Squarespace：Domains → DNS → Nameservers, 换成 Cloudflare 的 NS,等 5–30 分钟生效
+
 2. Connect and secure your users, networks, and data with Zero Trust security.
 
 Cloudflare.com->Protect & Connect -> Zeor Trust -> Networks -> Connectors -> Cloudflare Tunnels -> Create a tunnel -> Name your tunnel ->mxiwellsoftware ->Save Tunnel
@@ -23,6 +28,11 @@ A. Download and install https://github.com/cloudflare/cloudflared/releases/lates
 run cloudflared-windows-386.msi to setup clouddflare tunnel app at home network gateway macehine HWANG-LAPTOP-TRAVEL
 B. open CMD at administorator at HWANG-LAPTOP-TRAVEL and run cloudflared.exe service install eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiMzk3OTkyNTgtZTY3OC00ZjQ2LTgwMmUtNzE1MzBiODQzZmVjIiwicyI6Ik5EZzRNakkwT1dRdFpUTTBZeTAwTlRBNUxXRmpNbUl0TnpjM1lqSTVZamRsTVRnMCJ9
  INF Installing cloudflared Windows service.
+
+HWang822@HWANG-LAPTOP-TRAVEL MINGW64 ~
+$ cloudflared version
+cloudflared version 2026.1.1 (built 2026-01-19T18:11 UTC)
+
 Your connectors will automatically show here once cloudflared has been successfully installed on your machine.
 It will display install scussfullly 
 -> Click Next button
@@ -31,10 +41,15 @@ C. Route Traffic Add a published application route for pdp.mixwellsoftware.com h
    Connector ID:  8cec0c6f-7d4b-48ec-84ec-1cf10d1b9c9c
 
 Hostname
-Subdomain:     Domain mixwellsoftware.com  /Path (option)
+Subdomain:      
+Domain: mixwellsoftware.com  /Path (option)
 DNS Record for pdp.mixwellsoftware.com will be created
+
 Service
-Type: HTTP     URL: 192.168.12.100:8001 ->Complete Setup
+Type: HTTP     
+URL: 192.168.12.100:8001 
+->Complete Setup
+
 Data centers: dfw11, dfw06, dfw09, dfw08
 Origin IP: 172.58.48.77: 
 Version: 2026.1.1
@@ -42,7 +57,127 @@ Platform: windows_386
 Private IP: 192.168.1.116
 Hostname: HWANG-LAPTOP-TRAVEL
 
-D. Test 
+            mixwellsoftware.com
+        ┌────────┬──────────┬──────────┐
+        │        │          │          │
+      www      cam        nas        api/db
+        │        │          │          │
+        └────────┴──────────┴──────────┘
+                     │
+              Cloudflare
+              (DNS + HTTPS + WAF)
+                     │
+               Cloudflare Tunnel
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+   Web / PDP / API          NAS / DB / Camera
+   (HTTP/HTTPS)             (HTTP / TCP*)
+   192.168.12.x              192.168.12.x
+
+www.yourdomain.com  → http://192.168.12.10:80
+api.yourdomain.com  → http://192.168.12.11:3000
+pdp.yourdomain.com  → http://192.168.12.12:8080
+
+D. at HWang822@HWANG (192.168.12.100) create at web page and launch web service
+mkdir -p ~/mixwell_homepage
+cd ~/mixwell_homepage
+
+using editor create a index.html
+bash:
+python3 -m http.server 8001 --bind 0.0.0.0
+
+
+********************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mixwell Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #cce7ff;
+    }
+
+    .cta {
+      margin-top: 30px;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #00e0ff;
+      color: #003344;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .cta a:hover {
+      background: #ffffff;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #00e0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #aac;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mixwell Software</h1>
+  <p>Smart • Reliable • Scalable Solutions</p>
+  <div class="cta">
+
+
+
 
 
 
