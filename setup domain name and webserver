@@ -87,6 +87,48 @@ using editor create a index.html
 bash:
 python3 -m http.server 8001 --bind 0.0.0.0
 
+http://192.168.1.116:8001/ and http://localhost:8001/ could see webpage.
+
+**************************************************
+Cloudflare Tunnel Easy Tutorial
+https://www.youtube.com/watch?v=ZvIdFs3M5ic&t=126s
+
+build up Cloudflared tunnel in docker one time and auto running forever.
+
+crosstalksolutions.com/blog
+sign in crosstalsolutions.com hwem-Dl@00 to bring dashboard
+
+1. Could buy a new DNS name from cloudflare
+cloudflare.com->Account home -> Domains -> Domain Management -> Buy a domain -> Register Domain
+
+for example
+hwang822.com $10.46 Renews at $10.46/year
+mixwell.ai
+Registry policy requires a minimum registration period of 2 years for the .ai extension.  $70.00/year Renews at $70.00
+
+or 
+2. buy name from DNS provider and onbard this domain to cloudflare account.
+I aready has one domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
+cloudflare.com->Account home -> Domains -> Domain Management -> Onbard a domain
+
+3. cloudflare will create two self DNS names to binding your DNS name. xxxx1.ns.cloudflare.com or xxxx2.ns.cloudflare.com
+
+4. 去 Squarespace：Domains → DNS → Nameservers, 换成 Cloudflare 的 2 NS,等 5–30 分钟生效. cloudflare will hand over mixwellsoftware.com DNS.
+cloudflare.com->Account home ->  -> Domains -> Domain Management -> Domain -> mixwellsoftware.com -> DNS -> DNS Records
+		
+Type     Name     Content                 Proxy status     TTL    Actions
+CNAME    www      mixwellsoftware.com     Proxied          Auto   Edit
+Cloudflare Nameservers
+Every DNS zone on Cloudflare is assigned a set of Cloudflare-branded nameservers.
+Type	 Value
+NS	   ashton.ns.cloudflare.com
+NS	   grace.ns.cloudflare.com
+
+5. Create tunnel at my netwrok gateway computer HWang822@HWANG-LAPTOP-TRAVEL
+cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Create a tunnel -> Tunnel Name: tunnel-docker -> Save tunnel -> Docker (cloudflare connectors install and run)
+
+6. Install Docker Desktop 4.58.0 at HWang822@HWANG-LAPTOP-TRAVEL
+
 
 ********************
 
