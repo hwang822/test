@@ -91,7 +91,7 @@ http://192.168.1.116:8001/ and http://localhost:8001/ could see webpage.
 
 **************************************************
 Cloudflare Tunnel Easy Tutorial
-https://www.youtube.com/watch?v=ZvIdFs3M5ic&t=126s
+https://www.youtube.com/watch?v=ZvIdFs3M5ic
 
 build up Cloudflared tunnel in docker one time and auto running forever.
 
@@ -128,6 +128,32 @@ NS	   grace.ns.cloudflare.com
 cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Create a tunnel -> Tunnel Name: tunnel-docker -> Save tunnel -> Docker (cloudflare connectors install and run)
 
 6. Install Docker Desktop 4.58.0 at HWang822@HWANG-LAPTOP-TRAVEL
+powershell -> PS: wsl --install   // install windows system for Linux for Docker running.
+
+7. start cmd to copy&past tunnel-docker run command 
+    cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Cloudflare Tunnels -> tunnel-docker -> ... Configure -> Docker -> Install and run a connector 
+    -> copy-paste one of the following commands into a CMD:  
+    C:\Windows\System32>docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiZGE5YjJmZjYtNjI0Mi00ODIyLThjMjYtNzYwM2VmODUxYzRiIiwicyI6Ik1ESTRObUZqTmpVdFlXSmhaaTAwWkdJd0xUZzVObVF0TnpnMU1ETTFOR1JoT0RKayJ9
+
+8. Published application routes
+  cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Cloudflare Tunnels -> tunnel-docker -> Published application routes -> + Add a published applicaiton route 
+Edit published application route for tunnel-docker
+
+Hostname
+Subdomain   Domain
+www			mixwellsoftware.com
+Service
+Type    :// URL
+HTTP		192.168.1.116:8001
+
+9. at HWang822@HWANG (192.168.12.100) create at web page and launch web service
+mkdir -p ~/mixwell_homepage
+cd ~/mixwell_homepage
+
+using editor create a index.html
+bash:
+python3 -m http.server 8001 --bind 0.0.0.0
+http://192.168.1.116:8001/ or http://localhost:8001/ or www.mixwellsoftware.com could see webpage.
 
 
 ********************
