@@ -66,19 +66,17 @@ RDP			mixwellsoftware.com			HTTP	localhost:3030
 
 8. at HWang822@HWANG create at web page and launch web service
 using editor create startup.bat
-C:\HWang\MixwellSoftware-Server\Web\startup.bat
+C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat
 @echo off
 cd /d C:\HWang\MixwellSoftware-Server\Web
 python3 -m http.server 8000 --bind 0.0.0.0
-Add Task Scheduler WebServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\Web\startup.bat at system startup. 
+Add a new Task Scheduler WebServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat at system startup. 
 
-C:\HWang\MixwellSoftware-Server\Travel\startup.bat
+C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat
 @echo off
 cd /d C:\HWang\MixwellSoftware-Server\Travel
 python3 -m http.server 8020 --bind 0.0.0.0
-Add Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\Travel\startup.bat at system startup. 
-
-
+Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup. 
 
 7. Set Remote Desktup Connection
 Cloudflare Tunnel 不能直接转发裸 TCP 给 RDP 客户端
