@@ -55,28 +55,35 @@ Cloudflare Tunnel 	cloudflared 	This link opens in a new tab																				
 Edit published application route for tunnel-docker
 
 Hostname								Service
-Subdomain   Domain						Type    :// URL
-www			mixwellsoftware.com			HTTP		localhost:8001
+Subdomain   Domain						Type    ://URL
+www			mixwellsoftware.com			HTTP	localhost:8000
 
-Hostname								Service
 Subdomain   Domain						Type    :// URL
-travel		mixwellsoftware.com			HTTP		localhost:8020
+travel		mixwellsoftware.com			HTTP	localhost:8020
 
-Hostname								Service
-Subdomain   RDP							Type    :// URL
-travel		mixwellsoftware.com			HTTP	localhost:3030
+Subdomain   Domain						Type    :// URL
+RDP			mixwellsoftware.com			HTTP	localhost:3030
+
+8. at HWang822@HWANG create at web page and launch web service
+using editor create startup.bat
+C:\HWang\MixwellSoftware-Server\Web\startup.bat
+@echo off
+cd /d C:\HWang\MixwellSoftware-Server\Web
+python3 -m http.server 8000 --bind 0.0.0.0
+Add Task Scheduler WebServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\Web\startup.bat at system startup. 
+
+C:\HWang\MixwellSoftware-Server\Travel\startup.bat
+@echo off
+cd /d C:\HWang\MixwellSoftware-Server\Travel
+python3 -m http.server 8020 --bind 0.0.0.0
+Add Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\Travel\startup.bat at system startup. 
+
+
 
 7. Set Remote Desktup Connection
 Cloudflare Tunnel 不能直接转发裸 TCP 给 RDP 客户端
 登录 Cloudflare → 浏览器里直接看到 Windows 桌面 (Browser RDP)。	
 
-8. at HWang822@HWANG create at web page and launch web service
-using editor create a startup.bat
-C:\HWang\MixwellSoftware-Server\startup.bat
-@echo off
-cd /d C:\HWang\MixwellSoftware-Server
-python3 -m http.server 8001 --bind 0.0.0.0
-Set Task Scheduler to auto trigger C:\HWang\MixwellSoftware-Server\startup.bat at system startup. 
 
 A. 在你的 Windows 机器上：
 Settings → System → Remote Desktop
