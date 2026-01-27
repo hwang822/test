@@ -79,6 +79,10 @@ python3 -m http.server 8020 --bind 0.0.0.0
 Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup. 
 
 7. Set Remote Desktup Connection
+
+Free & Secure & Fast - RDP Back Home Using Cloudflare Zero Trust VPN Tunnel
+https://www.youtube.com/watch?v=tJuC6y3ci1Q
+
 Cloudflare Tunnel 不能直接转发裸 TCP 给 RDP 客户端
 登录 Cloudflare → 浏览器里直接看到 Windows 桌面 (Browser RDP)。	
 
