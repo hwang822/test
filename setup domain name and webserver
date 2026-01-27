@@ -42,9 +42,11 @@ NS	   grace.ns.cloudflare.com
 5. Create tunnel at my netwrok gateway computer HWang822@HWANG-LAPTOP-TRAVEL
 cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Create a tunnel -> Tunnel Name: MixwellSoftware Cloundflare Tunnel -> Choose an operating system: Windows
   -> Save 
+  -> Download https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.msi.
+  -> Run the installer.
   -> Open Command Prompt as Administrator 
    -> Run the following command: at CMD
-	cloudflared.exe service install eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiMGFjZTY1YzMtNTQ5MS00Zjg5LWJlYmQtYWNmNzJmYTUxNjdkIiwicyI6Ill6STBOVEUyTkRBdFltWmhPQzAwT1RNMkxUaGpaakl0WTJJd09EZzFOVEU0TVRrNCJ9
+	cloudflared.exe service install eyJh...YTUxNjdkIiwicyI6Ill6STBOVEUyTkRBdFltWmhPQzAwT1RNMkxUaGpaakl0WTJJd09EZzFOVEU0TVRrNCJ9
 
 Tunnel name   		Connector type	Connector ID							Tunnel ID								Routes		Status 		Uptime  	Context menu...
 MxiwellSoftware 					65c0067e-32b3-40b3-a149-ed592f54c39b    0ace65c3-5491-4f89-bebd-acf72fa5167d 	--			Healthy     4 hours     Configure
@@ -62,9 +64,9 @@ Subdomain   Domain						Type    :// URL
 travel		mixwellsoftware.com			HTTP	localhost:8020
 
 Subdomain   Domain						Type    :// URL
-RDP			mixwellsoftware.com			HTTP	localhost:3030
+rdp			mixwellsoftware.com			HTTP	localhost
 
-8. at HWang822@HWANG create at web page and launch web service
+7. at HWang822@HWANG create at web page and launch web service
 using editor create startup.bat
 C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat
 @echo off
@@ -78,7 +80,7 @@ cd /d C:\HWang\MixwellSoftware-Server\Travel
 python3 -m http.server 8020 --bind 0.0.0.0
 Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup. 
 
-7. Set Remote Desktup Connection
+8. Set Remote Desktup Connection
 
 Free & Secure & Fast - RDP Back Home Using Cloudflare Zero Trust VPN Tunnel
 https://www.youtube.com/watch?v=tJuC6y3ci1Q
@@ -86,12 +88,29 @@ https://www.youtube.com/watch?v=tJuC6y3ci1Q
 Cloudflare Tunnel 不能直接转发裸 TCP 给 RDP 客户端
 登录 Cloudflare → 浏览器里直接看到 Windows 桌面 (Browser RDP)。	
 
-
 A. 在你的 Windows 机器上：
-Settings → System → Remote Desktop
-打开 Enable Remote Desktop
-记住你的用户名 hwem
+search: download cloudflare zero trust docs download 
+https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/
+bring CMD as adminisitor and trun
+C:\Windows\System32>cloudflared.exe access rdp --hostname rdp.mixwellsoftware.com --url rdp://localhost:3390
+Windows Search Run->mstsc to bring up Remote Desktop Connection dialog
+Computer: localhost:3390
+
+mixwellsoftware.cloudflareaccess.com
+Windows RDP
+Get a login code emailed to you
+Email: hwem
+
+goto email to get confimed codes 348128
+Confirmed.
+Access Requested. Approve
+
+At 
+
+
+
 B. add an application
+Download 
 cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Applications -> Add an appication -> Self-hosted: Select 
   -> Applcation Name: 
 
