@@ -40,34 +40,52 @@ NS	   ashton.ns.cloudflare.com
 NS	   grace.ns.cloudflare.com
 
 5. Create tunnel at my netwrok gateway computer HWang822@HWANG-LAPTOP-TRAVEL
-cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Create a tunnel -> Tunnel Name: tunnel-docker -> Save tunnel -> Docker (cloudflare connectors install and run)
+cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Create a tunnel -> Tunnel Name: MixwellSoftware Cloundflare Tunnel -> Choose an operating system: Windows
+  -> Save 
+  -> Open Command Prompt as Administrator 
+   -> Run the following command: at CMD
+	cloudflared.exe service install eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiMGFjZTY1YzMtNTQ5MS00Zjg5LWJlYmQtYWNmNzJmYTUxNjdkIiwicyI6Ill6STBOVEUyTkRBdFltWmhPQzAwT1RNMkxUaGpaakl0WTJJd09EZzFOVEU0TVRrNCJ9
 
-6. Install Docker Desktop 4.58.0 at HWang822@HWANG-LAPTOP-TRAVEL
-powershell -> PS: wsl --install   // install windows system for Linux for Docker running.
+Tunnel name   		Connector type	Connector ID							Tunnel ID								Routes		Status 		Uptime  	Context menu...
+MxiwellSoftware 					65c0067e-32b3-40b3-a149-ed592f54c39b    0ace65c3-5491-4f89-bebd-acf72fa5167d 	--			Healthy     4 hours     Configure
+Cloudflare Tunnel 	cloudflared 	This link opens in a new tab																						Delete
 
-7. start cmd to copy&past tunnel-docker run command 
-    cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Cloudflare Tunnels -> tunnel-docker -> ... Configure -> Docker -> Install and run a connector 
-    -> copy-paste one of the following commands into a CMD:  
-    C:\Windows\System32>docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiNWE5N2QzZTFiMGI5ZTY1MTdhOGY0ZDcwZTI1ZDc2NTIiLCJ0IjoiZGE5YjJmZjYtNjI0Mi00ODIyLThjMjYtNzYwM2VmODUxYzRiIiwicyI6Ik1ESTRObUZqTmpVdFlXSmhaaTAwWkdJd0xUZzVObVF0TnpnMU1ETTFOR1JoT0RKayJ9
-
-8. Published application routes
-  cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Cloudflare Tunnels -> tunnel-docker -> Published application routes -> + Add a published applicaiton route 
+6. Published application routes
+  cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Networks -> Connectors -> Cloudflare Tunnels -> MxiwellSoftware Cloudflare Tunnel -> Published application routes -> + Add a published applicaiton route 
 Edit published application route for tunnel-docker
 
-Hostname
-Subdomain   Domain
-www			mixwellsoftware.com
-Service
-Type    :// URL
-HTTP		localhost:8001
+Hostname								Service
+Subdomain   Domain						Type    :// URL
+www			mixwellsoftware.com			HTTP		localhost:8001
 
-9. at HWang822@HWANG create at web page and launch web service
+Hostname								Service
+Subdomain   Domain						Type    :// URL
+travel		mixwellsoftware.com			HTTP		localhost:8020
+
+Hostname								Service
+Subdomain   RDP							Type    :// URL
+travel		mixwellsoftware.com			HTTP	localhost:3030
+
+7. Set Remote Desktup Connection
+Cloudflare Tunnel 不能直接转发裸 TCP 给 RDP 客户端
+登录 Cloudflare → 浏览器里直接看到 Windows 桌面 (Browser RDP)。	
+
+8. at HWang822@HWANG create at web page and launch web service
 using editor create a startup.bat
 C:\HWang\MixwellSoftware-Server\startup.bat
 @echo off
 cd /d C:\HWang\MixwellSoftware-Server
 python3 -m http.server 8001 --bind 0.0.0.0
 Set Task Scheduler to auto trigger C:\HWang\MixwellSoftware-Server\startup.bat at system startup. 
+
+A. 在你的 Windows 机器上：
+Settings → System → Remote Desktop
+打开 Enable Remote Desktop
+记住你的用户名 hwem
+B. add an application
+cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Applications -> Add an appication -> Self-hosted: Select 
+  -> Applcation Name: 
+
 
 ********************
 using editor create a index.html
