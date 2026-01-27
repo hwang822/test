@@ -61,17 +61,17 @@ Service
 Type    :// URL
 HTTP		localhost:8001
 
-9. at HWang822@HWANG (192.168.12.100) create at web page and launch web service
-mkdir -p ~/mixwell_homepage
-cd ~/mixwell_homepage
-
-using editor create a index.html
-bash:
+9. at HWang822@HWANG create at web page and launch web service
+using editor create a startup.bat
+C:\HWang\MixwellSoftware-Server\startup.bat
+@echo off
+cd /d C:\HWang\MixwellSoftware-Server
 python3 -m http.server 8001 --bind 0.0.0.0
-http://192.168.1.116:8001/ or http://localhost:8001/ or www.mixwellsoftware.com could see webpage.
-
+Set Task Scheduler to auto trigger C:\HWang\MixwellSoftware-Server\startup.bat at system startup. 
 
 ********************
+using editor create a index.html
+C:\HWang\MixwellSoftware-Server\index.html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -183,7 +183,7 @@ http://192.168.1.116:8001/ or http://localhost:8001/ or www.mixwellsoftware.com 
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-old DNS server
+old DNS server at xfinity cable networking
 
 Pay domain name www.mixwellsoftware.com at Squarespace.com 3 year start 11//11/2024 - 11/11/2027 15$/pre year.
 (Previous DNS pay domain name at 101domain.com gm_dl00 mixwellsoftware.com  3$/year)
