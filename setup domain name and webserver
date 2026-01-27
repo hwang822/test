@@ -59,7 +59,7 @@ Subdomain   Domain
 www			mixwellsoftware.com
 Service
 Type    :// URL
-HTTP		192.168.1.116:8001
+HTTP		localhost:8001
 
 9. at HWang822@HWANG (192.168.12.100) create at web page and launch web service
 mkdir -p ~/mixwell_homepage
