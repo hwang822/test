@@ -92,9 +92,23 @@ A. 在你的 Windows 机器上：
 search: download cloudflare zero trust docs download 
 https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/
 bring CMD as adminisitor and trun
-C:\Windows\System32>cloudflared.exe access rdp --hostname rdp.mixwellsoftware.com --url rdp://localhost:3390
-Windows Search Run->mstsc to bring up Remote Desktop Connection dialog
+C:\Windows\System32>cloudflared.exe access rdp --hostname rdp.mixwellsoftware.com --url rdp://localhost:3390 
+to start Windows RDP sevices.
+
+B. Add Access controls for an application service (RDP services)
+cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Access controls -> Applications -> Add an appication -> Self-hosted: Select 
+  -> Self-hosted: Select -> Applcation Name: rdp.mixwellsoftware.com 
+  -> Add public hostname : 
+Input method	Subdomain	Domain
+Default			rdp			mixwellsoftware.com
+  -> Access policies -> Create new policy -> Policy name: RDP-policy -> Action: Allow
+  -> Add rules ->Selector: Emails -> Value: hwem
+
+At Client Side
+Windows Search Run-> mstsc to bring up Remote Desktop Connection dialog
 Computer: localhost:3390
+
+
 
 mixwellsoftware.cloudflareaccess.com
 Windows RDP
@@ -109,10 +123,6 @@ At
 
 
 
-B. add an application
-Download 
-cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Applications -> Add an appication -> Self-hosted: Select 
-  -> Applcation Name: 
 
 
 ********************
