@@ -95,7 +95,20 @@ bring CMD as adminisitor and trun
 C:\Windows\System32>cloudflared.exe access rdp --hostname rdp.mixwellsoftware.com --url rdp://localhost:3390 
 to start Windows RDP sevices.
 
-B. Add Access controls for an application service (RDP services)
+B. At Client Side
+search: download cloudflare zero trust docs download 
+https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/downloads/
+bring CMD as adminisitor and trun
+C:\Windows\System32>cloudflared access rdp --hostname rdp.mixwellsoftware.com \ --url localhost:3390
+
+Windows Search Run-> mstsc to bring up Remote Desktop Connection dialog
+->Computer: localhost:3390
+->Connect
+Bring up Windows Security
+Username:hwem
+Password:Dl@00
+
+C.(option) Add Access controls for an application service (RDP services)
 cloudflare.com->Account home -> Protect & Connect -> Zero Trust -> Access controls -> Applications -> Add an appication -> Self-hosted: Select 
   -> Self-hosted: Select -> Applcation Name: rdp.mixwellsoftware.com 
   -> Add public hostname : 
@@ -106,10 +119,10 @@ Default			rdp			mixwellsoftware.com
 
 At Client Side
 Windows Search Run-> mstsc to bring up Remote Desktop Connection dialog
-Computer: localhost:3390
+->Computer: localhost:3390
+->Connect
 
-
-
+Bring up authority check page.
 mixwellsoftware.cloudflareaccess.com
 Windows RDP
 Get a login code emailed to you
@@ -118,12 +131,6 @@ Email: hwem
 goto email to get confimed codes 348128
 Confirmed.
 Access Requested. Approve
-
-At 
-
-
-
-
 
 ********************
 using editor create a index.html
