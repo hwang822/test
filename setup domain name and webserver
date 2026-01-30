@@ -81,12 +81,29 @@ C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat
 @echo off
 cd /d C:\HWang\MixwellSoftware-Server\Travel
 python3 -m http.server 8020 --bind 0.0.0.0
-Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup. 
 
-C:\HWang\MixwellSoftware-Server\VideoServiceStartup.bat
-@echo off
-python VideoService.py
-Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\VideoServiceStartup.bat at system startup. 
+Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup.
+
+Add a New Task Scheduler VideoServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\VideoServiceStartup.bat at system startup.
+	VideoServiceStartup.bat:
+	@echo off
+	python videoservice.py
+
+
+🧩 Task Scheduler VideoServiceStartup task 正确配置（逐项）
+1️⃣ General
+	✅ Name: VideoServiceStartup
+	✅ Run whether user is logged on or not
+	✅ Run with highest privileges（推荐）
+2️⃣ Triggers
+	Begin the task: At startup
+	Delay task for: 30 seconds（很重要！）
+3️⃣ Actions（这是重点）
+	Action: Start a program
+	字段	内容
+	Program/script	C:\HWang\MixwellSoftware-Server\VideoServiceStartup.bat
+	Start in		C:\HWang\MixwellSoftware-Server
+	Add arguments	（留空）    
 
 8. Set Remote Desktup Connection
 
@@ -140,7 +157,7 @@ goto email to get confimed codes 348128
 Confirmed.
 Access Requested. Approve
 
-********************
+#################################################################
 using editor create a index.html
 C:\HWang\MixwellSoftware-Server\Web\index.html
 
@@ -230,7 +247,7 @@ C:\HWang\MixwellSoftware-Server\Web\index.html
   <p>Smart • Reliable • Scalable Solutions</p>
   <div class="cta">
 
-********************
+#################################################################
 using editor create a flask service 
 C:\HWang\MixwellSoftware-Server\VideoService.py
 
@@ -296,7 +313,31 @@ if __name__ == "__main__":
     print("家人访问时输入密码即可看视频")
     app.run(host="0.0.0.0", port=PORT)
 
-*****************
+#################################################################
+Crate ffnoeg   video servcie same as youtube 
+
+👉 先装 FFmpeg（这是 100% 必须的）
+Windows 推荐：
+https://www.gyan.dev/ffmpeg/builds/
+下载 ffmpeg-git-full.7z
+解压
+把 bin 目录加入 PATH
+CMD-> SET PATH=%PATH%;C:\HWang\MixwellSoftware-Server\ServiceTools\ffmpeg\bin
+or seatch Windows "Edit the system environment variables"
+Test CMD->
+C:\Users\hwang>ffmpeg
+ffmpeg version 2026-01-29-git-c898ddb8fe-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+
+cd C:\Hwang\MixwellSoftware-Server\Travel\Videos\travelmap.mp4
+CMD ffmpeg -i travelmap.mp4 ^
+  -codec: copy ^
+  -start_number 0 ^
+  -hls_time 6 ^
+  -hls_list_size 0 ^
+  -f hls index.m3u8
+
+#################################################################
 
             mixwellsoftware.com
         ┌────────┬──────────┬──────────┐
