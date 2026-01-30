@@ -248,14 +248,20 @@ C:\HWang\MixwellSoftware-Server\Web\index.html
   <div class="cta">
 
 #################################################################
+
+https://www.youtube.com/watch?v=4nzI4RKwb5I
+Flask Tutorial #3 - Adding Bootstrap and Template Inheritance
+
 using editor create a flask service 
 C:\HWang\MixwellSoftware-Server\VideoService.py
 
 from flask import Flask, send_from_directory, request, abort, render_template_string
 import os
 
+VideoService.py
+
 # ---------------- 配置 ----------------
-VIDEO_FOLDER = "C:\HWang\MixwellSoftware-Server\Travel"   # 视频文件夹路径（可用绝对路径）
+VIDEO_FOLDER = "C:\HWang\MixwellSoftware-Server\Travel\Videos"   # 视频文件夹路径（可用绝对路径）
 PASSWORD = "huaizhong"    # 自定义访问密码
 PORT = 8080               # 服务器端口
 # --------------------------------------
@@ -265,7 +271,7 @@ app = Flask(__name__)
 # HTML 输入密码页面
 HTML_PASSWORD = """
 <!doctype html>
-<title>家庭视频</title>
+<title>旅游视频</title>
 <h1>请输入访问密码</h1>
 <form method="post">
   <input type="password" name="pw" placeholder="密码">
@@ -276,8 +282,8 @@ HTML_PASSWORD = """
 # HTML 视频列表页面
 HTML_LIST = """
 <!doctype html>
-<title>家庭视频列表</title>
-<h1>家庭视频</h1>
+<title>旅游视频列表</title>
+<h1>旅游视频</h1>
 <ul>
 {% for video in videos %}
 <li>
@@ -329,13 +335,10 @@ C:\Users\hwang>ffmpeg
 ffmpeg version 2026-01-29-git-c898ddb8fe-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers
   built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
 
-cd C:\Hwang\MixwellSoftware-Server\Travel\Videos\travelmap.mp4
-CMD ffmpeg -i travelmap.mp4 ^
-  -codec: copy ^
-  -start_number 0 ^
-  -hls_time 6 ^
-  -hls_list_size 0 ^
-  -f hls index.m3u8
+cmd -> ffmpeg -i bigvideo.mp4 -c copy -movflags +faststart bigvideofast.mp4 
+then copy bigvideofast.mp4 to web service floder?
+
+then copy index.m3u8
 
 #################################################################
 
