@@ -338,7 +338,14 @@ ffmpeg version 2026-01-29-git-c898ddb8fe-full_build-www.gyan.dev Copyright (c) 2
 cmd -> ffmpeg -i bigvideo.mp4 -c copy -movflags +faststart bigvideofast.mp4 
 then copy bigvideofast.mp4 to web service floder?
 
-then copy index.m3u8
+then copy bigvideofast.mp4 to videoservice floder C:\HWang\MixwellSoftware-Server\Travel\Videos
+
+########################################################
+create a email service.
+zoho.com
+
+
+
 
 #################################################################
 
