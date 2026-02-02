@@ -354,6 +354,73 @@ email account admin got to https://sign.zoho.com -> setting -> admin -> ...
 EmailService.py  
 
 #################################################################
+Create cam services.
+WYZE 云 → Bridge → RTSP → FFmpeg → HLS → Web → Tunnel
+
+docker-wyze-bridge only run linux OS. Have to use docker to run docker-wyze-bridge container.
+WYZE 摄像头
+   ↓
+Wyze Bridge (Docker)
+   ↓ RTSP
+FFmpeg (你手工跑)
+   ↓ HLS
+Python Web (你手工跑)
+   ↓
+Cloudflare Tunnel (你已有)
+
+
+1️⃣ 拉镜像
+手动启动 Docker Desktop (need pre install WSL windows system in Linux) to run Docker UI 
+CMD -> docker pull mrlt8/wyze-bridge (download wyze-bridge docker image file from docker hub)
+2️⃣ 启动  (run docker image)
+cmd -> 
+docker run -d ^
+--name wyze ^
+-p 5000:5000 ^
+-p 8554:8554 ^
+-e WYZE_EMAIL=xxx ^
+-e WYZE_PASSWORD=xxx ^
+-e WYZE_API_ID=xxx ^
+-e WYZE_API_KEY=xxx ^
+-e WEB_USERNAME=admin ^
+-e WEB_PASSWORD=Mixwell123 ^
+mrlt8/wyze-bridge
+
+C:\HWang\MixwellSoftware-Server\ServiceTools\wyze-cam-bridge\docker-wyze-bridge>docker run -d ^--name wyze ^-p 5000:5000 ^-p 8554:8554 ^-e WYZE_EMAIL=xxx ^-e WYZE_PASSWORD=xxx ^-e WYZE_API_ID=xxx ^-e WYZE_API_KEY=xxx ^-e WEB_USERNAME=admin ^-e WEB_PASSWORD=Mixwell123 ^mrlt8/wyze-bridge
+491efc20871636ed6ce1211c34fb6c0a9527984cd43563286fa5b93a1121856d
+
+if (docker: Error response from daemon: Conflict. The container name "/wyze" is already in use by container. 
+    删除旧容器 CMD->  
+C:\HWang\MixwellSoftware-Server\ServiceTools\wyze-cam-bridge\docker-wyze-bridge>docker stop wyze
+wyze
+C:\HWang\MixwellSoftware-Server\ServiceTools\wyze-cam-bridge\docker-wyze-bridge>docker rm wyze
+wyze
+
+after run docker-wyze-bridge
+run http://localhost:5000/login
+
+Wyze credentials required to complete authentication.
+
+API Key
+Token
+ Wyze API Key and ID can be obtained from the Wyze Developer Portal.
+Email: hwem
+Password: Dl@00
+API ID: API ID
+Key ID: API Key
+
+Get API ID and Key form https://developer-api-console.wyze.com/#/apikey/view
+Key Id
+512a8d7e-dbbe-40a5-b650-14f244faad36
+Api Key
+c4nYZ9q66BREQlMC7cCOK8uNLrX6aZBjbMoYUTnPsQCXwAeBCFurpvduxItd
+
+WYZE FFmpeg app run
+Detected 5 cameras.   Preview Not Available.
+
+
+
+#################################################################
 
             mixwellsoftware.com
         ┌────────┬──────────┬──────────┐
