@@ -69,6 +69,9 @@ rdp			mixwellsoftware.com			HTTP	localhost
 Subdomain   Domain						Type    :// URL
 video		mixwellsoftware.com			HTTP	localhost:8080
 
+Subdomain   Cam						    Type    :// URL
+video		mixwellsoftware.com			HTTP	localhost:8030
+
 7. at HWang822@HWANG create at web page and launch web service
 using editor create startup.bat
 C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat
@@ -88,6 +91,11 @@ Add a New Task Scheduler VideoServiceStartup to auto trigger C:\HWang\MixwellSof
 	VideoServiceStartup.bat:
 	@echo off
 	python videoservice.py
+
+Add a New Task Scheduler VideoServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\CamServiceStartup.bat at system startup.
+	CamServiceStartup.bat:
+	@echo off
+	python CamService.py
 
 
 🧩 Task Scheduler VideoServiceStartup task 正确配置（逐项）
@@ -355,6 +363,68 @@ EmailService.py
 
 #################################################################
 Create cam services.
+
+Set iphone as cam.
+Iphone store: ip webcam -> DrioCam Webcam install and start.
+Display cam viewer   http://192.168.12.214:4747
+
+At PC side. Download DrioCam Client app windows  https://droidcam.app/windows/
+install and start DiroCam Client.
+
+In the Client, click into the centre, or right-click and choose Add > DroidCam
+	Add a device Use WiFi IP
+    Device: HW Iphone Cam
+	WiFi IP: 192.168.12.214 
+
+Create CamService.py
+CMD->Python CamService.py
+localhost:8030
+
+....................
+from flask import Flask, Response
+import cv2
+
+app = Flask(__name__)
+
+# 这里改成你的DroidCam在PC端的设备号或IP
+# 如果PC端DroidCam已经显示为摄像头，比如 /dev/video0 或 0
+# Windows上通常是 0, 1, 2...
+cap = cv2.VideoCapture(0)  # 或者 VideoCapture('http://你的DroidCamIP:端口/video')
+
+def generate_frames():
+    while True:
+        success, frame = cap.read()
+        if not success:
+            break
+        else:
+            # 编码为 JPEG
+            ret, buffer = cv2.imencode('.jpg', frame)
+            frame = buffer.tobytes()
+            # 返回多部分 JPEG 流 (mjpeg)
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(generate_frames(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/')
+def index():
+    return """
+    <html>
+        <body>
+            <h1>Home Cam</h1>
+            <img src="/video_feed">
+        </body>
+    </html>
+    """
+
+if __name__ == "__main__":
+    # host='0.0.0.0' 让局域网其他设备访问
+    app.run(host='0.0.0.0', port=8030)
+.....
+Another way to start wyze-bridge but it is not working.
 WYZE 云 → Bridge → RTSP → FFmpeg → HLS → Web → Tunnel
 
 docker-wyze-bridge only run linux OS. Have to use docker to run docker-wyze-bridge container.
