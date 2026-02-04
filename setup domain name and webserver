@@ -73,29 +73,34 @@ Subdomain   Cam						    Type    :// URL
 video		mixwellsoftware.com			HTTP	localhost:8030
 
 7. at HWang822@HWANG create at web page and launch web service
-using editor create startup.bat
-C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat
+
+Add a new Task Scheduler WebServiceStartup to auto trigger C:\Workarea\MixwellSoftware.com-Services\Web\WebServiceStartup.bat at system startup. 
+WebServiceStartup.bat
 @echo off
 cd /d C:\HWang\MixwellSoftware-Server\Web
 python3 -m http.server 8000 --bind 0.0.0.0
-Add a new Task Scheduler WebServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\WebServiceStartup.bat at system startup. 
 
-C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat
+Add a new Task Scheduler TravelServiceStartup to auto trigger C:\Workarea\MixwellSoftware.com-Services\Travel\TravelServiceStartup.bat at system startup. 
+TravelServiceStartup.bat
 @echo off
-cd /d C:\HWang\MixwellSoftware-Server\Travel
+cd /d C:\Workarea\MixwellSoftware.com-Services\Travel
 python3 -m http.server 8020 --bind 0.0.0.0
 
-Add a New Task Scheduler TravelServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\TravelServiceStartup.bat at system startup.
-
-Add a New Task Scheduler VideoServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\VideoServiceStartup.bat at system startup.
-	VideoServiceStartup.bat:
+Add a New Task Scheduler VideoServiceStartup to auto trigger C:\Workarea\MixwellSoftware.com-Services\Video\VideoServiceStartup.bat at system startup. Action Start in: C:\Workarea\MixwellSoftware.com-Services\Video 
+	
+    VideoServiceStartup.bat:
 	@echo off
 	python videoservice.py
 
-Add a New Task Scheduler VideoServiceStartup to auto trigger C:\HWang\MixwellSoftware-Server\CamServiceStartup.bat at system startup.
+Add a New Task Scheduler CamServiceStartup to auto trigger C:\Workarea\MixwellSoftware.com-Services\Cam\CamServiceStartup.bat at system startup. Action Start in: C:\Workarea\MixwellSoftware.com-Services\Cam
 	CamServiceStartup.bat:
 	@echo off
 	python CamService.py
+
+Add a New Task Scheduler EmailServiceStartup to auto trigger C:\Workarea\MixwellSoftware.com-Services\Email\EmailServiceStartup.bat at system startup. Action Start in: C:\Workarea\MixwellSoftware.com-Services\Email
+	EmailServiceStartup.bat:
+	@echo off
+	python EmailService.py
 
 
 🧩 Task Scheduler VideoServiceStartup task 正确配置（逐项）
