@@ -493,6 +493,81 @@ c4nYZ9q66BREQlMC7cCOK8uNLrX6aZBjbMoYUTnPsQCXwAeBCFurpvduxItd
 WYZE FFmpeg app run
 Detected 5 cameras.   Preview Not Available.
 
+#################################################################
+
+Build smart home service through device control ewelink-api -> Home -> My Home + -> scan ->   https://web.ewelink.cc Qcode to access ewelink account. 
+左车门 						10008a94c0
+右车门						10008a9425
+3. Lightway 310Wx12			1001f8e658
+4. CanSolar 395Wx6			001d94334
+2. SunTech 270Wx9			1001692bbe
+1. Silfab 295Wx10 (双面) 	1001694fee
+
+Design
+
+eWeLink 云
+   ↓ WebSocket
+Node ewelink-api (本地服务)
+   ↓ HTTP JSON
+Python 脚本读取 device 状态
+   ↓ CSV/数据库/网页仪表盘
+
+1.
+create folder: C:\Workarea\MixwellSoftware.com-Services\SmartHome>
+C:\Workarea\MixwellSoftware.com-Services\SmartHome>node -v
+v20.10.0
+C:\Workarea\MixwellSoftware.com-Services\SmartHome>npm -v
+10.2.3
+
+node is tool to using js to run api
+
+https://www.youtube.com/watch?v=TlB_eWDSMt4
+Node.js Tutorial for Beginners: Learn Node in 1 Hour
+
+2. install ewelink-api (ewelink node webapi to access devices under ewelink).
+C:\Workarea\MixwellSoftware.com-Services\SmartHome>npm install ewelink-api
+
+C:\Workarea\MixwellSoftware.com-Services\SmartHome>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is EC27-33FA
+
+ Directory of C:\Workarea\MixwellSoftware.com-Services\SmartHome
+
+02/04/2026  10:38 AM    <DIR>          .
+02/04/2026  10:36 AM    <DIR>          ..
+02/04/2026  10:38 AM    <DIR>          node_modules
+02/04/2026  10:38 AM            62,561 package-lock.json
+02/04/2026  10:38 AM                56 package.json
+               2 File(s)         62,617 bytes
+               3 Dir(s)  66,562,977,792 bytes free
+
+Create node js to run ewelink api C:\Workarea\MixwellSoftware.com-Services\SmartHome\ewelink_server.js
+
+const ewelink = require('ewelink-api');
+
+(async () => {
+
+  const connection = new ewelink({
+    email: EMAIL,
+    password: PASSWORD,
+    region: 'as'
+  });
+
+  const cred = await connection.getCredentials();
+
+  console.log(cred);
+})();
+
+C:\Workarea\MixwellSoftware.com-Services\SmartHome>node ewelink_server.js
+{ error: 406, msg: 'Authentication failed' }
+
+ewelink does not accept Thirdparty API access only ewelink app.
+
+Could try to use 
+
+
+
+
 
 
 #################################################################
