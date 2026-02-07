@@ -565,10 +565,72 @@ ewelink does not accept Thirdparty API access only ewelink app.
 
 Could try to use 
 
+###############################################################
+Create wibsite for services.
+
+https://www.youtube.com/watch?v=dam0GPOAvVI
+Python Website Full Tutorial - Flask, Authentication, Databases & More
+
+CMD git clone https://github.com/techwithtim/Flask-Web-App-Tutorial
+install required depdences.
+
+CMD -> cd Flask-Web-App-Tutorial
+
+>pip install flask
+>pip install Flask-SQLAlchemy
+>pip install flask-logincd
+incase errors -> CMD >python.exe -m pip install --upgrade pip --user
+
+website\__init__.py
+
+from flask import Flask
+def create_app():
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
+    from .views import views     # get views (html) from .views def 
+    app.register_blueprint(views, url_prefix='/')     # register view page at app
+    return app
+
+main.py
+from website import create_app
+app = create_app()    # bring in python package at website\__init__.py to initial the web page.
+if __name__ == '__main__':   
+    app.run(debug=True)    #run the package   debug for rerunning after changed
+
+
+//UI page enter point
+website\view.py
+from flask import Blueprint
+views = Blueprint('views', __name__)
+@views.route('/')
+def home():
+    return "<h1>Test</h1>"
+website\auth.py
+from flask import Blueprint
+auth = Blueprint('auth', __name__)
+
+#localhost:5000\\login    #login and logout and sign-up page route
+@auth.route('/login')
+def login():
+    return "<p>Login</p>"
+localhost:5000\\login
+
+#localhost:5000\\logout
+@auth.route('/logout')
+def logout():
+    return "<p>Logout</p>"
+localhost:5000\\logout
+
+#localhost:5000\\logout
+@auth.route('/sign_up')
+def sign_up():
+    return "<p>sign_up</p>"
+localhost:5000\\sign_up
 
 
 
 
+http://localhost:5000/ => Test
 
 #################################################################
 
