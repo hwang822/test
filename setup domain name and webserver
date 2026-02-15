@@ -599,6 +599,48 @@ company_portal/
 CMD-> python app.py
 localhost:5000
 
+###################################################
+flutter.dev build mobile page.
+
+donwload flutter from Download https://docs.flutter.dev/install/manual and install the latest version of Git for Windows.
+open flutter_windows_3.41.1-stable.zip and copy flutter to 
+C:\Workarea\MixwellSoftware.com-MobileApps
+Set system env PATH new =C:\Workarea\MixwellSoftware.com-MobileApps\flutter\bin
+
+CMD -> cd  C:\Workarea\MixwellSoftware.com-MobileApps
+CMD -> python -m http.server 8010 --bind 127.0.0.1
+C:\Workarea\MixwellSoftware.com-MobileApps\mixwell_mobile>flutter build web --release --base-href /
+Compiling lib\main.dart for the Web...   
+
+C:\Workarea\MixwellSoftware.com-MobileApps\mixwell_mobile>cd build\web
+
+C:\Workarea\MixwellSoftware.com-MobileApps\mixwell_mobile\build\web>python -m http.server 8010 --bind 127.0.0.1
+Serving HTTP on 127.0.0.1 port 8010 (http://127.0.0.1:8010/) ...
+127.0.0.1 - - [15/Feb/2026 12:17:32] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [15/Feb/2026 12:17:32] "GET /flutter_bootstrap.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Feb/2026 12:17:33] "GET /main.dart.js HTTP/1.1" 200 -
+127.0.0.1 - - [15/Feb/2026 12:17:33] "GET /assets/FontManifest.json HTTP/1.1" 200 -
+127.0.0.1 - - [15/Feb/2026 12:17:33] "GET /assets/fonts/MaterialIcons-Regular.otf HTTP/1.1" 200 -
+127.0.0.1 - - [15/Feb/2026 12:17:33] "GET /assets/packages/cupertino_icons/assets/CupertinoIcons.ttf HTTP/1.1" 200 -
+
+Browser => http://localhost:8010/
+Will see webpage Flutter Home Page
+
+open C:\Workarea\MixwellSoftware.com-MobileApps\mixwell_mobile\lib\main.dart change "Flutter Home Page" to "Mixwell Software Services"
+rebuild and run web server Browser => http://localhost:8010/ web page will change to Mixwell Software Service
+
+
+
+
+
+
+
+
+
+
+
+
+
 #################################################################
 
             mixwellsoftware.com
