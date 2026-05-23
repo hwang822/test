@@ -120,6 +120,14 @@ Add a New Task Scheduler EmailServiceStartup to auto trigger C:\Workarea\Mixwell
 
 8. Set Remote Desktup Connection
 
+Another way using tailfare at miniPC and laptop.
+
+from laptop 
+mstsc → miniPC 的 Tailscale IP
+100.x.x.x
+H W
+Dl@00
+
 Free & Secure & Fast - RDP Back Home Using Cloudflare Zero Trust VPN Tunnel
 https://www.youtube.com/watch?v=tJuC6y3ci1Q
 
