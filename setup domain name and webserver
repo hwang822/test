@@ -770,3 +770,35 @@ click browser to make sure web page could run.
 right cleck BPWEN-PC\hwang822\Sites\mxiwellmvc\Manager Website to start or stop website.
 
 ***************
+set up tailscare VPN
+at miniPC install tailscare app. 
+
+miniPC：
+https://tailscale.com/download?utm_source=chatgpt.com
+安装：
+Download Tasiscale
+Laptop：也安装。登录同一个账号。 using github
+ping 100.x.x.x
+
+miniPC
+    ↓
+Tailscale
+    ↓
+iPhone
+Laptop
+
+实现：
+
+✅ VPN
+✅ 远程访问
+✅ AI services
+✅ Trading systems
+✅ Flask apps
+✅ 内网通信
+
+Exit Node（关键）
+Laptop / iPhone
+所有流量：
+miniPC
+
+这和你原本 WireGuard 想做的：
